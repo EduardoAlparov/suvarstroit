@@ -1,8 +1,4 @@
 import 'parsleyjs';
-import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
-
-dayjs.extend(customParseFormat);
 
 window.Parsley.addValidator('requiredIfChecked', {
     requirementType: 'string',
@@ -20,8 +16,8 @@ window.Parsley.addValidator('requiredIfChecked', {
         return true;
     },
     messages: {
-        en: 'Required field',
-        ru: 'Обязательное поле',
+        en: 'Error',
+        ru: 'Ошибка',
     },
     priority: 33,
 });
@@ -30,25 +26,38 @@ window.Parsley.addValidator('phone', {
     requirementType: 'string',
     validateString: function (value) {
         if (value.trim() === '') return true;
-        return /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
+        return /^(\+7|7|8)?[\s\-]?\(?[123456789][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
     },
     messages: {
-        en: 'This value should be a mobile number',
-        ru: 'Введите правильный номер мобильного телефона',
+        en: 'Error',
+        ru: 'Ошибка',
     },
 });
 
-window.Parsley.addValidator('date', {
+window.Parsley.addValidator('email', {
     requirementType: 'string',
     validateString: function (value) {
-        if (value.trim() === '') return true;
-        return dayjs(value, 'DD.MM.YYYY', true).isValid();
+      if (value.trim() === '') return true;
+      return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
     },
     messages: {
-        en: 'Enter correct date',
-        ru: 'Введите правильно дату',
+      en: 'Error',
+      ru: 'Ошибка',
     },
 });
+
+window.Parsley.addValidator('reqtext', {
+    requirementType: 'string',
+    validateString: function (value) {
+      if (value.trim() === '') return true;
+      return /^[А-Яа-яЁёA-Za-z]+$/.test(value);
+    },
+    messages: {
+      en: 'Error',
+      ru: 'Ошибка',
+    },
+});
+
 
 Parsley.addMessages('ru', {
     defaultMessage: 'Некорректное значение.',

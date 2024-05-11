@@ -1,0 +1,27 @@
+.dev {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap, 0.4rem) * 4);
+
+    &__text {
+        display: block;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .icon {
+        display: block;
+        width: 6.3rem;
+        height: 2rem;
+
+        @include breakpointMF(tablet) {
+            width: 8.8rem;
+            height: 2.8rem;
+        }
+    }
+
+    @include hoverActive() {
+        .dev__text {
+            opacity: 1;
+        }
+    }
+}

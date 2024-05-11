@@ -1,0 +1,53 @@
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    width: max-content;
+    padding: 0.8rem 1.2rem;
+
+    border-radius: 1rem;
+    background: var(--Dark-Blue-30, rgba(16, 16, 56, 0.30));
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+
+    @include breakpointMF(tablet) {
+        padding: 1.2rem 2.2rem;
+    }
+
+    &__text {
+        @include font(1rem, 120%, 400);
+        color: var(--White, #FFF);
+
+        @include breakpointMF(tablet) {
+            @include font(1.4rem, 130%, 400);
+        }
+    }
+
+    .icon {
+        display: none;
+        width: 1.4rem;
+        height: 1.4rem;
+
+        @include breakpointMF(tablet) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    &--icon {
+        .icon {
+            display: block;
+        }
+    }
+
+    &--blue {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    &--dark {
+        background: var(--Dark-Blue, #101038);
+    }
+}

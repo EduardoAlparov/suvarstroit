@@ -1,0 +1,35 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="home section section--first">
+    <div class="home__site-container">
+        <div class="home__grid-block grid-block grid-block--decrease">
+            <div class="grid-block__big-part home__big-part">
+                {{>home-slider homeSliderSmallClass=true}}
+            </div>
+
+            <div class="grid-block__small-part home__small-part"></div>
+        </div>
+    </div>
+
+    {{> filters }}
+</section>
+
+<section class="home section">
+    <div class="home__site-container">
+        <div class="home__grid-block home__grid-block--full-width grid-block grid-block--decrease">
+            <div class="grid-block__big-part home__big-part">
+                {{>home-slider homeSliderSmallClass=false}}
+            </div>
+
+            <div class="grid-block__small-part home__small-part"></div>
+        </div>
+    </div>
+
+    {{> filters }}
+</section>
+
+
+{{/content}}
+{{/extend}}

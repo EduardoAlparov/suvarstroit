@@ -1,0 +1,26 @@
+.tag-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    min-width: 12.4rem;
+    max-height: 3.2rem;
+    padding: 0.8rem 1.6rem;
+
+    @include font(1.2rem, 1.2, 400);
+    color: var(--Black, #020202);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+
+    border-radius: 0.6rem;
+    background: var(--Light-Grey, #F5F5F5);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-out;
+
+    @include hoverActive() {
+        color: var(--Red, #CF000C);
+        background: var(--Pink, #FAE5E7);
+    }
+}

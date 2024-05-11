@@ -1,0 +1,81 @@
+.carousel {
+    &__body {
+        @include breakpoint(small-tablet) {
+            width: 100%;
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            @include breakpointMF(tablet) {
+                margin-right: -100%;
+                padding-right: 100%;
+            }
+        }
+    }
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) * 2);
+
+        &>* {
+            flex-shrink: 0;
+        }
+    }
+
+    &__mailing {
+        &.main-btn {
+            width: 100%;
+            margin-top: 0.8rem;
+
+            @include breakpointMF(tablet) {
+                width: max-content;
+                margin-top: 3.4rem;
+            }
+        }
+    }
+
+    &__control {
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__swiper-wrapper {
+        width: 100%;
+        @include breakpointMF(tablet) {
+            grid-column: span 2;
+        }
+    }
+
+    &__link {
+        margin-top: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+
+        &.main-btn {
+            width: 100%;
+
+            color: var(--Red, #CF000C);
+            background: var(--White, #FFF);
+            border: 1px solid var(--Red-15, rgba(207, 0, 12, 0.15));
+
+            @include hoverActive() {
+                border-color: transparent;
+                color: var(--Red, #CF000C);
+                background-color: var(--Pink, #FAE5E7);
+            }
+        }
+    }
+}

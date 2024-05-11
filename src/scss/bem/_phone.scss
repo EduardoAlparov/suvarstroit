@@ -1,0 +1,40 @@
+.phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: calc(var(--gap) * 2);
+
+    &__link {
+        letter-spacing: -0.048em;
+        white-space: nowrap;
+
+        @include hoverActive() {
+            color: var(--Red);
+        }
+    }
+
+    &__text {
+        opacity: 0.4;
+        white-space: nowrap;
+    }
+
+    &.dropdown-menu__menu-phone {
+        gap: 0.6rem;
+
+        .phone__link {
+            letter-spacing: unset;
+        }
+
+        .phone__text {
+            leading-trim: both;
+            text-edge: cap;
+            font-feature-settings: 'clig' off, 'liga' off;
+        }
+
+        @include hoverActive() {
+            .phone__link {
+                color: var(--Red);
+            }
+        }
+    }
+}

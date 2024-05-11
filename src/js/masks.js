@@ -4,8 +4,10 @@ export default function masks() {
     const phoneInputs = Array.from(document.querySelectorAll('.js-phone-input'));
 
     phoneInputs.forEach(input => {
-        const instance = new Inputmask({ mask: '+7 (999) 999-99-99' });
-        instance.mask(input);
+        input.addEventListener('input', () => {
+            const instance = new Inputmask({ mask: '+7 (999) 999-99-99' });
+            instance.mask(input);
+        })
     });
 
     const onlyNumericInputs = Array.from(document.querySelectorAll('.js-numeric-input-decimals'));
@@ -23,7 +25,7 @@ export default function masks() {
     });
 
     const onlyNumericInputsNoFormatting = Array.from(document.querySelectorAll('.js-numeric-input'));
-    
+
     onlyNumericInputsNoFormatting.forEach(input => {
         input.addEventListener('input', () => {
             const value = input.value;

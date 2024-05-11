@@ -1,0 +1,57 @@
+.form-footer {
+    &__title {
+        margin-bottom:  calc(var(--gap, 0.4rem) * 6);
+    }
+
+    &__inputs,
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: calc(var(--gap, 0.4rem) * 2);
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    &__row {
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            gap: calc(var(--gap, 0.4rem) * 2);
+        }
+    }
+
+    &__input,
+    &__inputs {
+        flex-grow: 1;
+    }
+
+    &__submit {
+        min-width: 100%;
+
+        @include breakpointMF(tablet) {
+            min-width: 22rem;
+        }
+    }
+
+    &__agreement {
+        margin-top: 0.8rem;
+
+        color: var(--White-60, rgba(255, 255, 255, 0.6));
+
+        a {
+            color: var(--White, #FFF);
+
+            @include hoverActive() {
+                color: var(--Light-blue, #a5d9ff);
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            margin-top: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.input {
+    width: 100%;
+    height: 5rem;
+    padding: 2rem;
+
+    text-align: left;
+    color: var(--White, #FFF);
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    border-radius: 0.8rem;
+    border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+    transition: all 0.3s ease-out;
+
+    @include breakpointMF(tablet) {
+        height: 6rem;
+    }
+
+    @include placeholder() {
+        color: var(--White-50, rgba(255, 255, 255, 0.50));
+        leading-trim: both;
+        text-edge: cap;
+        font-feature-settings: 'clig' off, 'liga' off;
+        transition: all 0.3s ease-out;
+    }
+
+    &:focus {
+        border-color: var(--White-30, rgba(255, 255, 255, 0.30));
+
+        @include placeholder() {
+            color: var(--White, #FFF);
+        }
+    }
+
+    &:active {
+        border-color: var(--White-10, rgba(255, 255, 255, 0.10));
+    }
+}
+
+.input-wrapper {
+    position: relative;
+
+    .parsley-errors-list {
+        position: absolute;
+        top: calc(100% - 1rem);
+        right: 0;
+        z-index: 100;
+
+        li {
+            max-width: 22ch;
+            padding: 0.8rem;
+            border-radius: 0.8rem;
+            border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+            background: var(--White, #FFF);
+            color: var(--Red, #CF000C);
+            @include font(1.4rem, 100%, 400);
+        }
+    }
+
+    &:has(.parsley-errors-list > li) {
+        .parsley-errors-list {
+            &::before {
+                position: absolute;
+                left: calc(100% - 3.6rem);
+                top: -1rem;
+
+                display: block;
+                width: 1.3rem;
+                height: 1.1rem;
+
+                background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%229%22%20viewBox%3D%220%200%2011%209%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M4.67397%201.21062C5.07097%200.628781%205.92903%200.628781%206.32603%201.21062L10.0623%206.68638C10.5152%207.35016%2010.0398%208.25%209.23624%208.25H1.76376C0.960186%208.25%200.484816%207.35016%200.93773%206.68638L4.67397%201.21062Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: "";
+            }
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            z-index: 100;
+
+            display: block;
+            width: 2rem;
+            height: 2rem;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M9%2016.5C13.1421%2016.5%2016.5%2013.1421%2016.5%209C16.5%204.85786%2013.1421%201.5%209%201.5C4.85786%201.5%201.5%204.85786%201.5%209C1.5%2013.1421%204.85786%2016.5%209%2016.5Z%22%20stroke%3D%22%23FF6266%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M9%2012.3333H9.00833V12.3416H9V12.3333Z%22%20stroke%3D%22%23FF6266%22%20stroke-width%3D%222.25%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M9%209.00008V5.66675%22%20stroke%3D%22%23FF6266%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: "";
+        }
+    }
+}

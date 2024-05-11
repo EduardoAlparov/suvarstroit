@@ -1,0 +1,218 @@
+.select {
+    width: 100%;
+
+    select {
+        visibility: hidden;
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 1.5rem;
+    }
+
+    .choices {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 125%;
+        margin-bottom: 0;
+        position: relative;
+        border-radius: 0;
+        background: transparent;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+    }
+
+    .choices.is-open {
+        z-index: 30;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .choices__inner {
+        display: flex;
+        align-items: center;
+        height: 6rem;
+        padding: 2.4rem;
+
+        @include font(1.6rem, 130%, 400);
+        color: var(--Black, #020202);
+        leading-trim: both;
+        text-edge: cap;
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        background: var(--Light-Grey, #F5F5F5);
+        border-color: transparent;
+        border-radius: 1.2rem;
+        transition: border-color 0.2s;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.2;
+            min-height: 1.8rem;
+        }
+    }
+
+    .choices[data-type*=select-one] .choices__inner {
+        padding-bottom: 2.4rem;
+    }
+
+    .choices__list--single {
+        padding: 0;
+        padding-right: 2.4rem;
+    }
+
+    .choices__list--single .choices__item {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .choices[data-type*='select-one']:after {
+        right: 2.4rem;
+        top: 50%;
+        left: auto;
+
+        width: 1.4rem;
+        height: 1.4rem;
+        margin: 0;
+
+        border: none;
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%204L7%2010L13%204%22%20stroke%3D%22%23020202%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+        transform: translateY(-50%);
+    }
+
+    .choices__placeholder {
+        color: rgba(black, 0.5);
+        opacity: 1;
+    }
+
+    .choices__list--dropdown {
+        word-break: initial;
+        border: none;
+        border: 1px solid var(--primary-color) !important;
+        color: var(--text-color);
+        border-radius: 1.2rem !important;
+        background: white;
+        box-shadow: none;
+        transition: opacity 0.3s, visibility 0s linear 0.3s;
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+        padding: 0;
+        margin-top: 1.2rem;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+
+    .choices__list--dropdown .choices__item {
+        display: flex;
+        align-items: center;
+        padding: 2rem 5rem 2rem 2rem;
+
+        @include font(1.6rem, 130%, 400);
+        color: var(--Black, #020202);
+        font-feature-settings: 'clig' off, 'liga' off;
+        transition: background-color 0.2s, color 0.2s;
+        white-space: nowrap;
+
+        @include maxSizeText(1);
+    }
+
+    .choices__list--dropdown .choices__item--selectable.choices__placeholder {
+        color: rgba(black, 0.4);
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted {
+        background: rgba(207, 0, 12, 0.05);
+
+
+        &.is-selected {
+            background-color: white;
+        }
+    }
+
+    .choices__list--dropdown .choices__list {
+        max-height: 30rem;
+
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            background-color: white;
+            width: 0.6rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+        }
+
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        @include breakpoint(mobile) {
+            max-height: 22rem;
+        }
+    }
+
+    .choices__list--dropdown   {
+        &.choices__list[aria-expanded] {
+            z-index: 1000;
+        }
+    }
+
+    .choices__item {
+        &.is-selected {
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                transform: translateY(-50%);
+
+                display: block;
+                width: 4rem;
+                height: 2.4rem;
+
+                background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2223%22%20height%3D%2223%22%20rx%3D%2211.5%22%20stroke%3D%22%23CF000C%22%20stroke-opacity%3D%220.2%22%2F%3E%0A%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%2214%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+                background-size: contain;
+                background-position: right center;
+                background-repeat: no-repeat;
+                background-color: white;
+
+                content: "";
+            }
+        }
+    }
+
+
+    &--blue {
+        padding-bottom: 0;
+
+        .choices__inner {
+            color: var(--White, #fff);
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+        }
+
+        .choices[data-type*='select-one']:after {
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%204L7%2010L13%204%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+        }
+    }
+}

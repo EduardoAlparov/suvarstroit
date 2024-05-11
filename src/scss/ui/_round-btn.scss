@@ -1,0 +1,84 @@
+.round-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 100%;
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+
+    @include breakpointMF(tablet) {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+
+    .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        stroke: var(--Black, #020202);
+
+        @include breakpointMF(tablet) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    @include hoverActive() {
+        background: var(--White, #FFF);
+        border-color: transparent;
+    }
+
+    &--active {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            transform: translate(50%, -50%);
+
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+
+            color: var(--White, #FFF);
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.8rem;
+
+            background-color: var(--Red, #cf000c);
+            border-radius: 100%;
+            content: attr(data-favorite-count);
+        }
+
+        .icon {
+            stroke: var(--Red, #cf000c);
+        }
+    }
+
+    .icon-fill {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: var(--White, #FFF);
+
+        @include breakpointMF(tablet) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    &--white {
+        border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+        @include hoverActive() {
+            background: var(--White-10, rgba(255, 255, 255, 0.10));
+            border-color: transparent;
+        }
+
+    }
+}

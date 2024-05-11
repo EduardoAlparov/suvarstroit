@@ -1,0 +1,82 @@
+.main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+    max-height: 5rem;
+    padding: 1.6rem 3.2rem 1.6rem;
+
+    border-radius: 0.8rem;
+
+    @include font(1.4rem, 100%, 400);
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        stroke: var(--Red, #CF000C);
+    }
+
+    @include breakpointMF(tablet) {
+        max-height: 6rem;
+        padding: 2.4rem 3.2rem 2.4rem;
+        border-radius: 1.2rem;
+
+        @include font(1.6rem, 100%, 400);
+    }
+
+    &--red {
+        color: var(--White, #FFF);
+        background-color: var(--Red, #CF000C);
+
+        @include hoverActive() {
+            background-color: var(--Dark-Red, #B7000B);
+        }
+    }
+
+    &--outlined {
+        color: var(--White, #FFF);
+        border: 1px solid var(--White-30, rgba(255, 255, 255, 0.30));
+
+        @include hoverActive() {
+            color: var(--Black, #020202);
+            background-color: var(--White, #FFF);
+            border-color: transparent;
+        }
+    }
+
+    &--white {
+        color: var(--Black, #020202);
+        background-color: var(--White, #FFF);
+
+        @include hoverActive() {
+            color: var(--Red, #CF000C);
+            background-color: var(--Pink, #FAE5E7);
+        }
+    }
+
+    &--icons {
+        display: flex;
+        gap: var(--gap)
+    }
+
+    &--grey {
+        min-width: 28rem;
+        padding-right: 2.6rem;
+        padding-left: 2.6rem;
+
+        background: var(--Light-Grey, #F5F5F5);
+
+        @include hoverActive() {
+            color: var(--Red, #CF000C);
+            background-color: var(--Pink, #FAE5E7);
+        }
+    }
+
+    &--disabled,
+    &:disabled {
+        color: var(--Black-30, rgba(2, 2, 2, 0.30));
+        background-color: var(--White, #FFF);
+        pointer-events: none;
+    }
+}

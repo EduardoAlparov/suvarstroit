@@ -1,0 +1,77 @@
+.except-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1.5 / 1;
+
+    color: var(--White, #fff);
+    @extend ._border-24;
+
+    @include breakpointMF(tablet) {
+        aspect-ratio: 1;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 50;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+
+        @include breakpointMF(tablet) {
+            padding: 2rem 2.8rem 3.9rem 2rem;
+        }
+    }
+
+    &__title {
+        width: min-content;
+        padding-right: 7rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__btn {
+        display: block;
+
+        width: 5rem;
+        height: 5rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20filter%3D%22url(%23filter0_b_1657_9768)%22%3E%0A%20%20%20%20%3Crect%20width%3D%2250%22%20height%3D%2250%22%20rx%3D%2225%22%20fill%3D%22%23181823%22%20fill-opacity%3D%220.2%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M26.0814%2019.9478C25.9451%2020.9696%2026.079%2022.4999%2026.9831%2023.7607C27.9241%2025.0729%2029.5947%2025.9504%2032.226%2025.7956L32.1379%2024.2982C29.912%2024.4291%2028.785%2023.6994%2028.2021%2022.8866C27.5825%2022.0225%2027.4664%2020.9098%2027.5682%2020.146L26.0814%2019.9478ZM27.5682%2029.9645C27.4664%2029.2006%2027.5825%2028.088%2028.2021%2027.2239C28.785%2026.4111%2029.912%2025.6814%2032.1379%2025.8123L32.226%2024.3149C29.5947%2024.1601%2027.9241%2025.0375%2026.9831%2026.3498C26.079%2027.6106%2025.9451%2029.1409%2026.0814%2030.1627L27.5682%2029.9645Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32.1429%2025.0469H16.4286%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cfilter%20id%3D%22filter0_b_1657_9768%22%20x%3D%22-20%22%20y%3D%22-20%22%20width%3D%2290%22%20height%3D%2290%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%0A%20%20%20%20%20%20%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22%2F%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20in%3D%22BackgroundImageFix%22%20stdDeviation%3D%2210%22%2F%3E%0A%20%20%20%20%20%20%3CfeComposite%20in2%3D%22SourceAlpha%22%20operator%3D%22in%22%20result%3D%22effect1_backgroundBlur_1657_9768%22%2F%3E%0A%20%20%20%20%20%20%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22effect1_backgroundBlur_1657_9768%22%20result%3D%22shape%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    @include hoverActive() {
+        .except-link__btn {
+            opacity: 1;
+        }
+    }
+}

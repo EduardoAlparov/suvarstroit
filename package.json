@@ -20,7 +20,7 @@
     "@fancyapps/ui": "^4.0.26",
     "body-scroll-lock": "^3.1.5",
     "bootstrap-datepicker": "^1.9.0",
-    "choices.js": "^10.1.0",
+    "choices.js": "^10.2.0",
     "core-js": "^3.16.1",
     "dayjs": "^1.10.6",
     "detect-it": "^4.0.1",
@@ -29,9 +29,10 @@
     "inputmask": "^5.0.6",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",
+    "nouislider": "^15.7.1",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
-    "swiper": "^8.1.4"
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

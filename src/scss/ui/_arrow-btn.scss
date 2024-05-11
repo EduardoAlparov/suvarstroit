@@ -1,0 +1,17 @@
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 100%;
+    background: var(--Red, #CF000C);
+    border: 1px solid rgba(207, 0, 12, 0.15);
+
+    .icon {
+        width: 1.9rem;
+        height: 12rem;
+    }
+}

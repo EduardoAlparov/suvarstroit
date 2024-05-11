@@ -1,0 +1,70 @@
+.switcher {
+    display: flex;
+    align-items: center;
+    gap: 4.2rem;
+
+    @include breakpointMF(tablet) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        column-gap: 0.6rem;
+
+        cursor: pointer;
+
+        @include breakpointMF(tablet) {
+            column-gap: 1rem;
+        }
+
+        span {
+            color: var(--Black-30, rgba(2, 2, 2, 0.3));
+            @include font(3rem, 100%, 300);
+            font-feature-settings: 'clig' off, 'liga' off;
+            letter-spacing: -0.15rem;
+            transition: color 0.3s ease-out;
+
+            @include breakpointMF(tablet) {
+                @include font(5.4rem, 100%, 300);
+                letter-spacing: -0.27rem;
+            }
+        }
+
+        .icon {
+            width: 0.8rem;
+            aspect-ratio: 1;
+            fill: none;
+            stroke: var(--Black-30, rgba(2, 2, 2, 0.3));
+
+            transition: all 0.3s ease-out;
+
+            @include breakpointMF(tablet) {
+                width: 1.1rem;
+            }
+        }
+
+        @include hoverActive() {
+            .icon {
+                stroke: var(--Black, rgba(2, 2, 2, 1));
+            }
+        }
+    }
+
+    input[type="radio"] {
+        &:checked {
+            &~label {
+                span {
+                    color: var(--Black, rgba(2, 2, 2, 1));
+                }
+
+                .icon {
+                    stroke: none;
+                    fill: var(--Red, #CF000C);
+                }
+            }
+        }
+    }
+}

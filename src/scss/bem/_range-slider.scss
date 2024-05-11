@@ -1,0 +1,154 @@
+.range-slider {
+    &__label {
+        margin-bottom: 0.8rem;
+        color: var(--Black-40, rgba(2, 2, 2, 0.4));
+        @include font(1.2rem, 120%, 400);
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.2rem;
+            @include font(1.4rem, 120%, 400);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        color: var(--Black, #020202);
+        leading-trim: both;
+        text-edge: cap;
+        font-feature-settings: 'clig' off, 'liga' off;
+        line-height: 1.3;
+
+        @include breakpointMF(tablet) {
+
+        }
+    }
+}
+
+.range-slider__element {
+    box-shadow: none;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0;
+
+    .noUi-connects {
+        border-radius: 4px;
+    }
+
+    .noUi-base {
+        width: calc(100% - (2.7rem * 2));
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .noUi-connect {
+        background: var(--Red);
+    }
+
+    &.noUi-horizontal .noUi-origin {
+        height: 100%;
+    }
+
+    &.noUi-horizontal .noUi-handle {
+        width: 16px;
+        height: 16px;
+
+        border-radius: 50%;
+        top: 100%;
+        right: 0;
+        margin-top: -9px;
+        margin-right: -8px;
+        box-shadow: none;
+        cursor: pointer;
+        border: none;
+        background-color: var(--Red);
+        box-shadow: none;
+
+        @include breakpoint(tablet) {
+            width: 10px;
+            height: 10px;
+            margin-top: -6px;
+            margin-right: -5px;
+        }
+
+        @include breakpoint(mobile) {
+            width: 16px;
+            height: 16px;
+            margin-top: -9px;
+            margin-right: -8px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: var(--Red) !important;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block !important;
+            border-radius: 50%;
+        }
+    }
+
+    .noUi-handle:after,
+    .noUi-handle:before,
+    .noUi-handle:after,
+    .noUi-handle:before {
+        display: none;
+    }
+
+    .noUi-handle {
+        outline: none;
+    }
+    .noUi-handle:focus {
+        outline: none;
+    }
+}
+
+.range-slider__inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    gap: 2rem;
+    padding: calc(var(--gap, 0.4rem) * 6);
+    background: var(--Light-Grey, #F5F5F5);
+
+    @extend ._border-12;
+
+    @include breakpointMF(tablet) {
+        min-width: 25.7rem;
+        height: 6rem;
+    }
+
+    .range-slider__input-wrapper {
+        .range-slider__input {
+            margin: 0;
+            width: 10ch;
+        }
+
+        &--small {
+            .range-slider__input {
+                margin: 0;
+                width: 4ch;
+            }
+        }
+    }
+}
+
+.range-slider__input-wrapper:first-child .range-slider__input {
+    text-align: left;
+}
+.range-slider__input-wrapper:last-child .range-slider__input {
+    text-align: right;
+}
+
+.range-slider__inputs-divider {
+    flex-shrink: 0;
+    width: 1px;
+    height: 2.2rem;
+
+    background: var(--Black, #020202);
+    opacity: 0.1;
+}

@@ -1,0 +1,30 @@
+.carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 7rem;
+    height: 7rem;
+
+    border-radius: 100%;
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    background: var(--White, #FFF);
+
+    cursor: pointer;
+
+    .icon {
+        width: 2.2rem;
+        height: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    &__prev {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    @include hoverActive() {
+        background: var(--Light-Grey, #F5F5F5);
+    }
+}

@@ -1,0 +1,128 @@
+.news-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+
+    height: 33.5rem;
+    padding: 2.8rem 2rem;
+
+    @extend ._border-20;
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    background: var(--White, #FFF);
+
+    &::before {
+        position: absolute;
+        right: 2.4rem;
+        bottom: 2.4rem;
+        z-index: 10;
+
+        display: block;
+        width: 4rem;
+        height: 4rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.78589%200.981445C8.68082%201.76945%208.7859%202.94591%209.47671%203.90926C9.80787%204.37108%2010.2608%204.76632%2010.8578%205.04478C10.2608%205.32325%209.80787%205.71848%209.47671%206.1803C8.7859%207.14365%208.68082%208.32011%208.78589%209.10812L9.63551%208.99484C9.5501%208.35427%209.64503%207.41645%2010.1733%206.6798C10.6106%206.06994%2011.3873%205.53935%2012.7643%205.47364C12.9558%205.48171%2013.1552%205.48192%2013.363%205.47372C13.3987%205.47531%2013.4348%205.47717%2013.4712%205.47931L13.4719%205.46869C13.4884%205.46782%2013.505%205.4669%2013.5216%205.46592L13.4968%205.04478L13.5216%204.62365C13.505%204.62267%2013.4884%204.62174%2013.4719%204.62087L13.4712%204.61026C13.4348%204.6124%2013.3987%204.61426%2013.363%204.61584C13.1552%204.60765%2012.9558%204.60786%2012.7643%204.61593C11.3873%204.55021%2010.6106%204.01963%2010.1733%203.40977C9.64503%202.67312%209.5501%201.73529%209.63551%201.09473L8.78589%200.981445Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M13.465%205.03809H0.893555%22%20stroke%3D%22white%22%20stroke-width%3D%220.857143%22%2F%3E%0A%3C%2Fsvg%3E");
+        background-size: 1.3rem 0.8rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--Red, #CF000C);
+        border-radius: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+
+        content: "";
+    }
+
+    @include breakpointMF(tablet) {
+        gap: 2rem;
+        height: 36rem;
+        padding: 2.4rem;
+        aspect-ratio: 1.03 / 1;
+    }
+
+    &__name {
+        font-weight: 500;
+        @include maxSizeText(4);
+    }
+
+    &__desc {
+        opacity: 0.7;
+        @include maxSizeText(3);
+    }
+
+    &__date {
+        margin-top: auto;
+        opacity: 0.5;
+    }
+
+    @include hoverActive() {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.news-foto {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 38.5rem;
+
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    background-color: var(--White, #FFF);
+    @extend ._border-20;
+
+    &::before {
+        position: absolute;
+        right: 2.4rem;
+        bottom: 2.4rem;
+        z-index: 10;
+
+        display: block;
+        width: 4rem;
+        height: 4rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2010%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.78589%200.981445C8.68082%201.76945%208.7859%202.94591%209.47671%203.90926C9.80787%204.37108%2010.2608%204.76632%2010.8578%205.04478C10.2608%205.32325%209.80787%205.71848%209.47671%206.1803C8.7859%207.14365%208.68082%208.32011%208.78589%209.10812L9.63551%208.99484C9.5501%208.35427%209.64503%207.41645%2010.1733%206.6798C10.6106%206.06994%2011.3873%205.53935%2012.7643%205.47364C12.9558%205.48171%2013.1552%205.48192%2013.363%205.47372C13.3987%205.47531%2013.4348%205.47717%2013.4712%205.47931L13.4719%205.46869C13.4884%205.46782%2013.505%205.4669%2013.5216%205.46592L13.4968%205.04478L13.5216%204.62365C13.505%204.62267%2013.4884%204.62174%2013.4719%204.62087L13.4712%204.61026C13.4348%204.6124%2013.3987%204.61426%2013.363%204.61584C13.1552%204.60765%2012.9558%204.60786%2012.7643%204.61593C11.3873%204.55021%2010.6106%204.01963%2010.1733%203.40977C9.64503%202.67312%209.5501%201.73529%209.63551%201.09473L8.78589%200.981445Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M13.465%205.03809H0.893555%22%20stroke%3D%22white%22%20stroke-width%3D%220.857143%22%2F%3E%0A%3C%2Fsvg%3E");
+        background-size: 1.3rem 0.8rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--Red, #CF000C);
+        border-radius: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+
+        content: "";
+    }
+
+    @include breakpointMF(tablet) {
+        height: 43.5rem;
+        aspect-ratio: 1.03 / 1;
+    }
+
+    &__image {
+        aspect-ratio: 1.7 / 1;
+        overflow: hidden;
+        background-color: lightgray;
+        @extend ._border-20;
+    }
+
+    &__info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    @include hoverActive() {
+        &::before {
+            opacity: 1;
+        }
+    }
+}

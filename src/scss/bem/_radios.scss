@@ -1,0 +1,45 @@
+.radios {
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    &__item {
+        cursor: pointer;
+
+        input {
+            @include visuallyHidden();
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            width: 6rem;
+            height: 6rem;
+            padding: calc(var(--gap) * 6);
+
+            background-color: var(--Light-Grey, #F5F5F5);
+            border-radius: 0.8rem;
+
+            color: var(--Black, #020202);
+            leading-trim: both;
+            text-edge: cap;
+            font-feature-settings: 'clig' off, 'liga' off;
+        }
+
+        &--wider {
+            span {
+                width: auto;
+            }
+        }
+    }
+}
+
+.radios__item-input:checked ~ .radios__item-text {
+    background-color: var(--Pink, #FAE5E7);
+    color: var(--Red, #CF000C);
+}

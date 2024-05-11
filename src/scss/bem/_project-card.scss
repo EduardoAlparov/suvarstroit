@@ -1,0 +1,136 @@
+.project-card {
+    display: block;
+    @extend ._border-20;
+    background-color: #FFFDFB;
+
+    &__image {
+        position: relative;
+
+        width: 100%;
+        max-height: 52rem;
+        overflow: hidden;
+        aspect-ratio: 0.97 / 1;
+        margin-bottom: 2rem;
+
+        background-color: var(--Dark-Grey, #aeaeae);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            height: 100%;
+
+            .swiper-pagination {
+
+                &.swiper-pagination-bullets-dynamic {
+                    .swiper-pagination-bullet {
+                        &.swiper-pagination-bullet-active-prev,
+                        &.swiper-pagination-bullet-active-next {
+                            transform: scale(.8);
+                        }
+                    }
+                }
+
+                @include breakpointMF(tablet) {
+                    opacity: 0;
+                    transition: opacity 0.3s ease-out;
+                }
+            }
+        }
+    }
+
+    &__tabs {
+        position: absolute;
+        top: 1.6rem;
+        left: 1.6rem;
+        z-index: 20;
+
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+        flex-wrap: wrap;
+        max-width: 100%;
+
+        pointer-events: none;
+    }
+
+    &__info {
+        padding-bottom: 1.8rem;
+
+        @include breakpointMF(tablet) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+        margin-bottom: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__price {
+        color: #181823;
+        flex-shrink: 0;
+        letter-spacing: -0.056em;
+        @include font(1.4rem, 100%, 500);
+
+        @include breakpointMF(tablet) {
+
+            @include font(2rem, 120%, 500);
+        }
+    }
+
+    &__address {
+        position: relative;
+        padding-left: 2rem;
+
+        color: var(--Black-60, rgba(2, 2, 2, 0.6));
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+            transform: translateY(-50%);
+
+            width: 1.6rem;
+            height: 1.6rem;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2217%22%20height%3D%2216%22%20viewBox%3D%220%200%2017%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M8.5%201C6.95068%201.00165%205.46532%201.58164%204.36979%202.61273C3.27425%203.64381%202.65801%205.04178%202.65625%206.49995C2.65625%2011.2062%207.96875%2014.7605%208.1952%2014.9093C8.28452%2014.9681%208.39094%2014.9997%208.5%2014.9997C8.60906%2014.9997%208.71548%2014.9681%208.8048%2014.9093C9.03125%2014.7605%2014.3438%2011.2062%2014.3438%206.49995C14.342%205.04178%2013.7257%203.64381%2012.6302%202.61273C11.5347%201.58164%2010.0493%201.00165%208.5%201ZM8.5%204.49997C8.92029%204.49997%209.33113%204.61727%209.68059%204.83703C10.03%205.05679%2010.3024%205.36914%2010.4632%205.73459C10.6241%206.10004%2010.6662%206.50217%2010.5842%206.89013C10.5022%207.27809%2010.2998%207.63445%2010.0026%207.91415C9.70541%208.19385%209.32678%208.38433%208.91457%208.4615C8.50236%208.53867%208.07509%208.49907%207.6868%208.34769C7.2985%208.19632%206.96663%207.93998%206.73313%207.61108C6.49963%207.28219%206.375%206.89551%206.375%206.49995C6.375%205.96952%206.59888%205.46082%206.9974%205.08575C7.39591%204.71068%207.93641%204.49997%208.5%204.49997Z%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+
+    &__transparent-thumbs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    @include hoverActive() {
+        .project-card__swiper {
+            .swiper-pagination {
+                opacity: 1;
+            }
+        }
+    }
+}
