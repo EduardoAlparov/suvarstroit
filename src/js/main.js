@@ -1,10 +1,10 @@
 import './lazyload';
-import detectTouch from './detectTouch';
+// import detectTouch from './detectTouch';
 import masks from './masks';
 import validation from './validation';
+import modals from './modals';
 import anchorLinks from './anchorLinks';
 import accordions from './accordions';
-import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
 
@@ -13,11 +13,14 @@ import setHeaderPadding from './setHeaderPadding';
 import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
 import selectChoicesTextCollaps from './selectChoicesTextCollaps';
+import customCursor from './customCursor';
 import homeSwiper from './homeSwiper';
 import navbarSwitch from './navbarSwitch';
 import projectCardSwiper from './projectCardSwiper';
 import calcInputRange from './calcInputRange';
 import carouselsSwiper from './carouselsSwiper';
+import footerMap from './footerMap';
+import dropdownMenuFade from './dropdownMenuFade';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -26,12 +29,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
     // detectTouch();
-    // setScrollbarWidth();
+    setScrollbarWidth();
     masks();
     validation();
     // anchorLinks();
     // accordions();
-    // modals();
+    modals();
     // tabs();
     // menu();
     setHeaderPadding();
@@ -43,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
     projectCardSwiper();
     calcInputRange();
     carouselsSwiper();
+    footerMap();
+    dropdownMenuFade();
+    customCursor();
 });
 
 document.addEventListener('lazyloaded', () => {

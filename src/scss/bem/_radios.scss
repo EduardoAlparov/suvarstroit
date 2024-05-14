@@ -2,7 +2,12 @@
     &__items {
         display: flex;
         align-items: center;
-        gap: 0.6rem;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+
+        @include breakpointMF(tablet) {
+            gap: 0.6rem;
+        }
     }
 
     &__item {
@@ -18,9 +23,9 @@
             justify-content: center;
             flex-shrink: 0;
 
-            width: 6rem;
-            height: 6rem;
-            padding: calc(var(--gap) * 6);
+            width: 5.4rem;
+            height: 5rem;
+            padding: calc(var(--gap) * 8);
 
             background-color: var(--Light-Grey, #F5F5F5);
             border-radius: 0.8rem;
@@ -29,9 +34,22 @@
             leading-trim: both;
             text-edge: cap;
             font-feature-settings: 'clig' off, 'liga' off;
+
+            @include breakpointMF(tablet) {
+                padding: calc(var(--gap) * 6);
+
+                width: 6rem;
+                height: 6rem;
+            }
         }
 
         &--wider {
+            flex-grow: 1;
+
+            @include breakpointMF(tablet) {
+                flex-grow: unset;
+            }
+
             span {
                 width: auto;
             }

@@ -1,0 +1,655 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="home section section--first">
+    <div class="home__site-container">
+        <div class="home__grid-block home__grid-block--full-width grid-block grid-block--decrease">
+            <div class="grid-block__big-part home__big-part">
+                {{>home-slider homeSliderSmallClass=false}}
+            </div>
+
+            <div class="grid-block__small-part home__small-part"></div>
+        </div>
+    </div>
+
+    {{> filters }}
+</section>
+
+
+<section class="section projects">
+    <div class="projects__site-container">
+        <div class="projects__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                <span class="_thin-text">Наши&nbsp;</span>проекты
+            </h2>
+
+            <div class="projects__navbar navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <button data-projects-view="projects-list" type="button"
+                            class="js-navbar-button navbar__button navbar__button--active">
+                            <svg class="icon">
+                                <use xlink:href="#tile"></use>
+                            </svg>
+                            <span class="navbar__text navbar__text--text-14">
+                                Плиткой
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button data-projects-view="projects-map" type="button" class="js-navbar-button navbar__button">
+                            <svg class="icon">
+                                <use xlink:href="#pin"></use>
+                            </svg>
+                            <span class="navbar__text navbar__text--text-14">
+                                На карте
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="projects__render-window">
+            <ul id="projects-list" class="projects__list">
+                <li class="projects__item">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item ">
+                    {{>project-card}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section--blue section--round-border programs">
+    <div class="programs__site-container">
+        <div class="programs__heading projects__heading">
+            <h2 class="projects__title projects__title--h3-text">
+                Ипотечные <span class="_thin-text">программы</span>
+            </h2>
+            <a href="./programs.html" class="main-btn main-btn--outlined hide-on-mobile">
+                Смотреть все
+            </a>
+        </div>
+        <div class="programs__body">
+            <form action="" class="programs__form-calc form-calc js-form-calc">
+                <p class="form-calc__title form-calc__title--h6-text">
+                    Рассчитайте&nbsp;выгодные<br>условия&nbsp;по&nbsp;ипотеке
+                </p>
+
+                <div class="form-calc__inputs">
+                    <div class="form-calc__input ">
+                        <div class="simple-range simple-range--cost">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="cost" id="costInput" min="4000000" max="15000000"
+                                        value="5689000">
+                                </div>
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="cost" id="costOutput">
+                                            5 689 000
+                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--prepayment">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="prepayment" id="prepaymentInput" min="1000000"
+                                        max="5000000" value="2345000">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="prepayment" id="prepaymentOutput">
+                                            2 345 000
+                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                    </div>
+                                    <div class="simple-range__input-percentege">
+                                        <span class="simple-range__percentege-value">20</span><span>&nbsp;</span><span
+                                            class="simple-range__percentege-currency">&#x25;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="select select--blue">
+                            <div class="select__label simple-range__label simple-range__label--text-14">
+                                Выбрать программу
+                            </div>
+                            <select name="project" class="js-custom-select">
+                                <option value="Проект">Выбрать программу</option>
+                                <option value="Ипотека для IT специалистов">Ипотека для IT специалистов</option>
+                                <option value="Ипотека с господдержкой">Ипотека с господдержкой</option>
+                                <option value="Губернаторская ипотека">Губернаторская ипотека</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--term">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Срок</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="term" id="termInput" min="5" max="30" value="30">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output for="term" id="termOutput">30</output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">лет</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-calc__final">
+                    <p class="form-calc__final-text form-calc__final-text--h6-text">
+                        Ежемесячный платеж
+                    </p>
+                    <p id="calc-sum" class="form-calc__final-sum form-calc__final-sum--h6-text">
+                        20 000
+                    </p>
+                </div>
+
+                <button class="form-calc__submit main-btn main-btn--white" type="submit">
+                    Отправить онлайн-заявку
+                </button>
+            </form>
+
+            <ul class="programs__list">
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#family"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Семейная
+                            ипотека
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                макс.&nbsp;cрок кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                макс.&nbsp;сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#it"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Ипотека&nbsp;для&nbsp;IT специалистов
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                cрок<br>кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">9</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#gover"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Ипотека с&nbsp;господдержкой
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">8%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                cрок<br>кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program program--space-between">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#general"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Губернаторская ипотека
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage program__advantage--single">
+                            <p class="program__text program__text--text-14">
+                                Субсидирование из областного бюджета
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">&lt;&nbsp;8%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная&nbsp;ставка не выше 8%
+                            </p>
+                        </li>
+                        <li class="program__advantage program__advantage--row">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                в&nbsp;течение&nbsp;первых&nbsp;5 лет&nbsp;для&nbsp;работников бюджетной&nbsp;сферы
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item show-on-mobile">
+                    <a href="./programs.html" class="programs__link main-btn main-btn--outlined">
+                        Смотреть все
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section--white section--round-border carousel js-carousel-swiper-section">
+    <div class="carousel__site-container">
+        <div class="carousel__body programs__body">
+            <div class="carousel__aside">
+                <form action="" class="carousel__switcher switcher">
+                    <div class="switcher__input">
+                        <input class="visually-hidden" hidden type="radio" name="carousel-switcher"
+                            id="carousel-switcher-news" checked>
+                        <label for="carousel-switcher-news">
+                            <svg class="icon">
+                                <use xlink:href="#marker"></use>
+                            </svg>
+
+                            <span>Новости</span>
+                        </label>
+                    </div>
+                    <div class="switcher__input">
+                        <input class="visually-hidden" hidden type="radio" name="carousel-switcher"
+                            id="carousel-switcher-promo">
+                        <label for="carousel-switcher-promo">
+                            <svg class="icon">
+                                <use xlink:href="#marker"></use>
+                            </svg>
+
+                            <span>Акции</span>
+                        </label>
+                    </div>
+                </form>
+
+                <div class="carousel__control">
+                    <div class="carousel__buttons">
+                        <button type="button" class="carousel__btn carousel-btn carousel-btn__prev">
+                            <svg class="icon">
+                                <use xlink:href="#swiper-arrow-black"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="carousel__btn carousel-btn carousel-btn__next">
+                            <svg class="icon">
+                                <use xlink:href="#swiper-arrow-black"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <a href="#" class="carousel__mailing main-btn main-btn--icons main-btn--grey">
+                        <svg class="icon">
+                            <use xlink:href="#mailing"></use>
+                        </svg>
+                        <span>Подписаться на рассылку</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel__swiper-wrapper">
+                <div class="carousel__swiper swiper">
+                    <ul class="carousel__swiper-wrapper swiper-wrapper">
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="carousel__link main-btn">
+                    Смотреть все
+                </a>
+
+                <a href="#" class="carousel__mailing main-btn main-btn--icons main-btn--grey show-on-mobile">
+                    <svg class="icon">
+                        <use xlink:href="#mailing"></use>
+                    </svg>
+                    <span>Подписаться на рассылку</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section except">
+    <div class="except__site-container">
+        <div class="projects__heading except__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                Кроме&nbsp;<span class="_thin-text">квартир</span>
+            </h2>
+        </div>
+
+        <ul class="projects__list except__list">
+            <li class="projects__item except__item">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
+                                Коммерческая недвижимость
+                            </p>
+
+                            <div class="except-link-icon__btn"></div>
+                        </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/machine.png" alt="excepts image" />
+                        </picture>
+                    </div>
+                </a>
+            </li>
+            <li class="projects__item except__item">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
+                                Коммерческая недвижимость
+                            </p>
+
+                            <div class="except-link-icon__btn"></div>
+                        </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/machine.png" alt="excepts image" />
+                        </picture>
+                    </div>
+                </a>
+            </li>
+            <li class="projects__item except__item">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
+                                Коммерческая недвижимость
+                            </p>
+
+                            <div class="except-link-icon__btn"></div>
+                        </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/machine.png" alt="excepts image" />
+                        </picture>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

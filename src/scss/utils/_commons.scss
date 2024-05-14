@@ -1,4 +1,4 @@
-.visually-hidden {
+ .visually-hidden {
     @include visuallyHidden();
 }
 
@@ -29,7 +29,11 @@
 }
 
 ._border-12 {
-    border-radius: 1.2rem;
+    border-radius: 0.4rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 1.2rem;
+    }
 }
 
 ._border-16 {
@@ -73,12 +77,17 @@
 }
 
 .phone-link {
-    @include font(1.6rem, 130%, 500);
+    @include font(1.4rem, 100%, 500);
+    font-feature-settings: 'clig' off, 'liga' off;
 
     &:not(.socials-link) {
         @include hoverActive() {
             color: var(--Red);
         }
+    }
+
+    @include breakpointMF(tablet) {
+        @include font(1.6rem, 130%, 500);
     }
 }
 
@@ -142,6 +151,14 @@
     @include breakpointMF(tablet) {
         @include font(3.2rem, 100%, 400);
         letter-spacing: -0.064em;
+    }
+}
+
+[class*="--text-24"] {
+    @include font(1.6rem, 100%, 400);
+
+    @include breakpointMF(tablet) {
+        @include font(2.4rem, 11 0%, 400);
     }
 }
 

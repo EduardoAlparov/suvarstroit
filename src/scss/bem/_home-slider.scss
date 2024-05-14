@@ -20,11 +20,52 @@
         }
     }
 
+    &__image-swiper {
+        &.swiper {
+            .swiper-pagination {
+                &.swiper-pagination-bullets-dynamic {
+                    .swiper-pagination-bullet {
+                        &.swiper-pagination-bullet-active-prev,
+                        &.swiper-pagination-bullet-active-next {
+                            transform: scale(.8);
+                        }
+                    }
+                }
+
+                @include breakpointMF(tablet) {
+                    --swiper-pagination-bottom: 76px;
+                }
+            }
+        }
+    }
+
     &__body {
         position: relative;
         z-index: 100;
         width: 100%;
         height: 100%;
+        cursor: none;
+    }
+
+    &__hover-controls {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: stretch;
+
+    }
+
+    &__hover-control {
+        flex-grow: 1;
+        cursor: none;
     }
 
     // swiper info:
@@ -35,8 +76,6 @@
                 "g_tabs"
                 "g_link"
                 "g_button";
-
-                padding: 3.2rem 2rem;
 
             @include breakpointMF(tablet) {
                 grid-template-areas:
@@ -75,6 +114,17 @@
             top: unset;
             bottom: 6.4rem;
             right: 7.5rem;
+        }
+
+        .home-slider__image-swiper {
+            &.swiper {
+                .swiper-pagination {
+                    @include breakpointMF(tablet) {
+                        opacity: 0;
+                        transition: opacity 0.3s ease-out;
+                    }
+                }
+            }
         }
     }
 
@@ -120,7 +170,7 @@
         grid-template-rows: max-content 1fr max-content max-content;
         gap: 2rem;
 
-        padding: 3.2rem 2rem;
+        padding: 3.2rem 2rem 4.8rem;
 
         color: var(--White, #fff);
 
@@ -172,6 +222,7 @@
 
         grid-area: g_button;
         align-self: flex-end;
+        cursor: pointer;
 
         @include breakpointMF(tablet) {
             min-width: 18rem;
@@ -186,31 +237,47 @@
     }
 
     &__swiper-btn {
-        position: absolute;
-        top: 50%;
-        right: 9rem;
-        z-index: 100;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 10rem;
-        height: 10rem;
-
-        border-radius: 100%;
-        border: 1.5px solid var(--White, #FFF);
-
-        cursor: pointer;
-
-        .icon {
-            width: 3.2rem;
-            height: 2rem;
-            flex-shrink: 0;
+        &--pos {
+            bottom: 6.4rem;
+            right: 6.4rem;
+            transform: unset;
         }
 
         @include breakpoint(small-tablet) {
             @include visuallyHidden();
+        }
+    }
+}
+
+
+.cursor {
+    position: absolute;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 100%;
+    border: 1.5px solid var(--White, #FFF);
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    .icon {
+        width: 3.2rem;
+        height: 2rem;
+        flex-shrink: 0;
+
+        transition: 0.4s ease;
+    }
+
+    &--turn {
+        .icon {
+            transform: rotate(-180deg);
         }
     }
 }

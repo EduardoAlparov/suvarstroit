@@ -11,12 +11,8 @@ export default function rangeSlidersDouble() {
         const maxValue = element.hasAttribute('data-max') ? Number(element.getAttribute('data-max')) : 15;
         const stepValue = element.hasAttribute('data-step') ? Number(element.getAttribute('data-step')) : 1;
         const form = element.closest('form');
-
         const startValue = inputs[0].value.replace(/\s/g, '').trim() ? parseFloat(inputs[0].value.replace(/\s/g, '').trim()) : '';
         const endValue = inputs[1].value.replace(/\s/g, '').trim() ? parseFloat(inputs[1].value.replace(/\s/g, '').trim()) : '';
-        
-
-        console.log('Range slider created');
 
         noUiSlider.create(rangeSliderElement, {
             start: [startValue ? startValue : minValue, endValue ? endValue : maxValue],
@@ -50,7 +46,7 @@ export default function rangeSlidersDouble() {
         inputs[1].addEventListener('change', (event) => {
             rangeSliderElement.noUiSlider.set([null, event.target.value.replace(/[^\d]+/g, '')]);
         })
-       
+
         if (form) {
             form.addEventListener('reset', () => {
                 console.log('Parent form has been reset')
@@ -61,7 +57,7 @@ export default function rangeSlidersDouble() {
                     inputs[0].value = newValue[0];
                     inputs[1].value = newValue[1];
                 }, 10)
-            
+
                 // rangeSliderElement.noUiSlider.set([minValue, maxValue]);
             })
         }

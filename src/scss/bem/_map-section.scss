@@ -1,0 +1,177 @@
+.map-section {
+    &__body {
+        aspect-ratio: 2.4375 / 1;
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+
+        flex-grow: 1;
+        max-height: 100%;
+        overflow: auto;
+
+        @include customScrollbar();
+
+        @include breakpointMF(tablet) {
+            gap: 1.6rem;
+            padding-right: 1rem;
+            margin-right: -1.4rem;
+        }
+
+        li {
+            flex: 1 0 auto;
+            height: calc(100% / 4 - ((0.8rem * 3) / 4));
+
+            @include breakpointMF(tablet) {
+                height: calc(100% / 4 - ((1.6rem * 3) / 4));
+            }
+        }
+    }
+
+    &__yamaps-wrapper {
+        @extend ._border-16;
+
+        grid-column: span 2;
+        background-color: lightgray;
+        overflow: hidden;
+
+        display: none;
+
+        @include breakpointMF(tablet) {
+            display: block;
+        }
+    }
+
+    &__yamaps {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.map-button {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--Black, #181823);
+    background-color: var(--White, #fff);
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    text-align: left;
+
+    @extend ._border-16;
+
+    &__body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        padding: 2.1rem 2rem;
+
+        @include breakpointMF(tablet) {
+            gap: 2rem;
+            padding: 2.4rem 2.4rem;
+        }
+    }
+
+    &__image {
+        display: block;
+
+        width: 5.2rem;
+        height: 5.2rem;
+
+        border-radius: 100%;
+        overflow: hidden;
+
+        @include breakpointMF(tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    &__name {
+        margin-bottom: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    @include hoverActive() {
+        background: var(--Light-Grey, #F5F5F5);
+    }
+
+    &--active {
+        background-color: #FFF7F8;
+        pointer-events: none;
+
+        @include hoverActive() {
+            background-color: #FFF7F8;
+        }
+    }
+}
+
+.ya-main-placemark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+
+    border-radius: 100%;
+    background-color: lightgrey;
+    border: 2px solid var(--Red, #CF000C);
+
+
+    > div {
+
+        overflow: hidden;
+        display: block;
+        flex-shrink: 0;
+
+        width: 100PX;
+        height: 100PX;
+
+        border-radius: 100%;
+        pointer-events: none;
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            top: calc(100%);
+            transform: translateX(-50%);
+
+            width: 12px;
+            height: 7px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0%200H12L6%207L0%200Z%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E");
+            content: "";
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

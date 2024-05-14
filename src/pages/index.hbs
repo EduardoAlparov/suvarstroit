@@ -71,7 +71,6 @@
     {{> filters }}
 </section>
 
-
 <section class="section projects">
     <div class="projects__site-container">
         <div class="projects__heading">
@@ -114,13 +113,19 @@
                 <li class="projects__item projects__item--wide">
                     {{>project-card}}
                 </li>
-                <li class="projects__item projects__item">
+                <li class="projects__item">
                     {{>project-card}}
                 </li>
-                <li class="projects__item projects__item">
+                <li class="projects__item">
                     {{>project-card}}
                 </li>
-                <li class="projects__item projects__item">
+                <li class="projects__item">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item projects__item--wide">
+                    {{>project-card}}
+                </li>
+                <li class="projects__item">
                     {{>project-card}}
                 </li>
             </ul>
@@ -139,14 +144,13 @@
             </a>
         </div>
         <div class="programs__body">
-            <form action="" class="programs__form-calc form-calc">
+            <form action="" class="programs__form-calc form-calc js-form-calc">
                 <p class="form-calc__title form-calc__title--h6-text">
                     Рассчитайте&nbsp;выгодные<br>условия&nbsp;по&nbsp;ипотеке
                 </p>
 
                 <div class="form-calc__inputs">
-
-                    <div class="form-calc__input">
+                    <div class="form-calc__input ">
                         <div class="simple-range simple-range--cost">
                             <div class="simple-range__wrapper">
                                 <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
@@ -543,26 +547,19 @@
                             </a>
                         </li>
                         <li class="carousel__swiper-slide swiper-slide">
-                            <a id="" href="#" class="news-foto">
-                                <div class="news-foto__image">
-                                    <div class="image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/news/img-1.webp"
-                                                alt="project image" />
-                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
-                                        </picture>
-                                    </div>
-                                </div>
+                            <a id="" href="#" class="news-card">
+                                <p class="news-card__name news-card__name--text-22">
+                                    Льготная процентная ставка<br>1,99%
+                                </p>
+                                <p class="news-card__desc">
+                                    Программа "Господдержка - 2020" устанавливается для граждан РФ, приобретающих
+                                    ипотеку в новостройке, при следующих условиях: первоначальный взнос от 30,1%,
+                                    срок кредита до 30 лет, максимальная сумма кредита до 6 млн.руб.
+                                </p>
 
-                                <div class="news-foto__info">
-                                    <p class="news-card__name news-card__name--text-20">
-                                        Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
-                                    </p>
-
-                                    <p class="news-foto__date news-card__date news-card__date--text-14">
-                                        11.01.2024
-                                    </p>
-                                </div>
+                                <p class="news-card__date news-card__date--text-14">
+                                    11.01.2024
+                                </p>
                             </a>
                         </li>
                     </ul>
@@ -592,6 +589,44 @@
         </div>
 
         <ul class="projects__list except__list">
+            <li class="projects__item except__item">
+                <a href="#" id="" class="except-link">
+                    <div class="except-link__image image-block">
+                        <picture>
+                            <source type="image/webp" srcset="./img/excepts/excepts.webp" alt="excepts image" />
+                            <img class="lazy" src="./img/excepts/excepts.jpg" alt="excepts image" />
+                        </picture>
+                    </div>
+                    <div class="except-link__body">
+                        <div class="except-link__row">
+                            <p class="except-link__title except-link__title--h5-text">
+                                Коммерческая недвижимость
+                            </p>
+
+                            <div class="except-link__btn"></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="projects__item except__item">
+                <a href="#" id="" class="except-link">
+                    <div class="except-link__image image-block">
+                        <picture>
+                            <source type="image/webp" srcset="./img/excepts/excepts.webp" alt="excepts image" />
+                            <img class="lazy" src="./img/excepts/excepts.jpg" alt="excepts image" />
+                        </picture>
+                    </div>
+                    <div class="except-link__body">
+                        <div class="except-link__row">
+                            <p class="except-link__title except-link__title--h5-text">
+                                Коммерческая недвижимость
+                            </p>
+
+                            <div class="except-link__btn"></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
             <li class="projects__item except__item">
                 <a href="#" id="" class="except-link">
                     <div class="except-link__image image-block">

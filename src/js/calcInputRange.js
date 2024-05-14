@@ -1,6 +1,7 @@
 export default () => {
+    const calc = document.querySelector('.js-form-calc');
 
-    // const inputs = document.querySelector('.leasing-calc__inputs').querySelectorAll('input[type=range]');
+    if(!calc) return;
 
     const inputs = document.querySelector('.form-calc__inputs').querySelectorAll('input[type=range]');
     const rangePercentege = document.querySelectorAll('.simple-range__input-percentege');

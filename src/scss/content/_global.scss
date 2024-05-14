@@ -8,9 +8,9 @@
 
 :root {
     // layouts:
-    --max-container-width: 156rem;
+    --content-padding: 2rem;
     --gap: 0.3rem;
-    --content-padding: calc(var(--gap) * 5);
+    --max-container-width: 156rem;
 
     // colors:
     --Black: #020202;
@@ -56,6 +56,7 @@
     --swiper-pagination-bottom: 20px;
 
     @include breakpointMF(tablet) {
+        --content-padding: calc(var(--gap) * 5);
         --gap: 0.4rem;
         --swiper-pagination-bottom: 24px;
     }
@@ -211,4 +212,12 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
+}
+
+[class*='ymaps-2'][class*='-ground-pane'] {
+    filter: grayscale(100%) brightness(0.95);
+}
+
+[class*='ymaps-2'][class*='-copyrights-pane'] {
+    display: none;
 }

@@ -26,7 +26,29 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font: 400 1.6rem/1.2 var(--main-ff);
+    font: 400 1.4rem/1.2 var(--main-ff);
+
+    @include breakpointMF(tablet) {
+        font: 400 1.6rem/1.2 var(--main-ff);
+    }
+
+    &.is-dark-block {
+        .page-content {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 100;
+
+                background: var(--Black-30, rgba(2, 2, 2, 0.3));
+                content: "";
+            }
+        }
+    }
 }
 
 
@@ -44,7 +66,11 @@ body {
 }
 
 .section {
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
+
+    @include breakpointMF(tablet) {
+        margin-bottom: 10rem;
+    }
 
     &--first {
         @extend ._header-padding-top;
@@ -75,5 +101,9 @@ body {
 
     &:last-child {
         margin-bottom: 6rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 12rem;
+        }
     }
 }

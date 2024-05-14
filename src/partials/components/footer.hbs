@@ -1,7 +1,153 @@
 <footer class="page-footer">
-    <div class="page-footer__site-container">
-        <div class="page-footer__map">
+    <script>
+        var mapData = [
+            {
+                coords: [55.818338, 49.143829],
+                title: 'Офис продаж',
+                name: 'ЖК Столичный',
+                address: `Казань, ул. Чистопольская 86/10 офис-287`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.689060, 49.201115],
+                title: 'Офис продаж',
+                name: 'ЖК Южный парк',
+                address: `Казань, ул. Уютная,1`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.761280, 49.150644],
+                title: 'Офис продаж',
+                name: 'ЖК Манхэттен',
+                address: `Казань, Оренбургский тракт 8д, 3 этаж`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.721502, 49.187600],
+                title: 'Офис продаж',
+                name: 'ЖК Палитра',
+                address: `Казань, ул.Братьев Батталовых 20 к.1`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.724368, 49.174191],
+                title: 'Офис продаж',
+                name: 'ЖК Сказочный лес',
+                address: `Казань, ул. Рауиса Гареева, 109`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+        ];
 
+        var mapZoom = 11;
+
+        var mapCenter = [55.800777, 49.107601];
+    </script>
+
+    <div class="page-footer__site-container">
+        <div class="page-footer__map-section map-section">
+            <div class="projects__heading map-section__heading">
+                <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                    Офисы&nbsp;<span class="_thin-text">продаж</span>
+                </h2>
+            </div>
+
+            <div class="map-section__body programs__body">
+                <div class="map-section__aside">
+                    <ul class="map-section__list">
+                        <li>
+                            <button data-coords="55.818338, 49.143829" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-1.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Столичный</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул. Чистопольская 86/10 офис-287
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.689060, 49.201115" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-2.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Манхэттен</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, Оренбургский тракт 8д, 3 этаж
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.761280, 49.150644" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Южный парк</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул. Уютная,1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.721502, 49.187600" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Палитра</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул.Братьев Батталовых 20 к.1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.724368, 49.174191" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Палитра</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул.Братьев Батталовых 20 к.1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="map-section__yamaps-wrapper">
+                    <div class="map-section__yamaps js-footer-map">
+
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="page-footer__body">

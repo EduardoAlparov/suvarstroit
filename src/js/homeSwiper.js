@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import { closestEdge } from "./utils";
 
 export default () => {
     const homeSwiperWrappers = document.querySelectorAll('.js-home-swiper-wrapper');
@@ -8,7 +9,10 @@ export default () => {
         const homeInfoSwiperBox = homeSwiperWrapper.querySelector('.home-slider__info-swiper.swiper');
 
         const swiperImage = new Swiper(homeImageSwiperBox, {
-
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
         })
 
         const swiperInfo = new Swiper(homeInfoSwiperBox, {
@@ -17,15 +21,27 @@ export default () => {
               crossFade: true
             },
 
-            navigation: {
-                nextEl: homeInfoSwiperBox.querySelector('.home-slider__swiper-btn'),
-            },
-
             on: {
                 init: function () {
-                    console.log('swiper initialized');
+                    const body = homeSwiperWrapper.querySelector('.js-home-slider-body');
+
+                    body.addEventListener("click", function(e) {
+                        let dir = closestEdge(e, body);
+
+                        if(dir === 'left') {
+                            swiperInfo.slidePrev(600);
+                        } else {
+                            swiperInfo.slideNext(600);
+                        }
+                    });
                 },
             },
+
+            breakpoints: {
+                768: {
+
+                }
+              }
         })
 
         swiperInfo.controller.control = swiperImage;

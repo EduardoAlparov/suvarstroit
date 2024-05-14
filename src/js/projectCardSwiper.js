@@ -22,9 +22,7 @@ export default () => {
         });
 
         projectCardSwiper.on('init', function () {
-            console.log('init');
             const s = 4;
-
             const projectCardThumbs = new Swiper(transparentThumbs, {
                 slidesPerView: projectCardSwiper.slides.length,
 

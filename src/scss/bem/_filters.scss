@@ -1,28 +1,35 @@
 .filters {
     position: relative;
-    z-index: 85;
+    z-index: 500;
 
     padding: calc(var(--gap) * 6) 0 ;
     color: inherit;
 
     &__row {
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
         margin-top: 1.5rem;
         width: 100%;
 
-        @include breakpoint(mobile) {
-            flex-direction: column;
-            align-items: stretch;
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: flex-end;
         }
     }
 
     &__fields {
         display: flex;
-        align-items: stretch;
-        justify-content: space-between;
+        flex-direction: column;
+
         flex-grow: 1;
-        gap: calc(var(--gap) * 6);
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: calc(var(--gap) * 6);
+        }
     }
 
     &__field {
@@ -36,30 +43,20 @@
         }
 
         &--select {
-            width: 25rem;
-        }
-    }
+            order: 4;
+            width: 100%;
 
-    &__row--extended {
-        @include breakpointMF(small-tablet) {
-            display: none;
-
-            .extended-search-open & {
-                display: flex;
+            @include breakpointMF(tablet) {
+                order: 0;
+                width: 25rem;
             }
         }
 
-        @include breakpoint(mobile) {
-            margin-top: 0;
+        &--ranges {
+            padding-bottom: 0.5rem;
 
-            .filters__form:not(.extended-search-open) & {
-                .filters__fields--short {
-                    display: none;
-                }
-
-                .filters__checkboxes {
-                    display: none;
-                }
+            @include breakpointMF(tablet) {
+                padding-bottom: 0;
             }
         }
     }
@@ -91,14 +88,16 @@
 }
 
 .filters__submit {
-    flex-shrink: 0;
-    margin-left: 1.5rem;
-    width: 33rem;
-
-    @include breakpoint(mobile) {
+    &.main-btn {
+        flex-shrink: 0;
         width: 100%;
-        margin: 0;
-        flex-shrink: 1;
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            width: max-content;
+            margin-top: unset;
+            margin-left: 1.5rem;
+        }
     }
 }
 

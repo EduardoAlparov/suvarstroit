@@ -75,3 +75,99 @@
         }
     }
 }
+
+.except-link-icon {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1.51 / 1;
+
+    color: var(--Black, #020202);
+    border: 1px solid var(--Red-15, rgba(207, 0, 12, 0.15));
+    background-color: var(--White, #FFF);
+    @extend ._border-16;
+
+    &__body {
+        position: relative;
+        z-index: 50;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+
+        @include breakpointMF(tablet) {
+            padding: 3rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: -4%;
+            left: 36%;
+            z-index: 100;
+
+            width: 108%;
+            aspect-ratio: 1;
+
+            background: linear-gradient(144deg, rgba(244, 0, 7, 0.04) 16.51%, rgba(244, 0, 7, 0.04) 29.34%, rgba(244, 0, 7, 0.26) 64.84%, rgba(244, 0, 7, 0.26) 64.84%);
+            border-radius: 100%;
+            content: "";
+        }
+    }
+
+
+    &__image {
+        position: absolute;
+        z-index: 200;
+
+        right: 3rem;
+        bottom: 2rem;
+
+        width: 50%;
+        aspect-ratio: 1;
+        height: auto;
+
+        img {
+            min-height: unset;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__btn {
+        display: block;
+
+        width: 5rem;
+        height: 5rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2259%22%20height%3D%2259%22%20rx%3D%2229.5%22%20stroke%3D%22%23CF000C%22%20stroke-opacity%3D%220.15%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M31.5529%2023.9722C31.3953%2025.1542%2031.5529%2026.9189%2032.5891%2028.3639C33.0858%2029.0566%2033.7652%2029.6495%2034.6607%2030.0672C33.7652%2030.4849%2033.0858%2031.0777%2032.5891%2031.7705C31.5529%2033.2155%2031.3953%2034.9802%2031.5529%2036.1622L32.8273%2035.9923C32.6992%2035.0314%2032.8416%2033.6247%2033.6339%2032.5197C34.2899%2031.6049%2035.455%2030.809%2037.5204%2030.7105C37.8077%2030.7226%2038.1069%2030.7229%2038.4185%2030.7106C38.4721%2030.713%2038.5263%2030.7158%2038.5809%2030.719L38.5818%2030.703C38.6066%2030.7017%2038.6315%2030.7003%2038.6564%2030.6989L38.6192%2030.0672L38.6564%2029.4355C38.6315%2029.434%2038.6066%2029.4326%2038.5818%2029.4313L38.5809%2029.4154C38.5263%2029.4186%2038.4721%2029.4214%2038.4185%2029.4238C38.1069%2029.4115%2037.8077%2029.4118%2037.5204%2029.4239C35.455%2029.3253%2034.2899%2028.5294%2033.6339%2027.6147C32.8416%2026.5097%2032.6992%2025.1029%2032.8273%2024.1421L31.5529%2023.9722Z%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3Cpath%20d%3D%22M38.5719%2030.0571H19.7147%22%20stroke%3D%22%23CF000C%22%20stroke-width%3D%221.28571%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        border: 1px solid var(--Red-15, rgba(207, 0, 12, 0.15));
+        border-radius: 100%;
+        transition: opacity 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    @include hoverActive() {
+        .except-link-icon__btn {
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2230%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M31.5533%2023.9722C31.3957%2025.1542%2031.5534%2026.9189%2032.5896%2028.3639C33.0863%2029.0566%2033.7657%2029.6495%2034.6611%2030.0672C33.7657%2030.4849%2033.0863%2031.0777%2032.5896%2031.7705C31.5534%2033.2155%2031.3957%2034.9802%2031.5533%2036.1622L32.8278%2035.9923C32.6997%2035.0314%2032.8421%2033.6247%2033.6344%2032.5197C34.2904%2031.6049%2035.4555%2030.809%2037.5209%2030.7105C37.8081%2030.7226%2038.1074%2030.7229%2038.419%2030.7106C38.4726%2030.713%2038.5267%2030.7158%2038.5814%2030.719L38.5823%2030.703C38.6071%2030.7017%2038.632%2030.7003%2038.6569%2030.6989L38.6197%2030.0672L38.6569%2029.4355C38.632%2029.434%2038.6071%2029.4326%2038.5823%2029.4313L38.5814%2029.4154C38.5267%2029.4186%2038.4726%2029.4214%2038.419%2029.4238C38.1074%2029.4115%2037.8081%2029.4118%2037.5209%2029.4239C35.4555%2029.3253%2034.2904%2028.5294%2033.6344%2027.6147C32.8421%2026.5097%2032.6997%2025.1029%2032.8278%2024.1421L31.5533%2023.9722Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M38.572%2030.0571H19.7148%22%20stroke%3D%22white%22%20stroke-width%3D%221.28571%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        }
+    }
+}

@@ -5,10 +5,8 @@ export default function modals() {
 
     function openModal(id, event) {
         const modal = document.querySelector(`.js-modal${id}`);
-        if (!modal) {
-            // console.error(`Modal with ID: ${id} not found`);
-            return;
-        }
+
+        if (!modal) return;
 
         if (typeof window.closeMenu === 'function') {
             window.closeMenu();
@@ -17,8 +15,6 @@ export default function modals() {
         if (event) {
             event.preventDefault();
         }
-
-        console.log('Opening modal', modal);
 
         const openHandler = () => {
             lockScroll(modal, {
@@ -62,7 +58,9 @@ export default function modals() {
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
             const hash = link.hash;
+
             if (!hash) return;
+
             openModal(hash, event);
         } else if (event.target.matches('.js-close-modal') || event.target.closest('.js-close-modal')) {
             event.preventDefault();
