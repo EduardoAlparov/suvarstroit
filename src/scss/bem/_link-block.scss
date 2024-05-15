@@ -26,6 +26,8 @@
     }
 
     &__arrow-btn {
+        position: relative;
+        z-index: 200;
         opacity: 0;
         transition: opacity 0.3s ease-out;
     }
@@ -93,6 +95,21 @@
             .link-block__arrow-btn {
                 opacity: 1;
             }
+        }
+    }
+
+    &--white {
+        color: var(--White, #FFF);
+        background: linear-gradient(180deg, #457DE5 0%, #C0D9F3 46.29%);
+
+        &::before {
+            content: none;
+        }
+
+        .link-block__image {
+            left: 0;
+            height: 60%;
+            width: 100%;
         }
     }
 

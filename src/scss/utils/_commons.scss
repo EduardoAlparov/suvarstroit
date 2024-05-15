@@ -193,8 +193,6 @@
     letter-spacing: -0.08em;
 
     @include breakpointMF(tablet) {
-        leading-trim: both;
-        text-edge: cap;
         font-feature-settings: 'clig' off, 'liga' off;
         @include font(2.6rem, 110%, 400);
         letter-spacing: -0.052em;
@@ -203,13 +201,21 @@
 
 [class*="--text-28"] {
     @include font(1.8rem, 100%, 400);
-    leading-trim: both;
-    text-edge: cap;
     font-feature-settings: 'clig' off, 'liga' off;
 
     @include breakpointMF(tablet) {
         @include font(2.8rem, 100%, 400);
         letter-spacing: -0.056em;
+    }
+}
+
+[class*="--text-30"] {
+    @include font(1.8rem, 100%, 400);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(3rem, 110%, 400);
+        letter-spacing: -0.009em;
     }
 }
 

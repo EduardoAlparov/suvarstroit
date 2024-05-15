@@ -196,12 +196,6 @@ th {
     vertical-align: top;
 }
 
-::selection {
-    color: white;
-    background-color: var(--Dark-grey);
-    -webkit-text-fill-color: white;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
