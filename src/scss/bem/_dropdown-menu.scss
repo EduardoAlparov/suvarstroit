@@ -1,5 +1,6 @@
 .dropdown-menu {
     padding-top: calc(var(--gap) * 3);
+    color: var(--Black, rgba(2, 2, 2));
 
     &__body {
         display: grid;

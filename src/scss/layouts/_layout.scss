@@ -99,6 +99,22 @@ body {
         }
     }
 
+    &--minus-mb {
+        &~.section {
+            z-index: 100;
+        }
+
+        &~.section--round-border  {
+            margin-bottom: 0;
+        }
+
+        margin-bottom: -1.2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: -2.4rem;
+        }
+    }
+
     &:last-child {
         margin-bottom: 6rem;
 

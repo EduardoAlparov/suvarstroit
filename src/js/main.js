@@ -21,6 +21,7 @@ import calcInputRange from './calcInputRange';
 import carouselsSwiper from './carouselsSwiper';
 import footerMap from './footerMap';
 import dropdownMenuFade from './dropdownMenuFade';
+import youtubeVideoControl from './youtubeVideoControl';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     footerMap();
     dropdownMenuFade();
     customCursor();
+    // youtubeVideoControl();
 });
 
 document.addEventListener('lazyloaded', () => {

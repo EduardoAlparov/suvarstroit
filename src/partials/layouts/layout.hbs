@@ -12,13 +12,14 @@
     </title>
 </head>
 
-<body class="no-touch" ontouchstart="">
+<body class="no-touch {{#if mainPage}}main-page{{/if}}" ontouchstart="">
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
         {{> sprite }}
     </div>
 
     <div class="page-content">
-        {{> header }}
+        {{> header}}
+        {{> breadcrumbs}}
         <main class="page-main">
             {{#block "main"}}
 

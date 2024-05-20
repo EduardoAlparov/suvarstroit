@@ -65,5 +65,18 @@
         }
     }
 
+    &.navbar--width-auto {
+        width: auto;
+        max-width: unset;
 
+        .navbar__item {
+            flex: 1 1 auto;
+        }
+    }
+
+    &.general-plan__navbar {
+        .navbar__button {
+            min-width: 10.6rem;
+        }
+    }
 }

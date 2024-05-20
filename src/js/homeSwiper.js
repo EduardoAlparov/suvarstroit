@@ -7,18 +7,13 @@ export default () => {
     homeSwiperWrappers.forEach((homeSwiperWrapper) => {
         const homeImageSwiperBox = homeSwiperWrapper.querySelector('.home-slider__image-swiper.swiper');
         const homeInfoSwiperBox = homeSwiperWrapper.querySelector('.home-slider__info-swiper.swiper');
+        const isFullSlider = homeSwiperWrapper.classList.contains('home--fillscreen');
 
         const swiperImage = new Swiper(homeImageSwiperBox, {
             pagination: {
-                el: ".swiper-pagination",
-                dynamicBullets: true,
-            },
-        })
-
-        const swiperInfo = new Swiper(homeInfoSwiperBox, {
-            effect: 'fade',
-            fadeEffect: {
-              crossFade: true
+                el: isFullSlider ? ".number-pagination" : ".swiper-pagination",
+                dynamicBullets: !isFullSlider,
+                type: isFullSlider ? "fraction" : "fraction",
             },
 
             on: {
@@ -29,19 +24,20 @@ export default () => {
                         let dir = closestEdge(e, body);
 
                         if(dir === 'left') {
-                            swiperInfo.slidePrev(600);
+                            swiperImage.slidePrev(600);
                         } else {
-                            swiperInfo.slideNext(600);
+                            swiperImage.slideNext(600);
                         }
                     });
                 },
             },
+        })
 
-            breakpoints: {
-                768: {
-
-                }
-              }
+        const swiperInfo = new Swiper(homeInfoSwiperBox, {
+            effect: 'fade',
+            fadeEffect: {
+              crossFade: true
+            }
         })
 
         swiperInfo.controller.control = swiperImage;

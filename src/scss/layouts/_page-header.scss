@@ -3,14 +3,13 @@
     top: calc(var(--gap) * 4);
     right: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1500;
 
     &__nav {
         position: relative;
         background: var(--Light-Grey, #F5F5F5);
 
         @extend ._border-16;
-
     }
 
     &__nav {
@@ -68,6 +67,34 @@
         @include breakpointMF(tablet) {
             margin-left: calc(var(--gap) * 8);
             padding: 1.8rem 0;
+        }
+    }
+}
+
+.page-header {
+    &.page-header--blur {
+        color: var(--White, #fff);
+
+        .page-header__nav {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            .icon {
+                fill: var(--White, #fff);
+            }
+        }
+
+        .menu__link--icon {
+            .icon {
+                fill: var(--White, #fff);
+            }
+        }
+
+        .round-btn {
+            @extend .round-btn--white;
+
         }
     }
 }

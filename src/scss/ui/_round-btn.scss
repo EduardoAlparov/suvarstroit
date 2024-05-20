@@ -17,7 +17,7 @@
     .icon {
         width: 1.4rem;
         height: 1.4rem;
-        stroke: var(--Black, #020202);
+        stroke: currentColor;
 
         @include breakpointMF(tablet) {
             width: 1.6rem;

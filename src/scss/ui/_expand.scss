@@ -1,0 +1,29 @@
+.expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 6rem;
+    height: 6rem;
+
+    background-color: rgba(24, 24, 35, 0.15);
+    border-radius: 0.8rem;
+    backdrop-filter: blur(15px);
+
+    transition: 0.3s ease-out;
+
+    .icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        fill: var(--White, #FFF);
+        transition: 0.3s ease-out;
+    }
+
+    @include hoverActive() {
+        background-color: var(--White, #FFF);
+
+        .icon {
+            fill: var(--Black, rgba(2, 2, 2, 1));
+        }
+    }
+}

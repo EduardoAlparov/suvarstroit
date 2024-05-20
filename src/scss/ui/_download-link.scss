@@ -1,0 +1,28 @@
+.download-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.4rem;
+    width: max-content;
+
+    .icon,
+    span {
+        flex-shrink: 0;
+    }
+
+    .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    span {
+        font-feature-settings: 'clig' off, 'liga' off;
+        transition: color 0.3s ease-out;
+    }
+
+    @include hoverActive() {
+        span {
+            color: var(--Red, #CF000C);
+        }
+    }
+}

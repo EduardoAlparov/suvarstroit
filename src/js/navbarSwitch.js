@@ -12,6 +12,21 @@ export default () => {
                 if (activeItem !== btn) activeItem?.classList.remove(ACTIVE_CLASS);
 
                 btn.classList.toggle(ACTIVE_CLASS);
+
+                const id = btn.dataset.switchId;
+                const findedEl = document.getElementById(id);
+                const wrapper = navbar.closest('.js-switchable-window');
+                const windows = wrapper.querySelectorAll('[data-switch-window]');
+
+                if(id && findedEl) {
+                    windows.forEach((window) => {
+                        window.classList.add('display-none');
+                    })
+
+                    findedEl.classList.remove('display-none');
+                } else {
+                    return;
+                }
             }
         })
     })

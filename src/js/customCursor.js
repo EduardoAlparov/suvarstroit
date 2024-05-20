@@ -2,9 +2,6 @@ import { closestEdge } from "./utils";
 
 export default () => {
     const bodies = document.querySelectorAll('.js-home-slider-body');
-    const leftSide = document.querySelector('.js-left-side');
-    const rightSide = document.querySelector('.js-right-side');
-
 
     bodies.forEach((b) => {
         const cursor = b.querySelector('.cursor');

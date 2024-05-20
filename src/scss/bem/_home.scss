@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: stretch;
 
+    &.home--fillscreen {
+        position: relative;
+        height: 100dvh;
+    }
 
     @include breakpointMF(tablet) {
         height: auto;
@@ -82,9 +86,5 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: calc(var(--gap, 0.4rem) * 6);
-
-        .home__link-block {
-
-        }
     }
 }

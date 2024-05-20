@@ -1,5 +1,9 @@
- .visually-hidden {
+.visually-hidden {
     @include visuallyHidden();
+}
+
+[class].display-none {
+    display: none !important;
 }
 
 .no-scroll {
@@ -91,6 +95,17 @@
     }
 }
 
+[class*="--text-biggest"] {
+    @include font(4.2rem, 100%, 400);
+    letter-spacing: -0.0126em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(11rem, 100%, 400);
+        letter-spacing: -0.033 em;
+    }
+}
+
 [class*="--text-h2"] {
     @include font(4.2rem, 100%, 400);
     letter-spacing: -0.0126em;
@@ -151,6 +166,16 @@
     @include breakpointMF(tablet) {
         @include font(3.2rem, 100%, 400);
         letter-spacing: -0.064em;
+    }
+}
+
+[class*="--text-34"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.004em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.4rem, 110%, 400);
+        letter-spacing: -0.068em;
     }
 }
 
@@ -216,6 +241,17 @@
     @include breakpointMF(tablet) {
         @include font(3rem, 110%, 400);
         letter-spacing: -0.009em;
+    }
+}
+
+[class*="--text-64"] {
+    @include font(3rem, 100%, 300);
+    letter-spacing: -0.05em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(6.4rem, 100%, 300);
+        letter-spacing: -0.032em;
     }
 }
 

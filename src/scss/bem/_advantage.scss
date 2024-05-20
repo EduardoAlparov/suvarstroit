@@ -1,0 +1,60 @@
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    min-height: 11.8rem;
+    padding: 1.6rem;
+
+    background: var(--Light-Grey, #F5F5F5);
+    @extend ._border-20;
+
+    @include breakpointMF(tablet) {
+        padding: 3rem;
+        min-height: 24.3rem;
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &__param {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+
+        @include breakpointMF(tablet) {
+            gap: 0.6rem;
+            align-items: flex-end;
+        }
+    }
+
+    &__text {
+        @include breakpointMF(tablet) {
+            padding-bottom: 1.1rem;
+        }
+    }
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+
+    &__desc {
+        padding-left: 0.2rem;
+        font-feature-settings: 'clig' off, 'liga' off;
+        opacity: 0.8;
+
+        @include breakpointMF(tablet) {
+            padding-left: 0.8rem;
+        }
+    }
+}
