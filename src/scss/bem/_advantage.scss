@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
+    overflow: hidden;
 
     min-height: 11.8rem;
     padding: 1.6rem;
@@ -15,16 +16,26 @@
         min-height: 24.3rem;
     }
 
+    &__bottom,
     &__top {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
 
+    &__number--maxw  {
+        max-width: min-content;
+        white-space: unset !important;
+    }
+
     &__param {
         display: inline-flex;
         align-items: baseline;
         gap: 0.4rem;
+
+        span {
+            white-space: nowrap;
+        }
 
         @include breakpointMF(tablet) {
             gap: 0.6rem;
@@ -35,6 +46,12 @@
     &__text {
         @include breakpointMF(tablet) {
             padding-bottom: 1.1rem;
+        }
+
+        &--pb-0 {
+            @include breakpointMF(tablet) {
+                padding-bottom: 0.6rem;
+            }
         }
     }
 
@@ -48,6 +65,16 @@
         }
     }
 
+    .icon-pic {
+        width: 3.2rem;
+        height: 3.2rem;
+
+        @include breakpointMF(tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
     &__desc {
         padding-left: 0.2rem;
         font-feature-settings: 'clig' off, 'liga' off;
@@ -55,6 +82,139 @@
 
         @include breakpointMF(tablet) {
             padding-left: 0.8rem;
+        }
+    }
+
+    &__bottom {
+        align-items: flex-end;
+
+        .main-btn {
+            min-width: 14.2rem;
+            pointer-events: none;
+
+            @include breakpointMF(tablet) {
+                min-width: 22rem;
+            }
+        }
+
+        .advantage__desc {
+            @include breakpointMF(tablet) {
+                max-width: min-content;
+                padding-bottom: 0.6rem;
+            }
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            width: unset;
+            height: 94%;
+            aspect-ratio: 1.04 / 1;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &--round {
+            position: relative;
+            width: 30%;
+
+            &::before {
+                position: absolute;
+                width: 20.8rem;
+                aspect-ratio: 1;
+                border-radius: 100%;
+                border: 1px solid #FFECEC;
+                content: "";
+
+                @include breakpointMF(tablet) {
+                    width: 165%;
+                }
+            }
+
+            @include breakpointMF(tablet) {
+                width: 47%;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 100;
+
+                min-height: 100%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+    }
+
+    &__decore-el {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: flex-end;
+
+        .icon-fw {
+            width: 100%;
+            aspect-ratio: 4 / 1;
+        }
+    }
+
+    &__round-image {
+        position: relative;
+
+        height: 100%;
+        aspect-ratio: 1;
+
+        background: #FFECEC;
+        border-radius: 100%;
+
+        img {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+
+            width: 110%;
+            max-width: unset;
+            aspect-ratio: 2 / 1;
+
+            @include breakpointMF(tablet) {
+                width: 150%;
+                right: 1.6rem;
+            }
+        }
+    }
+
+    &--bordered {
+        background: var(--White, #FFF);
+        border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    }
+
+    &.advantage--row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: calc(var(--gap, 0.4rem) * 4);
+
+        @include breakpointMF(tablet) {
+            gap: calc(var(--gap, 0.4rem) * 6);
         }
     }
 }

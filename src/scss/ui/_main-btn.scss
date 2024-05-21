@@ -38,6 +38,17 @@
         color: var(--White, #FFF);
         border: 1px solid var(--White-30, rgba(255, 255, 255, 0.30));
 
+        &.main-btn--red {
+            color: var(--Red, #CF000C);
+            background-color: var(--White, #FFF);
+            border: 1px solid var(--Red, #CF000C);
+
+            @include hoverActive() {
+                color: var(--Red, #CF000C);
+                background-color: #FFECEC;
+            }
+        }
+
         @include hoverActive() {
             color: var(--Black, #020202);
             background-color: var(--White, #FFF);

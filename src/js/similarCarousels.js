@@ -1,15 +1,14 @@
 import Swiper from 'swiper/bundle';
 
 export default () => {
-    const carouselsWrappers = document.querySelectorAll('.js-carousel-swiper-section');
+    const carouselsWrappers = document.querySelectorAll('.js-triple-carousel-wrapper');
 
     carouselsWrappers.forEach((carouselsWrapper) => {
-        const swiperBlock = carouselsWrapper.querySelector('.carousel__swiper.swiper');
-        const isTriple = swiperBlock.classList.contains('carousel__swiper--triple');
+        const swiperBlock = carouselsWrapper.querySelector('.similar__swiper.swiper');
 
         const carouselSwiper = new Swiper(swiperBlock, {
-            spaceBetween: isTriple ? 8 : 0,
-            slidesPerView: isTriple ? 1.1 : 1,
+            slidesPerVeiw: 1,
+            spaceBetween: 12,
             speed: 700,
 
             navigation: {
@@ -19,8 +18,8 @@ export default () => {
 
             breakpoints: {
                 768: {
-                    slidesPerView: isTriple ? 3 : 2.4,
-                    spaceBetween: 24
+                  slidesPerView: 3,
+                  spaceBetween: 24
                 }
             }
         })

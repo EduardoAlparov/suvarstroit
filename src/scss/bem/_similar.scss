@@ -1,0 +1,17 @@
+.similar {
+    &__swiper.swiper {
+        margin-right: -2rem;
+        padding-right: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__buttons {
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+}

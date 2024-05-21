@@ -159,6 +159,27 @@
     }
 }
 
+[class*="--text-80"] {
+    @include font(3rem, 100%, 300);
+    letter-spacing: -0.015em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(8rem, 100%, 300);
+        letter-spacing: -0.048em;
+    }
+}
+
+[class*="--text-60"] {
+    @include font(2rem, 100%, 300);
+    letter-spacing: -0.04em;
+
+    @include breakpointMF(tablet) {
+        @include font(6rem, 100%, 300);
+        letter-spacing: -0.03em;
+    }
+}
+
 [class*="--text-32"] {
     @include font(2rem, 100%, 400);
     letter-spacing: -0.008em;
@@ -176,6 +197,16 @@
     @include breakpointMF(tablet) {
         @include font(3.4rem, 110%, 400);
         letter-spacing: -0.068em;
+    }
+}
+
+[class*="--text-36"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.004em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.6rem, 110%, 400);
+        letter-spacing: -0.014em;
     }
 }
 

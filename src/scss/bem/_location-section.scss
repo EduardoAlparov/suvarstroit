@@ -1,0 +1,72 @@
+.location-section {
+    position: relative;
+
+    &__site-container {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+    }
+
+    &__map-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @extend ._border-16;
+    }
+
+    &__map {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+
+        background-color: #ccc;
+
+        &[data-class="midschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="midschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="playschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="playschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="playschool"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="playschool"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="meds"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="meds"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+
+        &[data-class="markets"] {
+            .ya-secondary-placemark {
+                &:not([data-placemark="markets"]) {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+        }
+    }
+}

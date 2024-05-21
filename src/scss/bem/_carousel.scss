@@ -6,13 +6,34 @@
         }
     }
 
+    &__title {
+        @include breakpointMF(tablet) {
+            max-width: min-content;
+        }
+    }
+
     &__swiper {
-        &.swiper {
-            @include breakpointMF(tablet) {
-                margin-right: -100%;
-                padding-right: 100%;
+        &:not(.carousel__swiper--no-overflow) {
+            &.swiper {
+                @include breakpointMF(tablet) {
+                    margin-right: -100%;
+                    padding-right: 100%;
+                }
             }
         }
+
+        &--triple {
+            &.swiper {
+                margin-right: -2rem;
+                padding-right: 2rem;
+
+                @include breakpointMF(tablet) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
     }
     &__aside {
         display: flex;

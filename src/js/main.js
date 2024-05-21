@@ -21,6 +21,8 @@ import calcInputRange from './calcInputRange';
 import carouselsSwiper from './carouselsSwiper';
 import footerMap from './footerMap';
 import dropdownMenuFade from './dropdownMenuFade';
+import similarCarousels from './similarCarousels';
+import locationMapsControl from './locationMapsControl';
 import youtubeVideoControl from './youtubeVideoControl';
 
 import gsap from 'gsap';
@@ -50,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     footerMap();
     dropdownMenuFade();
     customCursor();
+    similarCarousels();
+    locationMapsControl();
     // youtubeVideoControl();
 });
 
