@@ -72,7 +72,7 @@
 </section>
 
 <section class="section projects">
-    <div class="projects__site-container">
+    <div class="projects__site-container js-switchable-window">
         <div class="projects__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
                 <span class="_thin-text">Наши&nbsp;</span>проекты
@@ -81,22 +81,22 @@
             <div class="projects__navbar navbar">
                 <ul class="navbar__list">
                     <li class="navbar__item">
-                        <button data-projects-view="projects-list" type="button"
+                        <button data-switch-id="projects-list" type="button"
                             class="js-navbar-button navbar__button navbar__button--active">
                             <svg class="icon">
                                 <use xlink:href="#tile"></use>
                             </svg>
-                            <span class="navbar__text navbar__text--text-14">
+                            <span class="navbar__text navbar__text--text-16">
                                 Плиткой
                             </span>
                         </button>
                     </li>
                     <li class="navbar__item">
-                        <button data-projects-view="projects-map" type="button" class="js-navbar-button navbar__button">
+                        <button data-switch-id="projects-list" type="button" class="js-navbar-button navbar__button">
                             <svg class="icon">
                                 <use xlink:href="#pin"></use>
                             </svg>
-                            <span class="navbar__text navbar__text--text-14">
+                            <span class="navbar__text navbar__text--text-16">
                                 На карте
                             </span>
                         </button>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="projects__render-window">
-            <ul id="projects-list" class="projects__list">
+            <ul data-switch-window id="projects-list" class="projects__list">
                 <li class="projects__item">
                     {{>project-card}}
                 </li>
@@ -163,7 +163,8 @@
                                     <div class="input simple-range__input-value simple-range__input-value--text-18">
                                         <output data-calc-output for="cost" id="costOutput">
                                             5 689 000
-                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                        </output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">руб.</span>
                                     </div>
                                 </div>
                             </div>
@@ -185,10 +186,11 @@
                                     <div class="input simple-range__input-value simple-range__input-value--text-18">
                                         <output data-calc-output for="prepayment" id="prepaymentOutput">
                                             2 345 000
-                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                        </output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">руб.</span>
                                     </div>
                                     <div class="simple-range__input-percentege">
-                                        <span class="simple-range__percentege-value">20</span><span>&nbsp;</span><span
+                                        <span class="simple-range__percentege-value">20</span><span></span><span
                                             class="simple-range__percentege-currency">&#x25;</span>
                                     </div>
                                 </div>
@@ -223,7 +225,7 @@
                                 <div class="simple-range__values">
                                     <div class="input simple-range__input-value simple-range__input-value--text-18">
                                         <output for="term" id="termOutput">30</output><span>&nbsp;</span><span
-                                            class="simple-range__span-currency">лет</span>
+                                            class="simple-range__span-currency js-year-text">лет</span>
                                     </div>
                                 </div>
                             </div>

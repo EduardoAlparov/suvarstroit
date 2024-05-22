@@ -1,10 +1,17 @@
 .page-footer {
+    padding-bottom: 2rem;
+
+    @include breakpointMF(tablet) {
+        padding-bottom: 1.6rem;
+    }
+
     &__map-section {
         margin-bottom: 6rem;
     }
 
     &__body {
         position: relative;
+        overflow: hidden;
 
         padding: 2.8rem 2rem;
 
@@ -39,7 +46,6 @@
                 width: 44rem;
             }
         }
-
     }
 
     &__main {
@@ -47,7 +53,7 @@
 
         @include breakpointMF(tablet) {
             padding-top: calc(var(--gap, 0.4rem) * 10);
-            padding-bottom: calc(var(--gap, 0.4rem) * 15);
+            padding-bottom: calc(var(--gap, 0.4rem) * 13);
         }
     }
 
@@ -133,7 +139,7 @@
         @include breakpointMF(tablet) {
             flex-direction: row;
             gap: 14.2rem;
-            margin-top: 8rem;
+            margin-top: 7rem;
         }
     }
 

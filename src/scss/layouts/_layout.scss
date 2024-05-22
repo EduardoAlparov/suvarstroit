@@ -16,7 +16,7 @@ html {
     scroll-behavior: smooth;
 
     @include breakpointMF(tablet) {
-        font-size: clamp(4.2px, 0.6vw, 10px);
+        font-size: clamp(4.2px, 0.585vw, 20px);
     }
 
     @include noHighlight();
@@ -100,18 +100,18 @@ body {
     }
 
     &--minus-mb {
-        &~.section {
-            z-index: 100;
-        }
-
-        &~.section--round-border  {
-            margin-bottom: 0;
-        }
-
         margin-bottom: -1.2rem;
 
         @include breakpointMF(tablet) {
             margin-bottom: -2.4rem;
+        }
+
+        &+.section {
+            z-index: 100;
+        }
+
+        &+.section--round-border  {
+            margin-bottom: 0;
         }
     }
 

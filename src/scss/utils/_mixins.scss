@@ -73,6 +73,7 @@
 @mixin customScrollbar {
     scrollbar-color: var(--Black-10) white;
     scrollbar-width: thin;
+
     &::-webkit-scrollbar {
         background-color: white;
         width: 0.4rem;

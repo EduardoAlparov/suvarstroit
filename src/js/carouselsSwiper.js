@@ -6,11 +6,59 @@ export default () => {
     carouselsWrappers.forEach((carouselsWrapper) => {
         const swiperBlock = carouselsWrapper.querySelector('.carousel__swiper.swiper');
         const isTriple = swiperBlock.classList.contains('carousel__swiper--triple');
+        const isQuarter= swiperBlock.classList.contains('carousel__swiper--quarter');
+
+        let mobileOptions = {
+            spaceBetween: 0,
+            slidesPerView: 11,
+            speed: 600
+        };
+        let destopOptions = {
+            slidesPerView: 2.4,
+            spaceBetween: 24,
+            speed: 600
+        };
+
+        switch (isTriple) {
+            case true:
+                mobileOptions = {
+                    spaceBetween: 8,
+                    slidesPerView: 1.1,
+                    speed: 700
+                };
+                destopOptions = {
+                    spaceBetween: 24,
+                    slidesPerView: 3,
+                    speed: 700
+                };
+
+                break;
+
+            default:
+                break;
+        }
+
+        switch (isQuarter) {
+            case true:
+                mobileOptions = {
+                    spaceBetween: 8,
+                    slidesPerView: 1.1,
+                    speed: 500
+                };
+                destopOptions = {
+                    spaceBetween: 24,
+                    slidesPerView: 4,
+                    speed: 500
+                };
+
+                break;
+
+            default:
+                break;
+        }
 
         const carouselSwiper = new Swiper(swiperBlock, {
-            spaceBetween: isTriple ? 8 : 0,
-            slidesPerView: isTriple ? 1.1 : 1,
-            speed: 700,
+            ...mobileOptions,
 
             navigation: {
                 nextEl: carouselsWrapper.querySelector('.carousel-btn__next'),
@@ -19,8 +67,7 @@ export default () => {
 
             breakpoints: {
                 768: {
-                    slidesPerView: isTriple ? 3 : 2.4,
-                    spaceBetween: 24
+                    ...destopOptions
                 }
             }
         })

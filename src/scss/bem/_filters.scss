@@ -94,9 +94,12 @@
         margin-top: 2rem;
 
         @include breakpointMF(tablet) {
-            width: max-content;
+            width: 24.7rem;
             margin-top: unset;
             margin-left: 1.5rem;
+            padding: 2.4rem;
+
+            white-space: nowrap;
         }
     }
 }

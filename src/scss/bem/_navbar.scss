@@ -1,7 +1,4 @@
 .navbar {
-    width: 100%;
-    max-width: 33.5rem;
-
     &__list {
         display: flex;
         align-items: stretch;
@@ -33,7 +30,12 @@
         text-align: center;
         transition: all 0.3s ease-out;
 
+        @include breakpointMF(tablet) {
+            border-radius: 0.8rem;
+        }
+
         .icon {
+            width: 0;
             height: 1.4rem;
             fill: var(--White, #fff);
 
@@ -41,12 +43,20 @@
             opacity: 0;
             width: 0;
             transition: all 0.3s ease-out;
+
+            @include breakpointMF(tablet) {
+                width: 0;
+                height: 1.6rem;
+            }
         }
 
         span {
+            display: block;
+
             color: var(--Black, #020202);
             font-feature-settings: 'clig' off, 'liga' off;
             transition: color 0.3s ease-out;
+            white-space: nowrap;
         }
 
         &--active {
@@ -57,6 +67,10 @@
                 width: 1.4rem;
                 transform: scale(1);
                 opacity: 1;
+
+                @include breakpointMF(tablet) {
+                    width: 1.6rem;
+                }
             }
 
             span {

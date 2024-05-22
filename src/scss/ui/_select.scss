@@ -167,7 +167,7 @@
         }
     }
 
-    .choices__list--dropdown   {
+    .choices__list--dropdown  {
         &.choices__list[aria-expanded] {
             z-index: 1000;
         }
@@ -188,7 +188,6 @@
             background-size: contain;
             background-position: right center;
             background-repeat: no-repeat;
-            background-color: white;
 
             content: "";
         }
@@ -200,6 +199,13 @@
         }
     }
 
+    &.select--first-hidden {
+        .choices__list--dropdown .choices__list .choices__item {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
 
     &--blue {
         padding-bottom: 0;

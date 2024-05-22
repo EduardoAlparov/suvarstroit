@@ -46,6 +46,8 @@
 
         @include breakpointMF(tablet) {
             display: flex;
+            gap: calc(var(--gap, 0.4rem) * 2);
+            margin-top: 2rem;
         }
     }
 

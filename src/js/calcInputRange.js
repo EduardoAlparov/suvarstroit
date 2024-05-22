@@ -18,13 +18,15 @@ export default () => {
       e.addEventListener('input', () => e.style.setProperty('--value', e.value));
     }
 
+    termInput.addEventListener('input', (e) => {
+        const yearText = termInput.closest('.simple-range').querySelector('.js-year-text');
+        yearText.textContent = selectDesiredCase(e.target.value);
+    })
 
     inputs.forEach(input => {
         input.addEventListener('input', (e) => {
-
             e.target.closest('.simple-range__wrapper').querySelector('output').value =
               e.target.value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
-
         });
 
         input.addEventListener('input', (e) => {
@@ -49,12 +51,12 @@ export default () => {
                 let monthlyPaymentValue = (costInput.value - prepaymentInput2.value) / (termInput.value * 12);
 
                 monthlyPayment.textContent = '';
-                monthlyPayment.textContent = monthlyPaymentValue.toFixed(0);
+                monthlyPayment.textContent = monthlyPaymentValue.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
             } else {
                 let monthlyPaymentValue = (costInput.value - prepaymentInput2.value) / (termInput.value * 12);
 
                 monthlyPayment.textContent = '';
-                monthlyPayment.textContent = monthlyPaymentValue.toFixed(0);
+                monthlyPayment.textContent = monthlyPaymentValue.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
             }
         })
 
@@ -68,4 +70,18 @@ export default () => {
             })
         })
     })
+
+    function selectDesiredCase(count) {
+        const lastNumber = Number(count.split('').pop());
+
+        if(lastNumber === 1) {
+            return 'год';
+        } else if(count >= 11 && count <= 14) {
+            return 'лет';
+        } else if(lastNumber > 1 && lastNumber <= 4) {
+            return 'года';
+        } else {
+            return 'лет';
+        }
+    }
 }

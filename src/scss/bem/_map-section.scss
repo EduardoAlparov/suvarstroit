@@ -20,12 +20,29 @@
         max-height: 100%;
         overflow: auto;
 
-        @include customScrollbar();
-
         @include breakpointMF(tablet) {
             gap: 1.6rem;
             padding-right: 1rem;
             margin-right: -1.4rem;
+
+
+            &::-webkit-scrollbar {
+                background-color: white;
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--Black-10);
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: white;
+            }
         }
 
         li {
@@ -83,7 +100,7 @@
 
         @include breakpointMF(tablet) {
             gap: 2rem;
-            padding: 2.4rem 2.4rem;
+            padding: 2.4rem 2rem 2.4rem 2.4rem;
         }
     }
 
@@ -116,6 +133,7 @@
 
     &--active {
         background-color: #FFF7F8;
+        border: 1px solid var(--Red-30, rgba(207, 0, 12, 0.30));
         pointer-events: none;
 
         @include hoverActive() {

@@ -63,4 +63,14 @@
             }
         }
     }
+
+    &__navbar {
+        width: 100%;
+        max-width: max-content;
+
+        .navbar__button {
+            max-width: 13rem;
+        }
+    }
+
 }

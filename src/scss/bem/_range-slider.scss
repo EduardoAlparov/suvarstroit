@@ -48,33 +48,19 @@
     }
 
     &.noUi-horizontal .noUi-handle {
-        width: 16px;
-        height: 16px;
-
-        border-radius: 50%;
         top: 100%;
         right: 0;
-        margin-top: -9px;
-        margin-right: -8px;
+        overflow: hidden;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-top: -0.7rem;
+        margin-right: -0.6rem;
+
+        background-color: var(--Red);
+        border: none;
+        border-radius: 50%;
         box-shadow: none;
         cursor: pointer;
-        border: none;
-        background-color: var(--Red);
-        box-shadow: none;
-
-        @include breakpoint(tablet) {
-            width: 10px;
-            height: 10px;
-            margin-top: -6px;
-            margin-right: -5px;
-        }
-
-        @include breakpoint(mobile) {
-            width: 16px;
-            height: 16px;
-            margin-top: -9px;
-            margin-right: -8px;
-        }
 
         &::after {
             content: '';
@@ -123,15 +109,28 @@
     .range-slider__input-wrapper {
         .range-slider__input {
             margin: 0;
-            width: 10ch;
+            width: 9ch;
         }
 
         &--small {
             .range-slider__input {
                 margin: 0;
-                width: 4ch;
+                width: 3ch;
             }
         }
+    }
+}
+
+.range-slider__input-wrapper {
+    display: inline-flex;
+}
+
+.range-slider__input-pretext {
+    font-feature-settings: 'clig' off, 'liga' off;
+    opacity: 0.2;
+
+    &::after {
+        content: '\00A0';
     }
 }
 
@@ -140,6 +139,10 @@
 }
 .range-slider__input-wrapper:last-child .range-slider__input {
     text-align: right;
+
+    .range-slider__input-pretext {
+        text-align: right;
+    }
 }
 
 .range-slider__inputs-divider {

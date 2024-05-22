@@ -4,14 +4,14 @@
             <div class="filters__row">
                 <div class="filters__fields">
                     <div class="filters__field filters__field--select">
-                        <div class="select">
+                        <div class="select select--first-hidden">
                             <div class="select__label range-slider__label">
-                                Проект
+                                Выбрать
                             </div>
                             <select name="project" class="js-custom-select">
-                                <option value="Проект">Проект</option>
+                                <option value="Выбрать">Выбрать</option>
                                 <option value="ЖК «Южный парк»">ЖК «Южный парк»</option>
-                                <option value="ЖК «Станция спрортивная»">ЖК «Станция спрортивная»</option>
+                                <option value="ЖК «Станция спортивная»">ЖК «Станция спортивная»</option>
                                 <option value="ЖК «Времена года»">ЖК «Времена года»</option>
                                 <option value="ЖК «Столичный»">ЖК «Столичный»</option>
                                 <option value="ЖК «Батталовский»">ЖК «Батталовский»</option>
@@ -62,19 +62,26 @@
                         </div>
                     </div>
                     <div class="filters__field filters__field--ranges">
-                        <div class="range-slider js-range-slider-double" data-min="1200000" data-max="6000000"
+                        <div class="range-slider js-range-slider-double" data-min="1200000" data-max="20000000"
                             data-step="100000">
                             <div class="range-slider__label">
-                                Стоимость, руб
+                                Стоимость, руб.
                             </div>
                             <div class="range-slider__inputs">
                                 <div class="range-slider__input-wrapper">
+                                    <span class="range-slider__input-pretext">
+                                        от
+                                    </span>
                                     <input type="tel" class="range-slider__input js-numeric-input-decimals">
                                 </div>
+
                                 <div class="range-slider__inputs-divider">
 
                                 </div>
                                 <div class="range-slider__input-wrapper">
+                                    <span class="range-slider__input-pretext">
+                                        до
+                                    </span>
                                     <input type="tel" class="range-slider__input js-numeric-input-decimals">
                                 </div>
                             </div>
@@ -85,18 +92,25 @@
                         </div>
                     </div>
                     <div class="filters__field filters__field--flex-g0">
-                        <div class="range-slider js-range-slider-double" data-min="20" data-max="200" data-step="1">
+                        <div class="range-slider js-range-slider-double" data-min="20" data-max="400" data-step="1">
                             <div class="range-slider__label">
                                 Площадь, м
                             </div>
                             <div class="range-slider__inputs">
                                 <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <span class="range-slider__input-pretext">
+                                        от
+                                    </span>
                                     <input type="tel" class="range-slider__input js-numeric-input">
                                 </div>
+
                                 <div class="range-slider__inputs-divider">
 
                                 </div>
                                 <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <span class="range-slider__input-pretext">
+                                        до
+                                    </span>
                                     <input type="tel" class="range-slider__input js-numeric-input">
                                 </div>
                             </div>

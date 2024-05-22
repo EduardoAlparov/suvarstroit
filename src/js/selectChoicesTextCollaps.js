@@ -6,7 +6,7 @@ export default () => {
 
         if (!choicesItem.closest('.select').classList.contains('select--blue') && (text.length > 17)) {
 
-            choicesItem.textContent = text.slice(0, 18) + '...';
+            choicesItem.textContent = text.slice(0, 20) + '...';
 
         }
     })

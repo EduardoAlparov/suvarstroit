@@ -1,0 +1,105 @@
+.progress-link {
+    width: 100%;
+    max-width: 37.5rem;
+    display: block;
+
+    &__image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1.21 / 1;
+
+        @extend ._border-16;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.24 / 1;
+        }
+
+        img {
+            @include centeredAbsolute();
+            z-index: 100;
+
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 150;
+
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%);
+            content: "";
+        }
+    }
+
+    &__live-pin {
+        position: absolute;
+        top: 1.6rem;
+        left: 1.6rem;
+        z-index: 200;
+
+
+        @include breakpointMF(tablet) {
+            top: 2rem;
+            left: 2rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        column-gap: 1.6rem;
+        margin-top: 1.6rem;
+    }
+
+    &__data {
+        opacity: 0.5;
+        line-height: 150%
+    }
+
+    &:not(.progress-link--online) {
+        .progress-link__live-pin {
+            @include visuallyHidden();
+        }
+    }
+}
+
+.live-pin {
+    display: flex;
+    align-items: baseline;
+    column-gap: 0.4rem;
+
+    padding: 0.6rem 1.2rem;
+
+    color: var(--White, var(--White, #FFF));
+    @include font(1rem, 120%, 400);
+    font-family: "Uni Neue";
+
+    background-color: rgba(24, 24, 35, 0.20);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+
+    @include breakpointMF(tablet) {
+        @include font(1.6rem, 100%, 500);
+    }
+
+    i {
+        display: block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 100%;
+        background-color: var(--Red, #CF000C);
+
+        @include breakpointMF(tablet) {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+}

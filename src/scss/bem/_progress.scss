@@ -1,0 +1,46 @@
+.progress {
+    &__form {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap, 0.4rem) * 6);
+    }
+
+    &__select-wrapper {
+        width: 25rem;
+    }
+
+    &__navigation {
+        align-items: flex-end;
+    }
+
+    &__buttons {
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__mobile-filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        max-height: 5rem;
+        padding: 2.4rem 2rem 2rem;
+        gap: 2rem;
+
+        border-radius: 0.8rem;
+        background-color: var(--Light-Grey, #F5F5F5);
+
+        span {
+            @include font(1.4rem, 120%, 400);
+            font-feature-settings: 'clig' off, 'liga' off;
+        }
+
+        .icon {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: var(--Black, #020202);
+        }
+    }
+}
