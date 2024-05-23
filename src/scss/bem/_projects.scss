@@ -27,12 +27,16 @@
             &::after {
                 position: absolute;
                 left: 100%;
-                bottom: 1rem;
+                bottom: 0.5rem;
                 z-index: 10;
 
                 color: var(--Red);
                 font-size: 150%;
                 content: ".";
+
+                @include breakpointMF(tablet) {
+                    bottom: 1rem;
+                }
             }
         }
     }

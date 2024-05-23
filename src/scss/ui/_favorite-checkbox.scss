@@ -1,0 +1,32 @@
+.favorite-checkbox {
+    display: block;
+    cursor: pointer;
+
+    .icon {
+        width: 3.4rem;
+        height: 3.4rem;
+
+        fill: none;
+        fill-opacity: 0.15;
+        stroke: var(--Red, #cf000c);
+        stroke-opacity: 0.3;
+
+        transition: fill 0.3s ease-out;
+    }
+
+    @include hoverActive() {
+        .icon {
+            fill: var(--Red, #cf000c);
+            stroke: transparent;
+        }
+    }
+
+    input {
+        &:checked {
+            ~.icon {
+                fill: var(--Red, #cf000c);
+                fill-opacity: 1;
+            }
+        }
+    }
+}

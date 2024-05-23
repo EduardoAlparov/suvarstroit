@@ -1,0 +1,417 @@
+.plans {
+    &__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: 1fr 48.4rem;
+            align-items: stretch;
+            gap: 2.4rem;
+        }
+
+        &.plans__body--wider {
+            @include breakpointMF(tablet) {
+                grid-template-columns: 99.5rem 1fr;
+                align-items: stretch;
+                gap: 4.4rem;
+            }
+
+            .plans__big-left {
+                @include breakpointMF(tablet) {
+                }
+            }
+
+            .plans__main-window {
+                @include breakpointMF(tablet) {
+                    padding: 4rem;
+                    grid-template-columns: 100%;
+                }
+            }
+
+            .plans__small-right {
+                @include breakpointMF(tablet) {
+                    padding-right: 0;
+                    padding-left: 1rem;
+                }
+            }
+
+            .plans__swiper-slide {
+                &.swiper-slide {
+                    aspect-ratio: 1.71 / 1;
+                }
+            }
+
+
+            .plans__navbar {
+                margin-top: 2rem;
+                @include breakpointMF(tablet) {
+                    margin-top: 3.5rem;
+                }
+            }
+        }
+    }
+
+    &__filters {
+        margin-bottom: 2.5rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4.1rem;
+            padding-right: 1.6rem;
+        }
+
+        &.filters {
+            padding: 0;
+
+            @include breakpointMF(tablet) {
+                padding: 0;
+                padding-right: 1.6rem;
+            }
+
+            .filters__row {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__switched-windows {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__main-window {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+        height: 100%;
+        padding: 1.6rem;
+
+        background: var(--Grey-Light-Grey, #F5F5F5);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: 23rem 1fr;
+            padding: 2rem;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__swiper.swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper-slide {
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            max-width: unset;
+            height: 100%;
+            min-width: 100%;
+
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__layouts {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        padding: 2rem 1.6rem;
+
+        background: var(--White, #FFF);
+        background-repeat: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            max-height: 60rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2.7rem;
+            letter-spacing: -0.036em;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 0.8rem;
+        flex-grow: 1;
+        overflow: auto;
+
+        @include breakpoint(small-tablet) {
+            margin-right: -1.6rem;
+            padding-right: 1.6rem;
+        }
+
+        @include breakpointMF(tablet) {
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: -2rem;
+            padding-bottom: 2rem;
+
+            margin-right: -1.2rem;
+            padding-right: 1.2rem;
+
+
+            &::-webkit-scrollbar {
+                background-color: white;
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--Black-10);
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: white;
+            }
+        }
+    }
+
+    &__item {
+        flex-shrink: 0;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 1.2rem;
+        background-color: var(--White-White, #FFF);
+        border: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+        border-radius: 1.2rem;
+        opacity: 0.6;
+
+        @include breakpointMF(tablet) {
+            padding: 0.4rem 1.5rem 1.6rem;
+        }
+
+        &.plans__link--active {
+            opacity: 1;
+            border-color: var(--Red-Red, #CF000C) ;
+        }
+
+        @include hoverActive() {
+            opacity: 1;
+        }
+    }
+
+    &__link-info {
+        text-align: center;
+    }
+
+    &__swiper-slide {
+        &.swiper-slide {
+            aspect-ratio: 1.45 / 1;
+            overflow: hidden;
+        }
+    }
+
+    &__navbar {
+        margin-top: 2rem;
+
+        &.navbar {
+            width: max-content;
+        }
+
+        .navbar__list {
+            width: unset;
+            background: var(--White, #FFF);
+        }
+
+        .navbar__item {
+            flex: 0 1 max-content;
+        }
+    }
+
+    &__small-right {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            justify-content: space-between;
+            padding: 0.8rem 3rem 0;
+        }
+    }
+
+    &__name {
+        margin-bottom: 1.6rem;
+        letter-spacing: -0.015em;
+
+        @include breakpointMF(tablet) {
+            letter-spacing: -0.0102em;
+        }
+    }
+
+    &__table {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 2rem;
+
+            max-height: 4.3rem;
+            padding: 1.6rem 0;
+            border-bottom: 1px solid var(--Light-Gray, #E3E4E8);
+
+            @include breakpointMF(tablet) {
+                max-height: 4.5rem;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__key {
+        font-feature-settings: 'clig' off, 'liga' off;
+        line-height: 1.3;
+        opacity: 0.5;
+
+        @include breakpointMF(tablet) {
+            line-height: 1.5;
+        }
+    }
+
+    &__value {
+        letter-spacing: -0.056em;
+        line-height: 1;
+
+        @include breakpointMF(tablet) {
+            line-height: 1.3;
+        }
+    }
+
+    &__big-btn.main-btn {
+        width: 100%;
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__heading-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .plans__name {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__heading-variants,
+    &__heading-prices {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__heading-variants {
+        gap: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            align-items: flex-end;
+        }
+    }
+
+    &__red-price {
+        color: var(--Red-Red, #CF000C);
+        font-feature-settings: 'clig' off, 'liga' off;
+        letter-spacing: -0.052em;
+    }
+
+    &__item-price {
+        opacity: 0.5;
+        @include font(1.0rem, 120%, 400);
+
+        @include breakpointMF(tablet) {
+            @include font(1.4rem, 130%, 400);
+        }
+    }
+
+    &__mortgage-text {
+        color: var(--Black-50, rgba(2, 2, 2, 0.50));
+        font-feature-settings: 'clig' off, 'liga' off;
+    }
+
+    &__mortgage-price {
+        font-feature-settings: 'clig' off, 'liga' off;
+    }
+
+    &__controls {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            flex-flow: row nowrap;
+            gap: 0.8rem;
+        }
+    }
+
+    &__white-btn,
+    &__red-btn {
+        flex: 1 1 50%;
+
+        &.main-btn {
+            @include breakpointMF(tablet) {
+                padding: 2.4rem;
+            }
+        }
+    }
+
+    &__white-btn {
+        &.main-btn {
+            @include breakpointMF(tablet) {
+                max-width: 24rem;
+            }
+        }
+    }
+}

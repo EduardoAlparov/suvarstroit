@@ -1,0 +1,281 @@
+
+.accordion {
+    &__heading {
+        gap: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.4rem;
+        }
+    }
+
+    &__slogan {
+        @include breakpointMF(tablet) {
+            flex: 0 0 calc(50% - 2.4rem / 2);
+        }
+
+        span {
+            display: block;
+
+            @include font(1.4rem, 120%, 400);
+
+            @include breakpointMF(tablet) {
+                max-width: 25ch;
+                letter-spacing: -0.044em;
+                @include font(2rem, 125%, 400);
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__item {
+        padding: 2rem 0;
+        border-top: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+
+        &:last-child {
+            border-bottom: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+        }
+
+        @include breakpointMF(tablet) {
+            padding: 1.8rem 0;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        width: 100%;
+        cursor: pointer;
+
+        @include breakpointMF(tablet) {
+            justify-content: space-between;
+        }
+
+        .accordion__right {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            flex-grow: 1;
+            padding-right: 3.5rem;
+
+            @include breakpointMF(tablet) {
+                padding-right: 6rem;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+
+            width: 1.6rem;
+            height: 1.6rem;
+            transform: translateY(-50%);
+            transition: color 0.2s ease;
+
+            fill: var(--Black);
+            fill-opacity: 0.5;
+
+            @include breakpointMF(tablet) {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+
+        .icon-minus {
+            opacity: 0;
+        }
+
+        @include hoverActive() {
+            .accordion__name {
+                color: var(--Red-Red, #CF000C);
+            }
+
+            .icon {
+                fill: var(--Red-Red, #CF000C);
+                fill-opacity: 1;
+            }
+        }
+    }
+
+    &__number {
+        opacity: 0.3;
+    }
+
+    &__name {
+        transition: color 0.2s ease;
+    }
+
+    &__dropdown {
+        display: flex;
+        gap: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        opacity: 0;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition-duration: 0.4s;
+        transition-property: max-height, opacity, transform, padding;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        @include breakpointMF(tablet) {
+            gap: 2.4rem;
+        }
+
+        .accordion__left {
+            display: none;
+
+            @include breakpointMF(tablet) {
+                display: block;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1.6 / 1;
+        @extend ._border-16;
+        background-color: lightgray;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 100;
+
+            max-width: unset;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__right {
+        &:has(.accordion__points) {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+
+        @include breakpointMF(tablet) {
+            flex: 0 0 50%;
+            padding-left: 1.6rem;
+        }
+
+
+        .accordion__image {
+            flex-shrink: 0;
+            margin-top: 2rem;
+            aspect-ratio: 1.675 / 1;
+        }
+    }
+
+    &__left {
+        &:has(.accordion__image) {
+            @include breakpointMF(tablet) {
+                padding-right: 6rem;
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__point {
+        position: relative;
+        max-width: 95%;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        color: rgba(2, 2, 2, 0.8);
+
+        @include breakpointMF(tablet) {
+            max-width: 51rem;
+            padding-left: 1.4rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+
+            width: 0.4rem;
+            height: 1.4rem;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224%22%20height%3D%228%22%20viewBox%3D%220%200%204%208%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%222%22%20cy%3D%224%22%20r%3D%222%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: "";
+
+            @include breakpointMF(tablet) {
+                width: 0.6rem;
+                height: 2rem;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(tablet) {
+            letter-spacing: -0.036em;
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__offer {
+        margin-top: 2rem;
+        opacity: 0.6;
+        @include font(1.2rem, 130%, 400);
+
+        @include breakpointMF(tablet) {
+            max-width: 60rem;
+        }
+    }
+
+    input[type="radio"] {
+        &:checked {
+            ~ .accordion__button {
+                .accordion__name {
+                    color: var(--Red-Red, #CF000C);
+                }
+
+                .icon-minus {
+                    opacity: 1;
+                }
+
+                .icon-plus {
+                    transform: rotateX(90deg);
+                    opacity: 0;
+                }
+            }
+
+            ~ .accordion__dropdown {
+                max-height: 1500px;
+                opacity: 1;
+                transform: scaleY(1);
+                padding: 2rem 0 0.4rem;
+
+                @include breakpointMF(tablet) {
+                    padding: 3.6rem 0 0.6rem;
+                }
+            }
+        }
+    }
+}

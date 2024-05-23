@@ -13,9 +13,12 @@ export default () => {
 
                 btn.classList.toggle(ACTIVE_CLASS);
 
+                const wrapper = navbar.closest('.js-switchable-window');
+
+                if(!wrapper) return;
+
                 const id = btn.dataset.switchId;
                 const findedEl = document.getElementById(id);
-                const wrapper = navbar.closest('.js-switchable-window');
                 const windows = wrapper.querySelectorAll('[data-switch-window]');
 
                 if(id && findedEl) {
