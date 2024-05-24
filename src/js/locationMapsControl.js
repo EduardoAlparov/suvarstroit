@@ -109,10 +109,10 @@ export default () => {
                 mapInstance.behaviors.enable('MultiTouch');
             }
 
-            var HintLayout = ymaps.templateLayoutFactory.createClass( "<div class='my-hint'>" +
-                "<b>{{ properties.object }}</b><br />" +
-                "{{ properties.address }}" +
-                "</div>", {
+            var HintLayout = ymaps.templateLayoutFactory.createClass("<div class='my-hint'>" +
+            "<b>{{ properties.object }}</b><br />" +
+            "{{ properties.address }}" +
+            "</div>", {
                     // Определяем метод getShape, который
                     // будет возвращать размеры макета хинта.
                     // Это необходимо для того, чтобы хинт автоматически
@@ -227,8 +227,8 @@ export default () => {
 
             locationMeds.forEach(function(item) {
                 var msp = new ymaps.Placemark(item.coords, {
+                    object: item.address,
                     address: item.title,
-                    object: item.address
                 },{
                     iconLayout: locationMedsLayout,
                     iconShape: {
@@ -254,7 +254,7 @@ export default () => {
 
             locationMarkets.forEach(function(item) {
                 var msp = new ymaps.Placemark(item.coords, {
-                    address: item.title,
+                    address: 'asdasd',
                     object: item.address
                 },{
                     iconLayout: locationMarketsLayout,

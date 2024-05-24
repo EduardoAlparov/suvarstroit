@@ -1,5 +1,6 @@
-<header class="page-header {{#if headerBlurClass}}page-header--blur{{/if}}">
-    <div class="page-header__site-container">
+<header
+    class="page-header {{#if headerBlurClass}}page-header--blur{{/if}} {{#if headerMainClass}}page-header--main{{else}}page-header--secondary{{/if}}">
+    <div class="page-header__site-container page-header__main">
         <div class="page-header__nav">
             <a href="/" class="page-header__logo logo">
                 <svg class="icon">
@@ -249,6 +250,83 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="page-header__site-container page-header__second">
+        <div class="page-header__nav page-header__nav--white">
+            <div class="page-header__project-name navbar__button  navbar__button--active">
+                <span>
+                    Южный парк
+                </span>
+            </div>
+
+            <div class="page-header__mobile-menu-dropdown">
+                Южный парк
+            </div>
+
+            <div class="page-header__secondary-menu">
+                <ul class="menu menu--lower-gap">
+                    <li class="menu__item">
+                        <a href="#section-about" class="menu__link links">
+                            О проекте
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#section-general-plan" class="menu__link links">
+                            Генплан
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#section-advantages" class="menu__link links">
+                            Преимущества
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#section-plans" class="menu__link links">
+                            Планировки
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#section-programs" class="menu__link links">
+                            Ипотека
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#section-progress" class="menu__link links">
+                            Ход строительства
+                        </a>
+                    </li>
+                </ul>
+
+
+                <ul class="menu menu--lower-gap">
+                    <li class="menu__item">
+                        <a href="./commercial.html" class="menu__link links">
+                            Коммерция
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./storerooms.html" class="menu__link links">
+                            Кладовые
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./parking.html" class="menu__link links">
+                            Паркинг
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="page-header__secondary-link main-btn main-btn--red main-btn--smaller">
+                <span class="hide-on-mobile">
+                    Выбрать квартиру
+                </span>
+                <span class="show-on-mobile">
+                    Квартиры
+                </span>
+            </a>
         </div>
     </div>
 </header>

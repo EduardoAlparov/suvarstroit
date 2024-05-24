@@ -16,6 +16,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: calc(var(--gap) * 6);
+
+        &--white {
+            padding: 1.25rem 0;
+
+            background: var(--White, #FFF);
+            box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
+        }
     }
 
     &__menu {
@@ -44,7 +52,7 @@
     }
 
     &__nav {
-        &>* {
+        &>*:not(.page-header__secondary-link, .page-header__mobile-menu-dropdown, .page-header__project-name) {
             flex-grow: 1;
         }
     }
@@ -69,32 +77,169 @@
             padding: 1.8rem 0;
         }
     }
+
+    &__project-name {
+        margin-left: calc(var(--gap) * 8);
+        flex-grow: 0;
+
+        &.navbar__button {
+            display: none;
+            width: max-content;
+
+            @include breakpointMF(tablet) {
+                display: flex;
+            }
+        }
+    }
+
+    &__mobile-menu-dropdown {
+        flex-grow: 0;
+        margin-left: calc(var(--gap) * 4);
+
+        @include breakpointMF(tablet) {
+            display: none;
+        }
+    }
+
+    &__secondary-menu {
+        flex-grow: 1;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpointMF(tablet) {
+            display: flex;
+        }
+    }
+
+    &__secondary-link {
+        flex-grow: 0;
+        margin-right: calc(var(--gap) * 8);
+
+        &.main-btn {
+            flex-basis: 22.5rem;
+
+            @include breakpoint(small-tablet) {
+                max-height: 3.6rem;
+                flex-basis: 9.1rem;
+
+                margin-right: calc(var(--gap) * 4);
+                @include font(1.2rem, 120%, 400);
+            }
+        }
+    }
+
+    &__main {
+        position: relative;
+        z-index: 300;
+    }
+
+    &__second {
+        position: relative;
+        z-index: 200;
+        margin-top: -1px;
+        transform: translateY(-300%);
+    }
 }
 
 .page-header {
-    &.page-header--blur {
-        color: var(--White, #fff);
+    &:not(.page-header--fixed) {
+        &.page-header--blur .page-header__main {
+            color: var(--White, #fff);
 
-        .page-header__nav {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-        }
+            .page-header__nav {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+            }
 
-        .logo {
-            .icon {
-                fill: var(--White, #fff);
+            .logo {
+                .icon {
+                    fill: var(--White, #fff);
+                }
+            }
+
+            .menu__link--icon {
+                .icon {
+                    fill: var(--White, #fff);
+                }
+            }
+
+            .round-btn {
+                @extend .round-btn--white;
+
             }
         }
+    }
+}
 
-        .menu__link--icon {
-            .icon {
-                fill: var(--White, #fff);
+.page-header {
+    &.page-header--fixed {
+        position: fixed;
+        animation: transAnim 0.4s ease-out 1 forwards;
+
+    }
+}
+
+.page-header {
+    &.page-header--main {
+        .page-header__second {
+            display: none;
+        }
+    }
+}
+
+.page-header--secondary {
+    &.page-header--fixed {
+        &.page-header--second-visible {
+            position: fixed;
+        }
+    }
+
+    &.page-header--second-visible {
+        position: fixed;
+
+        .page-header__main {
+            display: none;
+        }
+
+        .page-header__second {
+            animation: transAnim 0.4s ease-out 1 forwards;
+        }
+
+        &.page-header--fixed {
+            .page-header__main {
+                display: block;
             }
         }
+    }
+}
 
-        .round-btn {
-            @extend .round-btn--white;
+@keyframes transAnim {
+    0% {
+        transform: translateY(-100%);
+    }
 
-        }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes transAnimReverse {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes opacityAnim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

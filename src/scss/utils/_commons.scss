@@ -170,6 +170,17 @@
     }
 }
 
+[class*="--text-70"] {
+    @include font(3rem, 100%, 400);
+    letter-spacing: -0.015em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(7rem, 100%, 400);
+        letter-spacing: -0.035em;
+    }
+}
+
 [class*="--text-60"] {
     @include font(2rem, 100%, 300);
     letter-spacing: -0.04em;
@@ -232,6 +243,7 @@
 
     @include breakpointMF(tablet) {
         @include font(2.2rem, 120%, 400);
+        letter-spacing: -0.066em;
     }
 }
 

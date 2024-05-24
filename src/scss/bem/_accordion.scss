@@ -8,6 +8,10 @@
             justify-content: space-between;
             gap: 2.4rem;
         }
+
+        &.tour__heading {
+            align-items: flex-start;
+        }
     }
 
     &__slogan {
@@ -18,14 +22,23 @@
         span {
             display: block;
 
-            @include font(1.4rem, 120%, 400);
-
             @include breakpointMF(tablet) {
-                max-width: 25ch;
-                letter-spacing: -0.044em;
-                @include font(2rem, 125%, 400);
+                max-width: 35ch;
             }
         }
+    }
+
+    &__slogan-text {
+        @include font(1.4rem, 120%, 400);
+
+        @include breakpointMF(tablet) {
+            letter-spacing: -0.044em;
+            @include font(2rem, 125%, 400);
+        }
+    }
+
+    &__slogan-bigger-text {
+        margin-bottom: 2rem;
     }
 
     &__item {
@@ -127,7 +140,7 @@
         transform: scaleY(0);
         transition-duration: 0.4s;
         transition-property: max-height, opacity, transform, padding;
-        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-timing-function: ease;
 
         @include breakpointMF(tablet) {
             gap: 2.4rem;

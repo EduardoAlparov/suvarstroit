@@ -14,13 +14,14 @@ html {
     font-size: 10px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 3rem);
 
     @include breakpoint(supersmall-mobile) {
         font-size: 8px;
     }
 
     @include breakpointMF(tablet) {
-        font-size: clamp(4.2px, 0.585vw, 20px);
+        font-size: clamp(4.2px, 0.595vw, 20px);
     }
 
     @include noHighlight();
@@ -52,6 +53,10 @@ body {
                 content: "";
             }
         }
+    }
+
+    &:has(.tour-gallery--fullscreen) {
+        @extend .no-scroll;
     }
 }
 

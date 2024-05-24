@@ -84,7 +84,7 @@
             {{> filters}}
         </div>
 
-        <div class="about__body">
+        <div id="section-about" class="about__body">
             <h2 class="projects__heading projects__title projects__title--h3-text projects__title--end-dot">
                 О проекте
             </h2>
@@ -167,18 +167,27 @@
                 </ul>
 
                 <div class="about__right about__video-block">
-                    <div class="video-block js-video-box">
-                        <div class="video-block__container" data-youtube-id="lJIrF4YjHfQ"></div>
-                        <div class="video-block__poster">
-                            <button type="button"></button>
+                    <div class="about__video-wrapper">
+                        <div class="video-block js-video-box">
+                            <div class="video-block__container" data-youtube-id="lJIrF4YjHfQ"></div>
 
-                            <div class="video-block__picture">
-                                <picture>
-                                    <source type="image/webp" srcset="./img/video/poster.webp" alt="video poster" />
-                                    <img class="lazy" src="./img/video/poster.jpg" alt="video poster">
-                                </picture>
+                            <div class="video-block__poster">
+                                <button type="button" class="video-block__button js-video-expand"></button>
+
+                                <div class="video-block__picture">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/video/poster.webp" alt="video poster" />
+                                        <img class="lazy" src="./img/video/poster.jpg" alt="video poster">
+                                    </picture>
+                                </div>
                             </div>
+
                         </div>
+                        <button type="button" class="about__video-close js-video-close close-btn close-btn--smaller">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#close-empty"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -186,7 +195,7 @@
     </div>
 </section>
 
-<section class="section general-plan">
+<section id="section-general-plan" class="section general-plan">
     <div class="general-plan__site-container js-switchable-window">
         <div class="general-plan__heading projects__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -939,7 +948,7 @@
     </div>
 </section>
 
-<section class="advantages section">
+<section id="section-advantages" class="advantages section">
     <div class="advantages__site-container js-switchable-window">
         <div class="advantages__heading projects__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -1258,22 +1267,22 @@
         var locationMiddleSchools = [
             {
                 coords: [55.686376, 49.222384],
-                address: 'Лицей Здоровое Поколение',
+                address: 'Школа № 24',
                 title: `Общеобразовательная школа`
             },
         ];
 
         var locationMeds = [
             {
-                coords: [56.625402, 47.945115],
-                address: 'Взрослая поликлиника № 3',
-                title: `Поликлиника для взрослых`
+                coords: [55.681531, 49.194028],
+                address: 'Больница',
+                title: `??????? ??????????`
             },
         ];
 
         var locationMarkets = [
             {
-                coords: [56.623450, 47.936531],
+                coords: [55.687410, 49.213232],
                 address: 'Магнит',
                 title: `Магазин продуктов`
             },
@@ -1316,8 +1325,9 @@
             </h2>
 
             <p class="accordion__slogan">
-                <span class="accordion__slogan-text">Комфорт и безопасность в&nbsp;вашей
-                    квартире</span>
+                <span class="accordion__slogan-text">
+                    Комфорт и безопасность в&nbsp;вашей&nbsp;квартире
+                </span>
             </p>
         </div>
 
@@ -1346,8 +1356,8 @@
                     <div class="accordion__left">
                         <div class="accordion__image hide-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-1.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-1.jpg" alt=" image" />
                             </picture>
                         </div>
                     </div>
@@ -1371,8 +1381,8 @@
 
                         <div class="accordion__image show-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-1.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-1.jpg" alt=" image" />
                             </picture>
                         </div>
 
@@ -1407,8 +1417,8 @@
                     <div class="accordion__left">
                         <div class="accordion__image hide-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco.jpg" alt=" image" />
                             </picture>
                         </div>
                     </div>
@@ -1432,8 +1442,8 @@
 
                         <div class="accordion__image show-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco.jpg" alt=" image" />
                             </picture>
                         </div>
 
@@ -1468,8 +1478,8 @@
                     <div class="accordion__left">
                         <div class="accordion__image hide-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-2.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-2.jpg" alt=" image" />
                             </picture>
                         </div>
                     </div>
@@ -1493,8 +1503,8 @@
 
                         <div class="accordion__image show-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-2.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-2.jpg" alt=" image" />
                             </picture>
                         </div>
 
@@ -1529,8 +1539,8 @@
                     <div class="accordion__left">
                         <div class="accordion__image hide-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-3.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-3.jpg" alt=" image" />
                             </picture>
                         </div>
                     </div>
@@ -1554,8 +1564,8 @@
 
                         <div class="accordion__image show-on-mobile">
                             <picture>
-                                <source type="image/webp" srcset="./img/all/acco.webp" alt=" image" />
-                                <img class="lazy" src="./img/all/acco.jpg" alt=" image" />
+                                <source type="image/webp" srcset="./img/acco/acco-3.webp" alt=" image" />
+                                <img class="lazy" src="./img/acco/acco-3.jpg" alt=" image" />
                             </picture>
                         </div>
 
@@ -1570,7 +1580,32 @@
     </div>
 </section>
 
-<section class="section plans-section">
+<section class="section tour">
+    <div class="tour__site-container">
+        <div class="projects__heading accordion__heading tour__heading">
+            <h2 class="tour__title projects__title projects__title--h3-text">
+                <span class="_bigger-text _bigger-text--text-70">Отделка</span><br>
+                <span class="_thin-text">и виртуальный тур</span>
+            </h2>
+
+            <p class="accordion__slogan">
+                <span class="accordion__slogan-bigger-text accordion__slogan-bigger-text--text-22">
+                    Чистовая отделка выполняется в каждом корпусе жилого комплекса «Южный парк».
+                </span>
+                <span class="accordion__slogan-smaller-text">
+                    Все грязные и громкие работы выполнит застройщик, а вам останется подобрать покрытия и цвет стен,
+                    купить нужную мебель. Стоимость отделки уже включена в стоимость квартиры.
+                </span>
+            </p>
+        </div>
+
+        <div class="tour__body">
+            {{>tour-gallery }}
+        </div>
+    </div>
+</section>
+
+<section id="section-plans" class="section plans-section">
     <div class="plans-section__site-container">
         <div class="projects__heading plans-section__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -1583,8 +1618,7 @@
     </div>
 </section>
 
-
-<section class="section section--blue section--round-border programs">
+<section id="section-programs" class="section section--blue section--round-border programs">
     <div class="programs__site-container">
         <div class="programs__heading projects__heading">
             <h2 class="projects__title projects__title--h3-text">
@@ -1895,7 +1929,7 @@
     </div>
 </section>
 
-<section class="section section--round-border section--white progress">
+<section id="section-progress" class="section section--round-border section--white progress">
     <div class="progress__site-container js-carousel-swiper-section">
         <div class="projects__heading progress__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">

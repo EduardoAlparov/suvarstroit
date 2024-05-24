@@ -69,7 +69,7 @@
 
     &--icons {
         display: flex;
-        gap: var(--gap)
+        gap: 0.8rem;
     }
 
     &--grey {
@@ -82,6 +82,18 @@
         @include hoverActive() {
             color: var(--Red, #CF000C);
             background-color: var(--Pink, #FAE5E7);
+        }
+    }
+
+    &--smaller {
+        padding: 1.6rem 1.6rem;
+
+        @include breakpointMF(tablet) {
+            max-height: 5.5rem;
+            padding: 2.4rem 3.2rem 2.4rem;
+            border-radius: 1.2rem;
+
+            @include font(1.6rem, 100%, 400);
         }
     }
 

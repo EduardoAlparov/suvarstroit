@@ -1,0 +1,13 @@
+.tour {
+    &__body {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 0.56 / 1;
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 2 / 1;
+        }
+    }
+}

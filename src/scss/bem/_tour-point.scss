@@ -1,0 +1,157 @@
+.tour-point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__button {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 5rem;
+        height: 5rem;
+
+        background-color: var(--Red-Red, #CF000C);
+        border-radius: 100%;
+
+        transition: background-color 0.3s ease-out;
+        cursor: pointer;
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: var(--White, #fff);
+        }
+    }
+
+    &__popup {
+        position: absolute;
+
+        display: flex;
+        align-items: stretch;
+        height: 10rem;
+
+        border: 1.6rem solid var(--White, #FFF);
+        border-radius: 0.8rem;
+        transition: 0.3s ease-out;
+        transition-property: width, height;
+
+        @include breakpointMF(tablet) {
+            width: 48.4rem;
+            height: 17.4rem;
+            border-width: 1.2rem;
+            border-radius: 1.6rem;
+        }
+    }
+
+    &__popup-window {
+        display: none;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 50%;
+        aspect-ratio: 1.5/1;
+        @extend ._border-16;
+        transition: opacity 0.2s ease-out 0.4s;
+
+        @include breakpointMF(tablet) {
+            margin: -4px;
+            padding: 0rem;
+            display: block;
+            // box-sizing: content-box;
+            border: 4px solid var(--White, #FFF);
+        }
+    }
+
+    &__popup-info {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        background: var(--White, #FFF);
+        transition: opacity 0.2s ease-out 0.4s;
+
+        @include breakpointMF(tablet) {
+            margin: -1px;
+            padding-left: 1.6rem;
+        }
+    }
+
+    &__name {
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__text {
+        flex-grow: 1;
+        overflow: auto;
+
+        @include noScrollbar();
+    }
+
+    &.tour-point--top {
+        .tour-point__popup {
+            @include breakpointMF(tablet) {
+                top: 0;
+            }
+        }
+    }
+
+    &.tour-point--right {
+        .tour-point__popup {
+            @include breakpointMF(tablet) {
+                left: calc(100% + 0.8rem);
+
+            }
+        }
+    }
+
+    &.tour-point--bottom {
+        .tour-point__popup {
+            @include breakpointMF(tablet) {
+                bottom: 0;
+            }
+        }
+    }
+
+    &.tour-point--left {
+        .tour-point__popup {
+            @include breakpointMF(tablet) {
+                right: calc(100% + 0.8rem);
+            }
+        }
+    }
+
+    input[type="radio"] {
+        &:not(:checked) {
+            &~.tour-point__popup {
+                @include visuallyHidden();
+
+                .tour-point__popup-info,
+                .tour-point__popup-window {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    input[type="radio"] {
+        &:checked {
+            &+.tour-point__button {
+                background-color: var(--Pink-oral, #FF6266);
+            }
+        }
+    }
+}

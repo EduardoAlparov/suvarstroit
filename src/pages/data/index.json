@@ -1,5 +1,6 @@
 {
     "title": "Главная страница",
     "filterClass": true,
-    "mainPage": true
+    "mainPage": true,
+    "headerMainClass": true
 }

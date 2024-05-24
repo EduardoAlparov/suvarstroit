@@ -123,11 +123,14 @@
 
 .range-slider__input-wrapper {
     display: inline-flex;
+    align-items: center;
 }
 
 .range-slider__input-pretext {
     font-feature-settings: 'clig' off, 'liga' off;
     opacity: 0.2;
+    line-height: 1;
+    display: flex;
 
     &::after {
         content: '\00A0';

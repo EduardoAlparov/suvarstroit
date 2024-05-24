@@ -3,6 +3,10 @@
     align-items: center;
     gap: calc(var(--gap) * 8);
 
+    &.menu--lower-gap {
+        gap: calc(var(--gap) * 6 );
+    }
+
     &__item {
         display: grid;
         align-content: stretch;

@@ -8,10 +8,10 @@ export default async () => {
         let firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        Array.from(playerBoxes).forEach( playerBox => {
+        Array.from(playerBoxes).forEach( (playerBox) => {
             let videoId,
                 player,
-                btn = playerBox.parentElement.querySelector('button'),
+                btn = playerBox.parentElement.querySelector('.video-block__button'),
                 videoContainer = playerBox.firstElementChild;
 
             videoContainer.id = getRandomInt(4000);
@@ -27,11 +27,25 @@ export default async () => {
             }
 
             btn.addEventListener('click', () => {
+                if(btn.classList.contains('js-video-expand')) {
+                    btn.closest('.about__video-block').classList.add('about__video-block--expand');
+                }
+
                 btn.closest('.video-block').classList.add('video-block--is-play');
                 player.playVideo();
             })
-        })
 
+            const videoBlockWrapper = playerBox.closest('.about__video-wrapper');
+            const videoBlockClose = videoBlockWrapper.querySelector('.js-video-close');
+
+            if(videoBlockWrapper && videoBlockClose) {
+                videoBlockClose.addEventListener('click', () => {
+                    player.stopVideo();
+                    btn.closest('.about__video-block').classList.remove('about__video-block--expand');
+                    btn.closest('.video-block').classList.remove('video-block--is-play');
+                })
+            }
+        })
     } else {
         return;
     }

@@ -10,6 +10,7 @@ import menu from './menu';
 
 import setScrollbarWidth from './setScrollbarWidth';
 import setHeaderPadding from './setHeaderPadding';
+import setFixedHeader from './setFixedHeader';
 import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
 import selectChoicesTextCollaps from './selectChoicesTextCollaps';
@@ -23,6 +24,7 @@ import footerMap from './footerMap';
 import dropdownMenuFade from './dropdownMenuFade';
 import similarCarousels from './similarCarousels';
 import locationMapsControl from './locationMapsControl';
+import tourWindowToggle from './tourWindowToggle';
 import youtubeVideoControl from './youtubeVideoControl';
 
 import gsap from 'gsap';
@@ -40,7 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     modals();
     // tabs();
     // menu();
-    setHeaderPadding();
+    // setHeaderPadding();
+    setFixedHeader();
     customSelects();
     rangeSlidersDouble();
     selectChoicesTextCollaps();
@@ -54,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     customCursor();
     similarCarousels();
     locationMapsControl();
+    tourWindowToggle();
     // youtubeVideoControl();
 });
 

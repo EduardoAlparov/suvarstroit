@@ -1,0 +1,55 @@
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 4.8rem;
+    height: 4.8rem;
+
+    background: var(--Grey-Light-Grey, #F5F5F5);
+    border-radius: 100%;
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        fill: var(--Black, #020202);
+        transition: fill 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    @include breakpointMF(tablet) {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &--bigger {
+        @include breakpointMF(tablet) {
+            width: 6.6rem;
+            height: 6.6rem;
+        }
+    }
+
+    &--smaller {
+        .icon {
+            @include breakpointMF(tablet) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
+    }
+
+    @include hoverActive() {
+        .icon {
+            fill: var(--Red);
+        }
+    }
+}

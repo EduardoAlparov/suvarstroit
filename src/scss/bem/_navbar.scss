@@ -57,8 +57,8 @@
 
         span {
             display: block;
-
             color: var(--Black, #020202);
+            line-height: 1;
             font-feature-settings: 'clig' off, 'liga' off;
             transition: color 0.3s ease-out;
             white-space: nowrap;

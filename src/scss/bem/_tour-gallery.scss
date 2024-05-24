@@ -1,0 +1,96 @@
+.tour-gallery {
+    --padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: lightgray;
+
+    &:not(.tour-gallery--fullscreen) {
+        .tour-gallery__close {
+            display: none;
+        }
+    }
+
+    &.tour-gallery--fullscreen {
+        --padding: 6rem;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 3000;
+
+        .tour-gallery__expand {
+            display: none;
+        }
+    }
+
+    &__links,
+    &__navbar,
+    &__expand,
+    &__close  {
+        position: absolute;
+        top: var(--padding);
+        z-index: 500;
+    }
+
+    &__expand,
+    &__close  {
+        right: var(--padding);
+    }
+
+    &__links,
+    &__navbar {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__links {
+        top: unset;
+        bottom: var(--padding);
+
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__link {
+        flex: 1 1 23rem;
+
+        &.main-btn {
+            min-width: 23rem;
+        }
+    }
+
+    &__swiper.swiper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper-slide.swiper-slide {
+        height: 100%;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 200;
+
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__point {
+        position: absolute;
+        z-index: 400;
+    }
+}
