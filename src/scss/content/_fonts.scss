@@ -46,8 +46,8 @@
 @font-face {
     font-family: 'Uni Neue';
     src: local('Uni Neue Regular'),
-        url('UniNeueRegular.woff2') format('woff2'),
-        url('UniNeueRegular.woff') format('woff');
+        url('../assets/fonts/UniNeueRegular.woff2') format('woff2'),
+        url('../assets/fonts/UniNeueRegular.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }

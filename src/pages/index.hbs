@@ -80,9 +80,9 @@
 
             <div class="projects__navbar navbar">
                 <ul class="navbar__list">
-                    <li class="navbar__item">
+                    <li class="navbar__item navbar__item--fb50">
                         <button data-switch-id="projects-list" type="button"
-                            class="js-navbar-button navbar__button navbar__button--active">
+                            class="js-navbar-button navbar__button">
                             <svg class="icon">
                                 <use xlink:href="#tile"></use>
                             </svg>
@@ -91,8 +91,9 @@
                             </span>
                         </button>
                     </li>
-                    <li class="navbar__item">
-                        <button data-switch-id="projects-list" type="button" class="js-navbar-button navbar__button">
+                    <li class="navbar__item  navbar__item--fb50">
+                        <button data-switch-id="projects-map"
+                            type="button" class="js-navbar-button navbar__button navbar__button--active">
                             <svg class="icon">
                                 <use xlink:href="#pin"></use>
                             </svg>
@@ -106,7 +107,7 @@
         </div>
 
         <div class="projects__render-window">
-            <ul data-switch-window id="projects-list" class="projects__list">
+            <ul data-switch-window id="projects-list" class="projects__list display-none">
                 <li class="projects__item">
                     {{>project-card}}
                 </li>
@@ -129,6 +130,88 @@
                     {{>project-card}}
                 </li>
             </ul>
+
+            <div data-switch-window id="projects-map" class="projects__map">
+                    <script>
+                        var mapDataObjects = [
+                            {
+                                coords: [55.818338, 49.143829],
+                                class: ['tab--dark','Бизнес класс'],
+                                devEnd: '2026',
+                                image: `./img/all/map-popup.png`,
+                                name: 'Столичный',
+                                address: `Казань, ул. Чистопольская 86/10 офис-287`,
+                                studios: '5',
+                                oneRoom: '10',
+                                twoRoom: '5',
+                                threeRoom: '2',
+                                fourRoom: '2',
+                                link: 'https://www.google.ru/'
+                            },
+                            {
+                                coords: [55.689060, 49.201115],
+                                class: ['','Комфорт'],
+                                devEnd: '2025',
+                                name: 'Южный парк',
+                                image: `./img/all/map-popup.png`,
+                                address: `Казань, ул. Уютная,1`,
+                                studios: '5',
+                                oneRoom: '10',
+                                twoRoom: '5',
+                                threeRoom: '2',
+                                fourRoom: '2',
+                                link: 'https://www.google.ru/'
+                            },
+                            {
+                                coords: [55.761280, 49.150644],
+                                class: ['tab--dark','Бизнес класс'],
+                                devEnd: '2026',
+                                name: 'Манхэттен',
+                                image: `./img/all/map-popup.png`,
+                                address: `Казань, Оренбургский тракт 8д, 3 этаж`,
+                                studios: '5',
+                                oneRoom: '10',
+                                twoRoom: '5',
+                                threeRoom: '2',
+                                fourRoom: '2',
+                                link: 'https://www.google.ru/'
+                            },
+                            {
+                                coords: [55.721502, 49.187600],
+                                class: ['','Комфорт'],
+                                devEnd: '2024',
+                                name: 'Палитра',
+                                image: `./img/all/map-popup.png`,
+                                address: `Казань, ул.Братьев Батталовых 20 к.1`,
+                                studios: '15',
+                                oneRoom: '1',
+                                twoRoom: '3',
+                                threeRoom: '22',
+                                fourRoom: '21',
+                                link: 'https://www.google.ru/'
+                            },
+                            {
+                                coords: [55.724368, 49.174191],
+                                class: ['tab--dark','Бизнес класс'],
+                                devEnd: '2026',
+                                name: 'Сказочный лес',
+                                image: `./img/all/map-popup.png`,
+                                address: `Казань, ул. Рауиса Гареева, 109`,
+                                studios: '5',
+                                oneRoom: '10',
+                                twoRoom: '5',
+                                threeRoom: '2',
+                                fourRoom: '2',
+                                link: 'https://www.google.ru/'
+                            },
+                        ];
+
+                        var mapProjectsZoom  = 11;
+
+                        var mapProjectsCenter = [55.800777, 49.107601];
+                    </script>
+                <div class="projects__map-wrapper js-projects-map"></div>
+            </div>
         </div>
     </div>
 </section>
@@ -489,7 +572,7 @@
                         </button>
                     </div>
 
-                    <a href="#" class="carousel__mailing main-btn main-btn--icons main-btn--grey">
+                    <a href="#mailing-modal" class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal hide-on-mobile">
                         <svg class="icon">
                             <use xlink:href="#mailing"></use>
                         </svg>
@@ -571,7 +654,7 @@
                     Смотреть все
                 </a>
 
-                <a href="#" class="carousel__mailing main-btn main-btn--icons main-btn--grey show-on-mobile">
+                <a href="#mailing-modal" class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal show-on-mobile">
                     <svg class="icon">
                         <use xlink:href="#mailing"></use>
                     </svg>

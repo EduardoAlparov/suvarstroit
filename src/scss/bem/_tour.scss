@@ -2,12 +2,21 @@
     &__body {
         position: relative;
         width: 100%;
+        max-width: 100%;
         overflow: hidden;
         aspect-ratio: 0.56 / 1;
         @extend ._border-20;
 
         @include breakpointMF(tablet) {
             aspect-ratio: 2 / 1;
+            max-width: unset;
+            overflow: hidden;
+
         }
+    }
+
+    &__gallery-wrapper {
+        width: 100%;
+        height: 100%;
     }
 }

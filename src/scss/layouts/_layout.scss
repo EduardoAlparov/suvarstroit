@@ -58,6 +58,12 @@ body {
     &:has(.tour-gallery--fullscreen) {
         @extend .no-scroll;
     }
+
+    &.modal-open {
+        .fixed-block {
+            padding-right: var(--sb-width, 16px);
+        }
+    }
 }
 
 
@@ -83,6 +89,10 @@ body {
 
     &--first {
         @extend ._header-padding-top;
+
+        .plans-section__site-container {
+            padding-top: 13rem;
+        }
     }
 
     &--blue {

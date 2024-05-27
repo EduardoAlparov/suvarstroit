@@ -53,5 +53,18 @@
         @include breakpointMF(tablet) {
             margin-top: 1.8rem;
         }
+
+        &.modal__agreement {
+            margin-top: 0.8rem;
+            color: var(--Black-50, (2, 2, 2, 0.50));
+
+            a {
+                color: var(--Black, (2, 2, 2, 1));
+            }
+
+            @include breakpointMF(tablet) {
+                margin-top: 2.4rem;
+            }
+        }
     }
 }

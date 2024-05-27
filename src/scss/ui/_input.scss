@@ -1,4 +1,4 @@
-.input {
+ .input {
     width: 100%;
     height: 5rem;
     padding: 2rem;
@@ -35,6 +35,27 @@
 
     &:active {
         border-color: var(--White-10, rgba(255, 255, 255, 0.10));
+    }
+
+    &.input--dark {
+        color: var(--Black, rgba(2, 2, 2, 1));
+        border-color: var(--Black-30, rgba(2, 2, 2, 0.30));
+
+        @include placeholder() {
+            color: var(--Black-40, rgba(2, 2, 2, 0.4));
+        }
+
+        &:focus {
+            border-color: var(--Black-30, rgba(2, 2, 2, 0.30));
+
+            @include placeholder() {
+                color: var(--Black, rgba(2, 2, 2, 1));
+            }
+        }
+
+        &:active {
+            border-color: var(--White-10, rgba(255, 255, 255, 0.10));
+        }
     }
 }
 

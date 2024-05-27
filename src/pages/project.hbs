@@ -1,7 +1,7 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
-<section class="home home--fillscreen section section--minus-mb  js-home-swiper-wrapper">
+<section class="home home--fillscreen-project section section--minus-mb js-home-swiper-wrapper">
     <div class="home-slider home-slider--fullscreen home-slider--small">
         <div class="home-slider__image-swiper-wrapper">
             <div class="home-slider__image-swiper swiper">
@@ -202,7 +202,7 @@
                 Генплан
             </h2>
 
-            <div class="general-plan__navbar navbar navbar--width-auto">
+            <div class="general-plan__navbar js-navbar-swiper navbar navbar--width-auto">
                 <ul class="navbar__list">
                     <li class="navbar__item">
                         <button data-switch-id="general-plan-2023" type="button"
@@ -955,7 +955,7 @@
                 Преимущества
             </h2>
 
-            <div class="general-plan__navbar navbar navbar--width-auto">
+            <div class="general-plan__navbar js-navbar-swiper navbar navbar--width-auto">
                 <ul class="navbar__list">
                     <li class="navbar__item">
                         <button data-switch-id="advantages-001" type="button"
@@ -998,7 +998,7 @@
         </div>
 
         <ul class="advantages__windows">
-            <li data-switch-window id="advantages-001" class="about__demo advantages__window">
+            <li data-switch-window id="advantages-001" class="about__demo advantages__window js-advantages-item-swiper">
                 <div class="about__left advantages__info-slider">
                     <div class="advantages__info-swiper swiper">
                         <ul class="advantages__info-swiper-wrapper swiper-wrapper">
@@ -1008,7 +1008,6 @@
                                 </h6>
 
                                 <div class="advantages__info-image">
-
                                     <div class="advantages__image">
                                         <picture>
                                             <source type="image/webp" srcset="./img/advantages/image-min.webp" alt="" />
@@ -1024,12 +1023,12 @@
                                 </p>
 
                                 <ul class="advantages__info-thumbs">
-                                    <li class="advantages__info-thumb advantages__info-thumb--active">
+                                    <li data-thumb-index="0" class="js-info-thumb advantages__info-thumb advantages__info-thumb--active">
                                         <a href="#">
                                             <img src="./img/advantages/thumb.png" alt="" />
                                         </a>
                                     </li>
-                                    <li class="advantages__info-thumb">
+                                    <li data-thumb-index="1" class="js-info-thumb advantages__info-thumb">
                                         <a href="#">
                                             <img src="./img/advantages/thumb.png" alt="" />
                                         </a>
@@ -1048,12 +1047,24 @@
                                     <source type="image/webp" srcset="./img/advantages/slide.webp" alt="" />
                                     <img class="lazy" src="./img/advantages/slide.jpg" alt="" />
                                 </picture>
+
+                                <button type="button" class="advantages__expand-slide expand">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#expand"></use>
+                                    </svg>
+                                </button>
                             </li>
                             <li class="advantages__image-swiper-slide swiper-slide">
                                 <picture>
                                     <source type="image/webp" srcset="./img/advantages/slide.webp" alt="" />
                                     <img class="lazy" src="./img/advantages/slide.jpg" alt="" />
                                 </picture>
+
+                                <button type="button" class="advantages__expand-slide expand">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#expand"></use>
+                                    </svg>
+                                </button>
                             </li>
                         </ul>
 
@@ -1075,11 +1086,11 @@
                         </div>
                     </div>
 
-                    <button type="button" class="advantages__expand expand">
+                    <a href="#modal-advantages-gallery" class="advantages__expand expand js-open-modal">
                         <svg aria-hidden="true" class="icon">
                             <use xlink:href="#expand"></use>
                         </svg>
-                    </button>
+                    </a>
                 </div>
             </li>
         </ul>
@@ -1270,6 +1281,11 @@
                 address: 'Школа № 24',
                 title: `Общеобразовательная школа`
             },
+            {
+                coords: [55.674309, 49.219280],
+                address: 'Усадская Прогимназия',
+                title: `Школа`
+            },
         ];
 
         var locationMeds = [
@@ -1280,11 +1296,58 @@
             },
         ];
 
+        var locationCross = [
+            {
+                coords: [55.693620, 49.241099],
+                address: 'Объект',
+                title: `??????? !!!!!!`
+            },
+        ];
+
+        var locationCafe = [
+            {
+                coords: [55.695159, 49.202451],
+                address: 'Тандыр',
+                title: `Закусочная`
+            },
+            {
+                coords: [55.679006, 49.214775],
+                address: 'Гала',
+                title: `Кафе`
+            },
+        ];
+
+        var locationSport = [
+            {
+                coords: [55.691506, 49.200250],
+                address: 'Федерация тхэквондо',
+                title: `спорт`
+            },
+            {
+                coords: [55.683517, 49.212274],
+                address: 'Зелёный кенгуру',
+                title: `Фитнес-клуб`
+            },
+        ];
+
         var locationMarkets = [
             {
                 coords: [55.687410, 49.213232],
                 address: 'Магнит',
                 title: `Магазин продуктов`
+            },
+        ];
+
+        var locationForests = [
+            {
+                coords: [55.691481, 49.189294],
+                address: 'Девликеевский лес',
+                title: `лесной массив`
+            },
+            {
+                coords: [55.706018, 49.268058],
+                address: 'Лес',
+                title: `лесной массив`
             },
         ];
 
@@ -1307,10 +1370,45 @@
     <div class="location-section__site-container">
         <div class="location-section__map-wrapper">
             <div class="location-section__map js-location-map">
-
-
                 <div class="location-section__nav-panel">
+                    <div class="location-section__nav-body">
+                        <h5 class="location-section__nav-title location-section__nav-title--h5-text">
+                            Инфраструктура<br>и&nbsp;расположение
+                        </h5>
 
+                        <ul class="location-section__nav-list">
+                            <li>
+                                <div class="location-section__nav-icon location-section__nav-icon--red">
+                                    <svg class="icon">
+                                        <use xlink:href="#all"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="location-section__nav-name location-section__nav-name--text-18">
+                                    Все объекты
+                                </p>
+
+                                <p class="location-section__nav-count location-section__nav-count--text-18">
+                                    45
+                                </p>
+                            </li>
+                            <li>
+                                <div class="location-section__nav-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#school-white"></use>
+                                    </svg>
+                                </div>
+
+                                <p class="location-section__nav-name location-section__nav-name--text-18">
+                                    Школы и детские сады
+                                </p>
+
+                                <p class="location-section__nav-count location-section__nav-count--text-18">
+                                    6
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1600,7 +1698,9 @@
         </div>
 
         <div class="tour__body">
-            {{>tour-gallery }}
+            <div class="tour__gallery-wrapper">
+                {{>tour-gallery }}
+            </div>
         </div>
     </div>
 </section>

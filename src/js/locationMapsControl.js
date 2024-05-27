@@ -12,6 +12,10 @@ export default () => {
             const locationMeds = window.locationMeds ?? null;
             const locationMarkets = window.locationMarkets ?? null;
             const locationPlayschools = window.locationPlayschools ?? null;
+            const locationCafe = window.locationCafe ?? null;
+            const locationCross = window.locationCross ?? null;
+            const locationSport = window.locationSport ?? null;
+            const locationForests = window.locationForests ?? null;
 
 
             const zoom = window.locationZoom ?? 15,
@@ -109,32 +113,74 @@ export default () => {
                 mapInstance.behaviors.enable('MultiTouch');
             }
 
-            var HintLayout = ymaps.templateLayoutFactory.createClass("<div class='my-hint'>" +
-            "<b>{{ properties.object }}</b><br />" +
-            "{{ properties.address }}" +
-            "</div>", {
-                    // Определяем метод getShape, который
-                    // будет возвращать размеры макета хинта.
-                    // Это необходимо для того, чтобы хинт автоматически
-                    // сдвигал позицию при выходе за пределы карты.
-                    getShape: function () {
-                        var el = this.getElement(),
-                            result = null;
-                        if (el) {
-                            var firstChild = el.firstChild;
-                            result = new ymaps.shape.Rectangle(
-                                new ymaps.geometry.pixel.Rectangle([
-                                    [0, 0],
-                                    [firstChild.offsetWidth, firstChild.offsetHeight]
-                                ])
-                            );
+            const HintLayout = ymaps.templateLayoutFactory.createClass("<div class='my-hint'>" +
+                        "<div class='location-hint'>" +
+                            "<p class='location-hint__title'>{{ properties.object }}</p>" +
+                            "<span class='location-hint__text'>{{ properties.address }}</span>" +
+                        "</div>" +
+                    "</div>", {
+                        // Определяем метод getShape, который
+                        // будет возвращать размеры макета хинта.
+                        // Это необходимо для того, чтобы хинт автоматически
+                        // сдвигал позицию при выходе за пределы карты.
+                        getShape: function () {
+                            var el = this.getElement(),
+                                result = null;
+                            if (el) {
+                                var firstChild = el.firstChild;
+                                result = new ymaps.shape.Rectangle(
+                                    new ymaps.geometry.pixel.Rectangle([
+                                        [0, 0],
+                                        [firstChild.offsetWidth, firstChild.offsetHeight]
+                                    ])
+                                );
+                            }
+                            return result;
                         }
-                        return result;
                     }
-                }
-            );
+                ),
 
-            var locationMiddleSchoolsLayout = ymaps.templateLayoutFactory.createClass([
+                clusterMarkerLayout = ymaps.templateLayoutFactory.createClass([
+                    '<div class="ya-main-cluster">',
+                        '<div>{{ properties.geoObjects.length }}</div>',
+                    '</div>'
+                ].join('')),
+                // макет кластера с ховером:
+                clusterMarkerLayoutHover = ymaps.templateLayoutFactory.createClass([
+                    '<div class="ya-main-cluster ya-main-cluster--hover">',
+                        '<div>{{ properties.geoObjects.length }}</div>',
+                    '</div>'
+                ].join('')),
+                // настройка макета иконки кластера:
+                clusterIcons = [
+                    {
+                        size: [40, 40],
+                        offset: [-20, -20]
+                    },
+                    {
+                        shape: {
+                            type: 'Circle',
+                            coordinates: [0, 0],
+                            radius: 25
+                        }
+                    }
+                ],
+
+                clusterer = new ymaps.Clusterer({
+                    clusterIcons: clusterIcons,
+                    clusterIconContentLayout: clusterMarkerLayout,
+                    clusterize: true,
+                    clusterHasBalloon: true,
+                    geoObjectOpenBalloonOnClick: true,
+                    visible: true,
+                    gridSize: 512,
+                    clusterHasHint: false,
+                }),
+
+                geoObjects = [];
+
+
+            const locationMiddleSchoolsLayout = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#school"></use>',
@@ -142,7 +188,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationMiddleSchoolsLayoutHover = ymaps.templateLayoutFactory.createClass([
+            const locationMiddleSchoolsLayoutHover = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="midschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#school"></use>',
@@ -150,7 +196,71 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationMedsLayout = ymaps.templateLayoutFactory.createClass([
+            const locationForestLayout = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cafe" class="ya-tree-placemark ya-secondary-placemark">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#treee"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationForestLayoutHover = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cafe" class="ya-tree-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#treee"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationCafeLayout = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cafe" class="ya-cafe-placemark ya-secondary-placemark">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#cafe"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationCafeLayoutHover = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cafe" class="ya-cafe-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#cafe"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationCrossLayout = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cross" class="ya-pl-cross-placemark ya-secondary-placemark">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#pl-cross"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationCrossLayoutHover = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cross" class="ya-pl-cross-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#pl-cross"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationSportLayout = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cross" class="ya-sport-placemark ya-secondary-placemark">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#sport"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationSportLayoutHover = ymaps.templateLayoutFactory.createClass([
+                '<div data-placemark="cross" class="ya-sport-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
+                    '<svg aria-hidden="true" class="icon">',
+                        '<use xlink:href="#sport"></use>',
+                    '</svg>',
+                '</div>'
+            ].join(''));
+
+            const locationMedsLayout = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="meds" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#meds"></use>',
@@ -158,7 +268,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationMedsLayoutHover = ymaps.templateLayoutFactory.createClass([
+            const locationMedsLayoutHover = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="meds" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#meds"></use>',
@@ -166,7 +276,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationMarketsLayout = ymaps.templateLayoutFactory.createClass([
+            const locationMarketsLayout = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="markets" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#markets"></use>',
@@ -174,7 +284,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationMarketsLayoutHover = ymaps.templateLayoutFactory.createClass([
+            const locationMarketsLayoutHover = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="markets" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#markets"></use>',
@@ -182,7 +292,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationPSLayout = ymaps.templateLayoutFactory.createClass([
+            const locationPSLayout = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="playschool" class="ya-mid-school-placemark ya-secondary-placemark">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#p-school"></use>',
@@ -190,7 +300,7 @@ export default () => {
                 '</div>'
             ].join(''));
 
-            var locationPSLayoutHover = ymaps.templateLayoutFactory.createClass([
+            const locationPSLayoutHover = ymaps.templateLayoutFactory.createClass([
                 '<div data-placemark="playschool" class="ya-mid-school-placemark ya-secondary-placemark ya-secondary-placemark--hover">',
                     '<svg aria-hidden="true" class="icon">',
                         '<use xlink:href="#p-school"></use>',
@@ -213,16 +323,13 @@ export default () => {
                     hintLayout: HintLayout,
 
                 });
-
                 msp.events.add('mouseenter', function (e) {
                     e.get('target').options.set('iconLayout', locationMiddleSchoolsLayoutHover);
                 });
-
                 msp.events.add('mouseleave', function (e) {
                     e.get('target').options.set('iconLayout', locationMiddleSchoolsLayout);
                 });
-
-                mapInstance.geoObjects.add(msp);
+                geoObjects.push(msp);
             });
 
             locationMeds.forEach(function(item) {
@@ -239,17 +346,13 @@ export default () => {
                     },
                     hintLayout: HintLayout
                 });
-
                 msp.events.add('mouseenter', function (e) {
                     e.get('target').options.set('iconLayout', locationMedsLayoutHover);
                 });
-
                 msp.events.add('mouseleave', function (e) {
                     e.get('target').options.set('iconLayout', locationMedsLayout);
                 });
-
-
-                mapInstance.geoObjects.add(msp);
+                geoObjects.push(msp);
             });
 
             locationMarkets.forEach(function(item) {
@@ -266,17 +369,13 @@ export default () => {
                     },
                     hintLayout: HintLayout
                 });
-
                 msp.events.add('mouseenter', function (e) {
                     e.get('target').options.set('iconLayout', locationMarketsLayoutHover);
                 });
-
                 msp.events.add('mouseleave', function (e) {
                     e.get('target').options.set('iconLayout', locationMarketsLayout);
                 });
-
-
-                mapInstance.geoObjects.add(msp);
+                geoObjects.push(msp);
             });
 
             locationPlayschools.forEach(function(item) {
@@ -293,18 +392,106 @@ export default () => {
                     },
                     hintLayout: HintLayout
                 });
-
                 msp.events.add('mouseenter', function (e) {
                     e.get('target').options.set('iconLayout', locationPSLayoutHover);
                 });
-
                 msp.events.add('mouseleave', function (e) {
                     e.get('target').options.set('iconLayout', locationPSLayout);
                 });
-
-
-                mapInstance.geoObjects.add(msp);
+                geoObjects.push(msp);
             });
+
+            locationCafe.forEach(function(item) {
+                const msp = new ymaps.Placemark(item.coords, {
+                    address: item.title,
+                    object: item.address
+                },{
+                    iconLayout: locationCafeLayout,
+                    iconShape: {
+                        type: 'Circle',
+                        coordinates: [0, 0],
+                        radius: 25
+                    },
+                    hintLayout: HintLayout
+                });
+                msp.events.add('mouseenter', function (e) {
+                    e.get('target').options.set('iconLayout', locationCafeLayoutHover);
+                });
+                msp.events.add('mouseleave', function (e) {
+                    e.get('target').options.set('iconLayout', locationCafeLayout);
+                });
+
+                geoObjects.push(msp);
+            });
+
+            locationSport.forEach(function(item) {
+                const msp = new ymaps.Placemark(item.coords, {
+                    address: item.title,
+                    object: item.address
+                },{
+                    iconLayout: locationSportLayout,
+                    iconShape: {
+                        type: 'Circle',
+                        coordinates: [0, 0],
+                        radius: 25
+                    },
+                    hintLayout: HintLayout
+                });
+                msp.events.add('mouseenter', function (e) {
+                    e.get('target').options.set('iconLayout', locationSportLayoutHover);
+                });
+                msp.events.add('mouseleave', function (e) {
+                    e.get('target').options.set('iconLayout', locationSportLayout);
+                });
+                geoObjects.push(msp);
+            });
+
+            locationCross.forEach(function(item) {
+                const msp = new ymaps.Placemark(item.coords, {
+                    address: item.title,
+                    object: item.address
+                },{
+                    iconLayout: locationCrossLayout,
+                    iconShape: {
+                        type: 'Circle',
+                        coordinates: [0, 0],
+                        radius: 25
+                    },
+                    hintLayout: HintLayout
+                });
+                msp.events.add('mouseenter', function (e) {
+                    e.get('target').options.set('iconLayout', locationCrossLayoutHover);
+                });
+                msp.events.add('mouseleave', function (e) {
+                    e.get('target').options.set('iconLayout', locationCrossLayout);
+                });
+                geoObjects.push(msp);
+            });
+
+            locationForests.forEach(function(item) {
+                const msp = new ymaps.Placemark(item.coords, {
+                    address: item.title,
+                    object: item.address
+                },{
+                    iconLayout: locationForestLayout,
+                    iconShape: {
+                        type: 'Circle',
+                        coordinates: [0, 0],
+                        radius: 25
+                    },
+                    hintLayout: HintLayout
+                });
+                msp.events.add('mouseenter', function (e) {
+                    e.get('target').options.set('iconLayout', locationForestLayoutHover);
+                });
+                msp.events.add('mouseleave', function (e) {
+                    e.get('target').options.set('iconLayout', locationForestLayout);
+                });
+                geoObjects.push(msp);
+            });
+
+            clusterer.add(geoObjects);
+            mapInstance.geoObjects.add(clusterer);
         }
     })
 }

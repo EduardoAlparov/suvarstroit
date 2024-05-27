@@ -1,21 +1,23 @@
 .popover {
-    position: absolute;
-    z-index: 1010;
-    overflow: hidden;
-    padding: 30px 30px 10px 30px;
+    &:not(:has(.map-popup)) {
+        position: absolute;
+        z-index: 1010;
+        overflow: hidden;
+        padding: 3rem 3rem 1rem 3rem;
 
-    color: var(--Black, #020202);
-    background-color: var(--White, #fff);
-    border-radius: 2rem;
+        color: var(--Black, #020202);
+        background-color: var(--White, #fff);
+        border-radius: 2rem;
 
-    text-align: left;
-    white-space: normal;
+        text-align: left;
+        white-space: normal;
 
-    @extend ._border-20;
+        @extend ._border-20;
 
-    .arrow,
-    .close {
-        display: none;
+        .arrow,
+        .close {
+            display: none;
+        }
     }
 }
 
@@ -30,7 +32,8 @@
 }
 
 .popover-title {
-    margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .popover-list {

@@ -1,4 +1,5 @@
 .plans {
+
     &__body {
         width: 100%;
         display: grid;
@@ -6,7 +7,7 @@
         gap: 2rem;
 
         @include breakpointMF(tablet) {
-            grid-template-columns: 1fr 48.4rem;
+            grid-template-columns: 1fr 50.4rem;
             align-items: stretch;
             gap: 2.4rem;
         }
@@ -95,6 +96,11 @@
             grid-template-columns: 23rem 1fr;
             padding: 2rem;
         }
+    }
+
+    &__sliders {
+        width: 100%;
+        max-width: 74.2rem;
     }
 
     &__slider {
@@ -208,6 +214,7 @@
         opacity: 0.6;
 
         @include breakpointMF(tablet) {
+            aspect-ratio: 1;
             padding: 0.4rem 1.5rem 1.6rem;
         }
 
@@ -218,6 +225,17 @@
 
         @include hoverActive() {
             opacity: 1;
+        }
+    }
+
+    &__link-image {
+        flex-grow: 1;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
 
@@ -236,28 +254,58 @@
         margin-top: 2rem;
 
         &.navbar {
-            width: max-content;
-        }
+            width: 100%;
 
-        .navbar__list {
-            width: unset;
-            background: var(--White, #FFF);
-        }
+            @include breakpointMF(tablet) {
+                width: max-content;
+            }
 
-        .navbar__item {
-            flex: 0 1 max-content;
+            .navbar__list {
+                width: max-content;
+                background: var(--White, #FFF);
+
+                @include breakpointMF(tablet) {
+                    width: unset;
+                }
+            }
+
+            .navbar__item {
+                flex-grow: 1;
+
+                @include breakpointMF(tablet) {
+                    flex: 0 1 max-content;
+                }
+            }
+
+            .navbar__button {
+                width: 100%;
+
+                @include breakpointMF(tablet) {
+                    min-width: 13rem;
+                }
+            }
         }
     }
 
     &__small-right {
+        @include breakpointMF(tablet) {
+            padding: 0.8rem 3rem 0;
+        }
+    }
+
+    &__info-swiper.swiper {
+        height: 100%;
+    }
+
+    &__info-wrapper {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 2rem;
+        height: 100%;
 
         @include breakpointMF(tablet) {
             justify-content: space-between;
-            padding: 0.8rem 3rem 0;
         }
     }
 
@@ -413,5 +461,17 @@
                 max-width: 24rem;
             }
         }
+    }
+
+    &__genplan {
+
+    }
+
+    &__zoom {
+        position: absolute;
+        right: 3rem;
+        left: unset;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }

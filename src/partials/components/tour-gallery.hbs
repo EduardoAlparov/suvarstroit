@@ -1,5 +1,5 @@
 <div class="tour-gallery js-tour-gallery">
-    <button type="button" class="tour-gallery__expand js-tour-gallery-expand expand">
+    <button type="button" class="tour-gallery__expand js-tour-gallery-expand expand hide-on-mobile">
         <svg aria-hidden="true" class="icon">
             <use xlink:href="#expand"></use>
         </svg>
@@ -11,7 +11,7 @@
         </svg>
     </button>
 
-    <div class="tour-gallery__navbar navbar navbar--width-auto">
+    <div class="tour-gallery__navbar navbar js-navbar-swiper navbar--width-auto">
         <ul class="navbar__list">
             <li class="navbar__item">
                 <button data-slide-id="advantages-001" type="button"
@@ -74,8 +74,7 @@
         <ul class="tour-gallery__swiper-wrapper swiper-wrapper">
             <li class="tour-gallery__swiper-slide swiper-slide">
                 <picture>
-                    <source srcset="img/all/tour-mob.webp" media="(max-width: 768px)" type="image/webp">
-                    <source srcset="img/all/tour-mob.jpg" media="(max-width: 768px)">
+
                     <source srcset="img/all/tour.webp" type="image/webp">
                     <img src="img/all/tour.jpg" alt="Генплан»">
                 </picture>

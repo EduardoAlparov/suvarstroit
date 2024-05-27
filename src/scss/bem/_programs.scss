@@ -1,6 +1,7 @@
 .programs {
     &__body {
         display: grid;
+        grid-template-columns: 100%;
         align-items: stretch;
         gap: 2rem;
 

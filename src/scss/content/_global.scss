@@ -224,7 +224,6 @@ select:-webkit-autofill:focus {
     }
 }
 
-
 .zoom-btns {
     transform: translateY(-50%);
     display: flex;
@@ -245,8 +244,8 @@ select:-webkit-autofill:focus {
     justify-content: center;
     flex-shrink: 0;
 
-    width: 60PX;
-    height: 60PX;
+    width: 6rem;
+    height: 6rem;
 
     background-color: var(--White, #fff);
     border-radius: 100%;
@@ -254,13 +253,12 @@ select:-webkit-autofill:focus {
     transition: 0.3s;
     cursor: pointer;
 
-
     .icon-minus,
     .icon-plus {
         display: block;
 
-        width: 22PX;
-        height: 22PX;
+        width: 2.2rem;
+        height: 2.2rem;
         flex-shrink: 0;
 
         background-repeat: no-repeat;
@@ -291,8 +289,8 @@ select:-webkit-autofill:focus {
     align-items: center;
     justify-content: center;
 
-    width: 40PX;
-    height: 40PX;
+    width: 4rem;
+    height: 4rem;
 
     border: 2px solid var(--White, #FFF);
     background: var(--Red, #CF000C);
@@ -302,8 +300,8 @@ select:-webkit-autofill:focus {
 
 
     .icon {
-        width: 16PX;
-        height: 16PX;
+        width: 1.6rem;
+        height: 1.6rem;
 
         fill: var(--White, #FFF);
         transition: fill 0.3s ease-out;
@@ -319,35 +317,102 @@ select:-webkit-autofill:focus {
 }
 
 .my-hint {
-    position: relative;
-    top: -60px;
-    left: 22px;
 
-    min-width: 195px;
-    min-height: 65px;
+}
+
+.fixed-hint {
+
+}
+
+.cluster-hint {
+    display: block;
+    width: 26.2rem;
+    height: 100%;
+    padding: 1.6rem;
+    color: var(--White, #FFF);
+    background-color: var(--Blue-Dark-Blue, #101038);
+    border-radius: 8px;
+
+    transform: translate(3rem, -50%);
+}
+
+.ya-main-cluster {
+    width: 4rem;
+    height: 4rem;
 
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    padding: 16PX 20PX 10px;
+    color: var(--White, #FFF);
+    will-change: transform;
+    @include font(1.4rem, 120%, 500);
 
-    background-color: var(--White, #fff);
-    border-radius: 0.8rem;
-    border: none;
-    color: var(--Black-50, rgba(2, 2, 2, 0.50));
+    background-color: var(--Red-Red, #CF000C);
+    border: 2px solid var(--White-White, #FFF);
+    border-radius: 100%;
 
-    // font-size: 1.4PX;
-    // line-height: 1.3;
-    // text-align: left;
-
-    b {
-        display: block;
-        margin-bottom: -10PX;
-
-        color: var(--Black, rgba(2, 2, 2, 1));
-        font-size: 16PX;
-        line-height: 1.5;
-        font-feature-settings: 'clig' off, 'liga' off;
+    &.ya-main-cluster--hover {
+        animation: toBigScale 0.3s ease-out 0s 1 forwards;
     }
 
+    &:not(.ya-main-cluster--hover) {
+        animation: toInintalScale 0.3s ease-out 0s 1 forwards;
+    }
+}
+
+.customControl {
+    padding: 20px;
+}
+
+.location-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: max-content;
+    min-width: 15rem;
+
+    padding: 2rem 1.6rem;
+    background: var(--White, #FFF);
+    border-radius: 8px;
+
+    &__title {
+        display: block;
+        margin-bottom: 1.2rem;
+        color: #020202;
+        font-feature-settings: 'clig' off, 'liga' off;
+        @include font(1.6rem, 150%, 400);
+        white-space: nowrap;
+    }
+
+    &__text {
+        display: block;
+        color: rgba(2, 2, 2, 0.50);
+        @include font(1.4rem, 130%, 400);
+        white-space: nowrap;
+    }
+}
+
+
+@keyframes toBigScale {
+    0% {
+        transform: scale(1);
+        background-color: var(--Red-Red, #CF000C);
+    };
+    100% {
+        transform: scale(1.25);
+
+        background-color: var(--Coral, #FF6266);
+    }
+}
+
+@keyframes toInintalScale {
+    0% {
+        transform: scale(1.25);
+        background-color: var(--Coral, #FF6266);
+    };
+    100% {
+        transform: scale(1);
+        background-color: var(--Red-Red, #CF000C);
+    }
 }

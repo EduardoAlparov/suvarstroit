@@ -29,5 +29,5 @@ export function closestEdge(mouse, elem) {
     }
 }
 
-export const IS_MOBILE = window.matchMedia('(max-width: 640px)').matches;
+export const IS_MOBILE = window.matchMedia('(max-width: 768px)').matches;
 export const IS_TABLET = window.matchMedia('(max-width: 1024px)').matches;

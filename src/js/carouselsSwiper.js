@@ -9,8 +9,8 @@ export default () => {
         const isQuarter= swiperBlock.classList.contains('carousel__swiper--quarter');
 
         let mobileOptions = {
-            spaceBetween: 0,
-            slidesPerView: 11,
+            spaceBetween: 8,
+            slidesPerView: 1.1,
             speed: 600
         };
         let destopOptions = {

@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import { IS_MOBILE } from "./utils";
+
 export default () => {
     const navbars = document.querySelectorAll('.navbar');
 
@@ -33,4 +36,14 @@ export default () => {
             }
         })
     })
+
+    if(IS_MOBILE) {
+        const navbarsSwiper = new Swiper('.js-navbar-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+
+            slideClass: 'navbar__item',
+            wrapperClass: 'navbar__list',
+        })
+    }
 }

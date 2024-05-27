@@ -1,0 +1,97 @@
+.map-popup {
+    position: relative;
+    width: 48rem;
+    height: 70rem;
+
+    &__inner-wrapper {
+        padding-right: 6rem;
+        height: 100%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        overflow: hidden;
+        width: 42rem;
+        height: 100%;
+
+        background: var(--White, #FFF);
+        @extend ._border-20;
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1.7 / 1;
+        background-color: lightgray;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.62 / 1;
+        }
+
+        img {
+            @include centeredAbsolute();
+
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2.4rem;
+
+
+        .main-btn  {
+            width: auto;
+            margin-top: auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+    }
+
+    &__list {
+        width: 100%;
+        margin-bottom: auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 0;
+
+        border-color: var(--Black-10, rgba(2, 2, 2, 0.1));
+        border-style: solid;
+        border-width: 0 0 1px 0;
+
+        p {
+            @include font(1.2rem, 120%, 400);
+
+            @include breakpointMF(tablet) {
+                @include font(1.4rem, 130%, 400);
+            }
+        }
+    }
+    &__value {
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,103 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3500;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--Black-30, rgba(2, 2, 2, 0.3));
+
+    &.active {
+        display: flex;
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__inner-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: calc(100% - 4rem);
+        margin: auto;
+
+        padding-top: 6rem;
+
+        @include breakpointMF(tablet) {
+            max-width: 64rem;
+            padding-top: 0;
+            padding-right: 7.2rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        overflow: hidden;
+        background: var(--White, #FFF);
+        @extend ._border-24;
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1.9 / 1;
+        background-color: lightgray;
+
+        img {
+            @include centeredAbsolute();
+
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__form {
+        padding: 2rem 1.6rem;
+
+        @include breakpointMF(tablet) {
+            padding: 3.2rem 3rem;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.6rem;
+        line-height: 100%;
+    }
+
+    &__text {
+        opacity: 0.6;
+    }
+
+    &__inputs-col {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+    }
+
+    &__sumbit.main-btn {
+        width: 100%;
+    }
+}

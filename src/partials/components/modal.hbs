@@ -1,0 +1,49 @@
+<div class="modal js-modal"  id="mailing-modal">
+    <div class="modal__inner-wrapper">
+
+        <button type="button" class="modal__close close-btn js-close-modal">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#close-empty"></use>
+            </svg>
+        </button>
+
+        <div class="modal__body">
+            <div class="modal__image">
+                <img src="./img/all/modal-img.png" alt="">
+            </div>
+
+            <form action="" class="modal__form" data-need-validation>
+                <div class="modal__heading">
+                    <h5 class="modal__title modal__title--h5-text">
+                        Подпишитесь<br>
+                        на e-mail рассылку
+                    </h5>
+                    <p class="modal__text">
+                        и узнавайте об обновлениях первыми
+                    </p>
+                </div>
+
+                <div class="modal__inputs">
+                    <div class="modal__inputs-col">
+                        <div class="modal__input input-wrapper">
+                            <input class="input input--dark" type="email" name="callback-email" id="callback-email"
+                                placeholder="E-mail" required="" autocomplete="off" minlength="3"
+                                data-parsley-email="" data-parsley-trigger="input"
+                                data-parsley-validate-if-empty>
+                        </div>
+
+                        <button class="modal__sumbit main-btn main-btn--red" type="submit">
+                            Подписаться
+                        </button>
+                    </div>
+                </div>
+
+                <p class="modal__agreement form-footer__agreement modal__agreement--text-14">
+                    Нажимая "Оставить заявку", вы соглашаетесь с <a href="#" target="_blank">
+                        политикой конфиденциальности
+                    </a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

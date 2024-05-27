@@ -1,5 +1,322 @@
 {{#extend "layout"}}
 {{#content "main"}}
 
+<section class="section plans-section section--first">
+    <div class="plans-section__site-container">
+        <div class="plans-section__plans">{{> plans planIsSection=false}}</div>
+    </div>
+</section>
+
+<section id="section-programs" class="section section--blue section--round-border programs">
+    <div class="programs__site-container">
+        <div class="programs__heading projects__heading">
+            <h2 class="projects__title projects__title--h3-text">
+                Ипотечные <span class="_thin-text">программы</span>
+            </h2>
+            <a href="./programs.html" class="main-btn main-btn--outlined hide-on-mobile">
+                Смотреть все
+            </a>
+        </div>
+        <div class="programs__body">
+            <form action="" class="programs__form-calc form-calc js-form-calc">
+                <p class="form-calc__title form-calc__title--h6-text">
+                    Рассчитайте&nbsp;выгодные<br>условия&nbsp;по&nbsp;ипотеке
+                </p>
+
+                <div class="form-calc__inputs">
+                    <div class="form-calc__input ">
+                        <div class="simple-range simple-range--cost">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="cost" id="costInput" min="4000000" max="15000000"
+                                        value="5689000">
+                                </div>
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="cost" id="costOutput">
+                                            5 689 000
+                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--prepayment">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="prepayment" id="prepaymentInput" min="1000000"
+                                        max="5000000" value="2345000">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="prepayment" id="prepaymentOutput">
+                                            2 345 000
+                                        </output><span>&nbsp;</span><span class="simple-range__span-currency">₽</span>
+                                    </div>
+                                    <div class="simple-range__input-percentege">
+                                        <span class="simple-range__percentege-value">20</span><span>&nbsp;</span><span
+                                            class="simple-range__percentege-currency">&#x25;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="select select--blue">
+                            <div class="select__label simple-range__label simple-range__label--text-14">
+                                Выбрать программу
+                            </div>
+                            <select name="project" class="js-custom-select">
+                                <option value="Проект">Выбрать программу</option>
+                                <option value="Ипотека для IT специалистов">Ипотека для IT специалистов</option>
+                                <option value="Ипотека с господдержкой">Ипотека с господдержкой</option>
+                                <option value="Губернаторская ипотека">Губернаторская ипотека</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--term">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Срок</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="term" id="termInput" min="5" max="30" value="30">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output for="term" id="termOutput">30</output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">лет</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-calc__final">
+                    <p class="form-calc__final-text form-calc__final-text--h6-text">
+                        Ежемесячный платеж
+                    </p>
+                    <p id="calc-sum" class="form-calc__final-sum form-calc__final-sum--h6-text">
+                        20 000
+                    </p>
+                </div>
+
+                <button class="form-calc__submit main-btn main-btn--white" type="submit">
+                    Отправить онлайн-заявку
+                </button>
+            </form>
+
+            <ul class="programs__list">
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#family"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Семейная
+                            ипотека
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                макс.&nbsp;cрок кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                макс.&nbsp;сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#it"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Ипотека&nbsp;для&nbsp;IT специалистов
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                cрок<br>кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">9</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#gover"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Ипотека с&nbsp;господдержкой
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-low-text program__number-low-text--text-18">от</span>
+                                <span class="program__number-text program__number-text--text-28">15%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                первоначальный взнос
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">8%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная ставка
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">30</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">лет</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                cрок<br>кредита
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6</span>
+                                <span class="program__number-low-text program__number-low-text--text-18">млн</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                сумма кредита
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item program program--space-between">
+                    <div class="program__image-block">
+                        <div class="program__icon">
+                            <svg class="icon">
+                                <use xlink:href="#general"></use>
+                            </svg>
+                        </div>
+                        <p class="program__name program__name--text-26">
+                            Губернаторская ипотека
+                        </p>
+                    </div>
+
+                    <ul class="program__advantages">
+                        <li class="program__advantage program__advantage--single">
+                            <p class="program__text program__text--text-14">
+                                Субсидирование из областного бюджета
+                            </p>
+                        </li>
+                        <li class="program__advantage">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">&lt;&nbsp;8%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                процентная&nbsp;ставка не выше 8%
+                            </p>
+                        </li>
+                        <li class="program__advantage program__advantage--row">
+                            <p class="program__numbers">
+                                <span class="program__number-text program__number-text--text-28">6%</span>
+                            </p>
+                            <p class="program__text program__text--text-14">
+                                в&nbsp;течение&nbsp;первых&nbsp;5 лет&nbsp;для&nbsp;работников бюджетной&nbsp;сферы
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="programs__item show-on-mobile">
+                    <a href="./programs.html" class="programs__link main-btn main-btn--outlined">
+                        Смотреть все
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 {{/content}}
 {{/extend}}

@@ -1,11 +1,13 @@
 .navbar {
+    width: 100%;
+
     &__list {
         display: flex;
         align-items: stretch;
         justify-content: center;
         gap: 0;
 
-        width: 100%;
+        width: max-content;
         padding: 0.4rem;
         border-radius: 0.8rem;
         background: var(--Light-Grey, #F5F5F5);
@@ -16,7 +18,9 @@
     }
 
     &__item {
-        flex: 1 0 50%;
+        &--fb50 {
+            flex: 1 0 50%;
+        }
     }
 
     &__button {
@@ -91,11 +95,16 @@
     }
 
     &.navbar--width-auto {
-        width: auto;
-        max-width: unset;
+
+        @include breakpointMF(tablet) {
+            width: auto;
+            max-width: unset;
+        }
 
         .navbar__item {
-            flex: 1 1 auto;
+            @include breakpointMF(tablet) {
+                flex: 1 1 auto;
+            }
         }
     }
 

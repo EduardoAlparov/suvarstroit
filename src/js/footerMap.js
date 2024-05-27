@@ -47,7 +47,7 @@ export default () => {
                     `<a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 329 329"><path fill="#fff" d="M194.64,164.77,322.75,36.66A21.31,21.31,0,0,0,292.61,6.52L164.5,134.63,36.39,6.52A21.31,21.31,0,0,0,6.25,36.66L134.36,164.77,6.25,292.88A21.31,21.31,0,0,0,36.39,323L164.5,194.91,292.61,323a21.31,21.31,0,0,0,30.14-30.14Z" /></svg></a>` +
                     '<div class="arrow"></div>' +
                     '<div class="popover-inner">' +
-                        '$[[options.contentLayout observeSize minWidth=380 maxWidth=380]]' +
+                        '$[[options.contentLayout observeSize minWidth=420 maxWidth=480]]' +
                         '</div>' +
                     '</div>',
                 {

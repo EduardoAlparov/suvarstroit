@@ -7,13 +7,13 @@ export default () => {
     homeSwiperWrappers.forEach((homeSwiperWrapper) => {
         const homeImageSwiperBox = homeSwiperWrapper.querySelector('.home-slider__image-swiper.swiper');
         const homeInfoSwiperBox = homeSwiperWrapper.querySelector('.home-slider__info-swiper.swiper');
-        const isFullSlider = homeSwiperWrapper.classList.contains('home--fillscreen');
+        const isFullSlider = homeSwiperWrapper.classList.contains('home--fillscreen-project');
 
         const swiperImage = new Swiper(homeImageSwiperBox, {
             pagination: {
                 el: isFullSlider ? ".number-pagination" : ".swiper-pagination",
                 dynamicBullets: !isFullSlider,
-                type: isFullSlider ? "fraction" : "fraction",
+                type: isFullSlider ? "fraction" : "bullets",
             },
 
             on: {

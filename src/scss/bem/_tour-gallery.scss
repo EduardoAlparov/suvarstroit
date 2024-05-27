@@ -1,5 +1,5 @@
 .tour-gallery {
-    --padding: 3rem;
+    --padding: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -9,6 +9,10 @@
     height: 100%;
 
     background-color: lightgray;
+
+    @include breakpointMF(tablet) {
+        --padding: 3rem;
+    }
 
     &:not(.tour-gallery--fullscreen) {
         .tour-gallery__close {
@@ -51,20 +55,42 @@
         transform: translateX(-50%);
     }
 
+    &__navbar {
+        padding: 0 var(--padding);
+
+        @include breakpointMF(tablet) {
+            padding: unset;
+        }
+    }
+
     &__links {
         top: unset;
         bottom: var(--padding);
-
+        width: calc(100% - 4rem);
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            width: unset;
+            flex-direction: row;
+        }
     }
 
     &__link {
-        flex: 1 1 23rem;
+        flex: 1 1 100%;
+
+        @include breakpointMF(tablet) {
+            flex: 1 1 23rem;
+        }
 
         &.main-btn {
-            min-width: 23rem;
+            min-width: 100%;
+
+            @include breakpointMF(tablet) {
+                min-width: 23rem;
+            }
         }
     }
 
@@ -74,8 +100,18 @@
         height: 100%;
     }
 
+    &__swiper-wrapper.swiper-wrapper {
+        overflow: auto;
+
+        @include breakpointMF(tablet) {
+            overflow: unset;
+        }
+    }
+
     &__swiper-slide.swiper-slide {
-        height: 100%;
+        height: 74.3rem;
+        aspect-ratio: 2 / 1;
+        width: auto;
 
         img {
             @include centeredAbsolute();
@@ -86,6 +122,12 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+
+        @include breakpointMF(tablet) {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: unset;
         }
     }
 
