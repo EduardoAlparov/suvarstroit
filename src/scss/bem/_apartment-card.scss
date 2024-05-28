@@ -1,0 +1,130 @@
+.apartment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    aspect-ratio: 0.86 / 1;
+    overflow: hidden;
+    padding: 3rem;
+
+    background: var(--White, #FFF);
+
+    @extend ._border-16;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.4rem;
+    }
+
+    &__name {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    &__info {
+        opacity: 0.5;
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    &__swiper.swiper {
+        width: 100%;
+        height: 80%;
+    }
+
+    &__swiper-slide.swiper-slide {
+        position: relative;
+        height: 100%;
+
+        img {
+            @include centeredAbsolute();
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__transparent-thumbs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        width: 100%;
+        height: 100%;
+
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    @include hoverActive() {
+        .apartment-card__swiper {
+            .swiper-pagination {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__price-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__price {
+        color: var(--Blue, #212173);
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-weight: 500;
+        line-height: 115%;
+    }
+
+    &__key {
+        position: relative;
+        padding-left: 2.2rem;
+
+        line-height: 150%;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 100;
+            transform: translateY(-50%);
+
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2217%22%20viewBox%3D%220%200%2016%2017%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20opacity%3D%220.3%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5.60156%206.50156C5.60156%204.04076%207.54076%202.10156%2010.0016%202.10156C12.4624%202.10156%2014.4016%204.04076%2014.4016%206.50156C14.4016%208.96236%2012.4624%2010.9016%2010.0016%2010.9016C9.59697%2010.9065%209.1935%2010.8581%208.80156%2010.7576V10.9016C8.80156%2011.1137%208.71728%2011.3172%208.56725%2011.4672C8.41722%2011.6173%208.21374%2011.7016%208.00156%2011.7016H7.20156V12.5016C7.20156%2012.7137%207.11728%2012.9172%206.96725%2013.0672C6.81722%2013.2173%206.61374%2013.3016%206.40156%2013.3016H5.60156V13.7016C5.60156%2014.0198%205.47513%2014.325%205.25009%2014.5501C5.02505%2014.7751%204.71982%2014.9016%204.40156%2014.9016H2.80156C2.4833%2014.9016%202.17808%2014.7751%201.95303%2014.5501C1.72799%2014.325%201.60156%2014.0198%201.60156%2013.7016V12.4328C1.60156%2012.1144%201.72796%2011.8088%201.95356%2011.5848L5.58556%207.95196C5.69276%207.84476%205.74556%207.65756%205.69916%207.44156C5.63369%207.13253%205.60097%206.81746%205.60156%206.50156ZM12.0016%205.30156C12.0016%205.08939%2011.9173%204.88591%2011.7672%204.73588C11.6172%204.58585%2011.4137%204.50156%2011.2016%204.50156C10.9894%204.50156%2010.7859%204.58585%2010.6359%204.73588C10.4858%204.88591%2010.4016%205.08939%2010.4016%205.30156C10.4016%205.51374%2010.4858%205.71722%2010.6359%205.86725C10.7859%206.01728%2010.9894%206.10156%2011.2016%206.10156C11.4137%206.10156%2011.6172%206.01728%2011.7672%205.86725C11.9173%205.71722%2012.0016%205.51374%2012.0016%205.30156Z%22%20fill%3D%22%23020202%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+}

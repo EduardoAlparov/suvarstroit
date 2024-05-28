@@ -29,6 +29,8 @@ import similarCarousels from './similarCarousels';
 import tourWindowToggle from './tourWindowToggle';
 import advantagesSwipersControl from './advantagesSwipersControl';
 import planBlockControl from './planBlockControl';
+import gallerySwiper from './gallerySwiper';
+import addingToFavorites from './addingToFavorites';
 import youtubeVideoControl from './youtubeVideoControl';
 
 import gsap from 'gsap';
@@ -66,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
     tourWindowToggle();
     advantagesSwipersControl();
     planBlockControl();
+    gallerySwiper();
+    addingToFavorites();
     // youtubeVideoControl();
 });
 

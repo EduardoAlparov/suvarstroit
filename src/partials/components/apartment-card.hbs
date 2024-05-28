@@ -1,0 +1,81 @@
+<div id="" class="apartment-card">
+    <div class="apartment-card__header">
+        <div class="apartment-card__titles">
+            <p class="apartment-card__name apartment-card__name--text-20">Студия 26,7 м2</p>
+            <p class="apartment-card__info apartment-card__info--text-14">
+                Южный парк, дом 5.2, 2 этаж из 12
+            </p>
+        </div>
+
+        <label class="apartment-card__favorite-checkbox favorite-checkbox favorite-checkbox--button">
+            <input class="visually-hidden js-flying-heart" hidden type="checkbox" name="favorite-checkbox"
+                id="favorite-checkbox-id-{{cardId}}">
+            <svg class="icon js-flying-heart-icon">
+                <use xlink:href="#fav"></use>
+            </svg>
+
+            <span></span>
+        </label>
+    </div>
+
+    <div class="apartment-card__body">
+        <div class="apartment-card__swiper swiper">
+            <ul class="apartment-card__swiper-wrapper swiper-wrapper">
+                <li class="apartment-card__swiper-slide swiper-slide">
+                    <picture>
+                        <source type="image/webp" srcset="./img/all/flat.webp" alt=" image" />
+                        <img class="lazy" src="./img/all/flat.png" alt=" image" />
+                    </picture>
+                </li>
+                <li class="apartment-card__swiper-slide swiper-slide">
+                    <picture>
+                        <source type="image/webp" srcset="./img/all/flat.webp" alt=" image" />
+                        <img class="lazy" src="./img/all/flat.png" alt=" image" />
+                    </picture>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="apartment-card__transparent-thumbs">
+            <div class="transparent-thumbs swiper">
+                <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="apartment-card__footer">
+        <div class="apartment-card__price-row">
+            <p class="apartment-card__price apartment-card__price--text-32">
+                5 190 000 ₽
+            </p>
+            <p class="apartment-card__key">
+                I кв. 2026
+            </p>
+        </div>
+
+        <div class="apartment-card__tabs">
+            <div class="tab tab--small tab--light-blue">
+                <svg class="icon">
+                    <use xlink:href="#key"></use>
+                </svg>
+                <span class="tab__text tab__text--text-14">Комфорт класс</span>
+            </div>
+            <div class="tab tab--small tab--light-red">
+                <svg class="icon">
+                    <use xlink:href="#key"></use>
+                </svg>
+                <span class="tab__text tab__text--text-14">Акция от застройщика</span>
+            </div>
+            <button type="button" class="tab tab--small tab--square tab--outlined">
+                <svg class="icon">
+                    <use xlink:href="#key"></use>
+                </svg>
+                <span class="tab__text tab__text--text-14">+1</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -26,16 +26,25 @@
 
             &::after {
                 position: absolute;
-                left: 100%;
-                bottom: 0.5rem;
+                left: calc(100% + 0.6rem);
+                bottom: 0;
                 z-index: 10;
 
-                color: var(--Red);
-                font-size: 150%;
-                content: ".";
+                width: 0.8rem;
+                height: 1.6rem;
+
+                background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%2216%22%20viewBox%3D%220%200%208%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%224%22%20cy%3D%224%22%20r%3D%224%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center top;
+
+                content: "";
 
                 @include breakpointMF(tablet) {
-                    bottom: 1rem;
+                    left: calc(100% + 0.8rem);
+
+                    width: 1.1rem;
+                    height: 2.5rem;
                 }
             }
         }

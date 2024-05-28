@@ -1,6 +1,10 @@
 .page-footer {
     padding-bottom: 2rem;
 
+    &--grey {
+        background-color: var(--Light-Grey, #F5F5F5);
+    }
+
     @include breakpointMF(tablet) {
         padding-bottom: 1.6rem;
     }

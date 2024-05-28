@@ -7,6 +7,176 @@
     </div>
 </section>
 
+<section class="section gallery">
+    <div class="gallery__site-container  js-switchable-window">
+        <div class="gallery__heading projects__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                Фотогалерея
+            </h2>
+
+            <div class="gallery__navbar js-navbar-swiper navbar navbar--width-auto">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <button data-switch-id="gallery-001" type="button"
+                            class="js-navbar-button navbar__button navbar__button--darker navbar__button--active">
+                            <span class="navbar__text">
+                                Фасад дома
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button data-switch-id="gallery-002" type="button" class="js-navbar-button navbar__button--darker navbar__button">
+                            <span class="navbar__text">
+                                Лобби и подъезд
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button data-switch-id="gallery-002" type="button" class="js-navbar-button navbar__button--darker navbar__button">
+                            <span class="navbar__text">
+                                Вид из окон
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button data-switch-id="gallery-002" type="button" class="js-navbar-button navbar__button--darker navbar__button">
+                            <span class="navbar__text">
+                                Благоустройство
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gallery__windows">
+            <div data-switch-window id="gallery-001" class="gallery__body js-gallery-swiper-wrapper">
+                <div class="gallery__main-swiper swiper">
+                    <ul class="gallery__main-swiper-wrapper swiper-wrapper">
+                        <li class="gallery__main-swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/gallery/image-mob.webp" media="(max-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./img/gallery/image-mob.jpg" media="(max-width: 768px)">
+                                <source srcset="./img/gallery/img.webp" type="image/webp">
+                                <img src="./img/gallery/img.jpg" alt="Генплан»">
+                            </picture>
+                        </li>
+                        <li class="gallery__main-swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/gallery/image-mob.webp" media="(max-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./img/gallery/image-mob.jpg" media="(max-width: 768px)">
+                                <source srcset="./img/gallery/img.webp" type="image/webp">
+                                <img src="./img/gallery/img.jpg" alt="Генплан»">
+                            </picture>
+                        </li>
+                        <li class="gallery__main-swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/gallery/image-mob.webp" media="(max-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./img/gallery/image-mob.jpg" media="(max-width: 768px)">
+                                <source srcset="./img/gallery/img.webp" type="image/webp">
+                                <img src="./img/gallery/img.jpg" alt="Генплан»">
+                            </picture>
+                        </li>
+                        <li class="gallery__main-swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/gallery/image-mob.webp" media="(max-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./img/gallery/image-mob.jpg" media="(max-width: 768px)">
+                                <source srcset="./img/gallery/img.webp" type="image/webp">
+                                <img src="./img/gallery/img.jpg" alt="Генплан»">
+                            </picture>
+                        </li>
+                        <li class="gallery__main-swiper-slide swiper-slide">
+                            <picture>
+                                <source srcset="./img/gallery/image-mob.webp" media="(max-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./img/gallery/image-mob.jpg" media="(max-width: 768px)">
+                                <source srcset="./img/gallery/img.webp" type="image/webp">
+                                <img src="./img/gallery/img.jpg" alt="Генплан»">
+                            </picture>
+                        </li>
+                    </ul>
+
+                    <div class="gallery__main-swiper-pagination">
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-pagination-counting">
+                            <svg class="icon" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="50" stroke="#ffffff" stroke-width="1" fill-opacity="0" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="gallery__main-swiper-buttons carousel__buttons">
+                        <button type="button"
+                            class="carousel__btn carousel-btn carousel-btn--dark carousel-btn__prev">
+                            <svg class="icon">
+                                <use xlink:href="#swiper-arrow"></use>
+                            </svg>
+                        </button>
+                        <button type="button"
+                            class="carousel__btn carousel-btn carousel-btn--dark carousel-btn__next">
+                            <svg class="icon">
+                                <use xlink:href="#swiper-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery__thumbs">
+                    <div class="gallery__thumbs-swiper swiper">
+                        <ul class="gallery__thumbs-swiper-wrapper swiper-wrapper">
+                            <li class="gallery__thumbs-swiper-slide swiper-slide">
+                                <a href="#" class="js-gallery-thumb gallery__thumb gallery__thumb--active">
+                                    <picture>
+                                        <source srcset="./img/gallery/thumb.webp" type="image/webp">
+                                        <img src="./img/gallery/thumb.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__thumbs-swiper-slide swiper-slide">
+                                <a href="#" class="js-gallery-thumb gallery__thumb">
+                                    <picture>
+                                        <source srcset="./img/gallery/thumb-1.webp" type="image/webp">
+                                        <img src="./img/gallery/thumb-1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__thumbs-swiper-slide swiper-slide">
+                                <a href="#" class="js-gallery-thumb gallery__thumb">
+                                    <picture>
+                                        <source srcset="./img/gallery/thumb.webp" type="image/webp">
+                                        <img src="./img/gallery/thumb.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__thumbs-swiper-slide swiper-slide">
+                                <a href="#" class="js-gallery-thumb gallery__thumb">
+                                    <picture>
+                                        <source srcset="./img/gallery/thumb-1.webp" type="image/webp">
+                                        <img src="./img/gallery/thumb-1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li class="gallery__thumbs-swiper-slide swiper-slide">
+                                <a href="#" class="js-gallery-thumb gallery__thumb">
+                                    <picture>
+                                        <source srcset="./img/gallery/thumb-1.webp" type="image/webp">
+                                        <img src="./img/gallery/thumb-1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="section-programs" class="section section--blue section--round-border programs">
     <div class="programs__site-container">
         <div class="programs__heading projects__heading">
@@ -314,6 +484,128 @@
                     </a>
                 </li>
             </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section--round-border section--white tour">
+    <div class="tour__site-container">
+        <div class="projects__heading accordion__heading tour__heading">
+            <h2 class="tour__title projects__title projects__title--h3-text">
+                <span class="_bigger-text _bigger-text--text-70">Отделка</span><br>
+                <span class="_thin-text">и виртуальный тур</span>
+            </h2>
+
+            <p class="accordion__slogan">
+                <span class="accordion__slogan-bigger-text accordion__slogan-bigger-text--text-22">
+                    Чистовая отделка выполняется в каждом корпусе жилого комплекса «Южный парк».
+                </span>
+                <span class="accordion__slogan-smaller-text">
+                    Все грязные и громкие работы выполнит застройщик, а вам останется подобрать покрытия и цвет стен,
+                    купить нужную мебель. Стоимость отделки уже включена в стоимость квартиры.
+                </span>
+            </p>
+        </div>
+
+        <div class="tour__body">
+            <div class="tour__gallery-wrapper">
+                {{>tour-gallery }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section carousel">
+    <div class="carousel__site-container">
+        <div class="carousel__body programs__body">
+            <div class="carousel__aside">
+                <h2 class="carousel__title projects__title projects__title--h3-text">
+                    Нежилые<br><span class="_thin-text">помещения</span>
+                </h2>
+            </div>
+
+            <div class="carousel__swiper-wrapper">
+                <div class="carousel__row">
+                    <div class="carousel__col">
+                        <a href="#" id="" class="except-link-icon">
+                            <div class="except-link-icon__body">
+                                <div class="except-link-icon__column">
+                                    <p class="except-link__title except-link__title--h6-text">
+                                        Кладовые
+                                    </p>
+
+                                    <div class="except-link-icon__btn"></div>
+                                </div>
+                            </div>
+
+                            <div class="except-link-icon__image image-block">
+                                <picture>
+                                    <img class="lazy" src="./img/excepts/box.png" alt="excepts image" />
+                                </picture>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel__col">
+                        <a href="#" id="" class="except-link-icon">
+                            <div class="except-link-icon__body">
+                                <div class="except-link-icon__column">
+                                    <p class="except-link__title except-link__title--h6-text">
+                                        Паркинг
+                                    </p>
+
+                                    <div class="except-link-icon__btn"></div>
+                                </div>
+                            </div>
+
+                            <div class="except-link-icon__image image-block">
+                                <picture>
+                                    <img class="lazy" src="./img/excepts/car.png" alt="excepts image" />
+                                </picture>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--round-border section--grey similar">
+    <div class="similar__site-container js-triple-carousel-wrapper">
+        <div class="projects__heading similar__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                Похожие&nbsp;<span class="_thin-text">квартиры</span>
+            </h2>
+
+            <div class="similar__buttons carousel__buttons">
+                <button type="button" class="carousel__btn carousel-btn carousel-btn__prev">
+                    <svg class="icon">
+                        <use xlink:href="#swiper-arrow-black"></use>
+                    </svg>
+                </button>
+                <button type="button" class="carousel__btn carousel-btn carousel-btn__next">
+                    <svg class="icon">
+                        <use xlink:href="#swiper-arrow-black"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="similar__body">
+            <div class="similar__swiper swiper">
+                <ul class="similar__swiper-wrapper swiper-wrapper">
+                    <li class="similar__swiper-slide swiper-slide">
+                        {{>apartment-card cardId=001}}
+                    </li>
+                    <li class="similar__swiper-slide swiper-slide">
+                        {{>apartment-card cardId=002}}
+                    </li>
+                    <li class="similar__swiper-slide swiper-slide">
+                        {{>apartment-card cardId=003}}
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

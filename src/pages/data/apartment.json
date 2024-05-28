@@ -3,5 +3,6 @@
     "filterClass": false,
     "headerBlurClass": false,
     "breadcrumbsWhiteClass": false,
-    "headerMainClass": true
+    "headerMainClass": true,
+    "greyFooterClass": true
 }

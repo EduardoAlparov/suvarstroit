@@ -50,4 +50,53 @@
     &--dark {
         background: var(--Dark-Blue, #101038);
     }
+
+    &--small {
+        border-radius: 0.6rem;
+        width: max-content;
+
+        @include breakpointMF(tablet) {
+            max-height: 3.2rem;
+            width: max-content;
+            padding: 0.8rem 1.6rem;
+        }
+
+        .tab__text {
+            @include breakpointMF(tablet) {
+                @include font(1.2rem, 120%, 400);
+            }
+        }
+    }
+
+    &--light-blue {
+        background: #E7EEF7;
+        backdrop-filter: blur(10px);
+
+        .tab__text {
+            color: var(--Black, #020202);
+        }
+    }
+
+
+    &--light-red {
+        background: rgba(207, 0, 12, 0.05);
+        backdrop-filter: blur(10px);
+
+        .tab__text {
+            color: var(--Red, #CF000C);
+        }
+    }
+
+    &--outlined {
+        border: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+        background: transparent;
+
+        .tab__text {
+            color: var(--Black, #020202);
+        }
+    }
+
+    &--square {
+        aspect-ratio: 1;
+    }
 }

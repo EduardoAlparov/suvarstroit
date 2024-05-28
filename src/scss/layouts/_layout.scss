@@ -66,7 +66,6 @@ body {
     }
 }
 
-
 .page-content {
     flex-grow: 1;
     display: flex;
@@ -101,7 +100,11 @@ body {
     }
 
     &--white {
-        background: var(--White, #FFF);
+        background-color: var(--White, #FFF);
+    }
+
+    &--grey {
+        background-color: var(--Light-Grey, #F5F5F5);
     }
 
     &--round-border {
@@ -115,6 +118,13 @@ body {
         @include breakpointMF(tablet) {
             margin-bottom: -2.4rem;
             padding: 10rem 0 14.4rem;
+        }
+
+        &.section--grey {
+            @include breakpointMF(tablet) {
+                margin-bottom: 0;
+                padding: 7rem 0 12rem;
+            }
         }
     }
 
@@ -139,6 +149,14 @@ body {
 
         @include breakpointMF(tablet) {
             margin-bottom: 12rem;
+        }
+
+        &.section--grey {
+            margin-bottom: 0;
+
+            @include breakpointMF(tablet) {
+                margin-bottom: 0;
+            }
         }
     }
 }
