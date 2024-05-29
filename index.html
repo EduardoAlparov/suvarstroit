@@ -377,14 +377,14 @@
                             <ul class="home-slider__image-swiper-wrapper swiper-wrapper">
                                 <li class="home-slider__swiper-slide swiper-slide image-block">
                                     <picture>
-                                        <source type="image/webp" srcset="./img/home/img-1.webp" alt="home image" />
-                                        <img class="lazy" src="./img/home/img-1.jpg" alt="home image" />
+                                        <source type="image/webp" srcset="./img/home/img-1H.webp" alt="home image" />
+                                        <img class="lazy" src="./img/home/img-1H.png" alt="home image" />
                                     </picture>
                                 </li>
                                 <li class="home-slider__swiper-slide swiper-slide image-block">
                                     <picture>
-                                        <source type="image/webp" srcset="./img/home/img-1.webp" alt="home image" />
-                                        <img class="lazy" src="./img/home/img-1.jpg" alt="home image" />
+                                        <source type="image/webp" srcset="./img/home/img-2H.webp" alt="home image" />
+                                        <img class="lazy" src="./img/home/img-2H.png" alt="home image" />
                                     </picture>
                                 </li>
                             </ul>
@@ -691,7 +691,7 @@
                 <ul class="navbar__list">
                     <li class="navbar__item navbar__item--fb50">
                         <button data-switch-id="projects-list" type="button"
-                            class="js-navbar-button navbar__button">
+                            class="js-navbar-button navbar__button  navbar__button--active">
                             <svg class="icon">
                                 <use xlink:href="#tile"></use>
                             </svg>
@@ -701,8 +701,7 @@
                         </button>
                     </li>
                     <li class="navbar__item  navbar__item--fb50">
-                        <button data-switch-id="projects-map"
-                            type="button" class="js-navbar-button navbar__button navbar__button--active">
+                        <button data-switch-id="projects-map" type="button" class="js-navbar-button navbar__button">
                             <svg class="icon">
                                 <use xlink:href="#pin"></use>
                             </svg>
@@ -716,7 +715,7 @@
         </div>
 
         <div class="projects__render-window">
-            <ul data-switch-window id="projects-list" class="projects__list display-none">
+            <ul data-switch-window id="projects-list" class="projects__list">
                 <li class="projects__item">
                     <a href="#" id="" class="project-card">
                         <div class="project-card__image js-card-swiper-wrapper">
@@ -724,111 +723,67 @@
                                 <ul class="project-card__swiper-wrapper swiper-wrapper">
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-3H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-3H.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                 </ul>
-                    
+
                                 <div class="swiper-pagination"></div>
                             </div>
-                    
+
                             <div class="project-card__transparent-thumbs">
                                 <div class="transparent-thumbs swiper">
                                     <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
+
                                     </ul>
                                 </div>
                             </div>
-                    
-                    
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Комфорт</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
                         </div>
-                    
+
                         <div class="project-card__info">
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
+                                    Южный парк
                                 </p>
-                    
-                                <p class="project-card__price">
-                                    от 4,9 млн ₽
-                                </p>
-                            </div>
-                            <p class="project-card__address">
-                                Приволжский р-н, ул. Рауиса Гареева
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="projects__item projects__item--wide">
-                    <a href="#" id="" class="project-card">
-                        <div class="project-card__image js-card-swiper-wrapper">
-                            <div class="project-card__swiper swiper">
-                                <ul class="project-card__swiper-wrapper swiper-wrapper">
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                </ul>
-                    
-                                <div class="swiper-pagination"></div>
-                            </div>
-                    
-                            <div class="project-card__transparent-thumbs">
-                                <div class="transparent-thumbs swiper">
-                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
-                                    </ul>
-                                </div>
-                            </div>
-                    
-                    
-                        </div>
-                    
-                        <div class="project-card__info">
-                            <div class="project-card__title">
-                                <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
-                                </p>
-                    
+
                                 <p class="project-card__price">
                                     от 4,9 млн ₽
                                 </p>
@@ -846,50 +801,67 @@
                                 <ul class="project-card__swiper-wrapper swiper-wrapper">
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-3HH.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-3HH.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                 </ul>
-                    
+
                                 <div class="swiper-pagination"></div>
                             </div>
-                    
+
                             <div class="project-card__transparent-thumbs">
                                 <div class="transparent-thumbs swiper">
                                     <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
+
                                     </ul>
                                 </div>
                             </div>
-                    
-                    
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Комфорт</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
                         </div>
-                    
+
                         <div class="project-card__info">
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
                                     Станция Спортивная
                                 </p>
-                    
+
                                 <p class="project-card__price">
                                     от 4,9 млн ₽
                                 </p>
@@ -907,50 +879,67 @@
                                 <ul class="project-card__swiper-wrapper swiper-wrapper">
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-4H.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                 </ul>
-                    
+
                                 <div class="swiper-pagination"></div>
                             </div>
-                    
+
                             <div class="project-card__transparent-thumbs">
                                 <div class="transparent-thumbs swiper">
                                     <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
+
                                     </ul>
                                 </div>
                             </div>
-                    
-                    
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab tab--dark">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Бизнес класс</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
                         </div>
-                    
+
                         <div class="project-card__info">
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
+                                    Времена года
                                 </p>
-                    
+
                                 <p class="project-card__price">
                                     от 4,9 млн ₽
                                 </p>
@@ -968,111 +957,67 @@
                                 <ul class="project-card__swiper-wrapper swiper-wrapper">
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-1H.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                 </ul>
-                    
+
                                 <div class="swiper-pagination"></div>
                             </div>
-                    
+
                             <div class="project-card__transparent-thumbs">
                                 <div class="transparent-thumbs swiper">
                                     <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
+
                                     </ul>
                                 </div>
                             </div>
-                    
-                    
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab tab--dark">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Бизнес класс</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
                         </div>
-                    
+
                         <div class="project-card__info">
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
+                                    Сказочный лес
                                 </p>
-                    
-                                <p class="project-card__price">
-                                    от 4,9 млн ₽
-                                </p>
-                            </div>
-                            <p class="project-card__address">
-                                Приволжский р-н, ул. Рауиса Гареева
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="projects__item projects__item--wide">
-                    <a href="#" id="" class="project-card">
-                        <div class="project-card__image js-card-swiper-wrapper">
-                            <div class="project-card__swiper swiper">
-                                <ul class="project-card__swiper-wrapper swiper-wrapper">
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                </ul>
-                    
-                                <div class="swiper-pagination"></div>
-                            </div>
-                    
-                            <div class="project-card__transparent-thumbs">
-                                <div class="transparent-thumbs swiper">
-                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
-                                    </ul>
-                                </div>
-                            </div>
-                    
-                    
-                        </div>
-                    
-                        <div class="project-card__info">
-                            <div class="project-card__title">
-                                <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
-                                </p>
-                    
+
                                 <p class="project-card__price">
                                     от 4,9 млн ₽
                                 </p>
@@ -1090,50 +1035,67 @@
                                 <ul class="project-card__swiper-wrapper swiper-wrapper">
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-3.webp" alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-3.jpg" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-5H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-5H.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                     <li class="project-card__swiper-slide swiper-slide image-block">
                                         <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp" alt="project image" />
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
                                             <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
                                         </picture>
                                     </li>
                                 </ul>
-                    
+
                                 <div class="swiper-pagination"></div>
                             </div>
-                    
+
                             <div class="project-card__transparent-thumbs">
                                 <div class="transparent-thumbs swiper">
                                     <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-                    
+
                                     </ul>
                                 </div>
                             </div>
-                    
-                    
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Комфорт</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
                         </div>
-                    
+
                         <div class="project-card__info">
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
-                                    Станция Спортивная
+                                    Палитра
                                 </p>
-                    
+
                                 <p class="project-card__price">
                                     от 4,9 млн ₽
                                 </p>
@@ -1144,87 +1106,322 @@
                         </div>
                     </a>
                 </li>
+                <li class="projects__item">
+                    <a href="#" id="" class="project-card">
+                        <div class="project-card__image js-card-swiper-wrapper">
+                            <div class="project-card__swiper swiper">
+                                <ul class="project-card__swiper-wrapper swiper-wrapper">
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-6H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-6H.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                </ul>
+
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                            <div class="project-card__transparent-thumbs">
+                                <div class="transparent-thumbs swiper">
+                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab tab--dark">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Бизнес класс</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card__info">
+                            <div class="project-card__title">
+                                <p class="project-card__name project-card__name--text-32">
+                                    Отражение
+                                </p>
+
+                                <p class="project-card__price">
+                                    от 4,9 млн ₽
+                                </p>
+                            </div>
+                            <p class="project-card__address">
+                                Приволжский р-н, ул. Рауиса Гареева
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="projects__item">
+                    <a href="#" id="" class="project-card">
+                        <div class="project-card__image js-card-swiper-wrapper">
+                            <div class="project-card__swiper swiper">
+                                <ul class="project-card__swiper-wrapper swiper-wrapper">
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-7H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-7H.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                </ul>
+
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                            <div class="project-card__transparent-thumbs">
+                                <div class="transparent-thumbs swiper">
+                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab tab--dark">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Бизнес класс</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card__info">
+                            <div class="project-card__title">
+                                <p class="project-card__name project-card__name--text-32">
+                                    Столичный
+                                </p>
+
+                                <p class="project-card__price">
+                                    от 4,9 млн ₽
+                                </p>
+                            </div>
+                            <p class="project-card__address">
+                                Приволжский р-н, ул. Рауиса Гареева
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="projects__item">
+                    <a href="#" id="" class="project-card">
+                        <div class="project-card__image js-card-swiper-wrapper">
+                            <div class="project-card__swiper swiper">
+                                <ul class="project-card__swiper-wrapper swiper-wrapper">
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-8H.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-8H.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                    <li class="project-card__swiper-slide swiper-slide image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
+                                        </picture>
+                                    </li>
+                                </ul>
+
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                            <div class="project-card__transparent-thumbs">
+                                <div class="transparent-thumbs swiper">
+                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <ul class="project-card__tabs">
+                                <li class="project-card__tab tab">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Комфорт</span>
+                                </li>
+                                <li class="project-card__tab tab tab--icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-card__info">
+                            <div class="project-card__title">
+                                <p class="project-card__name project-card__name--text-32">
+                                    Батталовский
+                                </p>
+
+                                <p class="project-card__price">
+                                    от 4,9 млн ₽
+                                </p>
+                            </div>
+                            <p class="project-card__address">
+                                Приволжский р-н, ул. Рауиса Гареева
+                            </p>
+                        </div>
+                    </a>
+                </li>
+
             </ul>
 
-            <div data-switch-window id="projects-map" class="projects__map">
-                    <script>
-                        var mapDataObjects = [
-                            {
-                                coords: [55.818338, 49.143829],
-                                class: ['tab--dark','Бизнес класс'],
-                                devEnd: '2026',
-                                image: `./img/all/map-popup.png`,
-                                name: 'Столичный',
-                                address: `Казань, ул. Чистопольская 86/10 офис-287`,
-                                studios: '5',
-                                oneRoom: '10',
-                                twoRoom: '5',
-                                threeRoom: '2',
-                                fourRoom: '2',
-                                link: 'https://www.google.ru/'
-                            },
-                            {
-                                coords: [55.689060, 49.201115],
-                                class: ['','Комфорт'],
-                                devEnd: '2025',
-                                name: 'Южный парк',
-                                image: `./img/all/map-popup.png`,
-                                address: `Казань, ул. Уютная,1`,
-                                studios: '5',
-                                oneRoom: '10',
-                                twoRoom: '5',
-                                threeRoom: '2',
-                                fourRoom: '2',
-                                link: 'https://www.google.ru/'
-                            },
-                            {
-                                coords: [55.761280, 49.150644],
-                                class: ['tab--dark','Бизнес класс'],
-                                devEnd: '2026',
-                                name: 'Манхэттен',
-                                image: `./img/all/map-popup.png`,
-                                address: `Казань, Оренбургский тракт 8д, 3 этаж`,
-                                studios: '5',
-                                oneRoom: '10',
-                                twoRoom: '5',
-                                threeRoom: '2',
-                                fourRoom: '2',
-                                link: 'https://www.google.ru/'
-                            },
-                            {
-                                coords: [55.721502, 49.187600],
-                                class: ['','Комфорт'],
-                                devEnd: '2024',
-                                name: 'Палитра',
-                                image: `./img/all/map-popup.png`,
-                                address: `Казань, ул.Братьев Батталовых 20 к.1`,
-                                studios: '15',
-                                oneRoom: '1',
-                                twoRoom: '3',
-                                threeRoom: '22',
-                                fourRoom: '21',
-                                link: 'https://www.google.ru/'
-                            },
-                            {
-                                coords: [55.724368, 49.174191],
-                                class: ['tab--dark','Бизнес класс'],
-                                devEnd: '2026',
-                                name: 'Сказочный лес',
-                                image: `./img/all/map-popup.png`,
-                                address: `Казань, ул. Рауиса Гареева, 109`,
-                                studios: '5',
-                                oneRoom: '10',
-                                twoRoom: '5',
-                                threeRoom: '2',
-                                fourRoom: '2',
-                                link: 'https://www.google.ru/'
-                            },
-                        ];
+            <div data-switch-window id="projects-map" class="projects__map  display-none">
+                <script>
+                    var mapDataObjects = [
+                        {
+                            coords: [55.818338, 49.143829],
+                            class: ['tab--dark', 'Бизнес класс'],
+                            devEnd: '2026',
+                            image: `./img/all/map-popup.png`,
+                            name: 'Столичный',
+                            address: `Казань, ул. Чистопольская 86/10 офис-287`,
+                            studios: '5',
+                            oneRoom: '10',
+                            twoRoom: '5',
+                            threeRoom: '2',
+                            fourRoom: '2',
+                            link: 'https://www.google.ru/'
+                        },
+                        {
+                            coords: [55.689060, 49.201115],
+                            class: ['', 'Комфорт'],
+                            devEnd: '2025',
+                            name: 'Южный парк',
+                            image: `./img/all/map-popup.png`,
+                            address: `Казань, ул. Уютная,1`,
+                            studios: '5',
+                            oneRoom: '10',
+                            twoRoom: '5',
+                            threeRoom: '2',
+                            fourRoom: '2',
+                            link: 'https://www.google.ru/'
+                        },
+                        {
+                            coords: [55.761280, 49.150644],
+                            class: ['tab--dark', 'Бизнес класс'],
+                            devEnd: '2026',
+                            name: 'Манхэттен',
+                            image: `./img/all/map-popup.png`,
+                            address: `Казань, Оренбургский тракт 8д, 3 этаж`,
+                            studios: '5',
+                            oneRoom: '10',
+                            twoRoom: '5',
+                            threeRoom: '2',
+                            fourRoom: '2',
+                            link: 'https://www.google.ru/'
+                        },
+                        {
+                            coords: [55.721502, 49.187600],
+                            class: ['', 'Комфорт'],
+                            devEnd: '2024',
+                            name: 'Палитра',
+                            image: `./img/all/map-popup.png`,
+                            address: `Казань, ул.Братьев Батталовых 20 к.1`,
+                            studios: '15',
+                            oneRoom: '1',
+                            twoRoom: '3',
+                            threeRoom: '22',
+                            fourRoom: '21',
+                            link: 'https://www.google.ru/'
+                        },
+                        {
+                            coords: [55.724368, 49.174191],
+                            class: ['tab--dark', 'Бизнес класс'],
+                            devEnd: '2026',
+                            name: 'Сказочный лес',
+                            image: `./img/all/map-popup.png`,
+                            address: `Казань, ул. Рауиса Гареева, 109`,
+                            studios: '5',
+                            oneRoom: '10',
+                            twoRoom: '5',
+                            threeRoom: '2',
+                            fourRoom: '2',
+                            link: 'https://www.google.ru/'
+                        },
+                    ];
 
-                        var mapProjectsZoom  = 11;
+                    var mapProjectsZoom = 11;
 
-                        var mapProjectsCenter = [55.800777, 49.107601];
-                    </script>
+                    var mapProjectsCenter = [55.800777, 49.107601];
+                </script>
                 <div class="projects__map-wrapper js-projects-map"></div>
             </div>
         </div>
@@ -1587,7 +1784,8 @@
                         </button>
                     </div>
 
-                    <a href="#mailing-modal" class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal hide-on-mobile">
+                    <a href="#mailing-modal"
+                        class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal hide-on-mobile">
                         <svg class="icon">
                             <use xlink:href="#mailing"></use>
                         </svg>
@@ -1669,7 +1867,8 @@
                     Смотреть все
                 </a>
 
-                <a href="#mailing-modal" class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal show-on-mobile">
+                <a href="#mailing-modal"
+                    class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal show-on-mobile">
                     <svg class="icon">
                         <use xlink:href="#mailing"></use>
                     </svg>
@@ -1693,8 +1892,8 @@
                 <a href="#" id="" class="except-link">
                     <div class="except-link__image image-block">
                         <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts.jpg" alt="excepts image" />
+                            <source type="image/webp" srcset="./img/excepts/excepts-H.webp" alt="excepts image" />
+                            <img class="lazy" src="./img/excepts/excepts-H.jpg" alt="excepts image" />
                         </picture>
                     </div>
                     <div class="except-link__body">
@@ -1712,14 +1911,14 @@
                 <a href="#" id="" class="except-link">
                     <div class="except-link__image image-block">
                         <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts.jpg" alt="excepts image" />
+                            <source type="image/webp" srcset="./img/excepts/excepts-H1.webp" alt="excepts image" />
+                            <img class="lazy" src="./img/excepts/excepts-H1.jpg" alt="excepts image" />
                         </picture>
                     </div>
                     <div class="except-link__body">
                         <div class="except-link__row">
                             <p class="except-link__title except-link__title--h5-text">
-                                Коммерческая недвижимость
+                                Кладовые
                             </p>
 
                             <div class="except-link__btn"></div>
@@ -1731,14 +1930,14 @@
                 <a href="#" id="" class="except-link">
                     <div class="except-link__image image-block">
                         <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts.jpg" alt="excepts image" />
+                            <source type="image/webp" srcset="./img/excepts/excepts-H2.webp" alt="excepts image" />
+                            <img class="lazy" src="./img/excepts/excepts-H2.jpg" alt="excepts image" />
                         </picture>
                     </div>
                     <div class="except-link__body">
                         <div class="except-link__row">
                             <p class="except-link__title except-link__title--h5-text">
-                                Коммерческая недвижимость
+                                Паркинг
                             </p>
 
                             <div class="except-link__btn"></div>
