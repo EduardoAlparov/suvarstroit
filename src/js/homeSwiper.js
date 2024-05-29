@@ -41,5 +41,6 @@ export default () => {
         })
 
         swiperInfo.controller.control = swiperImage;
+        swiperImage.controller.control = swiperInfo;
     })
 }

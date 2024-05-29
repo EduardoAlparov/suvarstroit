@@ -63,8 +63,7 @@
         backdrop-filter: blur(10.000000953674316px);
 
         border-radius: 100%;
-        opacity: 0;
-        transition: opacity 0.3s ease-out;
+        transition: background-color 0.3s ease-out;
 
         @include breakpointMF(tablet) {
             width: 6rem;
@@ -74,7 +73,11 @@
 
     @include hoverActive() {
         .except-link__btn {
-            opacity: 1;
+            background-color: var(--White, #FFF);
+            background-position: center;
+            background-size: 2rem 1.5rem;
+            backdrop-filter: unset;
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2214%22%20viewBox%3D%220%200%2020%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M12.447%200.957762C12.287%202.1582%2012.4459%203.95272%2013.5024%205.42609C14.5957%206.95081%2016.5461%207.98894%2019.6631%207.80559L19.575%206.30818C16.8634%206.46768%2015.4566%205.57724%2014.7214%204.55197C13.9493%203.47533%2013.8082%202.09842%2013.9339%201.15601L12.447%200.957762ZM13.9339%2012.9779C13.8082%2012.0354%2013.9493%2010.6585%2014.7214%209.58189C15.4566%208.55661%2016.8634%207.66617%2019.575%207.82568L19.6631%206.32827C16.5461%206.14492%2014.5957%207.18305%2013.5024%208.70777C12.4459%2010.1811%2012.287%2011.9757%2012.447%2013.1761L13.9339%2012.9779Z%22%20fill%3D%22%23CF000C%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M19.572%207.05688H0.714844%22%20stroke%3D%22%23CF000C%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
         }
     }
 }
