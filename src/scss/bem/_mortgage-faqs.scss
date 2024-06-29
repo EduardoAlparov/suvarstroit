@@ -1,0 +1,40 @@
+.mortgage-faqs {
+    &__body {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            max-width: min-content;
+            margin-right: 2.4rem;
+            margin-bottom: unset;
+        }
+    }
+
+    &__list {
+        @include breakpointMF(tablet) {
+            flex: 0 0 116.4rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

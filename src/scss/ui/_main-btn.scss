@@ -10,6 +10,8 @@
     border-radius: 0.8rem;
     white-space: nowrap;
 
+    transition-property: all;
+
     @include font(1.4rem, 100%, 400);
 
     .icon {
@@ -90,6 +92,17 @@
 
         @include breakpointMF(tablet) {
             max-height: 5.5rem;
+            padding: 2.4rem 3.2rem 2.4rem;
+            border-radius: 1.2rem;
+
+            @include font(1.6rem, 100%, 400);
+        }
+    }
+
+    &--bigger {
+        @include breakpointMF(tablet) {
+            height: 7rem;
+            max-height: 7rem;
             padding: 2.4rem 3.2rem 2.4rem;
             border-radius: 1.2rem;
 

@@ -31,3 +31,4 @@ npm run build
 ## Страница - [Варианты экранов](https://eduardoalparov.github.io/suvarstroit/alternatives.html).
 ## Страница - [Проект](https://eduardoalparov.github.io/suvarstroit/project.html).
 ## Страница - [Страница квартиры](https://eduardoalparov.github.io/suvarstroit/apartment.html).
+## Страница - [Ипотека](https://eduardoalparov.github.io/suvarstroit/mortgage.html).

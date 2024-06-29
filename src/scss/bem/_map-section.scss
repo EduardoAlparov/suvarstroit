@@ -23,9 +23,9 @@
         @include breakpointMF(tablet) {
             max-height: 100%;
             gap: 1.6rem;
+
             padding-right: 1rem;
             margin-right: -1.4rem;
-
 
             &::-webkit-scrollbar {
                 background-color: white;

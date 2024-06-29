@@ -71,7 +71,7 @@ input[type=range].styled-slider::-webkit-slider-thumb {
   width: 13px;
   height: 13px;
   border-radius: 1em;
-  background: #FFC0C2;
+  background: var(--Red, #CF000C);
   border: none;
   box-shadow: 0 0 #FFFFFF;
   margin-top: calc(2px * 0.5 - 13px * 0.5);
@@ -87,7 +87,7 @@ input[type=range].styled-slider::-webkit-slider-runnable-track {
 }
 
 input[type=range].styled-slider.slider-progress::-webkit-slider-runnable-track {
-  background: linear-gradient(#FFC0C2,#FFC0C2) 0/var(--sx) 100% no-repeat, transparent;
+  background: linear-gradient(var(--Red, #CF000C), var(--Red, #CF000C)) 0/var(--sx) 100% no-repeat, transparent;
 }
 
 /*mozilla*/
@@ -95,7 +95,7 @@ input[type=range].styled-slider::-moz-range-thumb {
   width: 13px;
   height: 13px;
   border-radius: 1em;
-  background: #FFC0C2;
+  background: var(--Red, #CF000C);
   border: none;
   box-shadow: 0 0  #FFFFFF;
   cursor: pointer;

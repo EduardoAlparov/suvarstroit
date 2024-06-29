@@ -1,0 +1,845 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="mortgage-intro section section--blue section--first section--minus-mb">
+    <div class="mortgage-intro__site-container">
+        <div class="mortgage-intro__body">
+            <div class="mortgage-intro__left">
+                <div class="mortgage-intro__top">
+                    <h1 class="mortgage-intro__title">
+                        <span class="mortgage-intro__span mortgage-intro__span--text-h2">
+                            Ипотека –&nbsp;
+                        </span>
+                        <span class="mortgage-intro__span mortgage-intro__span--text-h2">
+                            это легко
+                        </span>
+                    </h1>
+
+                    <p class="mortgage-intro__text mortgage-intro__text--text-22">
+                        Уникальные ипотечные программы и специальные условия от ведущих банков. Просто заполните анкету
+                        и получите одобрение. Всего один шаг, и квартира будет ваша.
+                    </p>
+                </div>
+
+                <div class="mortgage-intro__bottom">
+                    <a href="#" class="mortgage-intro__link main-btn main-btn--white">
+                        Рассчитать ипотеку
+                    </a>
+                    <a href="#" class="mortgage-intro__link main-btn main-btn--outlined">
+                        Получить консультацию
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mortgage-intro__image hide-on-mobile">
+        <div class="mortgage-intro__picture">
+            <picture>
+                <source type="image/webp" srcset="./img/mortgage/intro.webp" alt="" />
+                <img class="lazy" src="./img/mortgage/intro.png" alt="" />
+            </picture>
+        </div>
+    </div>
+</section>
+
+<section class="mortgage-plans section section--round-border section--white">
+    <div class="mortgage-plans__site-container">
+        <div class="mortgage-plans__navigation">
+            <div class="mortgage-plans__navbar js-navbar-swiper navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-0"
+                            class="js-navbar-button navbar__button navbar__button--darker navbar__button--active">
+                            <span class="navbar__text">
+                                Господдержка
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-1"
+                            class="js-navbar-button navbar__button navbar__button--darker">
+                            <span class="navbar__text">
+                                IT-ипотека
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-2"
+                            class="js-navbar-button navbar__button navbar__button--darker">
+                            <span class="navbar__text">
+                                Семейная
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-3"
+                            class="js-navbar-button navbar__button navbar__button--darker">
+                            <span class="navbar__text">
+                                Военная
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-4"
+                            class="js-navbar-button navbar__button navbar__button--darker">
+                            <span class="navbar__text">
+                                Ипотека по ставке 1,99%
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navbar__item">
+                        <button type="button" data-switch-id="mortgage-plan-5"
+                            class="js-navbar-button navbar__button navbar__button--darker">
+                            <span class="navbar__text">
+                                Ипотека за 1 руб/мес
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="mortgage-plans__list">
+            <li id="mortgage-plan-0" data-switch-window class="mortgage-plans__item mortgage-plan">
+                <div class="mortgage-plan__body">
+                    <div class="mortgage-plan__info">
+                        <div class="mortgage-plan__info-top">
+                            <p class="mortgage-plan__name mortgage-plan__name--h3-text">
+                                Ипотека с&nbsp;господдержкой
+                            </p>
+
+                            <p class="mortgage-plan__desc mortgage-plan__desc--text-18">
+                                Ипотека со&nbsp;сниженной ставкой на&nbsp;весь срок кредита
+                            </p>
+                        </div>
+                        <div class="mortgage-plan__info-center">
+                            <ul class="mortgage-plan__list">
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Первоначальный взнос
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30,1%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Процентная ставка
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            8%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;cрок кредита
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            лет
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;сумма кредита,&nbsp;₽
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            6
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            млн
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mortgage-plan__info-bottom">
+                            <button type="button" class="mortgage-plan__btn main-btn main-btn--outlined main-btn--red">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mortgage-plan__image">
+                        <picture>
+                            <source type="image/webp" srcset="./img/mortgage/plan.webp" alt="" />
+                            <img class="lazy" src="./img/mortgage/plan.jpg" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="mortgage-calc section">
+    <div class="mortgage-calc__site-container">
+        <div class="mortgage-calc__heading projects__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                Калькулятор&nbsp;<span class="_thin-text">ипотеки</span>
+            </h2>
+        </div>
+        <div class="mortgage-calc__body programs__body">
+            <form action="" class="mortgage-calc__form-calc programs__form-calc form-calc js-form-calc">
+                <p class="form-calc__title form-calc__title--h6-text">
+                    Рассчитайте&nbsp;выгодные<br>условия&nbsp;по&nbsp;ипотеке
+                </p>
+
+                <div class="form-calc__inputs">
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--cost">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="cost" id="costInput" min="4000000" max="15000000"
+                                        value="5689000">
+                                </div>
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="cost" id="costOutput">
+                                            5 689 000
+                                        </output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">руб.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--prepayment">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="prepayment" id="prepaymentInput" min="1000000"
+                                        max="5000000" value="2345000">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output data-calc-output for="prepayment" id="prepaymentOutput">
+                                            2 345 000
+                                        </output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency">руб.</span>
+                                    </div>
+                                    <div class="simple-range__input-percentege">
+                                        <span class="simple-range__percentege-value">20</span><span></span><span
+                                            class="simple-range__percentege-currency">&#x25;</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="select select--white">
+                            <div class="select__label simple-range__label simple-range__label--text-14">
+                                Программа ипотеки
+                            </div>
+                            <select name="project" class="js-custom-select">
+                                <option value="Проект">Выбрать программу</option>
+                                <option value="Ипотека для IT специалистов">Ипотека для IT специалистов</option>
+                                <option value="Ипотека с господдержкой">Ипотека с господдержкой</option>
+                                <option value="Губернаторская ипотека">Губернаторская ипотека</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-calc__input">
+                        <div class="simple-range simple-range--term">
+                            <div class="simple-range__wrapper">
+                                <div class="simple-range__label simple-range__label--text-14">Срок кредита</div>
+
+                                <div class="simple-range__input-wrapper">
+                                    <input class="simple-range__input styled-slider slider-progress" type="range"
+                                        required="required" name="term" id="termInput" min="5" max="30" value="30">
+                                </div>
+
+                                <div class="simple-range__values">
+                                    <div class="input simple-range__input-value simple-range__input-value--text-18">
+                                        <output for="term" id="termOutput">30</output><span>&nbsp;</span><span
+                                            class="simple-range__span-currency js-year-text">лет</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-calc__final">
+                    <p class="form-calc__final-text form-calc__final-text--h6-text">
+                        Ежемесячный платеж
+                    </p>
+                    <p id="calc-sum" class="form-calc__final-sum form-calc__final-sum--h6-text">
+                        20 000
+                    </p>
+                </div>
+
+                <a href="#modal-callback" class="form-calc__submit main-btn main-btn--red main-btn--bigger">
+                    Отправить онлайн-заявку
+                </a>
+
+                <p class="form-calc__agreement form-calc__agreement--text-14">
+                    Расчёт примерный, не является публичной офертой
+                </p>
+            </form>
+
+            <form action="" class="programs__list mortgage-calc__list-wrapper">
+                <ul class="mortgage-calc__scroll-list">
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-1">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-1"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/dom.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Дом РФ</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-3">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-3"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/sber.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Сбер</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-2">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-2"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/vtb.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">ВТБ</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-4">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-4"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/met.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Металлинвестбанк</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-5">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-5"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/sov.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Совкомбанк</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-6">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-6"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/alf.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Альфа-Банк</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-7">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-7"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
+                                    <img src="./img/banks/dom.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Дом РФ</p>
+                            </div>
+
+                            <p class="mortgage-calc__col-rate">
+                                от 4,6 %
+                            </p>
+
+                            <p class="mortgage-calc__col-term">
+                                до 25 лет
+                            </p>
+
+                            <p class="mortgage-calc__col-payment">
+                                от 15 %
+                            </p>
+
+                            <p class="mortgage-calc__col-month">
+                                14 000 ₽/мес
+                            </p>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <a href="#" class="mortgage-calc__link">
+                            Показать еще 8 предложений
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="mortgage-calc__header mortgage-calc__label">
+                    <span class="mortgage-calc__col-first"></span>
+                    <span class="mortgage-calc__col-rate">Ставка процента</span>
+                    <span class="mortgage-calc__col-term">Срок кредита</span>
+                    <span class="mortgage-calc__col-payment">Первый взнос</span>
+                    <span class="mortgage-calc__col-month">Платёж в месяц</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="mortgage-advantages section">
+    <div class="mortgage-advantages__site-container">
+        <div class="mortgage-calc__heading projects__heading">
+            <h2 class="mortgage-advantages__title projects__title projects__title--h3-text">
+                Почему ипотека — это легко?
+            </h2>
+        </div>
+        <div class="mortgage-advantages__body">
+            <div class="mortgage-advantages__swiper swiper">
+                <ul class="mortgage-advantages__swiper-wrapper swiper-wrapper">
+                    <li class="mortgage-advantages__swiper-slide swiper-slide">
+                        <div class="mortgage-advantages__advantage">
+                            <p class="mortgage-advantages__text mortgage-advantages__text--text-22">
+                                Выгодные&nbsp;предложения
+                                и&nbsp;низкие&nbsp;ставки
+                            </p>
+
+                            <span class="mortgage-advantages__count">01</span>
+                            <div class="mortgage-advantages__image">
+                                <img src="./img/mortgage/icon-1.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mortgage-advantages__swiper-slide swiper-slide">
+                        <div class="mortgage-advantages__advantage">
+                            <p class="mortgage-advantages__text mortgage-advantages__text--text-22">
+                                Одобрение&nbsp;в&nbsp;короткие
+                                сроки
+                            </p>
+
+                            <span class="mortgage-advantages__count">02</span>
+                            <div class="mortgage-advantages__image">
+                                <img src="./img/mortgage/icon-2.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mortgage-advantages__swiper-slide swiper-slide">
+                        <div class="mortgage-advantages__advantage">
+                            <p class="mortgage-advantages__text mortgage-advantages__text--text-22">
+                                Онлайн-анкета&nbsp;для&nbsp;всех
+                                банков&nbsp;сразу
+                            </p>
+
+                            <span class="mortgage-advantages__count">03</span>
+                            <div class="mortgage-advantages__image">
+                                <img src="./img/mortgage/icon-3.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mortgage-advantages__swiper-slide swiper-slide">
+                        <div class="mortgage-advantages__advantage">
+                            <p class="mortgage-advantages__text mortgage-advantages__text--text-22">
+                                Персональный&nbsp;менеджер на&nbsp;время&nbsp;сопровождения сделки
+                            </p>
+
+                            <span class="mortgage-advantages__count">04</span>
+                            <div class="mortgage-advantages__image">
+                                <img src="./img/mortgage/icon-4.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mortgage-faqs section">
+    <div class="mortgage-faqs__site-container">
+        <div class="mortgage-faqs__body">
+            <h2 class="mortgage-faqs__title mortgage-faqs__title--h3-text">
+                Вопросы и&nbsp;ответы
+            </h2>
+
+            <ul class="mortgage-faqs__list">
+                <li class="mortgage-faqs__item faq-item">
+                    <input class="faq-item__input visually-hidden" type="radio" name="faq-dropdowns" checked
+                        id="faq-dropdowns-id-1">
+
+                    <div class="faq-item__button">
+                        <div class="faq-item__question faq-item__question--text-20">
+                            Какой минимальный первоначальный взнос?
+                        </div>
+
+
+                        <label for="faq-dropdowns-id-1" class="faq-item__label"></label>
+
+                        <div class="faq-item__dropdown">
+                            <p class="faq-item__answer">
+                                Вы можете использовать средства материнского капитала полностью или частично в качестве
+                                первоначального взноса при получении ипотеки. Можно использовать только материнский
+                                капитал
+                                или сумму материнского капитала и собственных средств.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mortgage-faqs__item faq-item">
+                    <input class="faq-item__input visually-hidden" type="radio" name="faq-dropdowns"
+                        id="faq-dropdowns-id-2">
+
+                    <div class="faq-item__button">
+                        <div class="faq-item__question faq-item__question--text-20">
+                            Можно ли использовать материнский капитал в качестве первоначального взноса?
+                        </div>
+
+
+                        <label for="faq-dropdowns-id-2" class="faq-item__label"></label>
+
+                        <div class="faq-item__dropdown">
+                            <p class="faq-item__answer">
+                                Вы можете использовать средства материнского капитала полностью или частично в качестве
+                                первоначального взноса при получении ипотеки. Можно использовать только материнский
+                                капитал
+                                или сумму материнского капитала и собственных средств.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mortgage-faqs__item faq-item">
+                    <input class="faq-item__input visually-hidden" type="radio" name="faq-dropdowns"
+                        id="faq-dropdowns-id-3">
+
+                    <div class="faq-item__button">
+                        <div class="faq-item__question faq-item__question--text-20">
+                            Имеется ли возможность подать заявку на ипотеку не предоставляя справки 2-НДФЛ?
+                        </div>
+
+
+                        <label for="faq-dropdowns-id-3" class="faq-item__label"></label>
+
+                        <div class="faq-item__dropdown">
+                            <p class="faq-item__answer">
+                                Вы можете использовать средства материнского капитала полностью или частично в качестве
+                                первоначального взноса при получении ипотеки. Можно использовать только материнский
+                                капитал
+                                или сумму материнского капитала и собственных средств.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mortgage-faqs__item faq-item">
+                    <input class="faq-item__input visually-hidden" type="radio" name="faq-dropdowns"
+                        id="faq-dropdowns-id-4">
+
+                    <div class="faq-item__button">
+                        <div class="faq-item__question faq-item__question--text-20">
+                            Можно ли подтвердить занятость не предоставляя заверенную копию трудовой книжки?
+                        </div>
+
+
+                        <label for="faq-dropdowns-id-4" class="faq-item__label"></label>
+
+                        <div class="faq-item__dropdown">
+                            <p class="faq-item__answer">
+                                Вы можете использовать средства материнского капитала полностью или частично в качестве
+                                первоначального взноса при получении ипотеки. Можно использовать только материнский
+                                капитал
+                                или сумму материнского капитала и собственных средств.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mortgage-faqs__item faq-item">
+                    <input class="faq-item__input visually-hidden" type="radio" name="faq-dropdowns"
+                        id="faq-dropdowns-id-5">
+
+                    <div class="faq-item__button">
+                        <div class="faq-item__question faq-item__question--text-20">
+                            Можно ли подать заявку на ипотечный кредит без подтверждения дохода?
+                        </div>
+
+
+                        <label for="faq-dropdowns-id-5" class="faq-item__label"></label>
+
+                        <div class="faq-item__dropdown">
+                            <p class="faq-item__answer">
+                                Вы можете использовать средства материнского капитала полностью или частично в качестве
+                                первоначального взноса при получении ипотеки. Можно использовать только материнский
+                                капитал
+                                или сумму материнского капитала и собственных средств.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mortgage-callback section">
+    <div class="mortgage-callback__site-container">
+        <div class="mortgage-callback__body">
+            <div class="mortgage-callback__heading">
+                <h3 class="mortgage-callback__title mortgage-callback__title--h4-text ">
+                    Остались вопросы?
+                </h3>
+
+                <p class="mortgage-callback__text mortgage-callback__text--text-22">
+                    Оставьте заявку на бесплатную консультацию
+                </p>
+
+                <a href="#modal-callback" class="mortgage-callback__button main-btn main-btn--white">
+                    Получить консультацию
+                </a>
+            </div>
+            <div class="mortgage-callback__profile">
+                <div class="mortgage-callback__image">
+                    <img src="./img/mortgage/callback.png" alt="">
+                </div>
+
+                <div class="mortgage-callback__about">
+                    <div class="mortgage-callback__about-top">
+                        <p class="mortgage-callback__name mortgage-callback__name--text-24">
+                            Васильев Олег Олегович
+                        </p>
+                        <p class="mortgage-callback__role">
+                            Ипотечный брокер
+                        </p>
+                    </div>
+                    <p class="mortgage-callback__about-center">
+                        Помогу на каждом этапе сделки при покупке квартиры Вашей мечты!
+                    </p>
+                    <a href="tel:" class="mortgage-callback__about-bottom mortgage-callback__about-bottom--h6-text">
+                        8 960 052-90-69
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal js-modal" id="modal-callback">
+    <div class="modal__inner-wrapper">
+
+        <button type="button" class="modal__close close-btn js-close-modal">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#close-empty"></use>
+            </svg>
+        </button>
+
+        <div class="modal__body">
+            <form action="" class="modal__form" data-need-validation>
+                <div class="modal__heading">
+                    <h5 class="modal__title modal__title--h5-text">
+                        Заявка на ипотеку
+                    </h5>
+                    <p class="modal__text">
+                        Менеджер свяжется с&nbsp;вами для подтверждения<br>
+                        заявки&nbsp;и&nbsp;согласует время консультации
+                    </p>
+                </div>
+
+                <div class="modal__inputs">
+                    <div class="modal__inputs-col">
+                        <div class="modal__input input-wrapper">
+                            <input class="input input--dark" type="text" name="callback-name" id="callback-name"
+                                placeholder="Имя" required="" autocomplete="off" minlength="2" data-parsley-reqtext
+                                data-parsley-trigger="input" data-parsley-validate-if-empty>
+                        </div>
+                        <div class="modal__input input-wrapper">
+                            <input class="input input--dark" type="email" name="callback-email" id="callback-email"
+                                placeholder="E-mail" required="" autocomplete="off" minlength="3" data-parsley-email=""
+                                data-parsley-trigger="input" data-parsley-validate-if-empty>
+                        </div>
+
+                        <button class="modal__sumbit main-btn main-btn--red js-modal-callback-submit" type="submit">
+                            Подписаться
+                        </button>
+                    </div>
+                </div>
+
+                <p class="modal__agreement form-footer__agreement modal__agreement--text-14">
+                    Нажимая "Оставить заявку", вы соглашаетесь с <a href="#" target="_blank">
+                        политикой конфиденциальности
+                    </a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal js-modal" id="modal-success">
+    <div class="modal__inner-wrapper">
+
+        <button type="button" class="modal__close close-btn js-close-modal">
+            <svg aria-hidden="true" class="icon">
+                <use xlink:href="#close-empty"></use>
+            </svg>
+        </button>
+
+        <div class="modal__body">
+            <div class="modal__form">
+                <div class="modal__heading">
+                    <h5 class="modal__title modal__title--h5-text">
+                        Заявка отправлена
+                    </h5>
+                    <p class="modal__text">
+                        Менеджер свяжется с&nbsp;вами для подтверждения<br>
+                        заявки&nbsp;и&nbsp;согласует время консультации
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

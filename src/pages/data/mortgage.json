@@ -1,0 +1,13 @@
+{
+    "title": "Главная страница",
+    "filterClass": false,
+    "headerBlurClass": true,
+    "breadcrumbsWhiteClass": true,
+    "headerMainClass": true,
+    "greyPage": true,
+    "greyFooterClass": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Ипотека"
+    ]
+}

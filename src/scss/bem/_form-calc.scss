@@ -42,6 +42,11 @@
         &::after {
             content: " \20BD";
         }
+
+        &::before {
+            font-size: 2rem;
+            content: "от ";
+        }
     }
 
     &__submit {
@@ -49,6 +54,48 @@
 
         &.main-btn {
             width: 100%;
+        }
+    }
+
+    &__agreement {
+        margin-top: 2.4rem;
+        opacity: 0.5;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &.mortgage-calc__form-calc {
+        .form-calc__title {
+            color: var(--Black, #020202);
+        }
+
+        .form-calc__inputs {
+            @include breakpointMF(tablet) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        .form-calc__final {
+            @include breakpointMF(tablet) {
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        .simple-range {
+            .simple-range__label {
+                color: var(--Black-50, rgba(2, 2, 2, 0.5));
+            }
+
+            .simple-range__values {
+
+                .input {
+                    color: var(--Black, rgba(2, 2, 2));
+                    background: var(--White, #FFF);
+                    border: 1px solid rgba(255, 255, 255, 0.20);
+                }
+            }
         }
     }
 }

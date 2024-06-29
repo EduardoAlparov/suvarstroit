@@ -1,0 +1,150 @@
+.mortgage-plan {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        column-gap: 2.4rem;
+
+        width: 100%;
+        height: 100%;
+        padding: 1.6rem;
+
+        background: var(--White, #FFF);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            column-gap: unset;
+            justify-content: space-between;
+            padding: 4rem;
+        }
+    }
+
+    &__info,
+    &__image {
+        width: 100%;
+
+        @include breakpointMF(tablet) {
+            flex: 0 0 calc(50% - 2.4rem);
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__name {
+        margin-bottom: 2rem;
+        color: var(--Blue, #212173);
+
+        @include breakpointMF(tablet) {
+            width: min-content;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__desc {
+        opacity: 0.7;
+
+        @include breakpointMF(tablet) {
+            max-width: 35ch;
+        }
+    }
+
+    &__info-center {
+        padding-top: 3rem;
+        border-top: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+
+        @include breakpointMF(tablet) {
+            max-width: max-content;
+            padding-top: 3rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        column-gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            column-gap: 6rem;
+            padding-right: 2.2rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__key {
+        display: block;
+        width: min-content;
+        margin-bottom: 1.8rem;
+        opacity: 0.6rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    &__value {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5ch;
+    }
+
+    &__value-prefix {
+        letter-spacing: -0.02em;
+    }
+
+    &__value-number {
+        @include breakpointMF(tablet) {
+            padding-bottom: 0.8rem;
+        }
+    }
+
+    &__btn {
+        &.main-btn {
+            @include breakpointMF(tablet) {
+                width: 23rem;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1.617 / 1;
+        @extend ._border-16;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.617 / 1;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+            content: "";
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

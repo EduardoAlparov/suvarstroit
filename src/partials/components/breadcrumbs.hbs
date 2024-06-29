@@ -1,15 +1,13 @@
 <div class="breadcrumbs section--first  {{#if breadcrumbsWhiteClass}}breadcrumbs--white{{/if}}">
     <div class="breadcrumbs__site-container">
         <ul class="breadcrumbs__list">
+            {{#each breadcrumbsList}}
             <li class="breadcrumbs__item">
-                <a href="/" class="breadcrumbs__link">Главная</a>
+                <a href="/" class="breadcrumbs__link">
+                    {{this}}
+                </a>
             </li>
-            <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Проекты</a>
-            </li>
-            <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__link">Южный парк</a>
-            </li>
+            {{/each}}
         </ul>
     </div>
 </div>

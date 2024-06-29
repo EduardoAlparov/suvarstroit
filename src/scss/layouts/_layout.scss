@@ -77,6 +77,10 @@ body {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    &.page-main--grey {
+        background-color: var(--Light-Grey, #F5F5F5);
+    }
 }
 
 .section {
@@ -143,6 +147,8 @@ body {
             margin-bottom: 0;
         }
     }
+
+
 
     &:last-child {
         margin-bottom: 6rem;

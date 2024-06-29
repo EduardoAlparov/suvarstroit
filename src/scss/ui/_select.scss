@@ -220,4 +220,16 @@
             background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%204L7%2010L13%204%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
         }
     }
+
+    &--white {
+        .select__label {
+            color: var(--Black, #020202);
+            opacity: 0.5;
+        }
+
+        .choices__inner {
+            background-color: var(--White, #fff);
+            border: 1px solid rgba(255, 255, 255, 0.20);
+        }
+    }
 }

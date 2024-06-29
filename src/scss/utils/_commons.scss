@@ -102,40 +102,39 @@
 
     @include breakpointMF(tablet) {
         @include font(11rem, 100%, 400);
-        letter-spacing: -0.033 em;
+        letter-spacing: -0.03em;
     }
 }
 
 [class*="--text-h2"] {
     @include font(4.2rem, 100%, 400);
-    letter-spacing: -0.0126em;
+    letter-spacing: -0.02em;
     font-feature-settings: 'clig' off, 'liga' off;
 
     @include breakpointMF(tablet) {
         @include font(9rem, 100%, 400);
-        letter-spacing: -0.027em;
+        letter-spacing: -0.03em;
     }
 }
 
 [class*="--h3-text"] {
     @include font(3rem, 100%, 400);
-    letter-spacing: -0.009em;
+    letter-spacing: -0.01em;
     font-feature-settings: 'clig' off, 'liga' off;
 
     @include breakpointMF(tablet) {
         @include font(5.4rem, 100%, 400);
-        letter-spacing: -0.0162em;
+        letter-spacing: -0.02em;
     }
 }
 
 [class*="--h4-text"] {
     @include font(4rem, 100%, 400);
-    letter-spacing: -0.008em;
+    letter-spacing: -0.02em;
     font-feature-settings: 'clig' off, 'liga' off;
 
     @include breakpointMF(tablet) {
         @include font(4rem, 105%, 400);
-        letter-spacing: -0.0162em;
     }
 }
 
@@ -151,11 +150,11 @@
 
 [class*="--h6-text"] {
     @include font(2rem, 100%, 400);
-    letter-spacing: -0.008em;
+    letter-spacing: -0.02em;
 
     @include breakpointMF(tablet) {
         @include font(2.6rem, 110%, 400);
-        letter-spacing: -0.056em;
+        letter-spacing: -0.02em;
     }
 }
 
@@ -193,11 +192,11 @@
 
 [class*="--text-32"] {
     @include font(2rem, 100%, 400);
-    letter-spacing: -0.008em;
+    letter-spacing: -0.04em;
 
     @include breakpointMF(tablet) {
         @include font(3.2rem, 100%, 400);
-        letter-spacing: -0.064em;
+        letter-spacing: -0.02em;
     }
 }
 
@@ -239,11 +238,11 @@
 
 [class*="--text-22"] {
     @include font(2rem, 108%, 400);
-    letter-spacing: -0.08em;
+    letter-spacing: -0.03em;
 
     @include breakpointMF(tablet) {
         @include font(2.2rem, 120%, 400);
-        letter-spacing: -0.066em;
+        letter-spacing: -0.02em;
     }
 }
 

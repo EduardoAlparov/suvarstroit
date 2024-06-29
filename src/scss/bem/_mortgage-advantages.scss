@@ -1,0 +1,81 @@
+.mortgage-advantages {
+    &__title {
+        &.projects__title {
+            @include breakpointMF(tablet) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    &__advantage {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+
+        overflow: hidden;
+        padding: 3.2rem;
+
+        background: var(--White, #FFF);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1;
+            padding: 3.2rem;
+            width: 37.2rem;
+        }
+
+        &::before {
+            position: absolute;
+            right: 4.8rem;
+            bottom: 4.8rem;
+
+            width: 37.1rem;
+            aspect-ratio: 1;
+            transform: translate(50%, 50%);
+
+            background: linear-gradient(153deg, #FFECEC 13.46%, #FFF 51.11%);
+            border-radius: 100%;
+            content: "";
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: 4.8rem;
+        bottom: 4.8rem;
+
+        img {
+            display: block;
+            width: 11rem;
+            height: 11rem;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__text {
+        max-width: 20ch;
+    }
+
+    &__count {
+        color: var(--Black, #020202);
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+
+        opacity: 0.2;
+    }
+
+    &__swiper-wrapper.swiper-wrapper {
+        gap: 2.4rem;
+    }
+
+    &__swiper-slide.swiper-slide {
+        width: auto;
+    }
+}
