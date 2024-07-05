@@ -1,9 +1,13 @@
 .page-header {
     position: absolute;
-    top: calc(var(--gap) * 4);
+    top: 2rem;
     right: 0;
     left: 0;
     z-index: 1500;
+
+    @include breakpointMF(tablet) {
+        top: calc(var(--gap) * 4);
+    }
 
     &__nav {
         position: relative;
@@ -176,7 +180,6 @@
     &.page-header--fixed {
         position: fixed;
         animation: transAnim 0.4s ease-out 1 forwards;
-
     }
 }
 

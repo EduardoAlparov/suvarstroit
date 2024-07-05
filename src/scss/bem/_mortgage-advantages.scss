@@ -1,6 +1,8 @@
 .mortgage-advantages {
     &__title {
         &.projects__title {
+            width: 18ch;
+
             @include breakpointMF(tablet) {
                 width: 100%;
                 text-align: center;
@@ -17,7 +19,9 @@
         justify-content: space-between;
 
         overflow: hidden;
-        padding: 3.2rem;
+        width: 100%;
+        aspect-ratio: 3.07 / 1;
+        padding: 2rem;
 
         background: var(--White, #FFF);
         @extend ._border-20;
@@ -30,35 +34,75 @@
 
         &::before {
             position: absolute;
-            right: 4.8rem;
-            bottom: 4.8rem;
+            right: 0.7rem;
+            top: 50%;
+            transform: translate(40%, -50%);
 
-            width: 37.1rem;
+            display: block;
+
+            width: 50%;
             aspect-ratio: 1;
-            transform: translate(50%, 50%);
 
             background: linear-gradient(153deg, #FFECEC 13.46%, #FFF 51.11%);
             border-radius: 100%;
             content: "";
+
+            @include breakpointMF(tablet) {
+                top: unset;
+                right: 4.8rem;
+                bottom: 4.8rem;
+
+                aspect-ratio: unset;
+
+                width: 37.1rem;
+                aspect-ratio: 1;
+                transform: translate(50%, 50%);
+            }
         }
     }
 
     &__image {
         position: absolute;
-        right: 4.8rem;
-        bottom: 4.8rem;
+        right: 3.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        height: 46%;
+
+        @include breakpointMF(tablet) {
+            top: unset;
+            bottom: 4.8rem;
+            right: 4.8rem;
+            transform: unset;
+            height: auto;
+        }
 
         img {
             display: block;
-            width: 11rem;
-            height: 11rem;
+            height: 100%;
+            aspect-ratio: 1;
             object-fit: cover;
             object-position: center;
+
+            @include breakpointMF(tablet) {
+                width: 11rem;
+                height: 11rem;
+                aspect-ratio: unset;
+            }
         }
     }
 
     &__text {
         max-width: 20ch;
+
+        &.mortgage-advantages__text--text-22 {
+            @include breakpoint(small-tablet) {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+        }
     }
 
     &__count {
@@ -72,10 +116,21 @@
     }
 
     &__swiper-wrapper.swiper-wrapper {
-        gap: 2.4rem;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            gap: 2.4rem;
+            width: auto;
+        }
     }
 
     &__swiper-slide.swiper-slide {
-        width: auto;
+        width: 100%;
+
+        @include breakpointMF(tablet) {
+            width: auto;
+        }
     }
 }

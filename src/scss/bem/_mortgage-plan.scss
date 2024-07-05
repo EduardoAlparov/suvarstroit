@@ -3,11 +3,10 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        column-gap: 2.4rem;
 
         width: 100%;
         height: 100%;
-        padding: 1.6rem;
+        padding: 2rem;
 
         background: var(--White, #FFF);
         @extend ._border-20;
@@ -25,7 +24,7 @@
         width: 100%;
 
         @include breakpointMF(tablet) {
-            flex: 0 0 calc(50% - 2.4rem);
+            flex: 0 0 50%;
         }
     }
 
@@ -34,14 +33,21 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: space-between;
+        gap: 2.8rem;
+        margin-bottom: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: unset;
+            gap: unset;
+        }
     }
 
     &__name {
-        margin-bottom: 2rem;
+        margin-bottom: 1.6rem;
         color: var(--Blue, #212173);
 
         @include breakpointMF(tablet) {
-            width: min-content;
+            width: 15ch;
             margin-bottom: 2rem;
         }
     }
@@ -52,25 +58,48 @@
         @include breakpointMF(tablet) {
             max-width: 35ch;
         }
+
+        &.mortgage-plan__desc--text-18 {
+            @include breakpoint(small-tablet) {
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+            }
+        }
+    }
+
+    &__info-top {
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__info-center {
-        padding-top: 3rem;
+        padding-top: 2.8rem;
         border-top: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
 
         @include breakpointMF(tablet) {
             max-width: max-content;
+            margin-top: auto;
             padding-top: 3rem;
         }
     }
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         align-items: stretch;
-        column-gap: 2rem;
+        justify-content: space-between;
+        gap: 2rem;
 
         @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            justify-content: unset;
+            gap: unset;
             column-gap: 6rem;
+
             padding-right: 2.2rem;
         }
     }
@@ -79,13 +108,21 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        max-width: calc(100% / 2 - 1rem);
+        min-width: 15ch;
+
+        @include breakpointMF(tablet) {
+            max-width: auto;
+            min-width: unset;
+        }
     }
 
     &__key {
         display: block;
         width: min-content;
-        margin-bottom: 1.8rem;
-        opacity: 0.6rem;
+        margin-bottom: 1.2rem;
+        opacity: 0.6;
 
         @include breakpointMF(tablet) {
             margin-bottom: 1.8rem;
@@ -94,8 +131,12 @@
 
     &__value {
         display: inline-flex;
-        align-items: center;
+        align-items: flex-end;
         column-gap: 0.5ch;
+
+        @include breakpointMF(tablet) {
+            align-items: center;
+        }
     }
 
     &__value-prefix {
@@ -108,8 +149,16 @@
         }
     }
 
+    &__info-bottom {
+        @include breakpointMF(tablet) {
+            margin-top: 6rem;
+        }
+    }
+
     &__btn {
         &.main-btn {
+            width: 100%;
+
             @include breakpointMF(tablet) {
                 width: 23rem;
             }
@@ -119,11 +168,12 @@
     &__image {
         position: relative;
         overflow: hidden;
-        aspect-ratio: 1.617 / 1;
+        aspect-ratio: 1.475 / 1;
         @extend ._border-16;
 
         @include breakpointMF(tablet) {
-            aspect-ratio: 1.617 / 1;
+            aspect-ratio: 1.5 / 1;
+            flex: 0 0 calc(50% - 1.2rem);
         }
 
         &::before {

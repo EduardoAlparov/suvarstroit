@@ -6,6 +6,8 @@
     bottom: 0;
     z-index: 2100;
 
+    display: none;
+
     @include breakpointMF(tablet) {
         display: none;
     }
@@ -64,6 +66,14 @@
             &::after {
                 content: "";
             }
+        }
+    }
+
+    &.mobile-navigation--is-open {
+        display: block;
+
+        @include breakpointMF(tablet) {
+            display: none;
         }
     }
 }

@@ -10,6 +10,7 @@ import menu from './menu';
 
 import setScrollbarWidth from './setScrollbarWidth';
 import setHeaderPadding from './setHeaderPadding';
+import setBreadcrumbsPadding from './setBreadcrumbsPadding';
 import setFixedHeader from './setFixedHeader';
 import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
@@ -48,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     modals();
     // tabs();
     // menu();
-    // setHeaderPadding();
+    setHeaderPadding();
+    setBreadcrumbsPadding();
     setFixedHeader();
     customSelects();
     rangeSlidersDouble();

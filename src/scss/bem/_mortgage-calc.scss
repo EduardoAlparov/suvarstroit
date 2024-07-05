@@ -7,6 +7,11 @@
 
     &__list-wrapper {
         position: relative;
+        margin-top: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: unset;
+        }
     }
 
     &__scroll-list {
@@ -35,15 +40,6 @@
         }
     }
 
-    &__header {
-        position: absolute;
-        left: 0;
-        bottom: calc(100% + 2rem);
-
-        width: 100%;
-        padding: 0 4rem;
-    }
-
     &__item {
         margin-bottom: 1.6rem;
 
@@ -54,11 +50,20 @@
 
     &__label {
         display: flex;
-        align-items: center;
-        gap: 3rem;
+        flex-direction: column;
+        flex-wrap: wrap;
 
+        padding: 2rem;
         border: 1px solid transparent;
         transition: border 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+            padding: unset;
+        }
 
         & > span {
             opacity: 0.5;
@@ -66,13 +71,6 @@
             font-style: normal;
             font-weight: 400;
             line-height: 130%;
-        }
-
-        & > p {
-            font-size: 2rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
         }
 
         &--border {
@@ -102,16 +100,73 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        column-gap: 2rem;
-
-        flex: 0 0 30.4rem;
-        margin-right: 1rem;
+        column-gap: 1.2rem;
+        margin-bottom: 2.8rem;
 
         @include breakpointMF(tablet) {
+            flex: 0 0 30.4rem;
             column-gap: 2rem;
 
-            flex: 0 0 30.4rem;
+            margin-bottom: unset;
             margin-right: 1rem;
+        }
+
+        & > p {
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    &__cols {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.8rem;
+
+        @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            gap: 2rem;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+
+            flex: 1 0 calc(50%);
+            max-width: calc(50% - 1.4rem);
+
+            @include breakpointMF(tablet) {
+                flex: unset;
+                justify-content: unset;
+                min-width: 13rem;
+                max-width: unset;
+            }
+
+            & > p {
+                margin-bottom: 1.2rem;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                letter-spacing: -0.04em ;
+
+                @include breakpointMF(tablet) {
+                    margin-bottom: unset;
+                    letter-spacing: unset;
+                }
+            }
+
+            & > span {
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                opacity: 0.6;
+            }
         }
     }
 
@@ -137,17 +192,6 @@
         }
     }
 
-    &__col-month,
-    &__col-payment,
-    &__col-term,
-    &__col-rate {
-
-        @include breakpointMF(tablet) {
-            flex-grow: 1;
-            min-width: 13rem;
-        }
-    }
-
     &__radio {
         &:checked {
             & + .mortgage-calc__label {
@@ -161,14 +205,14 @@
         align-items: center;
         justify-content: center;
 
-        height: 7rem;
-        padding: 2.5rem;
+        height: 5rem;
+        padding: 2rem;
         text-align: center;
 
         background-color: rgba(2, 2, 2, 0.05);
-        border-radius: 12px;
+        border-radius: 0.8rem;
 
-        @include font(1.6rem, 100%, 500);
+        @include font(1.4rem, 100%, 400);
         @extend ._border-12;
 
         @include breakpointMF(tablet) {
@@ -178,6 +222,49 @@
             color: var(--Black, #020202);
 
             @include font(1.6rem, 100%, 500);
+        }
+    }
+
+    &__form-calc {
+        &.programs__form-calc {
+            .simple-range__label {
+                color: var(--Black-60, rgba(2, 2, 2, 0.6));
+            }
+
+            .form-calc__inputs {
+                @include breakpointMF(tablet) {
+                    margin-bottom: 6rem;
+                }
+            }
+
+            .form-calc__final {
+                @include breakpointMF(tablet) {
+                    margin-bottom: 3.2rem;
+                }
+            }
+        }
+    }
+
+    &__header {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 2rem);
+
+        width: 100%;
+        padding: 0 4rem;
+
+        &.mortgage-calc__label {
+            .mortgage-calc__cols {
+                li {
+                    & > p {
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 130%;
+                        opacity: 0.5;
+                    }
+                }
+            }
         }
     }
 }

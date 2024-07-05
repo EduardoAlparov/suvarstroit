@@ -4,7 +4,6 @@
         align-items: stretch;
         flex-direction: column;
 
-
         @include breakpointMF(tablet) {
             flex-direction: row;
             align-items: flex-start;

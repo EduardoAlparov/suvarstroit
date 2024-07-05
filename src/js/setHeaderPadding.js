@@ -10,4 +10,4 @@ export default () => {
     setHeaderHeightVar();
 
     window.addEventListener('resize', setHeaderHeightVar);
-  }
+}

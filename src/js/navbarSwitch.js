@@ -17,33 +17,53 @@ export default () => {
                 btn.classList.toggle(ACTIVE_CLASS);
 
                 const wrapper = navbar.closest('.js-switchable-window');
+                const wrapper2 = navbar.closest('.js-mortgage-window');
 
-                if(!wrapper) return;
+                if(wrapper) {
+                    const id = btn.dataset.switchId;
+                    const findedEl = document.getElementById(id);
+                    const windows = wrapper.querySelectorAll('[data-switch-window]');
 
-                const id = btn.dataset.switchId;
-                const findedEl = document.getElementById(id);
-                const windows = wrapper.querySelectorAll('[data-switch-window]');
+                    if(id && findedEl) {
+                        windows.forEach((window) => {
+                            window.classList.add('display-none');
+                        })
 
-                if(id && findedEl) {
-                    windows.forEach((window) => {
-                        window.classList.add('display-none');
-                    })
+                        findedEl.classList.remove('display-none');
+                    } else {
+                        return;
+                    }
+                } else if (wrapper2) {
+                    const id = btn.dataset.switchId;
+                    const findedEl = wrapper2.querySelectorAll(`[data-mortgage-window=${id}]`);
+                    const windows = wrapper2.querySelectorAll('[data-mortgage-window]');
 
-                    findedEl.classList.remove('display-none');
+                    if(id && (findedEl.length > 0)) {
+                        windows.forEach((window) => {
+                            window.classList.add('display-none');
+                        })
+
+                        findedEl.forEach((el) => {
+                            el.classList.remove('display-none');
+                        })
+                    } else {
+                        return;
+                    }
                 } else {
                     return;
                 }
+
             }
         })
+
+        if(IS_MOBILE && navbar.classList.contains('js-navbar-swiper')) {
+            const navbarsSwiper = new Swiper(navbar, {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+
+                slideClass: 'navbar__item',
+                wrapperClass: 'navbar__list',
+            })
+        }
     })
-
-    if(IS_MOBILE) {
-        const navbarsSwiper = new Swiper('.js-navbar-swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 0,
-
-            slideClass: 'navbar__item',
-            wrapperClass: 'navbar__list',
-        })
-    }
 }
