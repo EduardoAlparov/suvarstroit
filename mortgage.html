@@ -349,7 +349,7 @@
                 </div>
             </div>
         </header>
-        <div class="breadcrumbs section--first  breadcrumbs--white">
+        <div class="breadcrumbs section--first breadcrumbs--white">
             <div class="breadcrumbs__site-container">
                 <ul class="breadcrumbs__list">
                     <li class="breadcrumbs__item">
@@ -374,7 +374,7 @@
                 <div class="mortgage-intro__top">
                     <h1 class="mortgage-intro__title">
                         <span class="mortgage-intro__span mortgage-intro__span--text-h2">
-                            Ипотека –&nbsp;
+                            Ипотека –
                         </span>
                         <span class="mortgage-intro__span mortgage-intro__span--text-h2">
                             это легко
@@ -389,17 +389,19 @@
 
                 <div class="mortgage-intro__bottom">
                     <a href="#" class="mortgage-intro__link main-btn main-btn--white">
-                        Рассчитать ипотеку
+                        <span class="hide-on-mobile">Рассчитать ипотеку</span>
+                        <span class="show-on-mobile">Рассчитать</span>
                     </a>
                     <a href="#" class="mortgage-intro__link main-btn main-btn--outlined">
-                        Получить консультацию
+                        <span class="hide-on-mobile">Получить консультацию</span>
+                        <span class="show-on-mobile">Консультация</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="mortgage-intro__image hide-on-mobile">
+    <div class="mortgage-intro__image">
         <div class="mortgage-intro__picture">
             <picture>
                 <source type="image/webp" srcset="./img/mortgage/intro.webp" alt="" />
@@ -410,7 +412,7 @@
 </section>
 
 <section class="mortgage-plans section section--round-border section--white">
-    <div class="mortgage-plans__site-container">
+    <div class="mortgage-plans__site-container js-mortgage-window">
         <div class="mortgage-plans__navigation">
             <div class="mortgage-plans__navbar js-navbar-swiper navbar">
                 <ul class="navbar__list">
@@ -439,7 +441,7 @@
                         </button>
                     </li>
                     <li class="navbar__item">
-                        <button type="button" data-switch-id="mortgage-plan-3"
+                        <button type="button" data-switch-id="mortgage-plan-0"
                             class="js-navbar-button navbar__button navbar__button--darker">
                             <span class="navbar__text">
                                 Военная
@@ -447,7 +449,7 @@
                         </button>
                     </li>
                     <li class="navbar__item">
-                        <button type="button" data-switch-id="mortgage-plan-4"
+                        <button type="button" data-switch-id="mortgage-plan-1"
                             class="js-navbar-button navbar__button navbar__button--darker">
                             <span class="navbar__text">
                                 Ипотека по ставке 1,99%
@@ -455,7 +457,7 @@
                         </button>
                     </li>
                     <li class="navbar__item">
-                        <button type="button" data-switch-id="mortgage-plan-5"
+                        <button type="button" data-switch-id="mortgage-plan-2"
                             class="js-navbar-button navbar__button navbar__button--darker">
                             <span class="navbar__text">
                                 Ипотека за 1 руб/мес
@@ -465,8 +467,9 @@
                 </ul>
             </div>
         </div>
+
         <ul class="mortgage-plans__list">
-            <li id="mortgage-plan-0" data-switch-window class="mortgage-plans__item mortgage-plan">
+            <li data-mortgage-window="mortgage-plan-0" data-switch-window class="mortgage-plans__item mortgage-plan">
                 <div class="mortgage-plan__body">
                     <div class="mortgage-plan__info">
                         <div class="mortgage-plan__info-top">
@@ -535,9 +538,10 @@
                             </ul>
                         </div>
                         <div class="mortgage-plan__info-bottom">
-                            <button type="button" class="mortgage-plan__btn main-btn main-btn--outlined main-btn--red">
+                            <a href="#modal-mortgage" data-mortgage-link="0"
+                                class="mortgage-plan__btn main-btn main-btn--outlined main-btn--red js-plan-btn">
                                 Подробнее
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -549,7 +553,874 @@
                     </div>
                 </div>
             </li>
+            <li data-mortgage-window="mortgage-plan-1" data-switch-window
+                class="mortgage-plans__item mortgage-plan display-none">
+                <div class="mortgage-plan__body">
+                    <div class="mortgage-plan__info">
+                        <div class="mortgage-plan__info-top">
+                            <p class="mortgage-plan__name mortgage-plan__name--h3-text">
+                                IT-ипотека
+                            </p>
+
+                            <p class="mortgage-plan__desc mortgage-plan__desc--text-18">
+                                IT-ипотека со&nbsp;сниженной ставкой на&nbsp;весь срок кредита
+                            </p>
+                        </div>
+                        <div class="mortgage-plan__info-center">
+                            <ul class="mortgage-plan__list">
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Первоначальный взнос
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30,1%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Процентная ставка
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            8%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;cрок кредита
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            лет
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;сумма кредита,&nbsp;₽
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            6
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            млн
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mortgage-plan__info-bottom">
+                            <a href="#modal-mortgage" data-mortgage-link="1"
+                                class="mortgage-plan__btn main-btn main-btn--outlined main-btn--red js-plan-btn">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mortgage-plan__image">
+                        <picture>
+                            <source type="image/webp" srcset="./img/mortgage/plan.webp" alt="" />
+                            <img class="lazy" src="./img/mortgage/plan.jpg" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </li>
+            <li data-mortgage-window="mortgage-plan-2" data-switch-window
+                class="mortgage-plans__item mortgage-plan display-none">
+                <div class="mortgage-plan__body">
+                    <div class="mortgage-plan__info">
+                        <div class="mortgage-plan__info-top">
+                            <p class="mortgage-plan__name mortgage-plan__name--h3-text">
+                                Семейная ипотека
+                            </p>
+
+                            <p class="mortgage-plan__desc mortgage-plan__desc--text-18">
+                                Семейная ипотека со&nbsp;сниженной ставкой на&nbsp;весь срок кредита
+                            </p>
+                        </div>
+                        <div class="mortgage-plan__info-center">
+                            <ul class="mortgage-plan__list">
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Первоначальный взнос
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30,1%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Процентная ставка
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            от
+                                        </span>
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            8%
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;cрок кредита
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            30
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            лет
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="mortgage-plan__item">
+                                    <span class="mortgage-plan__key mortgage-plan__key--text-14">
+                                        Макс.&nbsp;сумма кредита,&nbsp;₽
+                                    </span>
+                                    <p class="mortgage-plan__value">
+                                        <span class="mortgage-plan__value-number mortgage-plan__value-number--text-32">
+                                            6
+                                        </span>
+                                        <span class="mortgage-plan__value-prefix mortgage-plan__value-prefix--text-18">
+                                            млн
+                                        </span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mortgage-plan__info-bottom">
+                            <a href="#modal-mortgage" data-mortgage-link="0"
+                                class="mortgage-plan__btn main-btn main-btn--outlined main-btn--red js-plan-btn">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mortgage-plan__image">
+                        <picture>
+                            <source type="image/webp" srcset="./img/mortgage/plan-2.webp" alt="" />
+                            <img class="lazy" src="./img/mortgage/plan-2.jpg" alt="" />
+                        </picture>
+                    </div>
+                </div>
+            </li>
         </ul>
+
+        <div class="modal modal--mortgage modal--big js-modal" id="modal-mortgage">
+            <div class="modal__inner-wrapper">
+                <div class="modal__body">
+                    <ul class="modal__l-change-window">
+                        <li data-mortgage-window="mortgage-plan-0" data-switch-window class="modal__l-change-item">
+                            <div class="modal__l-header">
+                                <p class="modal__mortgage-name">
+                                    Ипотека с господдержкой
+                                </p>
+
+                                <button type="button"
+                                    class="modal__static-close close-btn close-btn--smaller js-close-modal">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#close-empty"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="modal__l-main">
+
+                                <article class="modal__article modal-article modal-article--first">
+                                    <div class="modal-article__body modal-article__body--col-end">
+                                        <div class="modal-article__column">
+                                            <p class="modal-article__text">
+                                                Теперь льготную семейную ипотеку могут взять не только семьи
+                                                с ребёнком, рождённым после 1 января 2018 года, но и родители
+                                                двух и более несовершеннолетних детей. А материнский капитал
+                                                можно использовать в качестве частичной оплаты.
+                                            </p>
+
+                                            <div class="modal-article__image">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./img/mortgage/plan-2.webp"
+                                                        media="(min-width: 768px)" type="image/webp" />
+                                                    <source srcset="./img/mortgage/plan-2.webp"
+                                                        media="(max-width: 768px)" type="image/webp">
+                                                    <source srcset="./img/mortgage/plan-2.jpg"
+                                                        media="(max-width: 768px)">
+                                                    <img class="lazy" src="./img/mortgage/plan-2.jpg" alt="" />
+                                                </picture>
+                                            </div>
+
+                                            <div class="modal-article__terms terms">
+                                                <h5 class="terms__title">
+                                                    Условия ипотеки
+                                                </h5>
+                                                <ul class="terms__main-list">
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Особые условия
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Для семей, у которых с 01.01.2018г. по 31.12.2023г.
+                                                                родился
+                                                                ребёнок
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                есть двое детей до 18 лет
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                ребенок, которому установлена категория
+                                                                "ребенок-инвалид"
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Сумма кредита
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Москва и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Санкт-Петербург и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 6 млн ₽ Регионы
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Документы для ипотеки
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Паспорт и СНИЛС
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Свидетельство о заключении брака и свидетельство о
+                                                                рождении
+                                                                ребенка
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Что можно купить
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item terms__sub-item--text">
+                                                                Только квартиры в строящихся и готовых корпусах от
+                                                                Застройщика по
+                                                                договору участия в долевом строительстве и договору
+                                                                купли-продажи.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Страхование
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Жизни и здоровья
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Объекта недвижимости (после регистрации права
+                                                                собственности)
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Справки о доходах
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Возможно рассмотрение только по паспорту и СНИЛС
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <div class="modal-article__information">
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--first">
+                                            <p class="modal-article__information-text">
+                                                Льготная&nbsp;ставка&nbsp;на&nbsp;весь срок&nbsp;кредита
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--second">
+                                            <p class="modal-article__information-text">
+                                                Минимальный первоначальный&nbsp;взнос
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--third">
+                                            <p class="modal-article__information-text">
+                                                Сумма&nbsp;кредита до&nbsp;12&nbsp;млн&nbsp;руб
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--fourth">
+                                            <p class="modal-article__information-text">
+                                                Оформление&nbsp;по&nbsp;двум документам
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <h4 class="modal-article__steps-title">
+                                        Купите квартиру в 5 шагов
+                                    </h4>
+                                    <ul class="modal-article__steps">
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                01
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Выберите&nbsp;квартиру в&nbsp;#Суварстроит
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                02
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;бесплатную консультацию&nbsp;ипотечного брокера
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                03
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Предоставьте&nbsp;документы для&nbsp;банка и
+                                                подайте заявку&nbsp;на&nbsp;ипотеку
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                04
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;одобрение
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                05
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Подпишите кредитный&nbsp;договор
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+
+                            </div>
+                        </li>
+                        <li data-mortgage-window="mortgage-plan-1" data-switch-window class="modal__l-change-item">
+                            <div class="modal__l-header">
+                                <p class="modal__mortgage-name">
+                                    IT-ипотека
+                                </p>
+
+                                <button type="button"
+                                    class="modal__static-close close-btn close-btn--smaller js-close-modal">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#close-empty"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="modal__l-main">
+
+                                <article class="modal__article modal-article modal-article--first">
+                                    <div class="modal-article__body modal-article__body--col-end">
+                                        <div class="modal-article__column">
+                                            <p class="modal-article__text">
+                                                Теперь льготную семейную ипотеку могут взять не только семьи
+                                                с ребёнком, рождённым после 1 января 2018 года, но и родители
+                                                двух и более несовершеннолетних детей. А материнский капитал
+                                                можно использовать в качестве частичной оплаты.
+                                            </p>
+
+                                            <div class="modal-article__image">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./img/mortgage/plan-2.webp"
+                                                        media="(min-width: 768px)" type="image/webp" />
+                                                    <source srcset="./img/mortgage/plan-2.webp"
+                                                        media="(max-width: 768px)" type="image/webp">
+                                                    <source srcset="./img/mortgage/plan-2.jpg"
+                                                        media="(max-width: 768px)">
+                                                    <img class="lazy" src="./img/mortgage/plan-2.jpg" alt="" />
+                                                </picture>
+                                            </div>
+
+                                            <div class="modal-article__terms terms">
+                                                <h5 class="terms__title">
+                                                    Условия ипотеки
+                                                </h5>
+                                                <ul class="terms__main-list">
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Особые условия
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Для семей, у которых с 01.01.2018г. по 31.12.2023г.
+                                                                родился
+                                                                ребёнок
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                есть двое детей до 18 лет
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                ребенок, которому установлена категория
+                                                                "ребенок-инвалид"
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Сумма кредита
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Москва и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Санкт-Петербург и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 6 млн ₽ Регионы
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Документы для ипотеки
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Паспорт и СНИЛС
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Свидетельство о заключении брака и свидетельство о
+                                                                рождении
+                                                                ребенка
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Что можно купить
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item terms__sub-item--text">
+                                                                Только квартиры в строящихся и готовых корпусах от
+                                                                Застройщика по
+                                                                договору участия в долевом строительстве и договору
+                                                                купли-продажи.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Страхование
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Жизни и здоровья
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Объекта недвижимости (после регистрации права
+                                                                собственности)
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Справки о доходах
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Возможно рассмотрение только по паспорту и СНИЛС
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <div class="modal-article__information">
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--first">
+                                            <p class="modal-article__information-text">
+                                                Льготная&nbsp;ставка&nbsp;на&nbsp;весь срок&nbsp;кредита
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--second">
+                                            <p class="modal-article__information-text">
+                                                Минимальный первоначальный&nbsp;взнос
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--third">
+                                            <p class="modal-article__information-text">
+                                                Сумма&nbsp;кредита до&nbsp;12&nbsp;млн&nbsp;руб
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--fourth">
+                                            <p class="modal-article__information-text">
+                                                Оформление&nbsp;по&nbsp;двум документам
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <h4 class="modal-article__steps-title">
+                                        Купите квартиру в 5 шагов
+                                    </h4>
+                                    <ul class="modal-article__steps">
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                01
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Выберите&nbsp;квартиру в&nbsp;#Суварстроит
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                02
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;бесплатную консультацию&nbsp;ипотечного брокера
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                03
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Предоставьте&nbsp;документы для&nbsp;банка и
+                                                подайте заявку&nbsp;на&nbsp;ипотеку
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                04
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;одобрение
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                05
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Подпишите кредитный&nbsp;договор
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+
+                            </div>
+                        </li>
+                        <li data-mortgage-window="mortgage-plan-2" data-switch-window class="modal__l-change-item">
+                            <div class="modal__l-header">
+                                <p class="modal__mortgage-name">
+                                    Семейная ипотека
+                                </p>
+
+                                <button type="button"
+                                    class="modal__static-close close-btn close-btn--smaller js-close-modal">
+                                    <svg aria-hidden="true" class="icon">
+                                        <use xlink:href="#close-empty"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="modal__l-main">
+
+                                <article class="modal__article modal-article modal-article--first">
+                                    <div class="modal-article__body modal-article__body--col-end">
+                                        <div class="modal-article__column">
+                                            <p class="modal-article__text">
+                                                Теперь льготную семейную ипотеку могут взять не только семьи
+                                                с ребёнком, рождённым после 1 января 2018 года, но и родители
+                                                двух и более несовершеннолетних детей. А материнский капитал
+                                                можно использовать в качестве частичной оплаты.
+                                            </p>
+
+                                            <div class="modal-article__image">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./img/mortgage/plan-2.webp"
+                                                        media="(min-width: 768px)" type="image/webp" />
+                                                    <source srcset="./img/mortgage/plan-2.webp"
+                                                        media="(max-width: 768px)" type="image/webp">
+                                                    <source srcset="./img/mortgage/plan-2.jpg"
+                                                        media="(max-width: 768px)">
+                                                    <img class="lazy" src="./img/mortgage/plan-2.jpg" alt="" />
+                                                </picture>
+                                            </div>
+
+                                            <div class="modal-article__terms terms">
+                                                <h5 class="terms__title">
+                                                    Условия ипотеки
+                                                </h5>
+                                                <ul class="terms__main-list">
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Особые условия
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Для семей, у которых с 01.01.2018г. по 31.12.2023г.
+                                                                родился
+                                                                ребёнок
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                есть двое детей до 18 лет
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                ребенок, которому установлена категория
+                                                                "ребенок-инвалид"
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Сумма кредита
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Москва и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 12 млн ₽ Санкт-Петербург и область
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                до 6 млн ₽ Регионы
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Документы для ипотеки
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Паспорт и СНИЛС
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Свидетельство о заключении брака и свидетельство о
+                                                                рождении
+                                                                ребенка
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Что можно купить
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item terms__sub-item--text">
+                                                                Только квартиры в строящихся и готовых корпусах от
+                                                                Застройщика по
+                                                                договору участия в долевом строительстве и договору
+                                                                купли-продажи.
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Страхование
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Жизни и здоровья
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Объекта недвижимости (после регистрации права
+                                                                собственности)
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="terms__main-item">
+                                                        <h6 class="terms__subtitle">
+                                                            Справки о доходах
+                                                        </h6>
+
+                                                        <ul class="terms__sublist">
+                                                            <li class="terms__sub-item">
+                                                                Копия трудовой книжки и справка по форме 2-НДФЛ
+                                                            </li>
+                                                            <li class="terms__sub-item">
+                                                                Возможно рассмотрение только по паспорту и СНИЛС
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <div class="modal-article__information">
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--first">
+                                            <p class="modal-article__information-text">
+                                                Льготная&nbsp;ставка&nbsp;на&nbsp;весь срок&nbsp;кредита
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--second">
+                                            <p class="modal-article__information-text">
+                                                Минимальный первоначальный&nbsp;взнос
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--third">
+                                            <p class="modal-article__information-text">
+                                                Сумма&nbsp;кредита до&nbsp;12&nbsp;млн&nbsp;руб
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="modal-article__information-card modal-article__information-card--fourth">
+                                            <p class="modal-article__information-text">
+                                                Оформление&nbsp;по&nbsp;двум документам
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="modal__article modal-article">
+                                    <h4 class="modal-article__steps-title">
+                                        Купите квартиру в 5 шагов
+                                    </h4>
+                                    <ul class="modal-article__steps">
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                01
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Выберите&nbsp;квартиру в&nbsp;#Суварстроит
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                02
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;бесплатную консультацию&nbsp;ипотечного брокера
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                03
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Предоставьте&nbsp;документы для&nbsp;банка и
+                                                подайте заявку&nbsp;на&nbsp;ипотеку
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                04
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Получите&nbsp;одобрение
+                                            </p>
+                                        </li>
+                                        <li class="modal-article__step">
+                                            <span class="modal-article__step-number">
+                                                05
+                                            </span>
+                                            <p class="modal-article__step-text">
+                                                Подпишите кредитный&nbsp;договор
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </article>
+
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="modal__l-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -684,51 +1555,48 @@
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Дом РФ</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
-                        </div>
-                    </li>
-                    <li class="mortgage-calc__item">
-                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
-                            id="mortgage-calc-bank-3">
-                        <div class="mortgage-calc__label mortgage-calc__label--border">
-                            <label for="mortgage-calc-bank-3"></label>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
 
-                            <div class="mortgage-calc__col-first">
-                                <div class="mortgage-calc__image">
-                                    <img src="./img/banks/sber.png" alt="">
-                                </div>
-                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Сбер</p>
-                            </div>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                            </ul>
                         </div>
                     </li>
                     <li class="mortgage-calc__item">
@@ -739,26 +1607,110 @@
 
                             <div class="mortgage-calc__col-first">
                                 <div class="mortgage-calc__image">
+                                    <img src="./img/banks/sber.png" alt="">
+                                </div>
+                                <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Сбер</p>
+                            </div>
+
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mortgage-calc__item">
+                        <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
+                            id="mortgage-calc-bank-3">
+                        <div class="mortgage-calc__label mortgage-calc__label--border">
+                            <label for="mortgage-calc-bank-3"></label>
+
+                            <div class="mortgage-calc__col-first">
+                                <div class="mortgage-calc__image">
                                     <img src="./img/banks/vtb.png" alt="">
                                 </div>
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">ВТБ</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
                         </div>
                     </li>
                     <li class="mortgage-calc__item">
@@ -774,21 +1726,48 @@
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Металлинвестбанк</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
                         </div>
                     </li>
                     <li class="mortgage-calc__item">
@@ -804,21 +1783,48 @@
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Совкомбанк</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
                         </div>
                     </li>
                     <li class="mortgage-calc__item">
@@ -834,28 +1840,55 @@
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Альфа-Банк</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
                         </div>
                     </li>
                     <li class="mortgage-calc__item">
                         <input type="radio" class="mortgage-calc__radio visually-hidden" name="mortgage-calc-banks"
-                            id="mortgage-calc-bank-7">
+                            id="mortgage-calc-bank-10">
                         <div class="mortgage-calc__label mortgage-calc__label--border">
-                            <label for="mortgage-calc-bank-7"></label>
+                            <label for="mortgage-calc-bank-10"></label>
 
                             <div class="mortgage-calc__col-first">
                                 <div class="mortgage-calc__image">
@@ -864,23 +1897,51 @@
                                 <p class="mortgage-calc__bank mortgage-calc__bank--text-24">Дом РФ</p>
                             </div>
 
-                            <p class="mortgage-calc__col-rate">
-                                от 4,6 %
-                            </p>
+                            <ul class="mortgage-calc__cols">
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-rate">
+                                        от 4,6 %
+                                    </p>
 
-                            <p class="mortgage-calc__col-term">
-                                до 25 лет
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Ставка процента
+                                    </span>
+                                </li>
 
-                            <p class="mortgage-calc__col-payment">
-                                от 15 %
-                            </p>
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-term">
+                                        до 25 лет
+                                    </p>
 
-                            <p class="mortgage-calc__col-month">
-                                14 000 ₽/мес
-                            </p>
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Срок кредита
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-payment">
+                                        от 15 %
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Первый взнос
+                                    </span>
+                                </li>
+
+                                <li class="mortgage-calc__col">
+                                    <p class="mortgage-calc__col-month">
+                                        14 000 ₽/мес
+                                    </p>
+
+                                    <span class="mortgage-calc__col-text show-on-mobile">
+                                        Платёж в месяц
+                                    </span>
+                                </li>
+
+                            </ul>
                         </div>
                     </li>
+
                     <li class="mortgage-calc__item">
                         <a href="#" class="mortgage-calc__link">
                             Показать еще 8 предложений
@@ -888,12 +1949,22 @@
                     </li>
                 </ul>
 
-                <div class="mortgage-calc__header mortgage-calc__label">
-                    <span class="mortgage-calc__col-first"></span>
-                    <span class="mortgage-calc__col-rate">Ставка процента</span>
-                    <span class="mortgage-calc__col-term">Срок кредита</span>
-                    <span class="mortgage-calc__col-payment">Первый взнос</span>
-                    <span class="mortgage-calc__col-month">Платёж в месяц</span>
+                <div class="mortgage-calc__header mortgage-calc__label hide-on-mobile">
+                    <div class="mortgage-calc__col-first"></div>
+                    <ul class="mortgage-calc__cols">
+                        <li>
+                            <p class="mortgage-calc__col-rate">Ставка процента</p>
+                        </li>
+                        <li>
+                            <p class="mortgage-calc__col-term">Срок кредита</p>
+                        </li>
+                        <li>
+                            <p class="mortgage-calc__col-payment">Первый взнос</p>
+                        </li>
+                        <li>
+                            <p class="mortgage-calc__col-month">Платёж в месяц</p>
+                        </li>
+                    </ul>
                 </div>
             </form>
         </div>
@@ -983,7 +2054,6 @@
                         <div class="faq-item__question faq-item__question--text-20">
                             Какой минимальный первоначальный взнос?
                         </div>
-
 
                         <label for="faq-dropdowns-id-1" class="faq-item__label"></label>
 
@@ -1134,7 +2204,6 @@
 
 <div class="modal js-modal" id="modal-callback">
     <div class="modal__inner-wrapper">
-
         <button type="button" class="modal__close close-btn js-close-modal">
             <svg aria-hidden="true" class="icon">
                 <use xlink:href="#close-empty"></use>
@@ -1206,6 +2275,7 @@
         </div>
     </div>
 </div>
+
 
         </main>
         <footer class="page-footer page-footer--grey ">
@@ -1671,7 +2741,7 @@
             </div>
         </div>
     </div>
-    <div class="mobile-navigation">
+    <div class="mobile-navigation ">
         <ul class="mobile-navigation__list">
             <li class="mobile-navigation__item">
                 <a href="#" class="mobile-navigation__link mobile-navigation__link--active">
