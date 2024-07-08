@@ -42,6 +42,7 @@
     --Light-Grey: #f5f5f5;
     --Dark-Grey: #aeaeae;
     --Pink: #fae5e7;
+    --Pink-2: #FFC0C2;
     --Coral: #ff6266;
 
     // typography:
@@ -235,6 +236,10 @@ select:-webkit-autofill:focus {
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
+    }
+
+    &.zoom-btns--projects {
+        transform: unset;
     }
 }
 

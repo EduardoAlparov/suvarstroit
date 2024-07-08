@@ -357,11 +357,10 @@
         </div>
         <main class="page-main ">
 
-
-<section class="home section section--first">
+<section class="home section section--first js-animation-trigger">
     <div class="home__site-container">
         <div class="home__grid-block grid-block grid-block--decrease">
-            <div class="grid-block__big-part home__big-part">
+            <div class="grid-block__big-part home__big-part _animate-opacity-scale-from-down">
                 <div class="home-slider js-home-swiper-wrapper home-slider--small">
                     <div class="home-slider__image-swiper-wrapper">
                         <div class="home-slider__image-swiper swiper">
@@ -481,7 +480,7 @@
             </div>
 
             <div class="grid-block__small-part home__small-part">
-                <a href="#" class="home__link-block link-block link-block--pink">
+                <a href="#" class="home__link-block link-block link-block--pink _animate-opacity-from-down">
                     <div class="link-block__body">
                         <div class="link-block__heading">
                             <p class="link-block__title link-block__title--h4-text">
@@ -511,7 +510,8 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="home__link-block link-block link-block--blue">
+
+                <a href="#" class="home__link-block link-block link-block--blue _animate-opacity-from-down">
                     <div class="link-block__body">
                         <div class="link-block__heading">
                             <p class="link-block__title link-block__title--h4-text">
@@ -671,7 +671,7 @@
     </div>
 </section>
 
-<section class="section projects">
+<section class="section projects js-animation-trigger">
     <div class="projects__site-container js-switchable-window">
         <div class="projects__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -706,7 +706,7 @@
         </div>
 
         <div class="projects__render-window">
-            <ul data-switch-window id="projects-list" class="projects__list">
+            <ul data-switch-window id="projects-list" class="projects__list projects__list--animate">
                 <li class="projects__item">
                     <a href="#" id="" class="project-card">
                         <div class="project-card__image js-card-swiper-wrapper">
@@ -1419,13 +1419,13 @@
     </div>
 </section>
 
-<section class="section section--blue section--round-border programs">
+<section class="section section--blue section--round-border programs js-pin-trigger">
     <div class="programs__site-container">
         <div class="programs__heading projects__heading">
             <h2 class="projects__title projects__title--h3-text">
-                Ипотечные <span class="_thin-text">программы</span>
+                Ипотечные программы
             </h2>
-            <a href="./programs.html" class="main-btn main-btn--outlined hide-on-mobile">
+            <a href="./programs.html" class="main-btn main-btn--smaller main-btn--outlined hide-on-mobile">
                 Смотреть все
             </a>
         </div>
@@ -1437,7 +1437,7 @@
 
                 <div class="form-calc__inputs">
                     <div class="form-calc__input ">
-                        <div class="simple-range simple-range--cost">
+                        <div class="simple-range simple-range--pink simple-range--cost">
                             <div class="simple-range__wrapper">
                                 <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
                                 <div class="simple-range__input-wrapper">
@@ -1458,7 +1458,7 @@
                     </div>
 
                     <div class="form-calc__input">
-                        <div class="simple-range simple-range--prepayment">
+                        <div class="simple-range simple-range--pink simple-range--prepayment">
                             <div class="simple-range__wrapper">
                                 <div class="simple-range__label simple-range__label--text-14">Стоимость квартиры</div>
 
@@ -1499,7 +1499,7 @@
                     </div>
 
                     <div class="form-calc__input">
-                        <div class="simple-range simple-range--term">
+                        <div class="simple-range simple-range--pink simple-range--term">
                             <div class="simple-range__wrapper">
                                 <div class="simple-range__label simple-range__label--text-14">Срок</div>
 
@@ -1734,47 +1734,19 @@
 
 <section class="section section--white section--round-border carousel js-carousel-swiper-section">
     <div class="carousel__site-container">
+        <div class="carousel__heading projects__heading">
+            <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                Новости
+            </h2>
+            <a href="./news.html"
+                class="main-btn main-btn--smaller main-btn--outlined main-btn--outlined-dark hide-on-mobile">
+                Смотреть все
+            </a>
+        </div>
+
         <div class="carousel__body programs__body">
-            <div class="carousel__aside">
-                <form action="" class="carousel__switcher switcher">
-                    <div class="switcher__input">
-                        <input class="visually-hidden" hidden type="radio" name="carousel-switcher"
-                            id="carousel-switcher-news" checked>
-                        <label for="carousel-switcher-news">
-                            <svg class="icon">
-                                <use xlink:href="#marker"></use>
-                            </svg>
-
-                            <span>Новости</span>
-                        </label>
-                    </div>
-                    <div class="switcher__input">
-                        <input class="visually-hidden" hidden type="radio" name="carousel-switcher"
-                            id="carousel-switcher-promo">
-                        <label for="carousel-switcher-promo">
-                            <svg class="icon">
-                                <use xlink:href="#marker"></use>
-                            </svg>
-
-                            <span>Акции</span>
-                        </label>
-                    </div>
-                </form>
-
+            <div class="carousel__aside carousel__aside--flex-end">
                 <div class="carousel__control">
-                    <div class="carousel__buttons">
-                        <button type="button" class="carousel__btn carousel-btn carousel-btn__prev">
-                            <svg class="icon">
-                                <use xlink:href="#swiper-arrow-black"></use>
-                            </svg>
-                        </button>
-                        <button type="button" class="carousel__btn carousel-btn carousel-btn__next">
-                            <svg class="icon">
-                                <use xlink:href="#swiper-arrow-black"></use>
-                            </svg>
-                        </button>
-                    </div>
-
                     <a href="#mailing-modal"
                         class="carousel__mailing main-btn main-btn--icons main-btn--grey js-open-modal hide-on-mobile">
                         <svg class="icon">
@@ -1854,7 +1826,7 @@
                     </ul>
                 </div>
 
-                <a href="#" class="carousel__link main-btn">
+                <a href="#" class="carousel__link main-btn show-on-mobile">
                     Смотреть все
                 </a>
 
@@ -1870,7 +1842,7 @@
     </div>
 </section>
 
-<section class="section except">
+<section class="section section--white except expect--images">
     <div class="except__site-container">
         <div class="projects__heading except__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -1941,7 +1913,8 @@
 </section>
 
         </main>
-        <footer class="page-footer  ">
+        <footer
+            class="page-footer page-footer--no-map ">
             <script>
                 var mapData = [
                     {

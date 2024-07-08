@@ -13,8 +13,9 @@ export default () => {
             slidesPerView: 1.1,
             speed: 600
         };
+
         let destopOptions = {
-            slidesPerView: 2.4,
+            slidesPerView: 2.65,
             spaceBetween: 24,
             speed: 600
         };

@@ -1,0 +1,51 @@
+.js-animation-trigger {
+    ._animate-opacity-from-down {
+        @include breakpointMF(tablet) {
+            transform: translateY(50%);
+            opacity: 0;
+        }
+    }
+
+    ._animate-opacity-scale-from-down {
+        @include breakpointMF(tablet) {
+            transform: translateY(10%) scale(0.95);
+            opacity: 0;
+        }
+    }
+
+    .projects__list--animate {
+        .projects__item {
+            @include breakpointMF(tablet) {
+                transform: translateY(50%);
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+._animate-opacity-scale-from-down,
+._animate-opacity-from-down {
+
+    @include breakpointMF(tablet) {
+        transform: translateY(0%);
+        opacity: 1;
+
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transition-property: transform, opacity;
+        transition-delay: 0.3s;
+
+        &:last-child {
+            transition-delay: 0.6s;
+        }
+    }
+}
+
+._animate-opacity-scale-from-down {
+
+    @include breakpointMF(tablet) {
+        transform: translateY(0%) scale(1);
+        transition-duration: 0.3s;
+    }
+}

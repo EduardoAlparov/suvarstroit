@@ -22,14 +22,14 @@
     }
 
     &__input {
-        margin-bottom: 2.4rem;
+        margin-bottom: 2rem;
 
         &:last-child {
             margin-bottom: 0;
         }
 
         @include breakpointMF(tablet) {
-            margin-bottom: 2.4rem;
+            margin-bottom: 1.6rem;
 
             &:last-child {
                 margin-bottom: 0;

@@ -53,6 +53,16 @@
                 }
             }
         }
+
+        &.home__grid-block--full-height {
+            height: calc(100% - 1.6rem);
+            margin-top: auto;
+
+            @include breakpointMF(tablet) {
+                height: 100%;
+                aspect-ratio: unset;
+            }
+        }
     }
 
     &__big-part {

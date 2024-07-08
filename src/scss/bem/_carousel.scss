@@ -12,6 +12,13 @@
         }
     }
 
+    &__swiper.swiper {
+        @include breakpoint(small-tablet) {
+            margin-right: calc(var(--content-padding, 2rem) * -1);
+            padding-right: var(--content-padding, 2rem);
+        }
+    }
+
     &__swiper {
         &:not(.carousel__swiper--no-overflow) {
             &.swiper {
@@ -33,7 +40,6 @@
                 }
             }
         }
-
     }
 
     &__aside {
@@ -42,6 +48,12 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 2rem;
+
+        &--flex-end {
+            @include breakpointMF(tablet) {
+                justify-content: flex-end;
+            }
+        }
     }
 
     &__buttons {
@@ -110,9 +122,5 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2.4rem;
         }
-    }
-
-    &__col {
-
     }
 }

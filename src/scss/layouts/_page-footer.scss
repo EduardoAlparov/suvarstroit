@@ -1,5 +1,7 @@
 .page-footer {
+    position: relative;
     padding-bottom: 2rem;
+    background-color: var(--White, #FFF);
 
     &--grey {
         background-color: var(--Light-Grey, #F5F5F5);
@@ -152,6 +154,12 @@
             @include breakpointMF(tablet) {
                 padding-left: 2rem;
             }
+        }
+    }
+
+    &.page-footer--no-map {
+        .page-footer__map-section {
+            display: none;
         }
     }
 }

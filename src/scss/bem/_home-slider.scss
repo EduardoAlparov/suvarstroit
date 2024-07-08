@@ -231,6 +231,12 @@
             gap: 0.6rem;
             margin-left: auto;
         }
+
+        &.home-slider__tabs--wrap {
+            @include breakpointMF(tablet) {
+                max-width: 28rem;
+            }
+        }
     }
 
     &__btn {
@@ -270,6 +276,7 @@
         }
     }
 
+
     &__address {
         margin-bottom: 2.8rem;
     }
@@ -294,6 +301,15 @@
             gap: 4.4rem;
 
             padding: 15rem 0 8.4rem;
+        }
+    }
+
+    &:not(.home-slider--small) {
+        .home-slider__swiper-btn {
+            @include breakpointMF(tablet) {
+                top: 40rem;
+                left: calc(100% - 14rem);
+            }
         }
     }
 }

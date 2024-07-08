@@ -104,6 +104,7 @@ body {
     }
 
     &--white {
+        position: relative;
         background-color: var(--White, #FFF);
     }
 
@@ -148,8 +149,6 @@ body {
         }
     }
 
-
-
     &:last-child {
         margin-bottom: 6rem;
 
@@ -162,6 +161,12 @@ body {
 
             @include breakpointMF(tablet) {
                 margin-bottom: 0;
+            }
+        }
+
+        &.expect--images {
+            @include breakpointMF(tablet) {
+                margin-bottom: 10rem;
             }
         }
     }

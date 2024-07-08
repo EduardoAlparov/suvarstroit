@@ -41,6 +41,12 @@
         color: var(--White, #FFF);
         border: 1px solid var(--White-30, rgba(255, 255, 255, 0.30));
 
+        @include hoverActive() {
+            color: var(--Black, #020202);
+            background-color: var(--White, #FFF);
+            border-color: transparent;
+        }
+
         &.main-btn--red {
             color: var(--Red, #CF000C);
             background-color: var(--White, #FFF);
@@ -52,10 +58,16 @@
             }
         }
 
-        @include hoverActive() {
-            color: var(--Black, #020202);
-            background-color: var(--White, #FFF);
-            border-color: transparent;
+        &.main-btn--outlined-dark {
+            color: var(--Dark-Blue, #101038);
+            border: 1px solid var(--Dark-Blue, #101038);
+
+
+            @include hoverActive() {
+                color: var(--White, #FFF);
+                background-color: var(--Dark-Blue, #101038);
+                border-color: transparent;
+            }
         }
     }
 

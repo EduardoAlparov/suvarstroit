@@ -27,8 +27,12 @@ npm run build
 
 # Ссылки на верстку
 # - общие:
-## Страница - [Главная](https://eduardoalparov.github.io/suvarstroit/).
-## Страница - [Варианты экранов](https://eduardoalparov.github.io/suvarstroit/alternatives.html).
+## Страница - [Главная.](https://eduardoalparov.github.io/suvarstroit/)
+## Страница - [Главная - 2 вариант страницы.](https://eduardoalparov.github.io/suvarstroit/index-version-2.html)
+## Страница - [Главная - 3 вариант страницы.](https://eduardoalparov.github.io/suvarstroit/index-version-3.html)
+## Страница - [Главная - 4 вариант страницы.](https://eduardoalparov.github.io/suvarstroit/index-version-4.html)
+## Страница - [Главная - 5 вариант страницы.](https://eduardoalparov.github.io/suvarstroit/index-version-5.html)
+
 ## Страница - [Проект](https://eduardoalparov.github.io/suvarstroit/project.html).
 ## Страница - [Страница квартиры](https://eduardoalparov.github.io/suvarstroit/apartment.html).
 ## Страница - [Ипотека](https://eduardoalparov.github.io/suvarstroit/mortgage.html).

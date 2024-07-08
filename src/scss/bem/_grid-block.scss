@@ -44,6 +44,8 @@
     }
 
     &__big-part {
-
+        &.grid-block__big-part--no-br {
+            border-radius: 0;
+        }
     }
 }

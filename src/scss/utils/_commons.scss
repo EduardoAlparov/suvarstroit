@@ -144,11 +144,11 @@
 
 [class*="--h5-text"] {
     @include font(2rem, 100%, 400);
-    letter-spacing: -0.08em;
+    letter-spacing: -0.04em;
 
     @include breakpointMF(tablet) {
         @include font(3.4rem, 110%, 400);
-        letter-spacing: -0.0102em;
+        letter-spacing: -0.03em;
     }
 }
 
@@ -157,7 +157,7 @@
     letter-spacing: -0.02em;
 
     @include breakpointMF(tablet) {
-        @include font(2.6rem, 110%, 400);
+        @include font(2.8rem, 110%, 400);
         letter-spacing: -0.02em;
     }
 }
@@ -261,12 +261,12 @@
 
 [class*="--text-26"] {
     @include font(2rem, 100%, 400);
-    letter-spacing: -0.08em;
+    letter-spacing: -0.04em;
 
     @include breakpointMF(tablet) {
         font-feature-settings: 'clig' off, 'liga' off;
         @include font(2.6rem, 110%, 400);
-        letter-spacing: -0.052em;
+        letter-spacing: -0.02em;
     }
 }
 
@@ -276,7 +276,7 @@
 
     @include breakpointMF(tablet) {
         @include font(2.8rem, 100%, 400);
-        letter-spacing: -0.056em;
+        letter-spacing: -0.02em;
     }
 }
 

@@ -8,15 +8,23 @@ import accordions from './accordions';
 import tabs from './tabs';
 import menu from './menu';
 
+
+import animationsTriggers from './animationsTriggers';
+
+
+
 import setScrollbarWidth from './setScrollbarWidth';
 import setHeaderPadding from './setHeaderPadding';
 import setBreadcrumbsPadding from './setBreadcrumbsPadding';
 import setFixedHeader from './setFixedHeader';
+
 import customSelects from './customSelects';
 import rangeSlidersDouble from './rangeSlidersDouble';
 import selectChoicesTextCollaps from './selectChoicesTextCollaps';
+
 import customCursor from './customCursor';
 import homeSwiper from './homeSwiper';
+
 import linkBlockSwiper from './linkBlockSwiper';
 import navbarSwitch from './navbarSwitch';
 import projectCardSwiper from './projectCardSwiper';
@@ -50,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // tabs();
     // menu();
     setHeaderPadding();
+    animationsTriggers();
     setBreadcrumbsPadding();
     setFixedHeader();
     customSelects();

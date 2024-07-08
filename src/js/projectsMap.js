@@ -63,9 +63,6 @@ export default () => {
             if (!mapDataObjects) return;
 
             const zoom = window.mapProjectsZoom ?? 14,
-                // высота контейнера карты для расчета позиции кнопок зума:
-                windowHeight = element.clientHeight,
-
                 center = window.mapProjectsCenter,
 
                 mapInstance = new ymaps.Map(element, {
@@ -73,24 +70,28 @@ export default () => {
                     zoom: zoom,
                     controls: []
                 }),
+
                 // макет главных маркеров с картинкой:
                 MainMarkerLayout = ymaps.templateLayoutFactory.createClass([
                     '<div class="ya-main-placemark">',
                         '<div>$[properties.iconContent]</div>',
                     '</div>'
                 ].join('')),
+
                 // макет кластера с бордером:
                 clusterMarkerLayout = ymaps.templateLayoutFactory.createClass([
                     '<div class="ya-main-cluster">',
                         '<div>{{ properties.geoObjects.length }}</div>',
                     '</div>'
                 ].join('')),
+
                 // макет кластера с ховером:
                 clusterMarkerLayoutHover = ymaps.templateLayoutFactory.createClass([
                     '<div class="ya-main-cluster ya-main-cluster--hover">',
                         '<div>{{ properties.geoObjects.length }}</div>',
                     '</div>'
                 ].join('')),
+
                 // настройка макета иконки кластера:
                 clusterIcons = [
                     {
@@ -105,6 +106,7 @@ export default () => {
                         }
                     }
                 ],
+
                 // макет хинта кластера(всплывашка):
                 HintLayout = ymaps.templateLayoutFactory.createClass( "<div class='my-hint'>" +
                         "<div class='cluster-hint'>" +
@@ -127,6 +129,7 @@ export default () => {
                         }
                     }
                 ),
+
                 // макет обертки для попапа:
                 MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                     '<div class="popover">' +
@@ -246,9 +249,10 @@ export default () => {
                     }
                 }
                 ),
+
                 // макет кнопок зума:
                 ZoomLayout = ymaps.templateLayoutFactory.createClass(
-                    "<div class='zoom-btns'>" +
+                    "<div class='zoom-btns zoom-btns--projects'>" +
                         "<div id='zoom-in' class='zoom-in-btn'><i class='icon-plus'></i></div>" +
                         "<div id='zoom-out' class='zoom-in-btn'><i class='icon-minus'></i></div>" +
                     "</div>", {
@@ -288,16 +292,18 @@ export default () => {
                         map.setZoom(map.getZoom() - 1, {checkZoomRange: true});
                     }
                 }),
+
                 // настройка кнопок зума:
                 zoomControl = new ymaps.control.ZoomControl({
                     options: {
                         position: {
-                            top: (windowHeight / 2),
+                            top: '30rem',
                             right: 'var(--content-padding, 4rem)',
                         },
                         layout: ZoomLayout
                     }
                 }),
+
                 // пакет плейсмаркеров:
                 objectManager = new ymaps.ObjectManager({
                     clusterIcons: clusterIcons,

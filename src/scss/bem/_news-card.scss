@@ -44,7 +44,10 @@
 
     &__name {
         font-weight: 500;
-        @include maxSizeText(4);
+
+        @include breakpointMF(tablet) {
+            max-width: 30ch;
+        }
     }
 
     &__desc {

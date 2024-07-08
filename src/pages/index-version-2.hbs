@@ -3,67 +3,9 @@
 
 <section class="home section section--first js-animation-trigger">
     <div class="home__site-container">
-        <div class="home__grid-block grid-block grid-block--decrease">
+        <div class="home__grid-block home__grid-block--full-width grid-block grid-block--decrease">
             <div class="grid-block__big-part home__big-part _animate-opacity-scale-from-down">
-                {{>home-slider homeSliderSmallClass=true}}
-            </div>
-
-            <div class="grid-block__small-part home__small-part">
-                <a href="#" class="home__link-block link-block link-block--pink _animate-opacity-from-down">
-                    <div class="link-block__body">
-                        <div class="link-block__heading">
-                            <p class="link-block__title link-block__title--h4-text">
-                                Коммерческая недвижимость
-                            </p>
-
-                            <p class="link-block__text">
-                                Текст
-                            </p>
-                        </div>
-
-                        <div class="link-block__tab tab tab--blue">
-                            <svg class="icon">
-                                <use xlink:href="#key"></use>
-                            </svg>
-                            <span class="tab__text tab__text--text-14">текст</span>
-                        </div>
-
-                        <div class="link-block__arrow-btn arrow-btn">
-                            <svg class="icon">
-                                <use xlink:href="#swiper-arrow"></use>
-                            </svg>
-                        </div>
-
-                        <div class="link-block__image">
-                            <img src="./img/home/link-img.png" alt="">
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" class="home__link-block link-block link-block--blue _animate-opacity-from-down">
-                    <div class="link-block__body">
-                        <div class="link-block__heading">
-                            <p class="link-block__title link-block__title--h4-text">
-                                Выгодная ипотека
-                            </p>
-
-                            <p class="link-block__text">
-                                Акция до 20 февраля 2024
-                            </p>
-                        </div>
-
-                        <div class="link-block__tab tab tab--blue">
-                            <svg class="icon">
-                                <use xlink:href="#key"></use>
-                            </svg>
-                            <span class="tab__text tab__text--text-14">5% от застройщика</span>
-                        </div>
-
-                        <div class="link-block__btn main-btn main-btn--outlined">
-                            Подробнее
-                        </div>
-                    </div>
-                </a>
+                {{>home-slider homeSliderSmallClass=false}}
             </div>
         </div>
     </div>
@@ -185,7 +127,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="projects__item">
+                <li class="projects__item projects__item--wide">
                     <a href="#" id="" class="project-card">
                         <div class="project-card__image js-card-swiper-wrapper">
                             <div class="project-card__swiper swiper">
@@ -497,7 +439,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="projects__item">
+                <li class="projects__item projects__item--wide">
                     <a href="#" id="" class="project-card">
                         <div class="project-card__image js-card-swiper-wrapper">
                             <div class="project-card__swiper swiper">
@@ -641,84 +583,6 @@
                             <div class="project-card__title">
                                 <p class="project-card__name project-card__name--text-32">
                                     Столичный
-                                </p>
-
-                                <p class="project-card__price">
-                                    от 4,9 млн ₽
-                                </p>
-                            </div>
-                            <p class="project-card__address">
-                                Приволжский р-н, ул. Рауиса Гареева
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                <li class="projects__item">
-                    <a href="#" id="" class="project-card">
-                        <div class="project-card__image js-card-swiper-wrapper">
-                            <div class="project-card__swiper swiper">
-                                <ul class="project-card__swiper-wrapper swiper-wrapper">
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-8H.webp"
-                                                alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-8H.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-2.webp"
-                                                alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-2.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-1.webp"
-                                                alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-1.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                    <li class="project-card__swiper-slide swiper-slide image-block">
-                                        <picture>
-                                            <source type="image/webp" srcset="./img/projects/img-4.webp"
-                                                alt="project image" />
-                                            <img class="lazy" src="./img/projects/img-4.jpg" alt="project image" />
-                                        </picture>
-                                    </li>
-                                </ul>
-
-                                <div class="swiper-pagination"></div>
-                            </div>
-
-                            <div class="project-card__transparent-thumbs">
-                                <div class="transparent-thumbs swiper">
-                                    <ul class="transparent-thumbs__swiper-wrapper swiper-wrapper">
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <ul class="project-card__tabs">
-                                <li class="project-card__tab tab">
-                                    <svg class="icon">
-                                        <use xlink:href="#key"></use>
-                                    </svg>
-                                    <span class="tab__text tab__text--text-14">Комфорт</span>
-                                </li>
-                                <li class="project-card__tab tab tab--icon">
-                                    <svg class="icon">
-                                        <use xlink:href="#key"></use>
-                                    </svg>
-                                    <span class="tab__text tab__text--text-14">Сдача в 2026</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="project-card__info">
-                            <div class="project-card__title">
-                                <p class="project-card__name project-card__name--text-32">
-                                    Батталовский
                                 </p>
 
                                 <p class="project-card__price">
@@ -1161,66 +1025,145 @@
                 <div class="carousel__swiper swiper">
                     <ul class="carousel__swiper-wrapper swiper-wrapper">
                         <li class="carousel__swiper-slide swiper-slide">
-                            <a id="" href="#" class="news-card">
-                                <p class="news-card__name news-card__name--text-22">
-                                    Субсидированная процентная ставка 5,5% по программе "Господдержка 2020"
-                                </p>
-                                <p class="news-card__desc">
-                                    Программа "Господдержка - 2020" устанавливается для граждан РФ, приобретающих
-                                    ипотеку в новостройке, при следующих условиях: первоначальный взнос от 30,1%,
-                                    срок кредита до 30 лет, максимальная сумма кредита до 6 млн.руб.
-                                </p>
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
 
-                                <p class="news-card__date news-card__date--text-14">
-                                    11.01.2024
-                                </p>
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная<br> ставка 5,5% по программе<br> "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
                             </a>
                         </li>
                         <li class="carousel__swiper-slide swiper-slide">
-                            <a id="" href="#" class="news-card">
-                                <p class="news-card__name news-card__name--text-22">
-                                    Ипотека под 2,5%
-                                    для IT-специалистов
-                                </p>
-                                <p class="news-card__desc">
-                                    Субсидированная процентная ставка в размере 2,5% годовых на весь срок кредитования
-                                </p>
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-2.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-2.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
 
-                                <p class="news-card__date news-card__date--text-14">
-                                    11.01.2024
-                                </p>
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Ипотека под 2,5%<br>
+                                        для IT-специалистов
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
                             </a>
                         </li>
                         <li class="carousel__swiper-slide swiper-slide">
-                            <a id="" href="#" class="news-card">
-                                <p class="news-card__name news-card__name--text-22">
-                                    Льготная процентная ставка<br>1,99%
-                                </p>
-                                <p class="news-card__desc">
-                                    Программа "Господдержка - 2020" устанавливается для граждан РФ, приобретающих
-                                    ипотеку в новостройке, при следующих условиях: первоначальный взнос от 30,1%,
-                                    срок кредита до 30 лет, максимальная сумма кредита до 6 млн.руб.
-                                </p>
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-3.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-3.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
 
-                                <p class="news-card__date news-card__date--text-14">
-                                    11.01.2024
-                                </p>
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Отраженная дата 07.07 - старт<br> бронирования квартир в новом<br> ЖК
+                                        «Отражение»
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
                             </a>
                         </li>
                         <li class="carousel__swiper-slide swiper-slide">
-                            <a id="" href="#" class="news-card">
-                                <p class="news-card__name news-card__name--text-22">
-                                    Льготная процентная ставка<br>1,99%
-                                </p>
-                                <p class="news-card__desc">
-                                    Программа "Господдержка - 2020" устанавливается для граждан РФ, приобретающих
-                                    ипотеку в новостройке, при следующих условиях: первоначальный взнос от 30,1%,
-                                    срок кредита до 30 лет, максимальная сумма кредита до 6 млн.руб.
-                                </p>
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-1.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-1.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
 
-                                <p class="news-card__date news-card__date--text-14">
-                                    11.01.2024
-                                </p>
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Субсидированная процентная<br> ставка 5,5% по программе<br> "Господдержка 2020"
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-2.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-2.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Ипотека под 2,5%<br>
+                                        для IT-специалистов
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="carousel__swiper-slide swiper-slide">
+                            <a id="" href="#" class="news-foto">
+                                <div class="news-foto__image">
+                                    <div class="image-block">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/news/img-3.webp"
+                                                alt="project image" />
+                                            <img class="lazy" src="./img/news/img-3.jpg" alt="project image" />
+                                        </picture>
+                                    </div>
+                                </div>
+
+                                <div class="news-foto__info">
+                                    <p class="news-card__name news-card__name--text-20">
+                                        Отраженная дата 07.07 - старт<br> бронирования квартир в новом<br> ЖК
+                                        «Отражение»
+                                    </p>
+
+                                    <p class="news-foto__date news-card__date news-card__date--text-14">
+                                        11.01.2024
+                                    </p>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -1242,7 +1185,7 @@
     </div>
 </section>
 
-<section class="section section--white except expect--images">
+<section class="section section--white except">
     <div class="except__site-container">
         <div class="projects__heading except__heading">
             <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
@@ -1252,59 +1195,59 @@
 
         <ul class="projects__list except__list">
             <li class="projects__item except__item">
-                <a href="#" id="" class="except-link">
-                    <div class="except-link__image image-block">
-                        <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts-H.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts-H.jpg" alt="excepts image" />
-                        </picture>
-                    </div>
-                    <div class="except-link__body">
-                        <div class="except-link__row">
-                            <p class="except-link__title except-link__title--h5-text">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
                                 Коммерческая недвижимость
                             </p>
 
-                            <div class="except-link__btn"></div>
+                            <div class="except-link-icon__btn"></div>
                         </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/machine.png" alt="excepts image" />
+                        </picture>
                     </div>
                 </a>
             </li>
             <li class="projects__item except__item">
-                <a href="#" id="" class="except-link">
-                    <div class="except-link__image image-block">
-                        <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts-H1.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts-H1.jpg" alt="excepts image" />
-                        </picture>
-                    </div>
-                    <div class="except-link__body">
-                        <div class="except-link__row">
-                            <p class="except-link__title except-link__title--h5-text">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
                                 Кладовые
                             </p>
 
-                            <div class="except-link__btn"></div>
+                            <div class="except-link-icon__btn"></div>
                         </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/box.png" alt="excepts image" />
+                        </picture>
                     </div>
                 </a>
             </li>
             <li class="projects__item except__item">
-                <a href="#" id="" class="except-link">
-                    <div class="except-link__image image-block">
-                        <picture>
-                            <source type="image/webp" srcset="./img/excepts/excepts-H2.webp" alt="excepts image" />
-                            <img class="lazy" src="./img/excepts/excepts-H2.jpg" alt="excepts image" />
-                        </picture>
-                    </div>
-                    <div class="except-link__body">
-                        <div class="except-link__row">
-                            <p class="except-link__title except-link__title--h5-text">
+                <a href="#" id="" class="except-link-icon">
+                    <div class="except-link-icon__body">
+                        <div class="except-link-icon__column">
+                            <p class="except-link__title except-link__title--h6-text">
                                 Паркинг
                             </p>
 
-                            <div class="except-link__btn"></div>
+                            <div class="except-link-icon__btn"></div>
                         </div>
+                    </div>
+
+                    <div class="except-link-icon__image image-block">
+                        <picture>
+                            <img class="lazy" src="./img/excepts/car.png" alt="excepts image" />
+                        </picture>
                     </div>
                 </a>
             </li>

@@ -14,6 +14,8 @@ export default () => {
 
             cursor.style.left = (pos.x) + 'px';
             cursor.style.top = (pos.y) + 'px';
+            cursor.style.opacity = '1';
+
 
             if(dir === 'left') {
                 cursor.classList.add('cursor--turn');
@@ -29,6 +31,7 @@ export default () => {
 
             cursor.style.left = 'auto';
             cursor.style.top = 'auto';
+            cursor.style.opacity = '0';
         });
 
     })

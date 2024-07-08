@@ -8,6 +8,7 @@
 
         @include breakpointMF(tablet) {
             margin-bottom: 4rem;
+            align-items: center;
         }
 
         &.except__heading {
@@ -30,13 +31,14 @@
                 bottom: 0;
                 z-index: 10;
 
+                display: block;
                 width: 0.8rem;
                 height: 1.6rem;
 
                 background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%2216%22%20viewBox%3D%220%200%208%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%224%22%20cy%3D%224%22%20r%3D%224%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E");
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-position: center top;
+                background-position: center bottom;
 
                 content: "";
 
@@ -44,7 +46,7 @@
                     left: calc(100% + 0.8rem);
 
                     width: 1.1rem;
-                    height: 2.5rem;
+                    height: 100%
                 }
             }
         }
@@ -58,6 +60,25 @@
         @include breakpointMF(tablet) {
             grid-template-columns: repeat(3, 1fr);
             gap: calc(var(--gap) * 10) calc(var(--gap) * 6);
+        }
+
+        &.projects__list--animate {
+            .projects__item {
+                @include breakpointMF(tablet) {
+                    transform: translateY(0%);
+                    opacity: 1;
+
+                    transition-duration: 0.6s;
+                    transition-timing-function: ease-out;
+                    transition-property: transform, opacity;
+
+                    @for $i from 1 through 12 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: calc(#{$i} * 0.3s);
+                        }
+                    }
+                }
+            }
         }
     }
 

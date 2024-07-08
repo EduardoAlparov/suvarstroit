@@ -1,0 +1,93 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="home section--first section js-animation-trigger">
+    <div class="home__site-container">
+        <div class="home__grid-block grid-block grid-block--decrease _animate-opacity-scale-from-down">
+            <div class="grid-block__big-part home__big-part">
+                {{>home-slider homeSliderSmallClass=true}}
+            </div>
+
+            <div class="grid-block__small-part home__small-part">
+                <div class="home__double-links home__link-block _animate-opacity-from-down">
+                    <a href="#" class="home__link-block link-block link-block--pink link-block--white">
+                        <div class="link-block__body">
+                            <div class="link-block__heading">
+                                <p class="link-block__title link-block__title--text-30">
+                                    Станция спортивная
+                                </p>
+
+                                <p class="link-block__text">
+                                    Текст
+                                </p>
+                            </div>
+
+                            <div class="link-block__arrow-btn arrow-btn">
+                                <svg class="icon">
+                                    <use xlink:href="#swiper-arrow"></use>
+                                </svg>
+                            </div>
+
+                            <div class="link-block__image">
+                                <img src="./img/home/link-img-2.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="home__link-block link-block link-block--pink link-block--white">
+                        <div class="link-block__body">
+                            <div class="link-block__heading">
+                                <p class="link-block__title link-block__title--text-30">
+                                    Столичный
+                                </p>
+
+                                <p class="link-block__text">
+                                    Текст
+                                </p>
+                            </div>
+
+                            <div class="link-block__arrow-btn arrow-btn">
+                                <svg class="icon">
+                                    <use xlink:href="#swiper-arrow"></use>
+                                </svg>
+                            </div>
+
+                            <div class="link-block__image">
+                                <img src="./img/home/link-img-3.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <a href="#" class="home__link-block link-block link-block--blue _animate-opacity-from-down">
+                    <div class="link-block__body">
+                        <div class="link-block__heading">
+                            <p class="link-block__title link-block__title--h4-text">
+                                Выгодная ипотека
+                            </p>
+
+                            <p class="link-block__text">
+                                Акция до 20 февраля 2024
+                            </p>
+                        </div>
+
+                        <div class="link-block__tab tab tab--blue">
+                            <svg class="icon">
+                                <use xlink:href="#key"></use>
+                            </svg>
+                            <span class="tab__text tab__text--text-14">5% от застройщика</span>
+                        </div>
+
+                        <div class="link-block__btn main-btn main-btn--outlined">
+                            Подробнее
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
