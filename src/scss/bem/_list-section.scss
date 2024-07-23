@@ -1,0 +1,275 @@
+.list-section {
+    &.section--round-border {
+        @include breakpoint(small-tablet) {
+            padding: 2rem 0 3rem;
+        }
+    }
+
+    &__navs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 0.8rem;
+        margin-bottom: 2rem;
+
+        @include breakpointMF(tablet) {
+            column-gap: 1.6rem;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__grouping {
+        margin-right: auto;
+    }
+
+    &__catalog {
+        display: flex;
+        flex-wrap: wrap;
+
+        &.list-section__catalog--tiles {
+            gap: 0.8rem;
+
+            @include breakpointMF(tablet) {
+                gap: 2.4rem;
+            }
+
+            .list-section__catalog-item {
+                width: 100%;
+
+                @include breakpointMF(tablet) {
+                    width: calc(100% / 5 - (2.4rem * 4 / 5) );
+                }
+
+                .searched-card {
+                    .searched-card__variant--row {
+                        display: none;
+                    }
+
+                    .searched-card__variant--tile {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &.list-section__catalog--list {
+            gap: 0.8rem;
+
+            @include breakpointMF(tablet) {
+                gap: 1.6rem;
+            }
+
+            .list-section__catalog-item {
+                width: 100%;
+
+                .searched-card {
+                    .searched-card__variant--row {
+                        display: flex;
+                    }
+
+                    .searched-card__variant--tile {
+                        display: none;
+                    }
+
+                    .searched-card__favorite-checkbox {
+                        display: none;
+
+                        @include breakpointMF(tablet) {
+                            right: 4rem;
+                            display: flex;
+                            margin-top: 2.6rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.list-section__catalog--tiles,
+        &.list-section__catalog--list {
+            .list-section__catalog-item--full {
+                width: 100%;
+            }
+        }
+    }
+
+    &__mobile-open-filter,
+    &__mobile-sorting,
+    &__mobile-switching {
+        @extend .show-on-mobile;
+    }
+
+    &__mobile-btn {
+        width: 5rem;
+        height: 5rem;
+
+        background-color: var(--White, #FFF);
+        border-radius: 0.8rem;
+
+        background-size: 1.4rem 1.4rem;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &.list-section__mobile-sorting {
+            background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.67091%202.50685C3.7803%202.3975%203.92865%202.33606%204.08333%202.33606C4.23801%202.33606%204.38635%202.3975%204.49574%202.50685L6.82908%204.84019C6.93534%204.95021%206.99413%205.09756%206.9928%205.2505C6.99147%205.40345%206.93013%205.54976%206.82197%205.65792C6.71382%205.76607%206.56751%205.82742%206.41456%205.82875C6.26161%205.83008%206.11426%205.77128%206.00424%205.66502L4.66666%204.32744V11.0859C4.66666%2011.2406%204.6052%2011.389%204.49581%2011.4984C4.38641%2011.6078%204.23804%2011.6693%204.08333%2011.6693C3.92862%2011.6693%203.78024%2011.6078%203.67085%2011.4984C3.56145%2011.389%203.49999%2011.2406%203.49999%2011.0859V4.32744L2.16241%205.66502C2.05239%205.77128%201.90504%205.83008%201.75209%205.82875C1.59914%205.82742%201.45284%205.76607%201.34468%205.65792C1.23653%205.54976%201.17518%205.40345%201.17385%205.2505C1.17252%205.09756%201.23132%204.95021%201.33758%204.84019L3.67091%202.50685ZM9.33333%209.67777V2.91927C9.33333%202.76456%209.39478%202.61619%209.50418%202.50679C9.61358%202.3974%209.76195%202.33594%209.91666%202.33594C10.0714%202.33594%2010.2197%202.3974%2010.3291%202.50679C10.4385%202.61619%2010.5%202.76456%2010.5%202.91927V9.67777L11.8376%208.34019C11.9476%208.23393%2012.0949%208.17513%2012.2479%208.17646C12.4008%208.17779%2012.5471%208.23914%2012.6553%208.34729C12.7635%208.45545%2012.8248%208.60176%2012.8261%208.7547C12.8275%208.90765%2012.7687%209.055%2012.6624%209.16502L10.3291%2011.4984C10.2197%2011.6077%2010.0713%2011.6691%209.91666%2011.6691C9.76198%2011.6691%209.61363%2011.6077%209.50424%2011.4984L7.17091%209.16502C7.06465%209.055%207.00585%208.90765%207.00718%208.7547C7.00851%208.60176%207.06986%208.45545%207.17802%208.34729C7.28617%208.23914%207.43248%208.17779%207.58543%208.17646C7.73837%208.17513%207.88573%208.23393%207.99574%208.34019L9.33333%209.67777Z%22%20fill%3D%22%23212173%22%2F%3E%0A%3C%2Fsvg%3E');
+        }
+
+        &.list-section__mobile-open-filter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+
+            flex-grow: 1;
+            width: auto;
+            padding: 0 1.8rem;
+
+            span {
+                color: var(--Black-Black, var(--Black, #020202));
+                font-size: 1.4rem;
+                line-height: 120%;
+            }
+
+            i {
+                display: block;
+                width: 1.4rem;
+                height: 1.4rem;
+
+                background-image: url('data:image/svg+xml, %3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cg%20clip-path%3D%22url(%23clip0_5071_52096)%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.4375%202.46754H6.95715C6.92816%202.32645%206.91326%202.18283%206.91266%202.03879L6.91272%202.02652C6.91286%201.88076%206.92762%201.73538%206.9568%201.59257H0.4375C0.195809%201.59257%200%201.78835%200%202.03007C0%202.27179%200.195781%202.4676%200.4375%202.46754ZM6.27329%206.99824V7.00371C6.27104%207.75252%205.65999%208.36162%204.91148%208.36162C4.16366%208.3616%203.55258%207.75314%203.54938%207.00496L3.54941%206.99728C3.55034%206.24716%204.16106%205.63742%204.91148%205.63742C5.66128%205.63739%206.27167%206.24686%206.27329%206.99632V6.99824ZM13.5625%206.56202H7.04315C7.07226%206.70433%207.08707%206.84919%207.08734%206.99444V7.00619C7.08695%207.15093%207.0721%207.29527%207.04301%207.43705L13.5625%207.43702C13.8042%207.43702%2014%207.24127%2014%206.99955C14%206.7578%2013.8042%206.56202%2013.5625%206.56202ZM2.77949%206.56202H0.4375C0.195809%206.56202%200%206.75783%200%206.99955C0%207.24124%200.195781%207.43705%200.4375%207.43705L2.77985%207.43702C2.75084%207.29593%202.73594%207.15229%202.73536%207.00825L2.73539%206.99597C2.73552%206.85021%202.75029%206.70483%202.77949%206.56202ZM9.08852%2013.3311C8.33872%2013.3311%207.72833%2012.7216%207.72671%2011.9722V11.9648C7.72898%2011.216%208.34001%2010.6069%209.08849%2010.6069C9.83637%2010.6069%2010.4474%2011.2154%2010.4506%2011.9635L10.4506%2011.9712C10.4497%2012.7213%209.83891%2013.3311%209.08852%2013.3311ZM13.5625%2011.5315H11.2205C11.2496%2011.6738%2011.2644%2011.8186%2011.2646%2011.9639V11.9756C11.2642%2012.1203%2011.2494%2012.2647%2011.2203%2012.4064H13.5625C13.8042%2012.4064%2014%2012.2107%2014%2011.9689C14%2011.7273%2013.8042%2011.5315%2013.5625%2011.5315ZM6.9568%2011.5315H0.4375C0.195809%2011.5315%200%2011.7273%200%2011.969C0%2012.2107%200.195781%2012.4065%200.4375%2012.4065H6.95715C6.92816%2012.2654%206.91326%2012.1218%206.91266%2011.9777L6.91272%2011.9654C6.91285%2011.8197%206.92762%2011.6743%206.9568%2011.5315ZM7.72671%202.03136V2.02589C7.72898%201.27705%208.34001%200.667969%209.08849%200.667969C9.83637%200.667941%2010.4474%201.27645%2010.4506%202.02463L10.4506%202.03229C10.4493%202.78208%209.83891%203.39217%209.08849%203.39217C8.33872%203.39217%207.7283%202.78271%207.72671%202.03327V2.03136ZM11.2203%202.4676L13.5625%202.46754C13.8042%202.46754%2014%202.27179%2014%202.03007C14%201.78832%2013.8042%201.59257%2013.5625%201.59257H11.2205C11.2496%201.73486%2011.2644%201.87972%2011.2646%202.02496V2.03671C11.2643%202.18146%2011.2494%202.32581%2011.2203%202.4676Z%22%20fill%3D%22%23212173%22%2F%3E%0A%3C%2Fg%3E%0A%3Cdefs%3E%0A%3CclipPath%20id%3D%22clip0_5071_52096%22%3E%0A%3Crect%20width%3D%2214%22%20height%3D%2214%22%20fill%3D%22white%22%2F%3E%0A%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        &.list-section__mobile-switching {
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M2%204H12V6H2V4ZM1%203H2H12H13V4V6V7H12H2H1V6V4V3ZM2%209H12V11H2V9ZM1%208H2H12H13V9V11V12H12H2H1V11V9V8Z%22%20fill%3D%22%23212173%22%2F%3E%0A%3C%2Fsvg%3E');
+        }
+    }
+
+    &__add-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 5rem;
+        margin-top: 2rem;
+
+        color: var(--Red, #CF000C);
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+
+        background-color: var(--White, #FFF);
+        border-radius: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            height: 8rem;
+            margin-top: 3.2rem;
+
+            font-size: 1.6rem;
+            border-radius: 1.2rem;
+        }
+
+        & > * {
+            color: var(--Red, #CF000C);
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            @include breakpointMF(tablet) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__fixed-footer {
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        z-index: 2000;
+
+        width: 100%;
+        transform: translateX(-50%);
+        padding-bottom: 7rem;
+
+        @include breakpointMF(tablet) {
+            padding-bottom: 2rem;
+        }
+
+        .list-section__site-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__fixed-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+
+        min-width: 16rem;
+        height: 5rem;
+        background: var(--Dark-Blue, #101038);
+        border-radius: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            column-gap: 0.6rem;
+            min-width: 26rem;
+            height: 6rem;
+        }
+
+        .icon {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: var(--White, #FFF);
+
+            @include breakpointMF(tablet) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+
+        span {
+            color: var(--White, #FFF);
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+
+            @include breakpointMF(tablet) {
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
+        }
+    }
+
+    &__top-btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 6rem;
+        height: 6rem;
+        transform: translateY(-50%);
+
+        background: var(--White, #FFF);
+        border-radius: 100%;
+        border: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.06);
+
+        .icon {
+            width: 1.2rem;
+            height: 1.8rem;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.simple-section {
+    &.section {
+        margin-bottom: 3.2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    .simple-section__site-container {
+        padding-top: 4rem;
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4.4rem;
+        }
+    }
+
+    &__tabs {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        column-gap: 3.2rem;
+        overflow: auto;
+
+        max-width: calc(100% + 1.6rem);
+        margin-right: -1.6rem;
+        padding-right: 1.6rem;
+        padding-bottom: 1.8rem;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+
+            width: calc(100% + 1.6rem);
+            height: 2px;
+
+            background-color: var(--Black-05, rgba(2, 2, 2, 0.05));
+            content: "";
+        }
+
+        @include breakpointMF(tablet) {
+            max-width: 100%;
+            column-gap: 4rem;
+
+            margin-right: unset;
+            padding-right: unset;
+            margin-bottom: 3.2rem;
+        }
+
+        @include noScrollbar();
+    }
+
+    &__tab {
+        position: relative;
+        flex-shrink: 0;
+        width: max-content;
+
+        color: var(--Black, #020202);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 130%;
+
+        @include breakpointMF(tablet) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
+        &::before {
+            position: absolute;
+            top: calc(100% + 1.6rem);
+
+            width: calc(100% + 3px);
+            height: 2px;
+
+            background-color: transparent;
+            content: "";
+        }
+
+        &.simple-section__tab--active {
+            order: 1;
+            color: var(--Red, #CF000C);
+
+            &::before {
+                background-color: var(--Red, #CF000C);
+            }
+        }
+
+        &:not(.simple-section__tab--active) {
+            order: 2;
+        }
+    }
+
+    &__list-filters {
+        &.list-filters {
+            display: none;
+
+            @include breakpointMF(tablet) {
+                display: block;
+            }
+        }
+    }
+}

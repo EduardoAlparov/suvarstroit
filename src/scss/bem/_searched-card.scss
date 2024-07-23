@@ -1,0 +1,484 @@
+.searched-card {
+    position: relative;
+    display: block;
+
+    background-color: var(--White, #FFF);
+    border-radius: 1.6rem;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+
+        margin-bottom: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__tabs {
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 0.4rem;
+        width: max-content;
+    }
+
+    &__tab {
+        &.tab {
+            height: 3.2rem;
+            max-height: 3.2rem;
+        }
+    }
+
+    &__dropdown-button {
+        cursor: pointer;
+
+        &.searched-card__dropdown-button--active {
+            & + .searched-card__dropdown {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+
+        &.tab {
+            height: 3.2rem;
+            max-height: 3.2rem;
+        }
+
+        &.tab--square {
+            width: 3.2rem;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: calc(100% + 0.4rem);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+
+        padding: 0.8rem;
+
+        border-radius: 6px;
+        background: rgba(16, 16, 56, 0.70);
+        backdrop-filter: blur(15px);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            top:  calc(100% + 0.4rem);
+            left: calc(100% - 3.2rem);
+
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+
+            padding: 1.6rem;
+        }
+    }
+
+    &__variant {
+        display: flex;
+
+        &--tile {
+            display: none;
+            align-items: stretch;
+            flex-direction: column;
+            padding: 1.6rem;
+
+            .searched-card__name-value,
+            .searched-card__title {
+                @include font(2rem, 120%, 500);
+                letter-spacing: -0.02em;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &--row {
+            display: none;
+            flex-direction: row;
+            align-items: stretch;
+            padding: 2rem;
+
+
+            .searched-card__title {
+                @include font(1.4rem, 130%, 500);
+                letter-spacing: -0.02em;
+
+                @include breakpointMF(tablet) {
+                    @include font(2rem, 120%, 500);
+                }
+
+                .searched-card__area-value,
+                .searched-card__name-value {
+                    @include font(1.4rem, 130%, 500);
+                    letter-spacing: -0.02em;
+
+                    @include breakpointMF(tablet) {
+                        @include font(2rem, 120%, 500);
+                    }
+                }
+            }
+
+            .searched-card__prices {
+                flex-direction: column;
+                column-gap: unset;
+                align-items: flex-end;
+                gap: 0.8rem;
+
+                @include breakpointMF(tablet) {
+                    align-items: flex-start;
+                    gap: 1.2rem;
+                }
+            }
+
+            .searched-card__current-price {
+                font-size: 1.3rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 100%;
+                letter-spacing: unset;
+
+                @include breakpointMF(tablet) {
+                    font-size: 2.2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        flex-shrink: 0;
+
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__images {
+        position: relative;
+
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        aspect-ratio: 1.4 / 1;
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-bottom: 1.6rem;
+        padding: 0 1.6rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__swiper.project-card__swiper.swiper {
+        --swiper-pagination-color: var(--Black, rgba(2, 2, 2));
+        --swiper-pagination-bullet-inactive-color: var(--Black-10, rgba(2, 2, 2, 0.1));
+        --swiper-pagination-bullet-active-color: var(--Black, rgba(2, 2, 2));
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-bullet-inactive-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 0.2rem;
+
+        --swiper-pagination-bullet-width: 0.6rem;
+        --swiper-pagination-bullet-height: 0.6rem;
+
+        width: 100%;
+        padding-bottom: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            padding-bottom: 2.4rem;
+        }
+
+        &::before {
+            content: none;
+        }
+
+        .image-block {
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+
+            &.swiper-pagination-bullets-dynamic.swiper-pagination-bullets {
+                .swiper-pagination-bullet.swiper-pagination-bullet-active-next,
+                .swiper-pagination-bullet.swiper-pagination-bullet-active-prev {
+                    @include breakpointMF(tablet) {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        .searched-card__area-value {
+            @include font(2rem, 120%, 500);
+            letter-spacing: -0.02em;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+
+        @include breakpointMF(tablet) {
+            gap: 1.2rem;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__key {
+        display: block;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        opacity: 0.4;
+    }
+
+    &__value {
+        text-align: right;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+    }
+
+    &__station-value {
+        color: var(--Blue, #212173);
+    }
+
+    &__prices {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 1.2rem;
+    }
+
+    &__current-price {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+    }
+
+    &__old-price {
+        display: none;
+        color: var(--Black, #020202);
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        text-decoration-line: line-through;
+        opacity: 0.4;
+    }
+
+    &__favorite-checkbox {
+
+        &.favorite-checkbox {
+            position: absolute;
+            top: 1.6rem;
+            right: 1.6rem;
+        }
+    }
+
+    &__main {
+        display: flex;
+        align-items: stretch;
+        flex-grow: 1;
+
+        @include breakpointMF(tablet) {
+            padding: 2rem 0;
+            padding-right: 7.2rem;
+        }
+
+        .searched-card__prices {
+            @include breakpointMF(tablet) {
+                flex: 0 0 19.5rem;
+                margin-left: 2.4rem;
+            }
+        }
+    }
+
+    &__center {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        row-gap: 0.4rem;
+
+        @include breakpointMF(tablet) {
+            flex-direction: row;
+            align-items: stretch;
+            column-gap: 5rem;
+            row-gap: unset;
+        }
+    }
+
+    &__col {
+        flex-grow: 1;
+
+        &:has(.searched-card__tabs) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .searched-card__tabs {
+                display: none;
+
+                @include breakpointMF(tablet) {
+                    display: flex;
+                }
+            }
+
+            .searched-card__dropdown {
+                top: 0;
+                left: calc(100% + 0.4rem);
+            }
+        }
+
+        &:has(.searched-card__subtitle) {
+            display: flex;
+            flex-direction: column;
+
+            @include breakpointMF(tablet) {
+                padding: 0 6rem 0 2.4rem;
+                border-left: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+                border-right: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+            }
+
+            .searched-card__location-value {
+                margin-top: 0.6rem;
+                color: var(--Black, #020202);
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                opacity: 0.5;
+
+                @include breakpointMF(tablet) {
+                    margin-top: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__simple-list {
+        display: none;
+        align-items: center;
+        gap: 4rem;
+        padding-left: 4rem;
+
+        @include breakpointMF(tablet) {
+            display: flex;
+        }
+
+        li {
+            & > * {
+                color: var(--Black, #020202);
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+            }
+        }
+    }
+
+    &__single-image {
+        width: 2.8rem;
+        height: 2.7rem;
+        margin-right: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            width: 14rem;
+            height: 14rem;
+            margin-right: 4rem;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__subtitle {
+        .searched-card__station-value {
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+
+            @include breakpointMF(tablet) {
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 130%;
+            }
+        }
+    }
+
+    &:not(:has(.searched-card__dropdown-button--active)):hover {
+        .project-card__swiper.swiper .swiper-pagination {
+            opacity: 1;
+        }
+    }
+
+    &:has(.searched-card__dropdown-button--active) {
+        .project-card__transparent-thumbs {
+            pointer-events: none;
+        }
+    }
+
+    &.searched-card--new-price {
+        .searched-card__current-price {
+            color: var(--Red, #CF000C);
+        }
+
+        .searched-card__old-price {
+            display: block;
+        }
+    }
+}

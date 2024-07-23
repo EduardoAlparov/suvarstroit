@@ -91,7 +91,7 @@ body {
     }
 
     &--first {
-        @extend ._header-padding-top;
+        padding-top: calc(var(--breadcrumbs-height) + calc(var(--gap) * 10));
 
         .plans-section__site-container {
             padding-top: 13rem;

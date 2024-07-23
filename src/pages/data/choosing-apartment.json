@@ -1,0 +1,12 @@
+{
+    "title": "Поиск квартиры",
+    "filterClass": false,
+    "headerBlurClass": false,
+    "breadcrumbsWhiteClass": false,
+    "headerMainClass": true,
+    "greyFooterClass": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Выбор квартиры"
+    ]
+}

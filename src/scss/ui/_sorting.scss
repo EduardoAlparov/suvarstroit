@@ -1,0 +1,313 @@
+.sorting {
+    position: relative;
+    width: max-content;
+    min-width: 32.5rem;
+
+    &__dropdown {
+      position: absolute;
+      top: calc(100% - 1px);
+
+      overflow: hidden;
+      display: none;
+
+      width: 100%;
+      padding-top: 0.8rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+
+        background-color: var(--White, #FFF);
+        border-radius: 1.2rem;
+        border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.06);
+
+        &.sorting__list--padding {
+            padding: 0 2rem;
+        }
+
+        &.sorting__list--projects,
+        &.sorting__list--date {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                background-color: white;
+                width: 0.4rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--Black-10);
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: white;
+            }
+        }
+
+        &.sorting__list--date {
+            max-height: 25rem;
+        }
+
+        &.sorting__list--projects {
+            max-height: 40rem;
+        }
+    }
+
+    &__item {
+        &:not(:first-child) {
+            .sorting__label {
+                border-top: 1px solid var(--Black-10, rgba(5, 4, 3, 0.10));
+            }
+        }
+
+        &.sorting__item--line {
+            padding: 2rem 0;
+            border-top: 1px solid var(--Black-10, rgba(5, 4, 3, 0.10));
+
+            &:has(.sorting__reset) {
+                padding: 1.8rem 0;
+            }
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+
+        width: 100%;
+        height: 6rem;
+        padding: 2rem;
+        transition: var(--transition);
+        transition-property: background, border;
+        cursor: pointer;
+
+        @include hoverActive() {
+
+            .sorting__icon {
+                border-color: var(--Red, #CF000C);
+            }
+        }
+
+      input[type="radio"] {
+        &:checked {
+          & ~ .sorting__icon {
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2223%22%20height%3D%2223%22%20rx%3D%2211.5%22%20stroke%3D%22%23CF000C%22%20stroke-opacity%3D%220.2%22%2F%3E%0A%3Crect%20x%3D%225%22%20y%3D%225%22%20width%3D%2214%22%20height%3D%2214%22%20rx%3D%227%22%20fill%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border:none;
+          }
+        }
+      }
+    }
+
+    &__text {
+        display: block;
+        flex-grow: 1;
+        color: var(--Black, #020202);
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    &__icon {
+        display: block;
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        border-radius: 100%;
+        border: 1px solid var(--Red-20, rgba(207, 0, 12, 0.20));
+
+        transition: 0.3s ease-out;
+        transition-property: background, border;
+    }
+
+    &__current {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        height: 6rem;
+        padding: 1.6rem 3.2rem 1.6rem 1.6rem;
+
+        color: var(--Black, #020202);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 150%;
+
+        background: var(--White, #FFF);
+        border-radius: 1.2rem;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: 1.6rem;
+
+            display: block;
+
+            width: 1.4rem;
+            height: 1.4rem;
+            transform: translateY(-50%) rotate(180deg);
+
+            background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M1%2010L7%204L13%2010%22%20stroke%3D%22%23020202%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center ;
+
+            transition: transform var(--transition);
+            content: "";
+        }
+
+        &.sorting__current--open {
+            z-index: 100;
+
+            &::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+
+            & + .sorting__dropdown {
+                z-index: 200;
+                display: block;
+
+                .sorting__list {
+                    animation: slideDown 0.3s ease 0s 1 forwards;
+                }
+            }
+        }
+    }
+
+    &__current-icon {
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 1.2rem;
+    }
+
+    &__reset-icon {
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        opacity: 0.3;
+        transition: opacity 0.3s ease-out;
+    }
+
+    &__reset {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        width: 100%;
+
+        &--reverse {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        &:hover {
+            .sorting__reset-icon {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__checkbox-text,
+    &__reset-text {
+        color: var(--Black, #181823);
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__checkbox-label {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        cursor: pointer;
+
+        & > i {
+            display: block;
+            flex-shrink: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            border-radius: 0.4rem;
+            border: 1px solid var(--Red-20, rgba(207, 0, 12, 0.20));
+            transition: border 0.3s ease-out;
+        }
+
+        &--reverse {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        &:hover {
+            i {
+                border-color: var(--Red-50, rgba(207, 0, 12, 0.50));
+            }
+        }
+    }
+
+    &__sublist {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        margin-top: 1.6rem;
+        padding-left: 3.2rem;
+    }
+
+    &__checkbox {
+        &:is(input[type="checkbox"]) {
+            &:checked {
+                & + .sorting__checkbox-label {
+                    & > i {
+                        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%0A%20%20%3Crect%20width%3D%2224%22%20height%3D%2224%22%20rx%3D%224%22%20fill%3D%22%23CF000C%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M18%208L9.75%2016L6%2012.3636%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border: none;
+                    }
+                }
+
+                & ~ .sorting__sublist {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &.sorting--grey {
+        .sorting__current {
+            background: var(--Light-Grey, #F5F5F5);
+        }
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

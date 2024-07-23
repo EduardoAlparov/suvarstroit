@@ -12,9 +12,11 @@
     --gap: 0.3rem;
     --max-container-width: 156rem;
     --header-height: 6.5rem;
+    --breadcrumbs-height: 1rem;
 
     // colors:
     --Black: #020202;
+    --Black-05: rgba(2, 2, 2, 0.05);
     --Black-10: rgba(2, 2, 2, 0.1);
     --Black-30: rgba(2, 2, 2, 0.3);
     --Black-40: rgba(2, 2, 2, 0.4);
@@ -23,6 +25,7 @@
 
     --White: #fff;
     --White-10: rgba(255, 255, 255, 0.1);
+    --White-15: rgba(255, 255, 255, 0.15);
     --White-30: rgba(255, 255, 255, 0.3);
     --White-50: rgba(255, 255, 255, 0.5);
     --White-60: rgba(255, 255, 255, 0.6);
@@ -62,6 +65,7 @@
         --gap: 0.4rem;
         --swiper-pagination-bottom: 24px;
         --header-height: 8rem;
+        --breadcrumbs-height: 1.6rem;
     }
 }
 

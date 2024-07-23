@@ -69,10 +69,18 @@
 }
 
 ._header-padding-top {
-    padding-top: calc(var(--header-height) + 2rem);
+    padding-top: calc(var(--header-height) + 4rem);
 
     @include breakpointMF(tablet) {
         padding-top: calc(var(--header-height) + calc(var(--gap) * 10));
+    }
+}
+
+._breadcrumbs-padding-top {
+    padding-top: calc(var(--breadcrumbs-height) + 2rem);
+
+    @include breakpointMF(tablet) {
+        padding-top: calc(var(--breadcrumbs-height) + calc(var(--gap) * 10));
     }
 }
 

@@ -1,0 +1,127 @@
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 28px 20px 24px 20px;
+
+    color: var(--White, #FFF);
+
+    background-color: var(--Blue, #212173);
+    border-radius: 12px;
+
+    @include breakpointMF(tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 5rem 4rem 4rem;
+        border-radius: 1.6rem;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin-bottom: 5.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: unset;
+            padding-top: 2rem;
+        }
+
+        .icon {
+            width: 164px;
+            height: 14px;
+            fill: var(--White, #fff);
+
+            @include breakpointMF(tablet) {
+                width: 21.4rem;
+                height: 1.8rem;
+            }
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include breakpointMF(tablet) {
+            flex-grow: 1;
+            padding-right: 13rem;
+        }
+    }
+
+    &__heading {
+
+        @include breakpointMF(tablet) {
+            padding: 1rem 5rem 2rem 6.9rem;
+            border-color: var(--White-15, rgba(255, 255, 255, 0.15));
+            border-style: solid;
+            border-width: 0 1px 0 1px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.2rem;
+
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: -0.05em;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.4rem;
+            font-size: 2.8rem;
+            line-height: 125%;
+            letter-spacing: unset;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        line-height: 120%;
+        opacity: 0.6;
+    }
+
+    &__image {
+        display: none;
+
+        width: 7.1rem;
+        height: 7.6rem;
+        flex-shrink: 0;
+
+        background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2271%22%20height%3D%2277%22%20viewBox%3D%220%200%2071%2077%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20opacity%3D%220.4%22%20clip-path%3D%22url(%23clip0_5071_52489)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M70.3713%2075.6501H0.629643V28.5027L34.7315%201.51889L70.3713%2028.5109V75.6501Z%22%20stroke%3D%22white%22%20stroke-width%3D%221.25929%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M26.7779%2039.753L26.7779%2039.753C26.0056%2040.4928%2025.6296%2041.3711%2025.6296%2042.4244C25.6296%2043.4768%2026.0051%2044.3599%2026.7779%2045.1083C27.5536%2045.8432%2028.5205%2046.2191%2029.724%2046.2191C30.9287%2046.2191%2031.8906%2045.8426%2032.6572%2045.1084L26.7779%2039.753ZM26.7779%2039.753C27.5543%2039.0092%2028.5212%2038.6296%2029.724%2038.6296C30.9269%2038.6296%2031.8881%2039.0091%2032.6551%2039.7509L32.655%2039.7509M26.7779%2039.753L32.655%2039.7509M32.655%2039.7509L32.6595%2039.7551M32.655%2039.7509L32.6595%2039.7551M32.6595%2039.7551C33.4398%2040.4954%2033.8184%2041.3731%2033.8184%2042.4244M32.6595%2039.7551L33.8184%2042.4244M38.3299%2048.9043L38.3298%2048.9043C37.5575%2049.644%2037.1816%2050.5224%2037.1816%2051.5756C37.1816%2052.6281%2037.557%2053.5111%2038.3298%2054.2596C39.1055%2054.9945%2040.0724%2055.3704%2041.276%2055.3704C42.4806%2055.3704%2043.4426%2054.9939%2044.2092%2054.2596L38.3299%2048.9043ZM38.3299%2048.9043C39.1063%2048.1604%2040.0731%2047.7809%2041.276%2047.7809C42.4788%2047.7809%2043.4401%2048.1604%2044.207%2048.9022L44.207%2048.9022M38.3299%2048.9043L44.207%2048.9022M44.207%2048.9022L44.2114%2048.9064M44.207%2048.9022L44.2114%2048.9064M44.2114%2048.9064C44.9917%2049.6467%2045.3704%2050.5244%2045.3704%2051.5756M44.2114%2048.9064L45.3704%2051.5756M33.8184%2042.4244C33.8184%2043.4758%2033.4396%2044.3589%2032.6573%2045.1083L33.8184%2042.4244ZM45.3704%2051.5756C45.3704%2052.627%2044.9915%2053.5101%2044.2092%2054.2596L45.3704%2051.5756ZM30.6646%2055.1939L39.3066%2038.8061H40.3354L31.6934%2055.1939H30.6646ZM27.5052%2040.2586C26.944%2040.8687%2026.6549%2041.6%2026.6549%2042.4244C26.6549%2043.2487%2026.944%2043.98%2027.5052%2044.5901C28.0884%2045.2241%2028.8456%2045.5372%2029.724%2045.5372C30.6024%2045.5372%2031.3597%2045.2241%2031.9428%2044.5901C32.504%2043.98%2032.7931%2043.2487%2032.7931%2042.4244C32.7931%2041.6%2032.504%2040.8687%2031.9428%2040.2586C31.3597%2039.6247%2030.6024%2039.3115%2029.724%2039.3115C28.8456%2039.3115%2028.0884%2039.6247%2027.5052%2040.2586ZM39.0572%2049.4099C38.496%2050.02%2038.2069%2050.7513%2038.2069%2051.5756C38.2069%2052.4%2038.496%2053.1313%2039.0572%2053.7414C39.6403%2054.3753%2040.3976%2054.6885%2041.276%2054.6885C42.1544%2054.6885%2042.9116%2054.3753%2043.4948%2053.7414C44.056%2053.1313%2044.3451%2052.4%2044.3451%2051.5756C44.3451%2050.7513%2044.056%2050.02%2043.4948%2049.4099C42.9116%2048.7759%2042.1544%2048.4628%2041.276%2048.4628C40.3976%2048.4628%2039.6403%2048.7759%2039.0572%2049.4099Z%22%20stroke%3D%22white%22%20stroke-width%3D%221.25929%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_5071_52489%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2271.0009%22%20height%3D%2275.5571%22%20fill%3D%22white%22%20transform%3D%22translate(0%200.722656)%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpointMF(tablet) {
+            display: block;
+            margin-left: 7.4rem;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 5rem;
+        margin-top: 6rem;
+
+        border: 1px solid var(--White, #FFF);
+        border-radius: 8px;
+
+        @include breakpointMF(tablet) {
+            width: max-content;
+            min-width: 20rem;
+            height: 5.5rem;
+            margin-top: auto;
+            padding: 2rem;
+
+            border-radius: 1.2rem;
+            border: 1px solid var(--White-30, rgba(255, 255, 255, 0.30));
+        }
+    }
+}

@@ -7,7 +7,7 @@
     width: max-content;
     padding: 0.8rem 1.2rem;
 
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     background: var(--Dark-Blue-30, rgba(16, 16, 56, 0.30));
     backdrop-filter: blur(10px);
 
@@ -98,5 +98,13 @@
 
     &--square {
         aspect-ratio: 1;
+    }
+
+    &--white {
+        background: var(--White, #FFF);
+
+        .tab__text {
+            color: var(--Black, #020202);
+        }
     }
 }

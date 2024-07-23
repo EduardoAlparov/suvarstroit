@@ -42,6 +42,10 @@ import gallerySwiper from './gallerySwiper';
 import addingToFavorites from './addingToFavorites';
 import youtubeVideoControl from './youtubeVideoControl';
 
+import cardsDropdownToggle from './cardsDropdownToggle';
+import sortingSelect from './sortingSelect';
+import searchListSwitching from './searchListSwitching';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -82,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
     gallerySwiper();
     addingToFavorites();
     // youtubeVideoControl();
+
+    cardsDropdownToggle();
+    sortingSelect();
+    searchListSwitching();
 });
 
 document.addEventListener('lazyloaded', () => {

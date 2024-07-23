@@ -75,6 +75,12 @@
 @import 'bem/modal-article';
 @import 'bem/terms';
 
+@import 'bem/simple-section';
+@import 'bem/list-section';
+@import 'bem/list-filters';
+@import 'bem/searched-card';
+@import 'bem/promo';
+
 @import 'ui/round-btn';
 @import 'ui/socials-link';
 @import 'ui/tag-link';
@@ -91,5 +97,8 @@
 @import 'ui/expand';
 @import 'ui/favorite-checkbox';
 @import 'ui/close-btn';
+@import 'ui/sorting';
+@import 'ui/grouping';
+@import 'ui/switching';
 
 @import 'utils/animations';

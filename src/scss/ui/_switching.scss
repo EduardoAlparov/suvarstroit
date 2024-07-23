@@ -1,0 +1,38 @@
+.switching {
+    display: flex;
+    height: 6rem;
+    padding: 0.8rem;
+    align-items: flex-start;
+    border-radius: 0.8rem;
+    background-color: var(--White, #FFF);
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        width: 4.4rem;
+        height: 4.4rem;
+        padding: 0 2rem;
+        border-radius: 0.8rem;
+        transition: background-color 0.3s ease-out;
+
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            fill: var(--Dark-Blue, #101038);
+            transition: fill 0.3s ease-out;
+        }
+
+        &.switching__btn--active {
+            background-color: var(--Dark-Blue, #101038);
+
+            .icon {
+                width: 1.6rem;
+                height: 1.6rem;
+                fill: var(--White, #fff);
+            }
+        }
+    }
+}
