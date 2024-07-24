@@ -12,7 +12,7 @@ export default () => {
     if(header.classList.contains('page-header--main')) {
         const strHeader = ScrollTrigger.create({
             trigger : document.querySelector('.page-content'),
-            start: vh(50) + ' top',
+            start: vh(15) + ' top',
             onUpdate: (self) => {
                 header.classList.add('page-header--fixed');
             },

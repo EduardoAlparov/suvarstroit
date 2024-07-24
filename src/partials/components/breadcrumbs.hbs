@@ -1,4 +1,5 @@
-<div class="breadcrumbs {{#if breadcrumbsWhiteClass}}breadcrumbs--white{{/if}}">
+<div
+    class="breadcrumbs {{#if breadcrumbsWhiteClass}}breadcrumbs--white{{/if}}{{#if mainPage}}breadcrumbs--hidden{{/if}}">
     <div class="breadcrumbs__site-container">
         <ul class="breadcrumbs__list">
             {{#each breadcrumbsList}}

@@ -171,3 +171,9 @@ body {
         }
     }
 }
+
+body:has(.breadcrumbs--hidden) {
+    .section--first {
+        padding-top: calc(var(--header-height) + calc(var(--gap) * 10));
+    }
+}

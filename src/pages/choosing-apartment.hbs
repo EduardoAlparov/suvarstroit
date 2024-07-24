@@ -387,9 +387,9 @@
                 </div>
             </div>
             <div class="list-filters__footer-box">
-                <button type="button" class="list-filters__open-filters">
+                <a href="#modal-filters" class="list-filters__open-filters">
                     Все фильтры
-                </button>
+                </a>
                 <p class="list-filters__finded-objects">
                     Найдено 356 квартир
                 </p>
@@ -472,10 +472,10 @@
             </div>
 
             <button type="button" class="list-section__mobile-btn list-section__mobile-switching"></button>
-            <button type="button" class="list-section__mobile-btn list-section__mobile-open-filter">
+            <a href="#modal-filters" class="list-section__mobile-btn list-section__mobile-open-filter">
                 <span>Фильтр</span>
                 <i></i>
-            </button>
+            </a>
             <button type="button" class="list-section__mobile-btn list-section__mobile-sorting"></button>
         </form>
 
@@ -522,14 +522,14 @@
 
     <div class="list-section__fixed-footer">
         <div class="list-section__site-container">
-            <button type="button" class="list-section__fixed-btn">
+            <a href="#modal-filters" class="list-section__fixed-btn">
                 <svg class="icon">
                     <use xlink:href="#filter"></use>
                 </svg>
 
                 <span class="hide-on-mobile">Показать фильтры</span>
                 <span class="show-on-mobile">Фильтры</span>
-            </button>
+            </a>
 
             <button type="button" class="list-section__top-btn hide-on-mobile">
                 <svg class="icon">
@@ -539,6 +539,40 @@
         </div>
     </div>
 </section>
+
+<div class="modal-filters js-modal" id="modal-filters">
+    <div class="modal-filters__container">
+        <form action="" class="modal-filters__content">
+            <div class="modal-filters__header">
+                <p class="modal-filters__title modal-filters__title--h5-text">
+                    Все фильтры
+                </p>
+
+                <button type="button" class="modal-filters__close close-btn close-btn--smaller js-close-modal">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#close-empty"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-filters__body">
+                <div class="modal-filters__col">
+
+                </div>
+            </div>
+
+            <div class="modal-filters__footer">
+                <a href="#" class="modal-filters__link main-btn main-btn--red">Показать 562 квартиры</a>
+                <div class="modal-filters__reset main-btn main-btn--red main-btn--outlined">
+                    <input type="reset" class="" value="Сбросить фильтры">
+                    <svg aria-hidden="true" class="icon icon-reset">
+                        <use xlink:href="#reset-min"></use>
+                    </svg>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 {{/content}}
 {{/extend}}
