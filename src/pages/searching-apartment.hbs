@@ -1,0 +1,1338 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="simple-section section section--first js-animation-trigger">
+    <div class="simple-section__site-container">
+        <div class="simple-section__heading">
+            <h2 class="simple-section__title simple-section__title--h3-text">
+                Выбор квартиры
+            </h2>
+        </div>
+
+        <div class="simple-section__tabs">
+            <a href="#" class="simple-section__tab simple-section__tab--active js-search-tab">
+                Квартиры
+            </a>
+            <a href="#" class="simple-section__tab js-search-tab">
+                Паркинг
+            </a>
+            <a href="#" class="simple-section__tab js-search-tab">
+                Кладовые
+            </a>
+            <a href="#" class="simple-section__tab js-search-tab">
+                Коммерция
+            </a>
+        </div>
+
+        <form action="" class="simple-section__list-filters list-filters">
+            <div class="list-filters__main-box">
+                <div class="list-filters__item list-filters__item--dropdown">
+                    <p class="list-filters__label">
+                        Проект
+                    </p>
+                    <div class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                        <button class="sorting__current" type="button">
+                            <span class="sorting__current-text">
+                                Все проекты
+                            </span>
+                        </button>
+                        <div class="sorting__dropdown">
+                            <ul class="sorting__list sorting__list--padding sorting__list--projects">
+                                <li class="sorting__item sorting__item--line">
+                                    <button type="button" class="sorting__reset">
+                                        <svg class="sorting__reset-icon">
+                                            <use xlink:href="#reset"></use>
+                                        </svg>
+                                        <span class="sorting__reset-text">
+                                            Все проекты
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-UP">
+
+                                    <label class="sorting__checkbox-label" for="projects-checkbox-sorting-UP">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Южный парк
+                                        </span>
+                                    </label>
+
+                                    <ul class="sorting__sublist">
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-UP-1">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-UP-1">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    1 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-UP-2">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-UP-2">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    2 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-SS">
+
+                                    <label class="sorting__checkbox-label" for="projects-checkbox-sorting-SS">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Станция Спортивная
+                                        </span>
+                                    </label>
+
+                                    <ul class="sorting__sublist">
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-SS-1">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-SS-1">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    1 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-SS-2">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-SS-2">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    2 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-SS-3">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-SS-3">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    3 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-VG">
+
+                                    <label class="sorting__checkbox-label" for="projects-checkbox-sorting-VG">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Времена года
+                                        </span>
+                                    </label>
+
+                                    <ul class="sorting__sublist">
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-VG-1">
+                                            <label class="sorting__checkbox-label" for="projects-checkbox-sorting-VG-1">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    1 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-Otr">
+
+                                    <label class="sorting__checkbox-label" for="projects-checkbox-sorting-Otr">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Отражение
+                                        </span>
+                                    </label>
+
+                                    <ul class="sorting__sublist">
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-Otr-1">
+                                            <label class="sorting__checkbox-label"
+                                                for="projects-checkbox-sorting-Otr-1">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    1 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-Stol">
+
+                                    <label class="sorting__checkbox-label" for="projects-checkbox-sorting-Stol">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Столичный
+                                        </span>
+                                    </label>
+
+                                    <ul class="sorting__sublist">
+                                        <li class="sorting__sublist-item">
+                                            <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                                name="projects-checkbox-sorting" id="projects-checkbox-sorting-Stol-1">
+                                            <label class="sorting__checkbox-label"
+                                                for="projects-checkbox-sorting-Stol-1">
+                                                <i></i>
+                                                <span class="sorting__checkbox-text">
+                                                    1 очередь
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-filters__item list-filters__item--buttons">
+                    <p class="list-filters__label">
+                        Количество комнат
+                    </p>
+                    <div class="list-filters__radios">
+                        <div class="radios">
+                            <div class="radios__items">
+                                <label class="radios__item radios__item--wider">
+                                    <input type="checkbox" name="rooms" value="studios" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        Студия
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="1" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        1
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="2" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        2
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="3" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        3
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="4" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        4+
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-filters__item list-filters__item--range">
+                    <p class="list-filters__label">
+                        Стоимость, руб.
+                    </p>
+
+                    <div class="range-slider js-range-slider-double" data-min="1200000" data-max="20000000"
+                        data-step="100000">
+                        <div class="range-slider__inputs">
+                            <div class="range-slider__input-wrapper">
+                                <span class="range-slider__input-pretext">
+                                    от
+                                </span>
+                                <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                            </div>
+
+                            <div class="range-slider__inputs-divider"></div>
+
+                            <div class="range-slider__input-wrapper">
+                                <span class="range-slider__input-pretext">
+                                    до
+                                </span>
+                                <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                            </div>
+                        </div>
+
+                        <div class="range-slider__element"></div>
+                    </div>
+                </div>
+                <div class="list-filters__item list-filters__item--range">
+                    <p class="list-filters__label">
+                        Площадь, м
+                    </p>
+
+                    <div class="range-slider js-range-slider-double" data-min="20" data-max="400" data-step="1">
+                        <div class="range-slider__inputs">
+                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                <span class="range-slider__input-pretext">
+                                    от
+                                </span>
+                                <input type="tel" class="range-slider__input js-numeric-input">
+                            </div>
+
+                            <div class="range-slider__inputs-divider"></div>
+                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                <span class="range-slider__input-pretext">
+                                    до
+                                </span>
+                                <input type="tel" class="range-slider__input js-numeric-input">
+                            </div>
+                        </div>
+
+                        <div class="range-slider__element"></div>
+                    </div>
+                </div>
+                <div class="list-filters__item list-filters__item--dropdown">
+                    <p class="list-filters__label">
+                        Срок сдачи проекта
+                    </p>
+                    <div class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                        <button class="sorting__current" type="button">
+                            <span class="sorting__current-text">
+                                Любой
+                            </span>
+                        </button>
+                        <div class="sorting__dropdown">
+                            <ul class="sorting__list sorting__list--padding sorting__list--date">
+                                <li class="sorting__item sorting__item--line">
+                                    <button type="button" class="sorting__reset sorting__reset--reverse">
+                                        <svg class="sorting__reset-icon">
+                                            <use xlink:href="#reset"></use>
+                                        </svg>
+                                        <span class="sorting__reset-text">
+                                            Любой
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-done">
+
+                                    <label class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                        for="projects-checkbox-sorting-done">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            Сдан
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-2-2024">
+
+                                    <label class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                        for="projects-checkbox-sorting-2-2024">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            II кв. 2024
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-3-2024">
+
+                                    <label class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                        for="projects-checkbox-sorting-3-2024">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            III кв. 2024
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-1-2025">
+
+                                    <label class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                        for="projects-checkbox-sorting-1-2025">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            I кв. 2025
+                                        </span>
+                                    </label>
+                                </li>
+                                <li class="sorting__item sorting__item--line">
+                                    <input type="checkbox" class="visually-hidden sorting__checkbox" hidden
+                                        name="projects-checkbox-sorting" id="projects-checkbox-sorting-3-2025">
+
+                                    <label class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                        for="projects-checkbox-sorting-3-2025">
+                                        <i></i>
+                                        <span class="sorting__checkbox-text">
+                                            III кв. 2025
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-filters__footer-box">
+                <a href="#modal-filters" class="list-filters__open-filters js-filters-trigger">
+                    Все фильтры
+                </a>
+                <p class="list-filters__finded-objects">
+                    Найдено 356 квартир
+                </p>
+                <div class="list-filters__reset-filters">
+                    <input type="reset" value="Сбросить фильтры">
+                    <i></i>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="list-section section section--grey section--round-border js-animation-trigger">
+    <div class="list-section__site-container">
+        <form action="" class="list-section__navs">
+            <div class="list-section__sorting sorting hide-on-mobile js-sorting">
+                <button class="sorting__current" type="button">
+                    <svg class="sorting__current-icon">
+                        <use xlink:href="#sorting"></use>
+                    </svg>
+                    <span class="sorting__current-text">
+                        Сначала дешевые
+                    </span>
+                </button>
+                <div class="sorting__dropdown">
+                    <ul class="sorting__list">
+                        <li class="sorting__item">
+                            <label class="sorting__label" for="radio-sort-popular">
+                                <input type="radio" class="visually-hidden" checked="checked" name="sorting-select"
+                                    id="radio-sort-popular"><span class="sorting__text">Сначала дешевые</span><span
+                                    class="sorting__icon"></span>
+                            </label>
+                        </li>
+                        <li class="sorting__item">
+                            <label class="sorting__label" for="radio-sort-new">
+                                <input type="radio" class="visually-hidden" name="sorting-select"
+                                    id="radio-sort-new"><span class="sorting__text">Новые</span><span
+                                    class="sorting__icon"></span>
+                            </label>
+                        </li>
+                        <li class="sorting__item">
+                            <label class="sorting__label" for="radio-sort-alpbt-up">
+                                <input type="radio" class="visually-hidden" name="sorting-select"
+                                    id="radio-sort-alpbt-up"><span class="sorting__text">По алфавиту (от А до
+                                    Я)</span><span class="sorting__icon"></span>
+                            </label>
+                        </li>
+                        <li class="sorting__item">
+                            <label class="sorting__label" for="radio-sort-alpbt-down">
+                                <input type="radio" class="visually-hidden" name="sorting-select"
+                                    id="radio-sort-alpbt-down"><span class="sorting__text ">По алфавиту (от Я до
+                                    А)</span><span class="sorting__icon"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="list-section__grouping grouping hide-on-mobile">
+                <p class="grouping__text">
+                    Сгруппировать похожие планировки
+                </p>
+                <label class="grouping__label">
+                    <input type="checkbox" class="visually-hidden" name="grouping-elements" id="grouping-elements-id">
+                    <span class="grouping__switcher"></span>
+                </label>
+            </div>
+
+            <div class="list-section__switching switching hide-on-mobile">
+                <button data-view="tile" type="button" class="switching__btn switching__btn--active js-switching-btn">
+                    <svg class="icon icon-tile">
+                        <use xlink:href="#tile"></use>
+                    </svg>
+                </button>
+                <button data-view="list" type="button" class="switching__btn js-switching-btn">
+                    <svg class="icon icon-list">
+                        <use xlink:href="#list"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <button type="button" class="list-section__mobile-btn list-section__mobile-switching"></button>
+            <a href="#modal-filters" class="list-section__mobile-btn list-section__mobile-open-filter">
+                <span>Фильтр</span>
+                <i></i>
+            </a>
+            <button type="button" class="list-section__mobile-btn list-section__mobile-sorting"></button>
+        </form>
+
+        <ul class="list-section__catalog list-section__catalog--tiles">
+            <li class="list-section__catalog-item">
+                {{>searched-card cardId=001}}
+            </li>
+            <li class="list-section__catalog-item">
+                {{>searched-card cardId=002 cardClass=true}}
+            </li>
+            <li class="list-section__catalog-item list-section__catalog-item--full">
+                <div class="list-section__promo promo">
+                    <div class="promo__logo">
+                        <svg class="icon">
+                            <use xlink:href="#logo-w"></use>
+                        </svg>
+                    </div>
+                    <div class="promo__center">
+                        <div class="promo__heading">
+                            <p class="promo__title">
+                                Скидки до 5% на&nbsp;недвижимость
+                            </p>
+                            <p class="promo__subtitle">
+                                Акция действует до 20 февраля 2024
+                            </p>
+                        </div>
+
+                        <div class="promo__image">
+
+                        </div>
+                    </div>
+                    <a href="#" class="promo__link">
+                        Подробнее
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <a href="#" class="list-section__add-link">
+            Показать еще&nbsp;<span class="list-section__add-link-plus">20</span>&nbsp;из&nbsp;<span
+                class="list-section__add-link-total">356</span>&nbsp;квартир
+        </a>
+    </div>
+
+    <div class="list-section__fixed-footer js-filters-target">
+        <div class="list-section__site-container">
+            <a href="#modal-filters" class="list-section__fixed-btn">
+                <svg class="icon">
+                    <use xlink:href="#filter"></use>
+                </svg>
+
+                <span class="hide-on-mobile">Показать фильтры</span>
+                <span class="show-on-mobile">Фильтры</span>
+            </a>
+
+            <button type="button" class="list-section__top-btn hide-on-mobile js-to-top-btn">
+                <svg class="icon">
+                    <use xlink:href="#top"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<div class="modal-filters js-modal" id="modal-filters">
+    <div class="modal-filters__container">
+        <form action="" class="modal-filters__content">
+            <div class="modal-filters__header">
+                <p class="modal-filters__title modal-filters__title--h5-text">
+                    Все фильтры
+                </p>
+
+                <button type="button" class="modal-filters__close close-btn close-btn--smaller js-close-modal">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#close-empty"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-filters__body">
+                <div class="modal-filters__body-filter-item">
+                    <div class="modal-filters__item">
+                        <p class="modal-filters__subtitle">
+                            Основные параметры
+                        </p>
+
+                        <div class="modal-filters__rows">
+                            <div class="modal-filters__col">
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Количество комнат
+                                    </p>
+                                    <div class="list-filters__radios">
+                                        <div class="radios">
+                                            <div class="radios__items">
+                                                <label class="radios__item radios__item--wider">
+                                                    <input type="checkbox" name="rooms" value="studios"
+                                                        class="radios__item-input">
+                                                    <span class="radios__item-text">
+                                                        Ст.
+                                                    </span>
+                                                </label>
+                                                <label class="radios__item">
+                                                    <input type="checkbox" name="rooms" value="1"
+                                                        class="radios__item-input">
+                                                    <span class="radios__item-text">
+                                                        1
+                                                    </span>
+                                                </label>
+                                                <label class="radios__item">
+                                                    <input type="checkbox" name="rooms" value="2"
+                                                        class="radios__item-input">
+                                                    <span class="radios__item-text">
+                                                        2
+                                                    </span>
+                                                </label>
+                                                <label class="radios__item">
+                                                    <input type="checkbox" name="rooms" value="3"
+                                                        class="radios__item-input">
+                                                    <span class="radios__item-text">
+                                                        3
+                                                    </span>
+                                                </label>
+                                                <label class="radios__item">
+                                                    <input type="checkbox" name="rooms" value="4"
+                                                        class="radios__item-input">
+                                                    <span class="radios__item-text">
+                                                        4+
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Проект
+                                    </p>
+                                    <div
+                                        class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                                        <button class="sorting__current" type="button">
+                                            <span class="sorting__current-text">
+                                                Все проекты
+                                            </span>
+                                        </button>
+                                        <div class="sorting__dropdown">
+                                            <ul class="sorting__list sorting__list--padding sorting__list--projects">
+                                                <li class="sorting__item sorting__item--line">
+                                                    <button type="button" class="sorting__reset">
+                                                        <svg class="sorting__reset-icon">
+                                                            <use xlink:href="#reset"></use>
+                                                        </svg>
+                                                        <span class="sorting__reset-text">
+                                                            Все проекты
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-UP">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="project-checkbox-sorting-UP">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Южный парк
+                                                        </span>
+                                                    </label>
+
+                                                    <ul class="sorting__sublist">
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-UP-1">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-UP-1">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    1 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-UP-2">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-UP-2">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    2 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-SS">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="project-checkbox-sorting-SS">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Станция Спортивная
+                                                        </span>
+                                                    </label>
+
+                                                    <ul class="sorting__sublist">
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-SS-1">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-SS-1">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    1 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-SS-2">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-SS-2">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    2 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-SS-3">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-SS-3">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    3 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-VG">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="project-checkbox-sorting-VG">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Времена года
+                                                        </span>
+                                                    </label>
+
+                                                    <ul class="sorting__sublist">
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-VG-1">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-VG-1">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    1 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-Otr">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="project-checkbox-sorting-Otr">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Отражение
+                                                        </span>
+                                                    </label>
+
+                                                    <ul class="sorting__sublist">
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-Otr-1">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-Otr-1">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    1 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-Stol">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="project-checkbox-sorting-Stol">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Столичный
+                                                        </span>
+                                                    </label>
+
+                                                    <ul class="sorting__sublist">
+                                                        <li class="sorting__sublist-item">
+                                                            <input type="checkbox"
+                                                                class="visually-hidden sorting__checkbox" hidden
+                                                                name="project-checkbox-sorting"
+                                                                id="project-checkbox-sorting-Stol-1">
+                                                            <label class="sorting__checkbox-label"
+                                                                for="project-checkbox-sorting-Stol-1">
+                                                                <i></i>
+                                                                <span class="sorting__checkbox-text">
+                                                                    1 очередь
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Этаж
+                                    </p>
+
+                                    <div class="range-slider js-range-slider-double" data-min="1" data-max="30"
+                                        data-step="1">
+                                        <div class="range-slider__inputs">
+                                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                                <span class="range-slider__input-pretext">
+                                                    от
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input">
+                                            </div>
+
+                                            <div class="range-slider__inputs-divider"></div>
+                                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                                <span class="range-slider__input-pretext">
+                                                    до
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input">
+                                            </div>
+                                        </div>
+
+                                        <div class="range-slider__element"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-filters__col">
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Площадь, м
+                                    </p>
+
+                                    <div class="range-slider js-range-slider-double" data-min="20" data-max="400"
+                                        data-step="1">
+                                        <div class="range-slider__inputs">
+                                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                                <span class="range-slider__input-pretext">
+                                                    от
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input">
+                                            </div>
+
+                                            <div class="range-slider__inputs-divider"></div>
+                                            <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                                <span class="range-slider__input-pretext">
+                                                    до
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input">
+                                            </div>
+                                        </div>
+
+                                        <div class="range-slider__element"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Kорпус
+                                    </p>
+                                    <div
+                                        class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                                        <button class="sorting__current" type="button">
+                                            <span class="sorting__current-text">
+                                                Любой
+                                            </span>
+                                        </button>
+                                        <div class="sorting__dropdown">
+                                            <ul class="sorting__list sorting__list--padding sorting__list--projects">
+                                                <li class="sorting__item sorting__item--line">
+                                                    <button type="button" class="sorting__reset">
+                                                        <svg class="sorting__reset-icon">
+                                                            <use xlink:href="#reset"></use>
+                                                        </svg>
+                                                        <span class="sorting__reset-text">
+                                                            Любой
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="projects-checkbox-sorting"
+                                                        id="frame-checkbox-sorting-1">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="frame-checkbox-sorting-1">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Корпус 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="projects-checkbox-sorting"
+                                                        id="frame-checkbox-sorting-2">
+
+                                                    <label class="sorting__checkbox-label"
+                                                        for="frame-checkbox-sorting-2">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Корпус 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Срок сдачи проекта
+                                    </p>
+                                    <div
+                                        class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                                        <button class="sorting__current" type="button">
+                                            <span class="sorting__current-text">
+                                                Любой
+                                            </span>
+                                        </button>
+                                        <div class="sorting__dropdown">
+                                            <ul class="sorting__list sorting__list--padding sorting__list--date">
+                                                <li class="sorting__item sorting__item--line">
+                                                    <button type="button"
+                                                        class="sorting__reset sorting__reset--reverse">
+                                                        <svg class="sorting__reset-icon">
+                                                            <use xlink:href="#reset"></use>
+                                                        </svg>
+                                                        <span class="sorting__reset-text">
+                                                            Любой
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="project-checkbox-sorting"
+                                                        id="project-checkbox-sorting-done">
+
+                                                    <label
+                                                        class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                                        for="project-checkbox-sorting-done">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Сдан
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-filters__col">
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Стоимость, руб.
+                                    </p>
+
+                                    <div class="range-slider js-range-slider-double" data-min="1200000"
+                                        data-max="20000000" data-step="100000">
+                                        <div class="range-slider__inputs">
+                                            <div class="range-slider__input-wrapper">
+                                                <span class="range-slider__input-pretext">
+                                                    от
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                            </div>
+
+                                            <div class="range-slider__inputs-divider"></div>
+
+                                            <div class="range-slider__input-wrapper">
+                                                <span class="range-slider__input-pretext">
+                                                    до
+                                                </span>
+                                                <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                            </div>
+                                        </div>
+
+                                        <div class="range-slider__element"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Класс жилья
+                                    </p>
+                                    <div
+                                        class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                                        <button class="sorting__current" type="button">
+                                            <span class="sorting__current-text">
+                                                Любой
+                                            </span>
+                                        </button>
+                                        <div class="sorting__dropdown">
+                                            <ul class="sorting__list sorting__list--padding sorting__list--date">
+                                                <li class="sorting__item sorting__item--line">
+                                                    <button type="button"
+                                                        class="sorting__reset sorting__reset--reverse">
+                                                        <svg class="sorting__reset-icon">
+                                                            <use xlink:href="#reset"></use>
+                                                        </svg>
+                                                        <span class="sorting__reset-text">
+                                                            Любой
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="class-checkbox-sorting"
+                                                        id="class-checkbox-sorting-done">
+
+                                                    <label
+                                                        class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                                        for="class-checkbox-sorting-done">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Бизнес
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-filters__row list-filters__item">
+                                    <p class="list-filters__label">
+                                        Выдача ключей
+                                    </p>
+                                    <div
+                                        class="list-filters__sorting list-filters__sorting--projects sorting sorting--grey js-sorting">
+                                        <button class="sorting__current" type="button">
+                                            <span class="sorting__current-text">
+                                                Не важно
+                                            </span>
+                                        </button>
+                                        <div class="sorting__dropdown">
+                                            <ul class="sorting__list sorting__list--padding sorting__list--date">
+                                                <li class="sorting__item sorting__item--line">
+                                                    <button type="button"
+                                                        class="sorting__reset sorting__reset--reverse">
+                                                        <svg class="sorting__reset-icon">
+                                                            <use xlink:href="#reset"></use>
+                                                        </svg>
+                                                        <span class="sorting__reset-text">
+                                                            Не важно
+                                                        </span>
+                                                    </button>
+                                                </li>
+                                                <li class="sorting__item sorting__item--line">
+                                                    <input type="checkbox" class="visually-hidden sorting__checkbox"
+                                                        hidden name="keys-checkbox-sorting"
+                                                        id="keys-checkbox-sorting-done">
+
+                                                    <label
+                                                        class="sorting__checkbox-label sorting__checkbox-label--reverse"
+                                                        for="keys-checkbox-sorting-done">
+                                                        <i></i>
+                                                        <span class="sorting__checkbox-text">
+                                                            Критерий
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-filters__col show-on-mobile">
+                                <div class="lmodal-filters__row grouping grouping--grey">
+                                    <p class="grouping__text">
+                                        Сгруппировать похожие планировки
+                                    </p>
+                                    <label class="grouping__label">
+                                        <input type="checkbox" class="visually-hidden" name="grouping-elements">
+                                        <span class="grouping__switcher"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-filters__body-filter-item">
+                    <div class="modal-filters__item modal-filters__item--half">
+                        <p class="modal-filters__subtitle">
+                            Отделка
+                        </p>
+
+                        <div class="modal-filters__checkboxes">
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-finishing" id="checkbox-finishing-1">
+                                <span>
+                                    White box
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-finishing" id="checkbox-finishing-2">
+                                <span>
+                                    Без отделки
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-finishing" id="checkbox-finishing-3">
+                                <span>
+                                    Чистовая
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-filters__item modal-filters__item--half">
+                        <p class="modal-filters__subtitle">
+                            Вид из окна
+                        </p>
+
+                        <div class="modal-filters__checkboxes">
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-view-1">
+                                <span>
+                                    Во двор
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-view-2">
+                                <span>
+                                    На город
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-view-3">
+                                <span>
+                                    На лес
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-view-4">
+                                <span>
+                                    На парк
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-filters__item">
+                        <p class="modal-filters__subtitle">
+                            Преимущества
+                        </p>
+
+                        <div class="modal-filters__checkboxes">
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-1">
+                                <span>
+                                    <svg aria-hidden="true" class="icon-promo">
+                                        <use xlink:href="#promo"></use>
+                                    </svg>
+
+                                    Со скидкой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-2">
+                                <span>
+                                    Видовая квартира
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-3">
+                                <span>
+                                    С террасой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-4">
+                                <span>
+                                    Двухуровневые
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-5">
+                                <span>
+                                    Мастер-спальня
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-6">
+                                <span>
+                                    Гардеробная
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-7">
+                                <span>
+                                    2+ санузла
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-8">
+                                <span>
+                                    Кухня-гостиная
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-9">
+                                <span>
+                                    С мебелировкой кухни
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-10">
+                                <span>
+                                    С лоджией
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-11">
+                                <span>
+                                    Рассрочка
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" id="checkbox-advan-12">
+                                <span>
+                                    Ипотека
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-filters__footer">
+                <a href="#" class="modal-filters__link main-btn main-btn--red">Показать 562 квартиры</a>
+                <div class="modal-filters__reset main-btn main-btn--red main-btn--outlined">
+                    <input type="reset" class="" value="Сбросить фильтры">
+                    <svg aria-hidden="true" class="icon icon-reset">
+                        <use xlink:href="#reset-min"></use>
+                    </svg>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

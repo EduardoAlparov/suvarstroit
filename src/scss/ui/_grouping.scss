@@ -8,13 +8,19 @@
     padding: 1.6rem;
 
     background-color: var(--White, #FFF);
-    border-radius: 1.2rem;
+    border-radius: 0.8rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 1.2rem;
+    }
 
     &__text {
         color: var(--Black-Black, var(--Fill-Black, #020202));
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 150%;
+
+        @include maxSizeText(1);
     }
 
     &__switcher {
@@ -47,6 +53,7 @@
 
     &__label {
         display: block;
+        flex-shrink: 0;
 
         cursor: pointer;
 
@@ -61,5 +68,9 @@
                 }
             }
         }
+    }
+
+    &--grey {
+        background: var(--Light-Grey, #F5F5F5);
     }
 }

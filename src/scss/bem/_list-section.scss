@@ -192,8 +192,9 @@
         z-index: 2000;
 
         width: 100%;
-        transform: translateX(-50%);
+        transform: translate(-50%, 100%);
         padding-bottom: 7rem;
+        transition: transform 0.3s ease-out;
 
         @include breakpointMF(tablet) {
             padding-bottom: 2rem;
@@ -204,6 +205,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        &._visible {
+            transform: translate(-50%, 0%);
         }
     }
 

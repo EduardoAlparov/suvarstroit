@@ -44,15 +44,20 @@
     &__content {
         position: relative;
 
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
         flex-grow: 1;
         width: 100%;
         max-width: 114rem;
         height: 100%;
-        padding: 0 6rem;
+        padding: 0 2rem;
 
         background-color: var(--White, #FFF);
 
         @include breakpointMF(tablet) {
+            padding: 0 6rem;
             border-radius: 24px 0px 0px 24px;
         }
     }
@@ -69,8 +74,120 @@
     }
 
     &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3.2rem;
+
         flex-grow: 1;
-        overflow: hidden;
+        overflow: auto;
+        padding-bottom: 14.8rem;
+
+        @include breakpointMF(tablet) {
+            padding-bottom: 10.8rem;
+        }
+    }
+
+    &__body-filter-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+
+        &:first-child {
+            .modal-filters__rows {
+                @include breakpointMF(tablet) {
+                    padding-bottom: 3.2rem;
+                    border-bottom: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+                }
+            }
+        }
+
+        &:last-child {
+            .modal-filters__rows {
+                padding-bottom: 2rem;
+
+                @include breakpointMF(tablet) {
+                    padding-bottom: 5rem;
+                }
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            gap: 3.2rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+
+        &.modal-filters__item--half {
+            @include breakpointMF(tablet) {
+                flex: 0 1 calc(100% / 2 - 1.6rem);
+            }
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 100%;
+
+        @include breakpointMF(tablet) {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 120%;
+        }
+    }
+
+    &__rows {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            gap: 2.4rem;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex-grow: 1;
+
+        @include breakpointMF(tablet) {
+            flex-basis: calc(100% / 3 - (2.5rem * 3 / 2));
+
+            gap: 3.2rem;
+        }
+    }
+
+    &__row {
+        &.list-filters__item {
+            .radios__item--wider {
+                flex-grow: 1;
+            }
+
+            .range-slider__inputs {
+                min-width: 100%;
+            }
+
+            .list-filters__sorting--projects.sorting {
+                min-width: 100%;
+            }
+        }
+    }
+
+    &__checkboxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
     }
 
     &__footer {
@@ -86,6 +203,8 @@
 
         width: 100%;
         padding: 2rem;
+
+        background-color: var(--White, #FFF);
 
         @include breakpointMF(tablet) {
             flex-direction: row;

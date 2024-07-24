@@ -11,8 +11,6 @@ import menu from './menu';
 
 import animationsTriggers from './animationsTriggers';
 
-
-
 import setScrollbarWidth from './setScrollbarWidth';
 import setHeaderPadding from './setHeaderPadding';
 import setBreadcrumbsPadding from './setBreadcrumbsPadding';
@@ -45,6 +43,8 @@ import youtubeVideoControl from './youtubeVideoControl';
 import cardsDropdownToggle from './cardsDropdownToggle';
 import sortingSelect from './sortingSelect';
 import searchListSwitching from './searchListSwitching';
+import fixedFooterSlide from './fixedFooterSlide';
+import scrollToTop from './scrollToTop';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     cardsDropdownToggle();
     sortingSelect();
     searchListSwitching();
+    fixedFooterSlide();
+    scrollToTop();
 });
 
 document.addEventListener('lazyloaded', () => {

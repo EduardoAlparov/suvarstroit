@@ -37,4 +37,4 @@ npm run build
 ## Страница - [Страница квартиры](https://eduardoalparov.github.io/suvarstroit/apartment.html).
 ## Страница - [Ипотека](https://eduardoalparov.github.io/suvarstroit/mortgage.html).
 
-## Страница - [Поиск квартиры](https://eduardoalparov.github.io/suvarstroit/choosing-apartment.html).
+## Страница - [Поиск квартиры](https://eduardoalparov.github.io/suvarstroit/searching-apartment.html).

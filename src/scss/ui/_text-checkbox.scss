@@ -1,0 +1,98 @@
+.text-checkbox {
+    display: block;
+    width: max-content;
+
+    & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+
+        flex-shrink: 0;
+        height: 4rem;
+        padding: 0.8rem 2rem;
+
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 120%;
+
+        background-color: var(--Light-Grey, #F5F5F5);
+        border-radius: 0.6rem;
+        backdrop-filter: blur(10px);
+
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+
+        & > i {
+            position: absolute;
+            top: 50%;
+            left: calc(100% - 1rem);
+            transform: translateY(-50%);
+
+            display: none;
+            max-width: min-content;
+            padding: 0.8rem;
+
+            color: var(--Black, #020202);
+            background-color: var(--White, #FFF);
+            border-radius: 0.6rem;
+            border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+        }
+
+        & > strong {
+            display: none;
+            width: 1.2rem;
+            height: 1.2rem;
+            flex-shrink: 0;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_5154_57125)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%2011C8.76142%2011%2011%208.76142%2011%206C11%203.23858%208.76142%201%206%201C3.23858%201%201%203.23858%201%206C1%208.76142%203.23858%2011%206%2011Z%22%20stroke%3D%22%23020202%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%208V6%22%20stroke%3D%22%23020202%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%204H6.005%22%20stroke%3D%22%23020202%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_5154_57125%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        & > .icon-promo {
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: var(--Black, #020202);
+            transition: fill 0.3s ease-out;
+        }
+    }
+
+    &--tooltip {
+        position: relative;
+        z-index: 200;
+
+        & > span {
+            & > strong {
+                display: block;
+
+                &:hover {
+                    & ~ i {
+                        display: block;
+                        z-index: 100;
+                    }
+                }
+            }
+        }
+    }
+
+    & > input[type="checkbox"] {
+        @include visuallyHidden();
+
+        &:checked {
+            & ~ span {
+                background-color: rgba(207, 0, 12, 0.05);
+                color: var(--Red, #CF000C);
+
+                & > strong {
+                    background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_5154_53473)%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%2011C8.76142%2011%2011%208.76142%2011%206C11%203.23858%208.76142%201%206%201C3.23858%201%201%203.23858%201%206C1%208.76142%203.23858%2011%206%2011Z%22%20stroke%3D%22%23CF000C%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%208V6%22%20stroke%3D%22%23CF000C%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M6%204H6.005%22%20stroke%3D%22%23CF000C%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_5154_53473%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2212%22%20height%3D%2212%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+                }
+
+                & > .icon-promo {
+                    fill: var(--Red, #CF000C);
+                }
+            }
+        }
+    }
+}
