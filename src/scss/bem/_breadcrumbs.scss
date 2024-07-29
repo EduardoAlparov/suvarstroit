@@ -12,16 +12,24 @@
     ul {
         display: flex;
         align-items: center;
-        column-gap: 0.8rem;
-        // padding: 2.8rem 0 0;
+        column-gap: 0.4rem;
+        flex-wrap: nowrap;
 
-        @include breakpointMF(tablet) {
-            // padding: 4rem 0 2rem;
+        @include breakpoint(small-tablet) {
+            width: 100%;
+            max-width: 100%;
+            overflow: auto;
+
+            @include noScrollbar();
         }
 
         li {
             position: relative;
-            padding-right: 1.1rem;
+            padding-right: 1.2rem;
+
+            @include breakpointMF(tablet) {
+                padding-right: 2rem;
+            }
 
             &::after {
                 position: absolute;
@@ -29,13 +37,20 @@
                 right: 0;
 
                 display: block;
-                width: 3px;
-                height: 3px;
+                width: 8px;
+                height: 8px;
 
                 transform: translateY(-50%);
-                background-color: currentColor;
-                border-radius: 100%;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%228%22%20height%3D%228%22%20viewBox%3D%220%200%208%208%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20opacity%3D%220.4%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M3%206.5L5.5%204L3%201.5%22%20stroke%3D%22black%22%20stroke-width%3D%220.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
                 content: '';
+
+                @include breakpointMF(tablet) {
+                    width: 1.6rem;
+                    height: 1.4rem;
+                }
             }
 
             &:last-child {
@@ -54,6 +69,7 @@
             a {
                 @include font(1.2rem, 120%, 400);
                 opacity: 0.5;
+                white-space: nowrap;
 
                 @include breakpointMF(tablet) {
                     @include font(1.4rem, 130%, 400);

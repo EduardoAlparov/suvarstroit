@@ -9,6 +9,18 @@
         }
     }
 
+    &__swiper-slide {
+        .searched-card {
+            .searched-card__variant--row {
+                display: none;
+            }
+
+            .searched-card__variant--tile {
+                display: flex;
+            }
+        }
+    }
+
     &__buttons {
         @include breakpoint(small-tablet) {
             @include visuallyHidden();

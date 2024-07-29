@@ -1,0 +1,44 @@
+.square-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    border: 1px solid var(--Black-10, rgba(2, 2, 2, 0.10));
+    border-radius: 0.8rem;
+
+    &--white {
+        background-color: var(--White, #FFF);
+        border-width: 0;
+    }
+
+    .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+
+        transition-timing-function: ease-out;
+        transition-duration: 0.3s;
+        transition-property: fill, stroke;
+    }
+
+    .icon-share {
+        fill: var(--Black, #020202);
+    }
+
+    .icon-print {
+        stroke: var(--Black, #020202);
+    }
+
+    @include hoverActive() {
+        .icon-share {
+            fill: var(--Blue, #212173);
+        }
+
+        .icon-print {
+            stroke: var(--Blue, #212173);
+        }
+    }
+}

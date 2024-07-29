@@ -4,5 +4,11 @@
     "headerBlurClass": false,
     "breadcrumbsWhiteClass": false,
     "headerMainClass": true,
-    "greyFooterClass": true
+    "greyFooterClass": true,
+    "breadcrumbsList": [
+        "Главная",
+        "Квартиры",
+        "ЖК Южный Парк",
+        "Квартира №63"
+    ]
 }

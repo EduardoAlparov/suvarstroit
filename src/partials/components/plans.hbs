@@ -183,7 +183,8 @@
                                     <li class="plans__swiper-slide swiper-slide">
                                         <div class="plans__genplan">
                                             <picture>
-                                                <source type="image/webp" srcset="./img/all/genplan.webp" alt=" image" />
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
                                                 <img class="lazy" src="./img/all/genplan.png" alt=" image" />
                                             </picture>
 
@@ -247,7 +248,8 @@
                                     <li class="plans__swiper-slide swiper-slide">
                                         <div class="plans__genplan">
                                             <picture>
-                                                <source type="image/webp" srcset="./img/all/genplan.webp" alt=" image" />
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
                                                 <img class="lazy" src="./img/all/genplan.png" alt=" image" />
                                             </picture>
 
@@ -311,7 +313,8 @@
                                     <li class="plans__swiper-slide swiper-slide">
                                         <div class="plans__genplan">
                                             <picture>
-                                                <source type="image/webp" srcset="./img/all/genplan.webp" alt=" image" />
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
                                                 <img class="lazy" src="./img/all/genplan.png" alt=" image" />
                                             </picture>
 
@@ -542,15 +545,15 @@
     {{else}}
     <div class="plans__body plans__body--wider js-plans-slider-wrapper">
         <div class="plans__big-left">
-            <div class="plans__switched-windows">
+            <div class="plans__switched-windows plans__switched-windows--max-height plans__switched-windows--sticky">
                 <div class="plans__main-window">
                     <div class="plans__slider">
                         <div class="plans__swiper swiper">
                             <ul class="plans__swiper-wrapper swiper-wrapper">
                                 <li class="plans__swiper-slide swiper-slide">
                                     <picture>
-                                        <source type="image/webp" srcset="./img/plans/plan-2.webp" alt=" image" />
-                                        <img class="lazy" src="./img/plans/plan-2.png" alt=" image" />
+                                        <source type="image/webp" srcset="./img/plans/plan-2g.webp" alt=" image" />
+                                        <img class="lazy" src="./img/plans/plan-2g.png" alt=" image" />
                                     </picture>
                                 </li>
                                 <li class="plans__swiper-slide swiper-slide">
@@ -632,13 +635,28 @@
                                 Студия 24,42 м2
                             </h5>
 
-                            <label class="plans__favorite-checkbox favorite-checkbox">
-                                <input class="visually-hidden" hidden type="checkbox" name="favorite-checkbox"
-                                    id="favorite-checkbox-id">
-                                <svg class="icon">
-                                    <use xlink:href="#favorite-btn"></use>
-                                </svg>
-                            </label>
+                            <div class="plans__controls">
+                                <label class="plans__favorite-checkbox favorite-checkbox">
+                                    <input class="visually-hidden" hidden type="checkbox" name="favorite-checkbox"
+                                        id="favorite-checkbox-id">
+                                    <svg class="icon">
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                    <span></span>
+                                </label>
+
+                                <a href="#" class="plans__share square-btn hide-on-mobile">
+                                    <svg class="icon icon-share">
+                                        <use xlink:href="#share"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="plans__share square-btn hide-on-mobile">
+                                    <svg class="icon icon-print">
+                                        <use xlink:href="#print"></use>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
 
                         <div class="plans__heading-bottom">
@@ -653,7 +671,7 @@
 
                             <div class="plans__heading-variants">
                                 <p class="plans__mortgage-text">
-                                    В ипотеку
+                                    в&nbsp;ипотеку
                                 </p>
                                 <p class="plans__mortgage-price">
                                     26 890 руб/мес
@@ -662,26 +680,34 @@
                         </div>
                     </div>
 
-                    <ul class="plans__table">
+                    <ul class="plans__table plans__table--collapsed">
                         <li>
                             <span class="plans__key">Проект</span>
                             <span class="plans__value">Южный парк</span>
                         </li>
                         <li>
-                            <span class="plans__key">Дом</span>
-                            <span class="plans__value">4.2</span>
+                            <span class="plans__key">Расположение</span>
+                            <span class="plans__value">2 очередь, Секция 5</span>
                         </li>
                         <li>
                             <span class="plans__key">Этаж</span>
                             <span class="plans__value">2 – 9</span>
                         </li>
                         <li>
+                            <span class="plans__key">Отделка</span>
+                            <span class="plans__value">Чистовая</span>
+                        </li>
+                        <li>
                             <span class="plans__key">Высота потолка, м</span>
                             <span class="plans__value">2.7</span>
                         </li>
                         <li>
-                            <span class="plans__key">Отделка</span>
-                            <span class="plans__value">Чистовая</span>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Высота потолка, м</span>
+                            <span class="plans__value">2.7</span>
                         </li>
                         <li>
                             <span class="plans__key">Срок сдачи</span>
@@ -689,17 +715,173 @@
                         </li>
                     </ul>
 
+                    <ul class="plans__labels plans__labels--collapsed">
+                        <li>
+                            <label class="plans__text-checkbox plans__text-checkbox--class text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-finishing" disabled>
+                                <span>
+                                    Комфорт класс
 
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="plans__text-checkbox text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled checked>
+                                <span>
+                                    <svg aria-hidden="true" class="icon-promo">
+                                        <use xlink:href="#promo"></use>
+                                    </svg>
+
+                                    Со скидкой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    С лоджией
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    2+ санузла
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    С террасой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <button class="plans__expand expand-link js-expand-link" type="button">
+                        Все параметры
+                        <i></i>
+                    </button>
                 </div>
 
-                <div class="plans__controls">
+                <div class="plans__controls plans__controls--mobile-fixed">
                     <a href="#" class="plans__red-btn main-btn main-btn--red">
                         Забронировать
                     </a>
                     <a href="#" class="plans__white-btn main-btn main-btn--red main-btn--outlined">
-                        Получить консультацию
+                        <span class="hide-on-mobile">
+                            Получить консультацию
+                        </span>
+                        <span class="show-on-mobile">
+                            Консультация
+                        </span>
                     </a>
                 </div>
+
+                <ul class="plans__radio-parameters">
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-mortgage" checked>
+                        <label for="radio-article-mortgage" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">В ипотеку от 15%</p>
+                                <p class="radio-article__desc">
+                                    Первоначальный взнос и ипотечный кредит от банка
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        от 426,89 тыс. ₽
+                                    </p>
+                                    <p class="radio-article__text">
+                                        Ежемесячный&nbsp;платеж
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-fullpay">
+                        <label for="radio-article-fullpay" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">100%&nbsp;оплата</p>
+                                <p class="radio-article__desc">
+                                    Посредством ваших личных накоплений одним платежом без рассрочек и кредита от банка
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        4 900 000 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-installment">
+                        <label for="radio-article-installment" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">Рассрочка</p>
+                                <p class="radio-article__desc">
+                                    Рассрочка без % или другие программы
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        от 426,89 тыс. ₽
+                                    </p>
+                                    <p class="radio-article__text">
+                                        Ежемесячный&nbsp;платеж
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

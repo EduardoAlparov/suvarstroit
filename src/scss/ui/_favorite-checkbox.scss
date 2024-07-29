@@ -110,10 +110,19 @@
         width: 3.2rem;
         height: 3.2rem;
 
-
         .icon {
             width: 1.44rem;
             height: 1.44rem;
+        }
+    }
+
+    &--middle {
+        width: 4rem;
+        height: 4rem;
+
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
         }
     }
 }

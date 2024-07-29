@@ -45,6 +45,8 @@ import sortingSelect from './sortingSelect';
 import searchListSwitching from './searchListSwitching';
 import fixedFooterSlide from './fixedFooterSlide';
 import scrollToTop from './scrollToTop';
+import expandLinkControl from './expandLinkControl';
+import programsSwiper from './programsSwiper';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -92,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
     searchListSwitching();
     fixedFooterSlide();
     scrollToTop();
+    expandLinkControl();
+    programsSwiper();
 });
 
 document.addEventListener('lazyloaded', () => {

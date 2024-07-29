@@ -8,7 +8,10 @@
     }
 
     .simple-section__site-container {
-        padding-top: 4rem;
+
+        @include breakpointMF(tablet) {
+            padding-top: 4rem;
+        }
     }
 
     &__heading {

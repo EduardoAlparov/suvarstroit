@@ -1,5 +1,4 @@
 .plans {
-
     &__body {
         width: 100%;
         display: grid;
@@ -80,6 +79,18 @@
     &__switched-windows {
         width: 100%;
         height: 100%;
+
+        &--max-height {
+            max-height: 70rem;
+        }
+
+        &.plans__switched-windows--sticky {
+
+            @include breakpointMF(tablet) {
+                position: sticky;
+                top: 15rem;
+            }
+        }
     }
 
     &__main-window {
@@ -89,12 +100,16 @@
         height: 100%;
         padding: 1.6rem;
 
-        background: var(--Grey-Light-Grey, #F5F5F5);
+        background-color: var(--Light-Grey, #F5F5F5);
         @extend ._border-20;
 
         @include breakpointMF(tablet) {
             grid-template-columns: 23rem 1fr;
             padding: 2rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            overflow: hidden;
         }
     }
 
@@ -307,6 +322,12 @@
         @include breakpointMF(tablet) {
             justify-content: space-between;
         }
+
+        &:not(:has(.plans__table--collapsed)) {
+            .plans__expand {
+                display: none !important;
+            }
+        }
     }
 
     &__name {
@@ -335,6 +356,14 @@
 
             span {
                 display: block;
+            }
+        }
+
+        &.plans__table--collapsed {
+            li {
+                &:nth-child(1n + 7) {
+                    display: none;
+                }
             }
         }
     }
@@ -402,10 +431,11 @@
     }
 
     &__heading-variants {
+        flex-direction: column-reverse;
         gap: 1.2rem;
 
         @include breakpointMF(tablet) {
-            align-items: flex-end;
+            align-items: flex-start;
         }
     }
 
@@ -469,5 +499,176 @@
         left: unset;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    &__favorite-checkbox {
+        &.favorite-checkbox {
+            @include breakpointMF(tablet) {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 4rem;
+                height: 4rem;
+
+                .icon {
+                    position: relative;
+                    z-index: 10;
+
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    fill: none;
+                    stroke: var(--Black, #020202);
+                    fill-opacity: unset;
+                    stroke-opacity: unset;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 5;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background: var(--White, #FFF);
+                    border-radius: 0.8rem;
+                    border: 1px solid rgba(2, 2, 2, 0.10);
+
+                    transition: background-color 0.3s ease-out;
+                    content: "";
+                }
+
+                @include hoverActive() {
+                    span {
+                        border-color: var(--Red-15, rgba(207, 0, 12, 0.15));
+                    }
+
+                    .icon {
+                        stroke: var(--Red, #cf000c);
+                        fill: none;
+                    }
+
+                    input {
+                        &:checked {
+                            &~.icon {
+                                stroke: var(--Red, #cf000c);
+                                fill: var(--Red, #cf000c);
+                            }
+                        }
+                    }
+                }
+
+                input {
+                    &:checked {
+                        &~.icon {
+                            stroke: var(--Red, #cf000c);
+                            fill: var(--Red, #cf000c);
+                        }
+
+                        &~span {
+                            background: var(--Pink-Pink, #FAE5E7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        &.plans__controls--mobile-fixed {
+            @include breakpoint(small-tablet) {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1000;
+
+                flex-direction: row;
+                padding: 2rem;
+
+                background-color: var(--White, #fff);
+                border-top: 1px solid var(--Black-05, rgba(2, 2, 2, 0.05));
+                box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.06);
+            }
+
+            .main-btn {
+                @include breakpoint(small-tablet) {
+                    width: calc(100% / 2 - 0.4rem);
+                }
+            }
+        }
+    }
+
+    &__labels {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            gap: 0.4rem;
+            margin-top: 2.4rem;
+        }
+
+        &.plans__labels--collapsed {
+            li {
+                &:nth-child(1n + 5) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__text-checkbox {
+        &.text-checkbox {
+            & > span {
+                cursor: default;
+            }
+        }
+
+        &--class {
+            &.text-checkbox {
+                & > span {
+                    color: var(--Black, #020202);
+                    background-color: #E7EEF7;
+                    backdrop-filter: blur(10px);
+                }
+            }
+        }
+    }
+
+    &__expand {
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__radio-parameters {
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__radio-article {
+        margin-bottom: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.6rem;
+        }
     }
 }

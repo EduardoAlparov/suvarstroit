@@ -71,6 +71,12 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+
+    &:has(.plans__switched-windows--sticky) {
+        @include breakpointMF(tablet) {
+            overflow: unset;
+        }
+    }
 }
 
 .page-main {
@@ -92,10 +98,6 @@ body {
 
     &--first {
         padding-top: calc(var(--breadcrumbs-height) + calc(var(--gap) * 10));
-
-        .plans-section__site-container {
-            padding-top: 13rem;
-        }
     }
 
     &--blue {

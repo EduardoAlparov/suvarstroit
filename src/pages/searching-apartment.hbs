@@ -480,12 +480,19 @@
         </form>
 
         <ul class="list-section__catalog list-section__catalog--tiles">
+
+            {{#each loop}}
             <li class="list-section__catalog-item">
-                {{>searched-card cardId=001}}
+                {{>searched-card }}
             </li>
             <li class="list-section__catalog-item">
-                {{>searched-card cardId=002 cardClass=true}}
+                {{>searched-card cardClass=true }}
             </li>
+            <li class="list-section__catalog-item">
+                {{>searched-card }}
+            </li>
+            {{/each}}
+
             <li class="list-section__catalog-item list-section__catalog-item--full">
                 <div class="list-section__promo promo">
                     <div class="promo__logo">
@@ -512,6 +519,12 @@
                     </a>
                 </div>
             </li>
+
+            {{#each loop}}
+            <li class="list-section__catalog-item">
+                {{>searched-card }}
+            </li>
+            {{/each}}
         </ul>
 
         <a href="#" class="list-section__add-link">

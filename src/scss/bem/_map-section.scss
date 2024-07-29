@@ -46,6 +46,10 @@
             }
         }
 
+        @include breakpoint(small-tablet) {
+            @include noScrollbar();
+        }
+
         li {
             flex: 1 0 auto;
             height: calc(100% / 4 - ((0.8rem * 3) / 4));
